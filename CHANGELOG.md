@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.1 — 2026-09-19 — live smoke verification
+
+- Add an opt-in live routing test and sanitized evidence.
+- Real `jev-1.13.0` passed 3/3 synthetic cases: browser operation, automation-test planning and no skill for general chat.
+- Update the independent Computer Use catalog entry to its v0.1.1 release and exact source commit.
+- Exclude local YAML credential filenames; keep all actual keys out of repository files.
+- Audio services and live trading remain outside the implemented scope.
+
 ## v0.1.0 — 2026-09-19 — developer preview
 
 - Create a repository-based skill catalog and Codex assistant plugin.

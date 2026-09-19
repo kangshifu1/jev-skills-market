@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "jev-skills-market",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "skills": [
     {
       "id": "jev-computer-use",
@@ -9,8 +9,8 @@
       "description": "Operate browser controls with Jev in Codex or isolated Chrome/Chromium; verify browser outcomes.",
       "distribution": "external",
       "repository": "kangshifu1/jev-computer-use",
-      "version": "v0.1.0",
-      "revision": "4c9cd55b985d782ab08fe1e957a5dba0bcd6aa22",
+      "version": "v0.1.1",
+      "revision": "49a84254c5118fb766eaa0fa9c0f765ae00c37ca",
       "license": "MIT",
       "requires": [
         "Node.js 22+",
@@ -27,7 +27,7 @@
       "description": "Coordinate supported skills and compose automation workflows.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "license": "MIT",
       "requires": [
         "Agent host"
@@ -42,7 +42,7 @@
       "description": "Design, execute and document smoke, regression, integration and exploratory tests with independent assertions.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "license": "MIT",
       "requires": [
         "Project test tools",
@@ -57,7 +57,7 @@
       "description": "Source financial research, classify evidence and evaluate historical or paper-trading performance; no live order execution.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "license": "MIT",
       "requires": [
         "Dated financial data",
@@ -72,7 +72,7 @@
       "description": "Design voice and chat assistants using STT, dialogue models, Jev, browser execution and TTS; includes a turn state machine, no connected audio services.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "license": "MIT",
       "requires": [
         "Separate STT/dialogue/TTS adapters",
@@ -87,7 +87,7 @@
       "description": "Build TypeSafe and Jev integrations with typed Choice, Noul and Score questions and current API documentation.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "license": "MIT",
       "requires": [
         "Live TypeSafe documentation"
