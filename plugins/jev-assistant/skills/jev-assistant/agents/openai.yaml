@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jev Assistant"
+  short_description: "Coordinate Jev workflows and discover suitable skills."
+  default_prompt: "Use $jev-assistant to help with my task."

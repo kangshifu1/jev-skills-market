@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "name": "jev-skills-market",
+  "version": "0.1.0",
+  "skills": [
+    {
+      "id": "jev-computer-use",
+      "category": "computer-use",
+      "description": "Operate browser controls with Jev in Codex or isolated Chrome/Chromium; verify browser outcomes.",
+      "distribution": "external",
+      "repository": "kangshifu1/jev-computer-use",
+      "version": "v0.1.0",
+      "revision": "4c9cd55b985d782ab08fe1e957a5dba0bcd6aa22",
+      "license": "MIT",
+      "requires": [
+        "Node.js 22+",
+        "Jev API credentials for live decisions",
+        "Codex compatible tab OR Playwright browser"
+      ],
+      "status": "developer-preview",
+      "path": "skills/jev-computer-use",
+      "upstream": "https://github.com/wy-coliney/jev-browser-use"
+    },
+    {
+      "id": "jev-assistant",
+      "category": "assistant",
+      "description": "Coordinate supported skills and compose automation workflows.",
+      "distribution": "bundled",
+      "repository": "kangshifu1/jev-skills-market",
+      "version": "v0.1.0",
+      "license": "MIT",
+      "requires": [
+        "Agent host"
+      ],
+      "status": "developer-preview",
+      "routable": false,
+      "path": "plugins/jev-assistant/skills/jev-assistant"
+    },
+    {
+      "id": "jev-automation-test",
+      "category": "testing",
+      "description": "Design, execute and document smoke, regression, integration and exploratory tests with independent assertions.",
+      "distribution": "bundled",
+      "repository": "kangshifu1/jev-skills-market",
+      "version": "v0.1.0",
+      "license": "MIT",
+      "requires": [
+        "Project test tools",
+        "Optional jev-computer-use"
+      ],
+      "status": "workflow",
+      "path": "plugins/jev-assistant/skills/jev-automation-test"
+    },
+    {
+      "id": "jev-finance-research",
+      "category": "finance",
+      "description": "Source financial research, classify evidence and evaluate historical or paper-trading performance; no live order execution.",
+      "distribution": "bundled",
+      "repository": "kangshifu1/jev-skills-market",
+      "version": "v0.1.0",
+      "license": "MIT",
+      "requires": [
+        "Dated financial data",
+        "Node.js 22+ for local metrics"
+      ],
+      "status": "workflow",
+      "path": "plugins/jev-assistant/skills/jev-finance-research"
+    },
+    {
+      "id": "jev-voice-assistant",
+      "category": "voice",
+      "description": "Design voice and chat assistants using STT, dialogue models, Jev, browser execution and TTS; includes a turn state machine, no connected audio services.",
+      "distribution": "bundled",
+      "repository": "kangshifu1/jev-skills-market",
+      "version": "v0.1.0",
+      "license": "MIT",
+      "requires": [
+        "Separate STT/dialogue/TTS adapters",
+        "Optional jev-computer-use"
+      ],
+      "status": "architecture-and-state-machine",
+      "path": "plugins/jev-assistant/skills/jev-voice-assistant"
+    },
+    {
+      "id": "typesafe-ai",
+      "category": "development",
+      "description": "Build TypeSafe and Jev integrations with typed Choice, Noul and Score questions and current API documentation.",
+      "distribution": "bundled",
+      "repository": "kangshifu1/jev-skills-market",
+      "version": "v0.1.0",
+      "license": "MIT",
+      "requires": [
+        "Live TypeSafe documentation"
+      ],
+      "status": "upstream-guidance",
+      "path": "plugins/jev-assistant/skills/typesafe-ai"
+    }
+  ]
+}

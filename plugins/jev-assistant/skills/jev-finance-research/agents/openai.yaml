@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jev Finance Research"
+  short_description: "Research markets and evaluate historical simulations."
+  default_prompt: "Use $jev-finance-research to help with my task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jev Voice Assistant"
+  short_description: "Design interruptible voice and browser assistants."
+  default_prompt: "Use $jev-voice-assistant to help with my task."

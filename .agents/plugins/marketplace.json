@@ -1,0 +1,20 @@
+{
+  "name": "jev-skills-market",
+  "interface": {
+    "displayName": "Jev Skills Market"
+  },
+  "plugins": [
+    {
+      "name": "jev-assistant",
+      "source": {
+        "source": "local",
+        "path": "./plugins/jev-assistant"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

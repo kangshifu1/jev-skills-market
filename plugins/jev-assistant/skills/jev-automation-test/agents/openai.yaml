@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jev Automation Test"
+  short_description: "Verify software with reproducible cases and evidence."
+  default_prompt: "Use $jev-automation-test to help with my task."
