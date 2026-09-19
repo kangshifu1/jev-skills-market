@@ -6,7 +6,7 @@
 首个登记的技能是独立项目 [Jev Computer Use](https://github.com/kangshifu1/jev-computer-use)。
 社区项目，与 TypeSafe、OpenAI 无隶属关系。
 
-> v0.1.1 是仓库形式的技能市场与助手开发预览，不是已上线的商店网站或完整聊天客户端。
+> v0.1.2 是仓库形式的技能市场与助手开发预览，不是已上线的商店网站或完整聊天客户端。
 
 ## 安装后的使用实测与截图
 
@@ -35,7 +35,7 @@
 
 ```sh
 # 安装本仓库中的五个 Skill；可在安装器里选择
-npx skills add https://github.com/kangshifu1/jev-skills-market/tree/v0.1.1 -g -a codex
+npx skills add https://github.com/kangshifu1/jev-skills-market/tree/v0.1.2 -g -a codex
 
 # 单独安装首个外部技能
 npx skills add https://github.com/kangshifu1/jev-computer-use/tree/v0.1.1 --skill jev-computer-use -g -a codex
@@ -57,6 +57,7 @@ codex plugin add jev-assistant@jev-skills-market
 | 技能 | 作用 | 交付状态 |
 | --- | --- | --- |
 | **jev-computer-use** | Jev 决策与浏览器操作，独立仓库 | 外部开发预览 |
+| **quantskills** | 发现因子、回测、数据质量与风险工具；接入本市场 Jev 路由 | 外部资源目录，非可直接安装 Skill |
 | **jev-assistant** | 组合工作流，发现适合的技能 | 指引＋可执行路由 CLI |
 | **jev-automation-test** | 回归／冒烟／接口测试，证据与断言 | 工作流 Skill |
 | **jev-finance-research** | 可追溯研究、历史与模拟绩效分析 | 工作流＋本地收益／回撤计算 |
@@ -66,15 +67,26 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## QuantSkills 接入
+
+已登记 [QuantSkills](https://github.com/quantskills/quantskills)，Jev 可将“寻找因子挖掘、IC 评价、回测等量化工具”的请求路由到该目录。
+这是**本市场提供的 Jev 路由接入**；尚无证据表明上游目录原生支持 Jev。目录本身没有 `SKILL.md`，
+`show quantskills` 会返回来源与 `install: null`，具体项目需按各自许可证、依赖和接口安装。
+本次按用户指定收录，未复制上游源码。见 [接入与使用边界](plugins/jev-assistant/skills/jev-assistant/references/quantskills.md)。
+
+后续自动发现按 [每日收录规则](docs/DAILY-DISCOVERY.md)执行；收录不代表项目已通过完整功能测试。
+
 ## 运行助手工具
 
 ```sh
 git clone https://github.com/kangshifu1/jev-skills-market.git
 cd jev-skills-market
-git checkout v0.1.1
+git checkout v0.1.2
 npm ci
 npm run jev -- list
 npm run jev -- show jev-computer-use
+npm run jev -- show quantskills
+npm run jev -- route "寻找 QuantSkills 的因子挖掘和 IC 评价工具"
 npm run jev -- route "帮我测试浏览器里的报表筛选功能"
 npm run demo
 ```
@@ -115,4 +127,4 @@ npm run test:live
 发布版本，市场登记其可核查的能力和依赖。来源校验见 [upstream.lock.json](upstream.lock.json)。
 设计记录见 [设计文档](docs/plans/2026-09-19-design.md)，发布说明见 [CHANGELOG.md](CHANGELOG.md)。
 
-真实 Jev 路由冒烟测试 3/3 通过，包含普通聊天不加载技能的案例。见 [脱敏记录](docs/live-smoke-2026-09-19.json)。这些合成样例不是通用准确率基准。
+v0.1.2 真实 Jev 路由冒烟测试 **6/6 通过**，包括 QuantSkills 中英文发现、金融指标和普通聊天无匹配。见 [本次脱敏记录](docs/quantskills-routing-2026-09-19.json)。八项本地测试与安装后的助手 CLI 检查通过；不代表上游量化工具已执行或完成质量评测。

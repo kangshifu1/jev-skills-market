@@ -21,6 +21,11 @@ be answered directly; do not require Jev or a skill for every turn.
   failures. Choose it when the deliverable is test evidence, not just clicks.
 - **jev-finance-research** handles sourced financial research, historical analysis and
   simulation. Choose it for those outputs even if browser navigation is also needed.
+- **quantskills** is an external directory for discovering factor research, backtesting,
+  data-quality and risk tools. Jev can recommend this directory through our catalog;
+  this is not a claim that upstream natively integrates Jev. `show quantskills` returns
+  its source URL and `install: null`. Read [the handoff guide](references/quantskills.md)
+  before selecting an individual upstream project.
 - **jev-voice-assistant** designs conversation/audio adapters and cancellable execution.
   It does not supply a microphone or a speech provider.
 - **typesafe-ai** contains the original TypeSafe integration guidance. Use current docs

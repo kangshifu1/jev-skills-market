@@ -8,10 +8,12 @@ const exec=promisify(execFile);
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const skills=resolve(process.env.JEV_SKILLS_DIR||join(root,'plugins/jev-assistant/skills'));
 const cli=join(skills,'jev-assistant/scripts/run.mjs');
+const {loadCatalog}=await import(pathToFileURL(join(skills,'jev-assistant/scripts/catalog.mjs')).href);
+const installedCatalog=await loadCatalog();
 const results=[];
 try{
   const command=async args=>JSON.parse((await exec(process.execPath,[cli,...args],{timeout:30000})).stdout);
-  const catalog=await command(['list']);results.push({name:'Installed catalog listing',pass:catalog.length===6&&catalog[0].id==='jev-computer-use',observed:catalog.length+' registered entries'});
+  const catalog=await command(['list']);results.push({name:'Installed catalog listing',pass:catalog.length===installedCatalog.skills.length&&catalog[0].id==='jev-computer-use',observed:catalog.length+' registered entries'});
   const entry=await command(['show','jev-computer-use']);results.push({name:'External skill lookup',pass:entry.repository==='kangshifu1/jev-computer-use'&&entry.distribution==='external',observed:entry.repository});
   const preview=await command(['route','Test the report filter']);results.push({name:'Request preview without execution',pass:preview.mode==='preview'&&preview.executed===false,observed:preview.mode});
   const doctor=await command(['doctor']);results.push({name:'Capability diagnostics',pass:doctor.catalog==='valid'&&doctor.audio==='not-connected',observed:'catalog valid; audio not connected; browser not probed'});
@@ -30,7 +32,7 @@ try{
   const {VoiceSession}=await import(pathToFileURL(join(skills,'jev-voice-assistant/scripts/session.mjs')).href);
   const session=new VoiceSession();const turn=session.begin('Open reports');session.propose(turn.turnId,{id:'reports',summary:'Open reports',effect:'read'});const job=session.takeAction(turn.turnId);session.interrupt();
   results.push({name:'Installed voice control logic / no audio',pass:job.signal.aborted&&!session.complete(turn.turnId,{verified:true}),observed:'Interrupted action signal aborted; late completion rejected'});
-  const report={kind:'github-installed-skills-usage',observedAt:new Date().toISOString(),distribution:'v0.1.1',installedViaSkillsCli:!!process.env.JEV_SKILLS_DIR,localChecks:results,routing:{passed:routing.filter(r=>r.pass).length,total:routing.length,cases:routing},notTested:['Native Codex browser attachment','Microphone/STT/dialogue-model/TTS integration','Live broker execution','Complex authenticated website compatibility'],screenshotDisclosure:'The screenshot is a report rendered from this JSON, not a live marketplace application.'};
+  const report={kind:'github-installed-skills-usage',observedAt:new Date().toISOString(),distribution:'v'+installedCatalog.version,installedViaSkillsCli:!!process.env.JEV_SKILLS_DIR,localChecks:results,routing:{passed:routing.filter(r=>r.pass).length,total:routing.length,cases:routing},notTested:['Native Codex browser attachment','Microphone/STT/dialogue-model/TTS integration','Live broker execution','Complex authenticated website compatibility'],screenshotDisclosure:'The screenshot is a report rendered from this JSON, not a live marketplace application.'};
   await writeFile(join(root,'docs/usage-verification-2026-09-19.json'),JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify(report,null,2));
   if(results.some(r=>!r.pass)||routing.some(r=>!r.pass))process.exitCode=1;

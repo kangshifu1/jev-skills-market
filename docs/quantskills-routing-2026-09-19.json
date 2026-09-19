@@ -1,0 +1,104 @@
+{
+  "kind": "live-typesafe-router",
+  "catalogVersion": "0.1.2",
+  "observedAt": "2026-09-19T14:17:10.647Z",
+  "passed": 6,
+  "total": 6,
+  "cases": [
+    {
+      "task": "Open the browser Reports page, click the Daily tab, and scroll through the report.",
+      "expected": "jev-computer-use",
+      "actual": {
+        "status": "recommended",
+        "skill": "jev-computer-use",
+        "confidence": 0.96,
+        "model": "jev-1.13.0",
+        "executed": false,
+        "threshold": 0.65
+      },
+      "pass": true,
+      "elapsedMs": 1121
+    },
+    {
+      "task": "Design regression and API integration test cases for a reporting feature with explicit assertions and pass/fail evidence.",
+      "expected": "jev-automation-test",
+      "actual": {
+        "status": "recommended",
+        "skill": "jev-automation-test",
+        "confidence": 1,
+        "model": "jev-1.13.0",
+        "executed": false,
+        "threshold": 0.65
+      },
+      "pass": true,
+      "elapsedMs": 1097
+    },
+    {
+      "task": "寻找 QuantSkills 中用于因子挖掘、IC 评价和前视偏差审计的工具，先给我项目入口。",
+      "expected": "quantskills",
+      "actual": {
+        "status": "recommended",
+        "skill": "quantskills",
+        "confidence": 0.99,
+        "model": "jev-1.13.0",
+        "executed": false,
+        "threshold": 0.65
+      },
+      "pass": true,
+      "elapsedMs": 421
+    },
+    {
+      "task": "Find QuantSkills tools for a factor research and backtesting workflow; show where to discover the individual projects.",
+      "expected": "quantskills",
+      "actual": {
+        "status": "recommended",
+        "skill": "quantskills",
+        "confidence": 1,
+        "model": "jev-1.13.0",
+        "executed": false,
+        "threshold": 0.65
+      },
+      "pass": true,
+      "elapsedMs": 327
+    },
+    {
+      "task": "Calculate total return and maximum drawdown from my existing dated equity series.",
+      "expected": "jev-finance-research",
+      "actual": {
+        "status": "recommended",
+        "skill": "jev-finance-research",
+        "confidence": 1,
+        "model": "jev-1.13.0",
+        "executed": false,
+        "threshold": 0.65
+      },
+      "pass": true,
+      "elapsedMs": 304
+    },
+    {
+      "task": "What is the Sun?",
+      "expected": null,
+      "actual": {
+        "status": "no-match",
+        "skill": null,
+        "confidence": 0.99,
+        "model": "jev-1.13.0",
+        "executed": false,
+        "threshold": 0.65
+      },
+      "pass": true,
+      "elapsedMs": 309
+    }
+  ],
+  "limitations": "A small set of synthetic requests, not a general accuracy benchmark. No skills were executed.",
+  "developmentNote": "Initial run passed 5/6: the existing finance description did not clearly cover equity metrics. After explicitly describing the implemented total-return and maximum-drawdown helper, the complete suite was rerun without lowering thresholds.",
+  "installationCheck": {
+    "source": "current local v0.1.2 working tree via skills add",
+    "skill": "jev-assistant",
+    "catalogEntries": 7,
+    "externalCatalogLookup": "pass",
+    "noFabricatedInstaller": "pass",
+    "routePreview": "pass",
+    "upstreamQuantSkillsInstalled": false
+  }
+}

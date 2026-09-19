@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.2 — 2026-09-19 — QuantSkills discovery
+
+- Register QuantSkills as an external resource directory in Jev routing.
+- Distinguish catalogs from installable Skills; no fabricated installation command.
+- Pin the inspected source revision and explain per-project dependencies and licensing.
+- Add discovery-versus-metrics routing coverage and daily discovery criteria.
+- Existing v0.1.1 screenshots remain historical evidence; no upstream execution is claimed.
+
 ## v0.1.1 — 2026-09-19 — live smoke verification
 
 - Add an opt-in live routing test and sanitized evidence.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "jev-skills-market",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "skills": [
     {
       "id": "jev-computer-use",
@@ -22,12 +22,34 @@
       "upstream": "https://github.com/wy-coliney/jev-browser-use"
     },
     {
+      "id": "quantskills",
+      "kind": "catalog",
+      "category": "quant-tool-discovery",
+      "description": "Discover and choose external QuantSkills tools for factor mining, IC evaluation, backtesting engines, point-in-time data quality, risk monitoring and quantitative research workflows. Use for finding specialized quant skills, not calculating returns/drawdown from an already supplied equity series.",
+      "distribution": "external",
+      "repository": "quantskills/quantskills",
+      "url": "https://github.com/quantskills/quantskills",
+      "version": "9bb4b122a43a94835a419f922a7be1628d3ddf41",
+      "revision": "9bb4b122a43a94835a419f922a7be1628d3ddf41",
+      "license": null,
+      "licenseStatus": "No root license found at inspected revision; link-only registration",
+      "requires": [
+        "Agent host to inspect individual upstream projects",
+        "Per-project license, runtime and data-provider checks",
+        "Jev API credentials only for live market routing"
+      ],
+      "status": "external-catalog-routing",
+      "jevIntegration": "market-router-only; upstream native integration not verified",
+      "inspectedAt": "2026-09-19",
+      "selection": "user-requested"
+    },
+    {
       "id": "jev-assistant",
       "category": "assistant",
       "description": "Coordinate supported skills and compose automation workflows.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.1",
+      "version": "v0.1.2",
       "license": "MIT",
       "requires": [
         "Agent host"
@@ -42,7 +64,7 @@
       "description": "Design, execute and document smoke, regression, integration and exploratory tests with independent assertions.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.1",
+      "version": "v0.1.2",
       "license": "MIT",
       "requires": [
         "Project test tools",
@@ -54,10 +76,10 @@
     {
       "id": "jev-finance-research",
       "category": "finance",
-      "description": "Source financial research, classify evidence and evaluate historical or paper-trading performance; no live order execution.",
+      "description": "Calculate total return and maximum drawdown from an existing dated equity series; produce sourced financial research or evaluate historical and paper-trading performance. Use when delivering analysis or metrics; discovering external quant tools belongs to quantskills. No live order execution.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.1",
+      "version": "v0.1.2",
       "license": "MIT",
       "requires": [
         "Dated financial data",
@@ -72,7 +94,7 @@
       "description": "Design voice and chat assistants using STT, dialogue models, Jev, browser execution and TTS; includes a turn state machine, no connected audio services.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.1",
+      "version": "v0.1.2",
       "license": "MIT",
       "requires": [
         "Separate STT/dialogue/TTS adapters",
@@ -87,7 +109,7 @@
       "description": "Build TypeSafe and Jev integrations with typed Choice, Noul and Score questions and current API documentation.",
       "distribution": "bundled",
       "repository": "kangshifu1/jev-skills-market",
-      "version": "v0.1.1",
+      "version": "v0.1.2",
       "license": "MIT",
       "requires": [
         "Live TypeSafe documentation"

@@ -9,7 +9,7 @@ export async function main(args = process.argv.slice(2)) {
     const [command, ...rest] = positionals;
     const output = value => console.log(JSON.stringify(value, null, 2));
     if (values.help || !command) console.log('Jev Skills Market\n  list\n  show <skill-id>\n  route "task" [--live]\n  doctor\nRoute previews the exact request by default. --live uses TYPESAFE_API_KEY. No command executes a recommended skill.');
-    else if (command === 'list') output(catalog.skills.map(s => ({ id: s.id, distribution: s.distribution, category: s.category, status: s.status })));
+    else if (command === 'list') output(catalog.skills.map(s => ({ id: s.id, kind: s.kind ?? 'skill', distribution: s.distribution, category: s.category, status: s.status })));
     else if (command === 'show') {
       const skill = catalog.skills.find(s => s.id === rest[0]);
       if (!skill) throw new Error('Unknown skill');

@@ -27,6 +27,20 @@ test('routing includes no-match and never executes a recommendation',()=>{
   assert.throws(()=>readDecision(invalid,request));
   assert.throws(()=>buildRequest('',catalog));
 });
+test('QuantSkills is a pinned external catalog recommendation without a fabricated installer',()=>{
+  const entry=catalog.skills.find(s=>s.id==='quantskills');
+  assert.equal(entry.kind,'catalog');
+  assert.equal(entry.distribution,'external');
+  assert.equal(entry.repository,'quantskills/quantskills');
+  assert.equal(installCommand(entry),null);
+  assert.equal(entry.license,null);
+  const request=buildRequest('Find a factor research tool',catalog);
+  assert.ok(request.questions.skill.criteria.quantskills);
+  assert.equal(readDecision(answer(request,'quantskills'),request).executed,false);
+  for(const change of [{distribution:'bundled'},{revision:'main'},{url:'https://unrelated.example/catalog'},{kind:'installer'}]){
+    assert.throws(()=>validateCatalog({schemaVersion:1,skills:[{...entry,...change}]}));
+  }
+});
 test('provider request sends no key in body and rejects transport/provider errors without raw bodies',async()=>{
   const result=await routeTask('Test browser',catalog,{apiKey:'fake-unit-test-secret',fetchImpl:async(url,opts)=>{
     assert.equal(url,'https://api.typesafe.ai/v1/systemone');

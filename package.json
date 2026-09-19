@@ -1,6 +1,6 @@
 {
   "name": "jev-skills-market",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Community Jev assistant and skill marketplace for browser automation, testing, finance research and voice orchestration.",
   "type": "module",
