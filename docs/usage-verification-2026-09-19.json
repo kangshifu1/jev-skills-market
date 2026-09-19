@@ -1,0 +1,124 @@
+{
+  "kind": "github-installed-skills-usage",
+  "observedAt": "2026-09-19T13:50:12.495Z",
+  "distribution": "v0.1.1",
+  "installedViaSkillsCli": true,
+  "localChecks": [
+    {
+      "name": "Installed catalog listing",
+      "pass": true,
+      "observed": "6 registered entries"
+    },
+    {
+      "name": "External skill lookup",
+      "pass": true,
+      "observed": "kangshifu1/jev-computer-use"
+    },
+    {
+      "name": "Request preview without execution",
+      "pass": true,
+      "observed": "preview"
+    },
+    {
+      "name": "Capability diagnostics",
+      "pass": true,
+      "observed": "catalog valid; audio not connected; browser not probed"
+    },
+    {
+      "name": "Installed finance helper / synthetic equity",
+      "pass": true,
+      "observed": "Return 10%; maximum drawdown 25%; synthetic, no external cash flows"
+    },
+    {
+      "name": "Installed voice control logic / no audio",
+      "pass": true,
+      "observed": "Interrupted action signal aborted; late completion rejected"
+    }
+  ],
+  "routing": {
+    "passed": 5,
+    "total": 5,
+    "cases": [
+      {
+        "task": "Open the browser Reports page, click the Daily tab and scroll through the report.",
+        "expected": "jev-computer-use",
+        "actual": {
+          "status": "recommended",
+          "skill": "jev-computer-use",
+          "confidence": 0.98,
+          "model": "jev-1.13.0",
+          "executed": false,
+          "threshold": 0.65
+        },
+        "elapsedMs": 1370,
+        "pass": true
+      },
+      {
+        "task": "Design regression tests with explicit assertions and pass/fail evidence for the reporting API.",
+        "expected": "jev-automation-test",
+        "actual": {
+          "status": "recommended",
+          "skill": "jev-automation-test",
+          "confidence": 1,
+          "model": "jev-1.13.0",
+          "executed": false,
+          "threshold": 0.65
+        },
+        "elapsedMs": 1172,
+        "pass": true
+      },
+      {
+        "task": "Evaluate historical portfolio returns and drawdown from dated equity data with no trading.",
+        "expected": "jev-finance-research",
+        "actual": {
+          "status": "recommended",
+          "skill": "jev-finance-research",
+          "confidence": 0.99,
+          "model": "jev-1.13.0",
+          "executed": false,
+          "threshold": 0.65
+        },
+        "elapsedMs": 1156,
+        "pass": true
+      },
+      {
+        "task": "Design an interruptible voice and chat assistant with speech transcription and text-to-speech adapters.",
+        "expected": "jev-voice-assistant",
+        "actual": {
+          "status": "recommended",
+          "skill": "jev-voice-assistant",
+          "confidence": 1,
+          "model": "jev-1.13.0",
+          "executed": false,
+          "threshold": 0.65
+        },
+        "elapsedMs": 946,
+        "pass": true
+      },
+      {
+        "task": "What is the Sun?",
+        "expected": null,
+        "actual": {
+          "status": "no-match",
+          "skill": null,
+          "confidence": 0.97,
+          "model": "jev-1.13.0",
+          "executed": false,
+          "threshold": 0.65
+        },
+        "elapsedMs": 1602,
+        "pass": true
+      }
+    ]
+  },
+  "notTested": [
+    "Native Codex browser attachment",
+    "Microphone/STT/dialogue-model/TTS integration",
+    "Live broker execution",
+    "Complex authenticated website compatibility"
+  ],
+  "screenshotDisclosure": "The screenshot is a report rendered from this JSON, not a live marketplace application.",
+  "screenshotSha256": {
+    "screenshots/usage-evidence.png": "b1a15ceda3b10c86768b7a423d1f873079d1f706855ff78937eef13092874519"
+  }
+}
