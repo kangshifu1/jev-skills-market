@@ -21,6 +21,10 @@
 
 [测试矩阵与未覆盖范围](docs/TESTING.md) · [原始脱敏记录](docs/usage-verification-2026-09-19.json) · [报告渲染脚本](scripts/render-evidence.mjs)
 
+Computer Use 新增[相同适配器下的耗时比较](https://github.com/kangshifu1/jev-computer-use/blob/main/docs/BENCHMARK.md)：
+同一合成三步任务各测三轮，Jev 执行与核验中位数 2.21 秒，当前 Codex 会话逐步调用相同
+适配器为 25.82 秒，均 3/3 通过。后者包含思考与工具往返；**Codex 原生 Browser Skill 仍未测**。
+
 ## 两个仓库，各自独立
 
 | 仓库 | 负责什么 |
