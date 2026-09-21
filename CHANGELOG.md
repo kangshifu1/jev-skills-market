@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — 2026-09-21 — external discovery on main
+
+- Add 71 independent projects from 109 GitHub candidates with current API metadata
+  and pinned Jev integration evidence; record 38 exclusions or existing sources.
+- Distinguish ordinary tools, SDKs and runtime-dependent plugins from installable
+  Skills. Tools and resource collections return no fabricated Skill installer.
+- Validate automated discovery metadata and repository deduplication. Keep new entries
+  out of model routing until separately evaluated; no upstream code was executed.
+- Existing v0.1.2 release remains unchanged; the new catalog is available on main.
+
 ## v0.1.2 — 2026-09-19 — QuantSkills discovery
 
 - Register QuantSkills as an external resource directory in Jev routing.

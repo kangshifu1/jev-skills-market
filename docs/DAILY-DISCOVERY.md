@@ -13,3 +13,18 @@ Jev / TypeSafe AI 项目。此任务由维护者本地 Codex 调度，不是本�
 
 用户明确指定的收录属于人工选择，例如 QuantSkills；不据此声称其符合自动发现门槛。
 定时任务的启用状态在维护者 Codex 中管理，克隆本仓库不会自动创建或运行该任务。
+
+新增条目使用 `selection: daily-github-discovery`，保存 GitHub API 的归属、Star、
+归档状态、默认分支、更新时间、推送时间、许可证识别值和检查时间，并将证据固定到
+完整提交。验证器检查门槛、来源字段与重复仓库地址（忽略大小写）。
+
+应用、SDK、MCP 服务和依赖专属运行时的插件包使用 `kind: tool`，资源集合使用
+`kind: catalog`；二者的 `show` 均返回 `install: null`。只有已确认名称、路径和安装
+方式的单独 Skill 使用 `kind: skill`。
+
+来源核实不等于运行测试。新增项目标为 `source-reviewed-not-run` 且 `routable: false`，
+可以 list/show 查询，但需单独评估后才能扩展模型路由。基准仓库必须有真实 Jev
+调用入口才按评价工具收录；仅有协议兼容或引用成绩不够。
+
+每天的新增与排除理由保存在 `docs/discovery/`。当前记录：
+[2026-09-21](discovery/2026-09-21.md)。目录更新发布在 main，不改写已有发布标签。

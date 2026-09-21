@@ -20,3 +20,15 @@ Resource directories may use `kind: catalog` with an external repository, verifi
 revision and canonical GitHub URL. They return `install: null`; do not imply a directory
 is an installable Skill. If no license is present, register a link and original summary
 only, and record that limitation. Automated discovery follows [the daily rules](docs/DAILY-DISCOVERY.md).
+
+Standalone applications, SDKs, MCP servers and runtime-dependent plugin bundles use
+`kind: tool`. Like catalogs, they require a canonical source URL and immutable
+revision and return `install: null`; link their pinned upstream usage instructions.
+Do not rename an application as a Skill merely to generate an installer.
+
+Daily discoveries additionally record GitHub API metadata and pinned integration
+evidence with `selection: daily-github-discovery`. They start as
+`status: source-reviewed-not-run` and `routable: false`. Change that selection/status
+only after a separate review with appropriate runtime and routing evidence; source
+inspection alone is insufficient. Keep bundled sibling entries in their existing repo,
+but deduplicate external entries by repository address, ignoring case.
