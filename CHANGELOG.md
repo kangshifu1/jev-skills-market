@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-09-22 — daily external discovery
+
+- Add 27 external projects after checking 146 GitHub candidates: 72 existing sources,
+  27 additions and 47 exclusions. Catalog now contains 105 entries.
+- Record current repository metadata, pinned integration evidence and upstream usage
+  links for document classification, voice, debugging, search, tracing and research.
+- Confirm Phoenix's TypeSafe tracing path through its official integration guide;
+  distinguish the platform from its separately registered OpenInference dependency.
+- Keep all additions source-reviewed but unexecuted and excluded from live routing.
+  No runtime, installer or independent Computer Use repository changes.
+
 ## Unreleased — 2026-09-21 — external discovery on main
 
 - Add 71 independent projects from 109 GitHub candidates with current API metadata

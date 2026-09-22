@@ -73,6 +73,48 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-22（main）
+
+本轮搜索 146 个去重候选，其中 72 个已登记来源；复核其余 74 个，新增 **27 个外部项目**。
+以下按本次 GitHub API 的 `updated_at` 倒序列出，Star 为本次检查快照。
+**只完成来源核实，未安装或运行上游代码。** 新条目可通过 list/show 查询，暂不加入模型路由。
+更新位于 main，不包含在现有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-22.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [Finderchangchang/jev-chat-JARVIS](https://github.com/Finderchangchang/jev-chat-JARVIS) | 942 | 工具 | Android 聊天辅助应用通过 OpenRouter 调用 Jev，对聊天文本分类并排列候选回复。 |
+| [dealerdefi/Jevmind](https://github.com/dealerdefi/Jevmind) | 164 | 工具 | CLI 和 MCP 工具集提供可选 Jev HTTP 判断后端；上游标注该适配器仅做过模拟传输测试。 |
+| [xerj-org/xerj](https://github.com/xerj-org/xerj) | 2,260 | 工具 | 搜索服务可选将检索结果文本发送给 Jev 评分和重排；本地兼容模型是独立后端。 |
+| [Arize-ai/phoenix](https://github.com/Arize-ai/phoenix) | 11,565 | 工具 | 可观测性平台通过 OpenInference 插桩接收 TypeSafe System One 调用追踪；官方文档提供实际 SDK 接入示例。 |
+| [jerryjliu/docjev](https://github.com/jerryjliu/docjev) | 192 | 工具 | 本地文档解析后使用 Jev 判断文档类别和拆分边界，提供 Python 库、CLI 与本地应用。 |
+| [wquguru/dasheng](https://github.com/wquguru/dasheng) | 111 | 工具 | 英语朗读工具经 ZenMux 调用 Jev，判断转写词语是否匹配及错误类别；不评价声学发音。 |
+| [0xNatoshi/jev-codex-router](https://github.com/0xNatoshi/jev-codex-router) | 173 | 工具 | 本地路由服务使用 Jev 为 Codex 模型调用选择模型档位和思考深度，依赖上游路由运行时。 |
+| [RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) | 112 | 工具 | MuJoCo 无人机模拟器从相机提取结构化场景，使用 Jev 辅助飞行状态判断，再由代码控制动作。 |
+| [FBddcz/embodied-jev](https://github.com/FBddcz/embodied-jev) | 163 | 工具 | MuJoCo 机器人工作台提供 TypeSafe Jev 决策后端，向 Jev 发送结构化文本状态。 |
+| [kevinbadi/hyperedit](https://github.com/kevinbadi/hyperedit) | 171 | 工具 | 视频编辑项目接入 Jev 选择编辑工作流和媒体候选，具体调用位于服务端脚本。 |
+| [FerryCorleone/crush-monitor](https://github.com/FerryCorleone/crush-monitor) | 114 | 工具 | 聊天文本分析工具使用 TypeSafe SDK 批量请求 Jev 的情绪、意图和回复评价。 |
+| [vinilana/jev-eval-agent](https://github.com/vinilana/jev-eval-agent) | 103 | 工具 | 比较直接工具选择与 Jev 预先选择工具的智能体评价项目，Jev 通过 SDK 发出真实请求。 |
+| [tinyhumansai/opencompany](https://github.com/tinyhumansai/opencompany) | 196 | 工具 | 多智能体运行时通过 TinyHumans 的 System One 代理请求 Jev，选择发言和任务转交目标。 |
+| [kitfunso/hippo-memory](https://github.com/kitfunso/hippo-memory) | 752 | 工具 | 智能体记忆工具提供默认关闭的 Jev 检索重排器，启用时发送候选文本给 TypeSafe。 |
+| [timpratim/macbrow](https://github.com/timpratim/macbrow) | 113 | 工具 | 语音 Mac 与浏览器控制工具使用 Jev 选择工具和参数，并可转交 jev-ultrafast 执行浏览器步骤。 |
+| [comet-ml/opik](https://github.com/comet-ml/opik) | 22,183 | 工具 | 可观测性平台包含 TypeSafe Python SDK 插桩，追踪同步与异步 System One 调用。 |
+| [CatCatUncle/openworkbuddy](https://github.com/CatCatUncle/openworkbuddy) | 173 | 工具 | 本地办公助手通过 TypeSafe 或 OpenRouter 请求 Jev，提供判断接口和目标验收功能。 |
+| [mohsen1/llm-debugger-vscode-extension](https://github.com/mohsen1/llm-debugger-vscode-extension) | 359 | 工具 | VS Code 调试扩展通过 Jev 判断下一步调试动作，生成模型承担代码生成等工作。 |
+| [Dicklesworthstone/skillranker](https://github.com/Dicklesworthstone/skillranker) | 108 | 工具 | Rust CLI 使用实时会话上下文请求 Jev，为下一步选择和排序技能。 |
+| [anton-abyzov/specweave](https://github.com/anton-abyzov/specweave) | 163 | 工具 | 开发工作流工具内置 Jev HTTP 客户端与命令，支持有界类型化判断和浏览器候选选择。 |
+| [truespar/sentio](https://github.com/truespar/sentio) | 246 | 工具 | 邮件平台提供可选 TypeSafe Jev 分类后端，对邮件作结构化标签判断。 |
+| [morganlinton/Albatross](https://github.com/morganlinton/Albatross) | 230 | 工具 | 终端编程智能体提供默认关闭的 Jev 判断模式，可先观察判断结果再启用受限直接回答。 |
+| [kunpengtalk/OmniStudio](https://github.com/kunpengtalk/OmniStudio) | 144 | 工具 | 模型工作台提供本地与云端 System One 后端，可用自有凭据连接 TypeSafe；本地模型不等于 Jev。 |
+| [LnYo-Cly/ai4j](https://github.com/LnYo-Cly/ai4j) | 429 | 工具 | Java SDK 接入 TypeSafe System One，提供类型化问题、判断路由与护栏接口。 |
+| [oficcejo/aiagents-stock](https://github.com/oficcejo/aiagents-stock) | 1,942 | 工具 | 股票研究工具可选调用 Jev 返回评级和新闻情绪等结构化结果；本市场未接账户或执行交易。 |
+| [OneWave-AI/claude-skills](https://github.com/OneWave-AI/claude-skills) | 301 | 集合/目录 | Skill 集合包含 Jev 接入、审查与评价工作流，以及真实调用 Jev 的标准和阈值扫描脚本。 |
+| [JamesANZ/medical-mcp](https://github.com/JamesANZ/medical-mcp) | 113 | 工具 | 医学文献 MCP 服务提供可选 Jev 检索重排，对问题与文献摘要的匹配程度作判断。 |
+
+例如 `npm run jev -- show docjev`、`npm run jev -- show macbrow` 返回固定提交、证据和上游用法。
+本轮工具及集合均返回 `install: null`；它们需要各自独立的运行环境。
+
 ## 每日发现：2026-09-21（main）
 
 本轮检查 109 个去重候选，新增 **71 个独立外部项目**。Star 为检查时的 GitHub API 快照，
