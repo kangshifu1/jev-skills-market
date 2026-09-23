@@ -73,6 +73,47 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-23（main）
+
+本轮搜索 185 个去重候选，98 个已有条目或来源；新增 **23 个外部工具**，市场共 **128 项**。
+Star 为本次 GitHub API 检查快照，新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游代码。** 新增项可通过 list/show 查询，暂不加入模型路由。
+以下更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-23.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [monteduro/killmyidea](https://github.com/monteduro/killmyidea) | 102 | 创业想法评价演示将多个评分问题交给 Jev，再由代码计算综合分和分类结果。 |
+| [jev-chat/jev-chat-jarvis-mac](https://github.com/jev-chat/jev-chat-jarvis-mac) | 173 | macOS 聊天辅助工具提供可选云端 Jev 判断层；默认本地模型与云端 Jev 是不同后端。 |
+| [miuuyy/Astra-Ares](https://github.com/miuuyy/Astra-Ares) | 145 | Codex 辅助路由工具使用 Jev 判断有界任务状态，选择后续模型调用的思考深度。 |
+| [ipenywis/laya-ultrafast](https://github.com/ipenywis/laya-ultrafast) | 114 | 浏览器工具默认使用本地 Laya，同时保留上游 TypeSafe Jev 云端决策模式。 |
+| [Devin-AXIS/jev-dsh-decision](https://github.com/Devin-AXIS/jev-dsh-decision) | 111 | Agent Harness 插件通过 Jev 选择工具、Skill 和任务负责人，并提供结构化质量判断。 |
+| [genspark-ai/genoffice](https://github.com/genspark-ai/genoffice) | 7,509 | 办公套件的文件搜索可选将检索候选发送给 TypeSafe Jev 进行相关性重排。 |
+| [vinilana/jev-gateway](https://github.com/vinilana/jev-gateway) | 175 | 编程智能体网关调用 Jev 辅助工具选择，支持 TypeSafe 直连及独立网关凭据。 |
+| [Horace-Maxwell/horosa-skill](https://github.com/Horace-Maxwell/horosa-skill) | 419 | 术数工具集提供默认关闭的 Jev 决策层，用于有界技法路由等判断；不验证术数结论。 |
+| [jev-chat/jev-chat-windows](https://github.com/jev-chat/jev-chat-windows) | 252 | Windows 聊天辅助工具对本地 OCR 文本调用 Jev 判断意图和情绪，提供候选回复。 |
+| [Zefan-Cai/Open-Jev](https://github.com/Zefan-Cai/Open-Jev) | 205 | 本地替代模型仓库包含调用 TypeSafe 官方 Jev API 的延迟比较脚本；仅登记该评价入口。 |
+| [dorkitude/webctl](https://github.com/dorkitude/webctl) | 120 | 搜索 CLI 使用 Jev 筛选搜索结果、判断重复项，并可对网页文本片段评分。 |
+| [HarnessRouter/SystemOneHarness](https://github.com/HarnessRouter/SystemOneHarness) | 102 | 将有界环境动作转成类型化问题的智能体循环，提供 TypeSafe 和 OpenRouter Jev 后端。 |
+| [wdobry/laya-playground](https://github.com/wdobry/laya-playground) | 125 | 本地 Laya 演示项目包含真实调用 Jev 的对照评价脚本；未复现上游基准结果。 |
+| [confident-ai/deepeval](https://github.com/confident-ai/deepeval) | 18,398 | 评价框架包含 TypeSafe System One 模型适配器和 JevEval 指标，支持同步与异步 SDK 请求。 |
+| [supercorp-ai/supercov](https://github.com/supercorp-ai/supercov) | 105 | 代码质量与测试覆盖工具使用 Jev 对源码评分，辅助选择待测试或重构位置。 |
+| [TianyuCodings/JevHarness](https://github.com/TianyuCodings/JevHarness) | 141 | 由生成模型编写任务专用执行框架，再通过 Jev 的类型化调用做运行时判断，支持轨迹评价。 |
+| [aowang-ai/jev-trade](https://github.com/aowang-ai/jev-trade) | 109 | Hyperliquid 交易项目使用 TypeSafe SDK 请求 Jev 判断买入、卖出或持有；本市场未接账户或下单。 |
+| [davide-desio-eleva/kirograph](https://github.com/davide-desio-eleva/kirograph) | 151 | 代码知识图谱工具可选使用 Jev 判断记忆关系、Wiki 矛盾与认证特征。 |
+| [ENTERPILOT/GoModel](https://github.com/ENTERPILOT/GoModel) | 1,180 | Go AI 网关实现原生 System One 透传，可连接 TypeSafe Jev；本地兼容服务单独配置。 |
+| [sdras/jev-webmcp-extension](https://github.com/sdras/jev-webmcp-extension) | 101 | Chrome 扩展让 Jev 根据页面 WebMCP 工具定义选择工具并填充候选参数。 |
+| [CTNicholas/jev-workflow-builder](https://github.com/CTNicholas/jev-workflow-builder) | 132 | 基于 Liveblocks 的多人工作流编辑演示，将 Jev 类型化判断与生成模型节点组合。 |
+| [mrnugget/jev-shell-history](https://github.com/mrnugget/jev-shell-history) | 101 | zsh 自动建议插件使用 Jev 对历史命令候选排序，启用时会向提供商提交相关上下文。 |
+| [umputun/tg-spam](https://github.com/umputun/tg-spam) | 446 | Telegram 反垃圾工具提供可选 Jev 判断后端，由本地阈值将概率转成分类结果。 |
+
+例如 `npm run jev -- show genoffice`、`npm run jev -- show deepeval-jev` 可查看固定提交与使用来源。
+本轮均为独立工具或依赖专属运行时的插件，`install: null`；不会将它们当成单独 Skill 安装。
+
+已收录的 Android 项目 `Finderchangchang/jev-chat-JARVIS` 迁移为 `jev-chat/jev-chat-jarvis`；
+当前 GitHub 仓库 ID 相同，已登记 `repositoryAliases`，不重复增加条目。
+
 ## 每日发现：2026-09-22（main）
 
 本轮搜索 146 个去重候选，其中 72 个已登记来源；复核其余 74 个，新增 **27 个外部项目**。

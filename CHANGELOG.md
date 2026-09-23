@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-09-23 — daily external discovery
+
+- Add 23 external tools from 185 GitHub candidates, bringing the catalog to 128
+  entries. Read every search page, deduplicate 98 existing sources and exclude 64.
+- Register the verified migration of the Android Jev Chat repository as an alias,
+  preserving its previous source revision and review snapshot.
+- Record pinned integration evidence for office search, testing, browser tools,
+  workflow orchestration, message classification and Jev comparison scripts.
+- New entries remain source-reviewed, unexecuted and outside live routing. No runtime
+  or independent Computer Use repository changes.
+
 ## Unreleased — 2026-09-22 — daily external discovery
 
 - Add 27 external projects after checking 146 GitHub candidates: 72 existing sources,

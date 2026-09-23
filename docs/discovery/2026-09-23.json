@@ -1,0 +1,1780 @@
+{
+  "date": "2026-09-23",
+  "timezone": "Asia/Shanghai",
+  "marketBaseCommit": "36f2e621b05bf5766708640c2aa9679c7cdba72f",
+  "search": {
+    "checkedAt": "2026-09-23T00:04:41.514219+00:00",
+    "queries": [
+      {
+        "query": "jev in:name,description stars:>100 archived:false",
+        "total_count": 104,
+        "pages": [
+          {
+            "page": 1,
+            "count": 100,
+            "incomplete_results": false
+          },
+          {
+            "page": 2,
+            "count": 4,
+            "incomplete_results": false
+          }
+        ]
+      },
+      {
+        "query": "\"typesafe.ai\" in:readme stars:>100 archived:false",
+        "total_count": 101,
+        "pages": [
+          {
+            "page": 1,
+            "count": 100,
+            "incomplete_results": false
+          },
+          {
+            "page": 2,
+            "count": 1,
+            "incomplete_results": false
+          }
+        ]
+      },
+      {
+        "query": "\"typesafe-ai\" in:readme stars:>100 archived:false",
+        "total_count": 101,
+        "pages": [
+          {
+            "page": 1,
+            "count": 100,
+            "incomplete_results": false
+          },
+          {
+            "page": 2,
+            "count": 1,
+            "incomplete_results": false
+          }
+        ]
+      },
+      {
+        "query": "\"jev\" \"system one\" in:readme stars:>100 archived:false",
+        "total_count": 100,
+        "pages": [
+          {
+            "page": 1,
+            "count": 100,
+            "incomplete_results": false
+          }
+        ]
+      },
+      {
+        "query": "org:typesafe-ai stars:>100 archived:false",
+        "total_count": 4,
+        "pages": [
+          {
+            "page": 1,
+            "count": 4,
+            "incomplete_results": false
+          }
+        ]
+      }
+    ],
+    "sort": "updated",
+    "order": "desc",
+    "uniqueCandidates": 185,
+    "alreadyRepresentedCount": 98,
+    "alreadyRepresented": [
+      "wy-coliney/jev-browser-use",
+      "browser-use/jev-ultrafast",
+      "jaredpalmer/kev",
+      "typesafe-ai/skills",
+      "realZachi/pg-jev",
+      "jarrodwatts/jev-trader",
+      "kerpopule/hermes-jev-skills",
+      "TianyuCodings/NanoJev",
+      "tamaratran/fast-jev-compaction",
+      "dabit3/jev-experiments",
+      "OpenAgentsInc/openagents",
+      "superagents-lab/jev-search",
+      "OpenByteInc/QuantDinger",
+      "jerryjliu/docjev",
+      "bespokelabsai/nimble",
+      "JoasASantos/NeuroSploit",
+      "gargpratyush/jev-router",
+      "Dicklesworthstone/skillranker",
+      "kunchenguid/compact-adviser",
+      "Arize-ai/phoenix",
+      "BillionsBobby/JevRouter",
+      "FerryCorleone/crush-monitor",
+      "typesafe-ai/typesafe-sdk-python",
+      "yonatangross/orchestkit",
+      "comet-ml/opik",
+      "Sac-Y/Jev-cu",
+      "rmalde/minecraft-agent",
+      "Anil-matcha/awesome-jev-by-typesafe",
+      "kyotofin/tax-doc-classifier",
+      "WrongStack/WrongStack",
+      "DevMortimer/pi-warden",
+      "thruwire/foreman",
+      "monotykamary/pi-fabric",
+      "wuyoscar/jev-skill",
+      "brainstormity/Jev-X-Sentiment-Analysis",
+      "kunpengtalk/OmniStudio",
+      "kitze/unclutter",
+      "ekzhang/openjev-sglang",
+      "kevinbadi/hyperedit",
+      "juspay/neurolink",
+      "logan-markewich/jeff",
+      "nicobailon/pi-mcp-adapter",
+      "xerj-org/xerj",
+      "AgentiLoop/Agent",
+      "0xNatoshi/jev-codex-router",
+      "timpratim/macbrow",
+      "itsmostafa/typesafe-mcp",
+      "y0usaf/pi-jev",
+      "standardagents/jevpilot",
+      "RomanSlack/jev-drone",
+      "kitfunso/hippo-memory",
+      "jkudish/jev-mcp",
+      "droidrun/mobile-jev",
+      "notque/vexjoy-agent",
+      "lakeday-org/perch",
+      "typesafe-ai/typesafe-sdk-js",
+      "moritzkremb/jev-voice-browser",
+      "narumiruna/pi-extensions",
+      "cequence-io/openai-scala-client",
+      "CatCatUncle/openworkbuddy",
+      "fhshaik/typesafe-mario",
+      "sutro-sh/jev-align",
+      "FBddcz/embodied-jev",
+      "kitze/skillbox",
+      "devagrawal09/stanley-code",
+      "devagrawal09/jev-review",
+      "Arize-ai/openinference",
+      "NiazMorshed2007/jev-review",
+      "caliber-ai-org/ai-setup",
+      "tamaratran/jev-pruner",
+      "OneWave-AI/claude-skills",
+      "jkudish/jev-browser",
+      "fatwang2/awesome-jev",
+      "wquguru/dasheng",
+      "tinyhumansai/opencompany",
+      "vinilana/jev-eval-agent",
+      "nicobailon/pi-interactive-shell",
+      "oficcejo/aiagents-stock",
+      "uehaj/jev-semgrep",
+      "vercel-labs/ai-cli",
+      "dealerdefi/Jevmind",
+      "LnYo-Cly/ai4j",
+      "coldteadotai/abide",
+      "truespar/sentio",
+      "anton-abyzov/specweave",
+      "calebl/ynab-mcp-server",
+      "DecapodLabs/decapod",
+      "mohsen1/llm-debugger-vscode-extension",
+      "MillionSend/millionsend",
+      "morganlinton/Albatross",
+      "delexw/claude-code-trace",
+      "ielab/llm-rankers",
+      "dbreunig/building-with-jev-skill",
+      "JamesANZ/medical-mcp",
+      "marvikomo/code-lens-ai",
+      "liuyanghejerry/Clausura",
+      "donvito/ai-backends",
+      "jev-chat/jev-chat-jarvis"
+    ],
+    "canonicalDuplicates": [
+      {
+        "catalogRepository": "Finderchangchang/jev-chat-JARVIS",
+        "canonicalRepository": "jev-chat/jev-chat-jarvis",
+        "repositoryId": 1379574728,
+        "checkedAt": "2026-09-23T00:05:24.623615+00:00",
+        "basis": "Both current GitHub repository API endpoints returned the same id and canonical full_name."
+      }
+    ],
+    "unregisteredReviewed": 87,
+    "resultsComplete": true
+  },
+  "addedCount": 23,
+  "excludedCount": 64,
+  "verification": {
+    "source": "Current GitHub repository API metadata; README and selected source files at immutable revisions; repository identity comparison for migration",
+    "upstreamCodeExecuted": false,
+    "liveProviderCalls": false,
+    "upstreamRuntimeTested": false,
+    "routingExpanded": false,
+    "checks": {
+      "npmTest": {
+        "passed": 12,
+        "failed": 0
+      },
+      "npmRunValidate": "passed",
+      "cliList": {
+        "entries": 128,
+        "passed": true
+      },
+      "newEntryShow": {
+        "passed": 23,
+        "failed": 0
+      },
+      "routePreview": {
+        "passed": true,
+        "executed": false,
+        "existingChoicesUnchanged": true
+      },
+      "previous105Entries": "only verified repositoryAliases added to Android Jev Chat entry; all historical source metadata preserved",
+      "repositoryAndAliasDedup": "passed",
+      "catalogAuditConsistency": "passed",
+      "diffCheck": "passed",
+      "credentialPatternAndLocalPathScan": {
+        "files": 6,
+        "findings": 0
+      },
+      "localDocumentationLinks": "passed",
+      "independentComputerUseRepo": "unchanged, clean at 0cd5c076445c00e0d56529a5e0471320a0564a4d"
+    }
+  },
+  "added": [
+    {
+      "id": "killmyidea",
+      "kind": "tool",
+      "category": "business-research",
+      "description": "创业想法评价演示将多个评分问题交给 Jev，再由代码计算综合分和分类结果。",
+      "distribution": "external",
+      "repository": "monteduro/killmyidea",
+      "url": "https://github.com/monteduro/killmyidea",
+      "version": "bc853421f2eb6f17da435621896dd6cd881a051c",
+      "revision": "bc853421f2eb6f17da435621896dd6cd881a051c",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "monteduro",
+        "stars": 102,
+        "pushedAt": "2026-09-18T10:56:38Z",
+        "updatedAt": "2026-09-23T00:04:44Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-09-23T00:05:32.619919+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/monteduro/killmyidea/blob/bc853421f2eb6f17da435621896dd6cd881a051c/src/lib/typesafe.ts#L50",
+          "summary": "创业想法评价演示将多个评分问题交给 Jev，再由代码计算综合分和分类结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/monteduro/killmyidea/blob/bc853421f2eb6f17da435621896dd6cd881a051c/README.md#L5",
+          "summary": "创业想法评价演示将多个评分问题交给 Jev，再由代码计算综合分和分类结果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/monteduro/killmyidea/blob/bc853421f2eb6f17da435621896dd6cd881a051c/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-chat-jarvis-mac",
+      "kind": "tool",
+      "category": "assistant",
+      "description": "macOS 聊天辅助工具提供可选云端 Jev 判断层；默认本地模型与云端 Jev 是不同后端。",
+      "distribution": "external",
+      "repository": "jev-chat/jev-chat-jarvis-mac",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis-mac",
+      "version": "355461cba2b4b584a30ada80fff7251df941718a",
+      "revision": "355461cba2b4b584a30ada80fff7251df941718a",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "jev-chat",
+        "stars": 173,
+        "pushedAt": "2026-09-22T16:45:59Z",
+        "updatedAt": "2026-09-23T00:01:26Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:27.223106+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/jev-chat/jev-chat-jarvis-mac/blob/355461cba2b4b584a30ada80fff7251df941718a/src/judge_jev.py#L135",
+          "summary": "macOS 聊天辅助工具提供可选云端 Jev 判断层；默认本地模型与云端 Jev 是不同后端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/jev-chat/jev-chat-jarvis-mac/blob/355461cba2b4b584a30ada80fff7251df941718a/README.md#L98",
+          "summary": "macOS 聊天辅助工具提供可选云端 Jev 判断层；默认本地模型与云端 Jev 是不同后端。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/jev-chat/jev-chat-jarvis-mac/blob/355461cba2b4b584a30ada80fff7251df941718a/README.md",
+      "usageNote": "查看上游的云端判断层设置；没有 Jev key 时可使用本地替代模型，本地模式不算 TypeSafe Jev 调用。未读取用户聊天或启动应用。"
+    },
+    {
+      "id": "astra-ares",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "Codex 辅助路由工具使用 Jev 判断有界任务状态，选择后续模型调用的思考深度。",
+      "distribution": "external",
+      "repository": "miuuyy/Astra-Ares",
+      "url": "https://github.com/miuuyy/Astra-Ares",
+      "version": "201f3675cf85187d9dbd79fe110d7174445e4f81",
+      "revision": "201f3675cf85187d9dbd79fe110d7174445e4f81",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "miuuyy",
+        "stars": 145,
+        "pushedAt": "2026-09-22T14:21:37Z",
+        "updatedAt": "2026-09-22T23:53:10Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:29.793759+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/miuuyy/Astra-Ares/blob/201f3675cf85187d9dbd79fe110d7174445e4f81/src/jev.mjs#L205",
+          "summary": "Codex 辅助路由工具使用 Jev 判断有界任务状态，选择后续模型调用的思考深度。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/miuuyy/Astra-Ares/blob/201f3675cf85187d9dbd79fe110d7174445e4f81/README.md#L21",
+          "summary": "Codex 辅助路由工具使用 Jev 判断有界任务状态，选择后续模型调用的思考深度。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/miuuyy/Astra-Ares/blob/201f3675cf85187d9dbd79fe110d7174445e4f81/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "laya-ultrafast",
+      "kind": "tool",
+      "category": "computer-use",
+      "description": "浏览器工具默认使用本地 Laya，同时保留上游 TypeSafe Jev 云端决策模式。",
+      "distribution": "external",
+      "repository": "ipenywis/laya-ultrafast",
+      "url": "https://github.com/ipenywis/laya-ultrafast",
+      "version": "571431b7d142d54f49ad962d9d083d9b7bb20040",
+      "revision": "571431b7d142d54f49ad962d9d083d9b7bb20040",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "ipenywis",
+        "stars": 114,
+        "pushedAt": "2026-09-22T21:33:23Z",
+        "updatedAt": "2026-09-22T23:52:43Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:29.541407+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ipenywis/laya-ultrafast/blob/571431b7d142d54f49ad962d9d083d9b7bb20040/laya_ultrafast/model.py#L120",
+          "summary": "浏览器工具默认使用本地 Laya，同时保留上游 TypeSafe Jev 云端决策模式。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ipenywis/laya-ultrafast/blob/571431b7d142d54f49ad962d9d083d9b7bb20040/README.md#L23",
+          "summary": "浏览器工具默认使用本地 Laya，同时保留上游 TypeSafe Jev 云端决策模式。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/ipenywis/laya-ultrafast/blob/571431b7d142d54f49ad962d9d083d9b7bb20040/README.md",
+      "usageNote": "默认是本地 Laya；上游 README 的 DECISION_MODEL=typesafe 才选择保留的云端 Jev 路径。两条路径均未在本市场运行。"
+    },
+    {
+      "id": "jev-dsh-decision",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "Agent Harness 插件通过 Jev 选择工具、Skill 和任务负责人，并提供结构化质量判断。",
+      "distribution": "external",
+      "repository": "Devin-AXIS/jev-dsh-decision",
+      "url": "https://github.com/Devin-AXIS/jev-dsh-decision",
+      "version": "adc88caa9bf174d367e79a5f254c7936bcef088e",
+      "revision": "adc88caa9bf174d367e79a5f254c7936bcef088e",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "Devin-AXIS",
+        "stars": 111,
+        "pushedAt": "2026-09-20T04:59:32Z",
+        "updatedAt": "2026-09-22T23:46:31Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-09-23T00:05:30.443566+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Devin-AXIS/jev-dsh-decision/blob/adc88caa9bf174d367e79a5f254c7936bcef088e/service/jev.mjs#L115",
+          "summary": "Agent Harness 插件通过 Jev 选择工具、Skill 和任务负责人，并提供结构化质量判断。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Devin-AXIS/jev-dsh-decision/blob/adc88caa9bf174d367e79a5f254c7936bcef088e/README.md#L10",
+          "summary": "Agent Harness 插件通过 Jev 选择工具、Skill 和任务负责人，并提供结构化质量判断。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Devin-AXIS/jev-dsh-decision/blob/adc88caa9bf174d367e79a5f254c7936bcef088e/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "genoffice",
+      "kind": "tool",
+      "category": "search",
+      "description": "办公套件的文件搜索可选将检索候选发送给 TypeSafe Jev 进行相关性重排。",
+      "distribution": "external",
+      "repository": "genspark-ai/genoffice",
+      "url": "https://github.com/genspark-ai/genoffice",
+      "version": "efb9247aa33fca8d08643d5ad780c091bcaccf3f",
+      "revision": "efb9247aa33fca8d08643d5ad780c091bcaccf3f",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "genspark-ai",
+        "stars": 7509,
+        "pushedAt": "2026-09-22T14:53:08Z",
+        "updatedAt": "2026-09-22T23:46:03Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-09-23T00:05:32.599173+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/genspark-ai/genoffice/blob/efb9247aa33fca8d08643d5ad780c091bcaccf3f/apps/shell/src/main/file-index/jev.ts#L158",
+          "summary": "办公套件的文件搜索可选将检索候选发送给 TypeSafe Jev 进行相关性重排。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/genspark-ai/genoffice/blob/efb9247aa33fca8d08643d5ad780c091bcaccf3f/README.md#L176",
+          "summary": "办公套件的文件搜索可选将检索候选发送给 TypeSafe Jev 进行相关性重排。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/genspark-ai/genoffice/blob/efb9247aa33fca8d08643d5ad780c091bcaccf3f/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-gateway",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "编程智能体网关调用 Jev 辅助工具选择，支持 TypeSafe 直连及独立网关凭据。",
+      "distribution": "external",
+      "repository": "vinilana/jev-gateway",
+      "url": "https://github.com/vinilana/jev-gateway",
+      "version": "a197836755671fc224cc3d7f91a8592d56ca665c",
+      "revision": "a197836755671fc224cc3d7f91a8592d56ca665c",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "vinilana",
+        "stars": 175,
+        "pushedAt": "2026-09-21T11:29:49Z",
+        "updatedAt": "2026-09-22T23:46:00Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:31.993390+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/vinilana/jev-gateway/blob/a197836755671fc224cc3d7f91a8592d56ca665c/src/jev.ts#L71",
+          "summary": "编程智能体网关调用 Jev 辅助工具选择，支持 TypeSafe 直连及独立网关凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/vinilana/jev-gateway/blob/a197836755671fc224cc3d7f91a8592d56ca665c/README.md#L4",
+          "summary": "编程智能体网关调用 Jev 辅助工具选择，支持 TypeSafe 直连及独立网关凭据。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/vinilana/jev-gateway/blob/a197836755671fc224cc3d7f91a8592d56ca665c/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "horosa-jev",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "术数工具集提供默认关闭的 Jev 决策层，用于有界技法路由等判断；不验证术数结论。",
+      "distribution": "external",
+      "repository": "Horace-Maxwell/horosa-skill",
+      "url": "https://github.com/Horace-Maxwell/horosa-skill",
+      "version": "86e00c71c73f7df264c8d6a555ea47cca88931c9",
+      "revision": "86e00c71c73f7df264c8d6a555ea47cca88931c9",
+      "license": "AGPL-3.0",
+      "licenseStatus": "GitHub API identifies AGPL-3.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "Horace-Maxwell",
+        "stars": 419,
+        "pushedAt": "2026-09-22T23:44:38Z",
+        "updatedAt": "2026-09-22T23:44:43Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "AGPL-3.0",
+        "checkedAt": "2026-09-23T00:05:32.189489+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Horace-Maxwell/horosa-skill/blob/86e00c71c73f7df264c8d6a555ea47cca88931c9/horosa-skill/src/horosa_skill/decisions/jev_http.py#L158",
+          "summary": "术数工具集提供默认关闭的 Jev 决策层，用于有界技法路由等判断；不验证术数结论。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Horace-Maxwell/horosa-skill/blob/86e00c71c73f7df264c8d6a555ea47cca88931c9/README.md#L474",
+          "summary": "术数工具集提供默认关闭的 Jev 决策层，用于有界技法路由等判断；不验证术数结论。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Horace-Maxwell/horosa-skill/blob/86e00c71c73f7df264c8d6a555ea47cca88931c9/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-chat-windows",
+      "kind": "tool",
+      "category": "assistant",
+      "description": "Windows 聊天辅助工具对本地 OCR 文本调用 Jev 判断意图和情绪，提供候选回复。",
+      "distribution": "external",
+      "repository": "jev-chat/jev-chat-windows",
+      "url": "https://github.com/jev-chat/jev-chat-windows",
+      "version": "033d6ef11f514153f4be0aaf1d937faac944f379",
+      "revision": "033d6ef11f514153f4be0aaf1d937faac944f379",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "jev-chat",
+        "stars": 252,
+        "pushedAt": "2026-09-22T16:08:25Z",
+        "updatedAt": "2026-09-22T23:36:22Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-09-23T00:05:33.255511+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/jev-chat/jev-chat-windows/blob/033d6ef11f514153f4be0aaf1d937faac944f379/core/jev_client.py#L124",
+          "summary": "Windows 聊天辅助工具对本地 OCR 文本调用 Jev 判断意图和情绪，提供候选回复。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/jev-chat/jev-chat-windows/blob/033d6ef11f514153f4be0aaf1d937faac944f379/README.md#L3",
+          "summary": "Windows 聊天辅助工具对本地 OCR 文本调用 Jev 判断意图和情绪，提供候选回复。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/jev-chat/jev-chat-windows/blob/033d6ef11f514153f4be0aaf1d937faac944f379/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "zefan-open-jev-benchmarks",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "本地替代模型仓库包含调用 TypeSafe 官方 Jev API 的延迟比较脚本；仅登记该评价入口。",
+      "distribution": "external",
+      "repository": "Zefan-Cai/Open-Jev",
+      "url": "https://github.com/Zefan-Cai/Open-Jev",
+      "version": "ed45657bf726c3b77408942830e5578f99df904e",
+      "revision": "ed45657bf726c3b77408942830e5578f99df904e",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "Zefan-Cai",
+        "stars": 205,
+        "pushedAt": "2026-09-21T07:40:27Z",
+        "updatedAt": "2026-09-22T23:32:39Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:34.841010+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Zefan-Cai/Open-Jev/blob/ed45657bf726c3b77408942830e5578f99df904e/scripts/benchmark_jev_api_latency.py#L68",
+          "summary": "本地替代模型仓库包含调用 TypeSafe 官方 Jev API 的延迟比较脚本；仅登记该评价入口。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/Zefan-Cai/Open-Jev/blob/ed45657bf726c3b77408942830e5578f99df904e/README.md",
+      "usageNote": "只登记仓库内真实 Jev API 的比较入口；其本地替代模型不标为 Jev。未执行基准，也未复现上游结果。"
+    },
+    {
+      "id": "webctl",
+      "kind": "tool",
+      "category": "search",
+      "description": "搜索 CLI 使用 Jev 筛选搜索结果、判断重复项，并可对网页文本片段评分。",
+      "distribution": "external",
+      "repository": "dorkitude/webctl",
+      "url": "https://github.com/dorkitude/webctl",
+      "version": "ab99fe743a8f30ad26437eaf8c15d1965ae46d4d",
+      "revision": "ab99fe743a8f30ad26437eaf8c15d1965ae46d4d",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "dorkitude",
+        "stars": 120,
+        "pushedAt": "2026-09-22T21:30:32Z",
+        "updatedAt": "2026-09-22T22:50:58Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:39.985933+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/dorkitude/webctl/blob/ab99fe743a8f30ad26437eaf8c15d1965ae46d4d/internal/jev/client.go#L154",
+          "summary": "搜索 CLI 使用 Jev 筛选搜索结果、判断重复项，并可对网页文本片段评分。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/dorkitude/webctl/blob/ab99fe743a8f30ad26437eaf8c15d1965ae46d4d/README.md#L25",
+          "summary": "搜索 CLI 使用 Jev 筛选搜索结果、判断重复项，并可对网页文本片段评分。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/dorkitude/webctl/blob/ab99fe743a8f30ad26437eaf8c15d1965ae46d4d/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "system-one-harness",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "将有界环境动作转成类型化问题的智能体循环，提供 TypeSafe 和 OpenRouter Jev 后端。",
+      "distribution": "external",
+      "repository": "HarnessRouter/SystemOneHarness",
+      "url": "https://github.com/HarnessRouter/SystemOneHarness",
+      "version": "ab8e8f08b4a6268c0633a474423d556599ee06a4",
+      "revision": "ab8e8f08b4a6268c0633a474423d556599ee06a4",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "HarnessRouter",
+        "stars": 102,
+        "pushedAt": "2026-09-21T11:01:24Z",
+        "updatedAt": "2026-09-22T22:40:28Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-09-23T00:05:40.563383+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/HarnessRouter/SystemOneHarness/blob/ab8e8f08b4a6268c0633a474423d556599ee06a4/systemone_harness/provider.py#L99",
+          "summary": "将有界环境动作转成类型化问题的智能体循环，提供 TypeSafe 和 OpenRouter Jev 后端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HarnessRouter/SystemOneHarness/blob/ab8e8f08b4a6268c0633a474423d556599ee06a4/README.md#L25",
+          "summary": "将有界环境动作转成类型化问题的智能体循环，提供 TypeSafe 和 OpenRouter Jev 后端。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/HarnessRouter/SystemOneHarness/blob/ab8e8f08b4a6268c0633a474423d556599ee06a4/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "laya-playground-jev-eval",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "本地 Laya 演示项目包含真实调用 Jev 的对照评价脚本；未复现上游基准结果。",
+      "distribution": "external",
+      "repository": "wdobry/laya-playground",
+      "url": "https://github.com/wdobry/laya-playground",
+      "version": "5a825ba0472a460830bc937907d43262a87410f8",
+      "revision": "5a825ba0472a460830bc937907d43262a87410f8",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "wdobry",
+        "stars": 125,
+        "pushedAt": "2026-09-20T20:59:37Z",
+        "updatedAt": "2026-09-22T22:39:36Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:40.926193+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/wdobry/laya-playground/blob/5a825ba0472a460830bc937907d43262a87410f8/eval/run_eval.py#L79",
+          "summary": "本地 Laya 演示项目包含真实调用 Jev 的对照评价脚本；未复现上游基准结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/wdobry/laya-playground/blob/5a825ba0472a460830bc937907d43262a87410f8/README.md#L50",
+          "summary": "本地 Laya 演示项目包含真实调用 Jev 的对照评价脚本；未复现上游基准结果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/wdobry/laya-playground/blob/5a825ba0472a460830bc937907d43262a87410f8/README.md",
+      "usageNote": "只登记仓库内真实 Jev API 的比较入口；其本地替代模型不标为 Jev。未执行基准，也未复现上游结果。"
+    },
+    {
+      "id": "deepeval-jev",
+      "kind": "tool",
+      "category": "testing",
+      "description": "评价框架包含 TypeSafe System One 模型适配器和 JevEval 指标，支持同步与异步 SDK 请求。",
+      "distribution": "external",
+      "repository": "confident-ai/deepeval",
+      "url": "https://github.com/confident-ai/deepeval",
+      "version": "b413bb19ac364154ec3d92ccdbb60afca054dc78",
+      "revision": "b413bb19ac364154ec3d92ccdbb60afca054dc78",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "confident-ai",
+        "stars": 18398,
+        "pushedAt": "2026-09-22T20:15:31Z",
+        "updatedAt": "2026-09-22T22:21:34Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-09-23T00:05:42.873209+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/confident-ai/deepeval/blob/b413bb19ac364154ec3d92ccdbb60afca054dc78/deepeval/models/system_one/typesafe_model.py#L78",
+          "summary": "评价框架包含 TypeSafe System One 模型适配器和 JevEval 指标，支持同步与异步 SDK 请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/confident-ai/deepeval/blob/b413bb19ac364154ec3d92ccdbb60afca054dc78/README.md#L72",
+          "summary": "评价框架包含 TypeSafe System One 模型适配器和 JevEval 指标，支持同步与异步 SDK 请求。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/confident-ai/deepeval/blob/b413bb19ac364154ec3d92ccdbb60afca054dc78/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "supercov",
+      "kind": "tool",
+      "category": "testing",
+      "description": "代码质量与测试覆盖工具使用 Jev 对源码评分，辅助选择待测试或重构位置。",
+      "distribution": "external",
+      "repository": "supercorp-ai/supercov",
+      "url": "https://github.com/supercorp-ai/supercov",
+      "version": "891ce87d9bf915635de4a40461bb2bafddc60e0b",
+      "revision": "891ce87d9bf915635de4a40461bb2bafddc60e0b",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "supercorp-ai",
+        "stars": 105,
+        "pushedAt": "2026-09-22T21:42:31Z",
+        "updatedAt": "2026-09-22T21:47:23Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:45.844512+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/supercorp-ai/supercov/blob/891ce87d9bf915635de4a40461bb2bafddc60e0b/crates/supercov-cli/src/quality.rs#L969",
+          "summary": "代码质量与测试覆盖工具使用 Jev 对源码评分，辅助选择待测试或重构位置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/supercorp-ai/supercov/blob/891ce87d9bf915635de4a40461bb2bafddc60e0b/README.md#L5",
+          "summary": "代码质量与测试覆盖工具使用 Jev 对源码评分，辅助选择待测试或重构位置。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/supercorp-ai/supercov/blob/891ce87d9bf915635de4a40461bb2bafddc60e0b/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-harness",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "由生成模型编写任务专用执行框架，再通过 Jev 的类型化调用做运行时判断，支持轨迹评价。",
+      "distribution": "external",
+      "repository": "TianyuCodings/JevHarness",
+      "url": "https://github.com/TianyuCodings/JevHarness",
+      "version": "34d5c9602f6f73792e2c625cc31dd9ed7b4f39b5",
+      "revision": "34d5c9602f6f73792e2c625cc31dd9ed7b4f39b5",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "TianyuCodings",
+        "stars": 141,
+        "pushedAt": "2026-09-21T10:39:01Z",
+        "updatedAt": "2026-09-22T21:40:07Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-09-23T00:05:46.581502+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/TianyuCodings/JevHarness/blob/34d5c9602f6f73792e2c625cc31dd9ed7b4f39b5/auto_jev/providers.py#L110",
+          "summary": "由生成模型编写任务专用执行框架，再通过 Jev 的类型化调用做运行时判断，支持轨迹评价。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/TianyuCodings/JevHarness/blob/34d5c9602f6f73792e2c625cc31dd9ed7b4f39b5/README.md#L7",
+          "summary": "由生成模型编写任务专用执行框架，再通过 Jev 的类型化调用做运行时判断，支持轨迹评价。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/TianyuCodings/JevHarness/blob/34d5c9602f6f73792e2c625cc31dd9ed7b4f39b5/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "hyperliquid-jev-trade",
+      "kind": "tool",
+      "category": "finance",
+      "description": "Hyperliquid 交易项目使用 TypeSafe SDK 请求 Jev 判断买入、卖出或持有；本市场未接账户或下单。",
+      "distribution": "external",
+      "repository": "aowang-ai/jev-trade",
+      "url": "https://github.com/aowang-ai/jev-trade",
+      "version": "a3f2f834a1b97dd42fab1193814179ac2e96d7cd",
+      "revision": "a3f2f834a1b97dd42fab1193814179ac2e96d7cd",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "aowang-ai",
+        "stars": 109,
+        "pushedAt": "2026-09-21T14:19:47Z",
+        "updatedAt": "2026-09-22T21:01:06Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-09-23T00:05:48.647794+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/aowang-ai/jev-trade/blob/a3f2f834a1b97dd42fab1193814179ac2e96d7cd/src/model.ts#L339",
+          "summary": "Hyperliquid 交易项目使用 TypeSafe SDK 请求 Jev 判断买入、卖出或持有；本市场未接账户或下单。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/aowang-ai/jev-trade/blob/a3f2f834a1b97dd42fab1193814179ac2e96d7cd/README.md#L6",
+          "summary": "Hyperliquid 交易项目使用 TypeSafe SDK 请求 Jev 判断买入、卖出或持有；本市场未接账户或下单。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/aowang-ai/jev-trade/blob/a3f2f834a1b97dd42fab1193814179ac2e96d7cd/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "kirograph-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "代码知识图谱工具可选使用 Jev 判断记忆关系、Wiki 矛盾与认证特征。",
+      "distribution": "external",
+      "repository": "davide-desio-eleva/kirograph",
+      "url": "https://github.com/davide-desio-eleva/kirograph",
+      "version": "78a3c7b9f9b491997f28df3c76a931de1bea64d6",
+      "revision": "78a3c7b9f9b491997f28df3c76a931de1bea64d6",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "davide-desio-eleva",
+        "stars": 151,
+        "pushedAt": "2026-09-22T20:56:15Z",
+        "updatedAt": "2026-09-22T20:54:54Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:49.626205+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/davide-desio-eleva/kirograph/blob/78a3c7b9f9b491997f28df3c76a931de1bea64d6/src/jev/client.ts#L59",
+          "summary": "代码知识图谱工具可选使用 Jev 判断记忆关系、Wiki 矛盾与认证特征。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/davide-desio-eleva/kirograph/blob/78a3c7b9f9b491997f28df3c76a931de1bea64d6/README.md#L190",
+          "summary": "代码知识图谱工具可选使用 Jev 判断记忆关系、Wiki 矛盾与认证特征。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/davide-desio-eleva/kirograph/blob/78a3c7b9f9b491997f28df3c76a931de1bea64d6/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "gomodel-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Go AI 网关实现原生 System One 透传，可连接 TypeSafe Jev；本地兼容服务单独配置。",
+      "distribution": "external",
+      "repository": "ENTERPILOT/GoModel",
+      "url": "https://github.com/ENTERPILOT/GoModel",
+      "version": "330558ae233b0257e08b7e49e1f2150db09678b7",
+      "revision": "330558ae233b0257e08b7e49e1f2150db09678b7",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "ENTERPILOT",
+        "stars": 1180,
+        "pushedAt": "2026-09-22T20:29:00Z",
+        "updatedAt": "2026-09-22T20:23:29Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:50.721827+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ENTERPILOT/GoModel/blob/330558ae233b0257e08b7e49e1f2150db09678b7/internal/providers/jev/jev.go#L123",
+          "summary": "Go AI 网关实现原生 System One 透传，可连接 TypeSafe Jev；本地兼容服务单独配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ENTERPILOT/GoModel/blob/330558ae233b0257e08b7e49e1f2150db09678b7/README.md#L135",
+          "summary": "Go AI 网关实现原生 System One 透传，可连接 TypeSafe Jev；本地兼容服务单独配置。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/ENTERPILOT/GoModel/blob/330558ae233b0257e08b7e49e1f2150db09678b7/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-webmcp-extension",
+      "kind": "tool",
+      "category": "computer-use",
+      "description": "Chrome 扩展让 Jev 根据页面 WebMCP 工具定义选择工具并填充候选参数。",
+      "distribution": "external",
+      "repository": "sdras/jev-webmcp-extension",
+      "url": "https://github.com/sdras/jev-webmcp-extension",
+      "version": "1ec3afb6cebf116d811a3c8a073414edaf5cb67c",
+      "revision": "1ec3afb6cebf116d811a3c8a073414edaf5cb67c",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "sdras",
+        "stars": 101,
+        "pushedAt": "2026-09-20T16:18:14Z",
+        "updatedAt": "2026-09-22T19:29:31Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-09-23T00:05:51.736589+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/sdras/jev-webmcp-extension/blob/1ec3afb6cebf116d811a3c8a073414edaf5cb67c/src/jev.js#L35",
+          "summary": "Chrome 扩展让 Jev 根据页面 WebMCP 工具定义选择工具并填充候选参数。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/sdras/jev-webmcp-extension/blob/1ec3afb6cebf116d811a3c8a073414edaf5cb67c/README.md#L3",
+          "summary": "Chrome 扩展让 Jev 根据页面 WebMCP 工具定义选择工具并填充候选参数。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/sdras/jev-webmcp-extension/blob/1ec3afb6cebf116d811a3c8a073414edaf5cb67c/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-workflow-builder",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "基于 Liveblocks 的多人工作流编辑演示，将 Jev 类型化判断与生成模型节点组合。",
+      "distribution": "external",
+      "repository": "CTNicholas/jev-workflow-builder",
+      "url": "https://github.com/CTNicholas/jev-workflow-builder",
+      "version": "9a652d22216028a64ccaa7468754e45e1860618b",
+      "revision": "9a652d22216028a64ccaa7468754e45e1860618b",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "CTNicholas",
+        "stars": 132,
+        "pushedAt": "2026-09-21T16:03:42Z",
+        "updatedAt": "2026-09-22T19:15:34Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-09-23T00:05:52.687676+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/CTNicholas/jev-workflow-builder/blob/9a652d22216028a64ccaa7468754e45e1860618b/app/workflow/server/typesafe.ts#L115",
+          "summary": "基于 Liveblocks 的多人工作流编辑演示，将 Jev 类型化判断与生成模型节点组合。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/CTNicholas/jev-workflow-builder/blob/9a652d22216028a64ccaa7468754e45e1860618b/README.md#L5",
+          "summary": "基于 Liveblocks 的多人工作流编辑演示，将 Jev 类型化判断与生成模型节点组合。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/CTNicholas/jev-workflow-builder/blob/9a652d22216028a64ccaa7468754e45e1860618b/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-shell-history",
+      "kind": "tool",
+      "category": "agent-context",
+      "description": "zsh 自动建议插件使用 Jev 对历史命令候选排序，启用时会向提供商提交相关上下文。",
+      "distribution": "external",
+      "repository": "mrnugget/jev-shell-history",
+      "url": "https://github.com/mrnugget/jev-shell-history",
+      "version": "4b2b75d26c0ccf5726263904514a22a8e11659ea",
+      "revision": "4b2b75d26c0ccf5726263904514a22a8e11659ea",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "mrnugget",
+        "stars": 101,
+        "pushedAt": "2026-09-18T08:11:11Z",
+        "updatedAt": "2026-09-22T17:09:51Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-09-23T00:05:54.056660+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/mrnugget/jev-shell-history/blob/4b2b75d26c0ccf5726263904514a22a8e11659ea/src/suggest.ts#L174",
+          "summary": "zsh 自动建议插件使用 Jev 对历史命令候选排序，启用时会向提供商提交相关上下文。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mrnugget/jev-shell-history/blob/4b2b75d26c0ccf5726263904514a22a8e11659ea/README.md#L3",
+          "summary": "zsh 自动建议插件使用 Jev 对历史命令候选排序，启用时会向提供商提交相关上下文。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/mrnugget/jev-shell-history/blob/4b2b75d26c0ccf5726263904514a22a8e11659ea/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "tg-spam-jev",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "Telegram 反垃圾工具提供可选 Jev 判断后端，由本地阈值将概率转成分类结果。",
+      "distribution": "external",
+      "repository": "umputun/tg-spam",
+      "url": "https://github.com/umputun/tg-spam",
+      "version": "d66bd841e80f2ad772bac0cc13228991d4549c86",
+      "revision": "d66bd841e80f2ad772bac0cc13228991d4549c86",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-23",
+      "github": {
+        "owner": "umputun",
+        "stars": 446,
+        "pushedAt": "2026-09-22T02:31:04Z",
+        "updatedAt": "2026-09-22T02:28:20Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-23T00:05:59.990126+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/umputun/tg-spam/blob/d66bd841e80f2ad772bac0cc13228991d4549c86/lib/tgspam/jev.go#L168",
+          "summary": "Telegram 反垃圾工具提供可选 Jev 判断后端，由本地阈值将概率转成分类结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/umputun/tg-spam/blob/d66bd841e80f2ad772bac0cc13228991d4549c86/README.md#L131",
+          "summary": "Telegram 反垃圾工具提供可选 Jev 判断后端，由本地阈值将概率转成分类结果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/umputun/tg-spam/blob/d66bd841e80f2ad772bac0cc13228991d4549c86/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    }
+  ],
+  "excluded": [
+    {
+      "repository": "NandhaKishorM/laya",
+      "stars": 16475,
+      "revision": "c7527708f9f5220c669d8aa385077cd28d04708a",
+      "checkedAt": "2026-09-23T00:05:25.064985+00:00",
+      "evidenceUrl": "https://github.com/NandhaKishorM/laya/blob/c7527708f9f5220c669d8aa385077cd28d04708a/README.md",
+      "reason": "README 明确 Jev 对照数据来自第三方且此处未调用 TypeSafe API；本地替代模型不按实际 Jev 接入收录。"
+    },
+    {
+      "repository": "yibie/awesome-jev",
+      "stars": 1302,
+      "revision": "a60d0f342e7a0ed72cb8c1b996701dc7594ee3e3",
+      "checkedAt": "2026-09-23T00:05:25.121253+00:00",
+      "evidenceUrl": "https://github.com/yibie/awesome-jev/blob/a60d0f342e7a0ed72cb8c1b996701dc7594ee3e3/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "AbdelStark/awesome-typesafe-jev",
+      "stars": 471,
+      "revision": "ebb32cdc9e7a288e5066592fb05a608e62578c71",
+      "checkedAt": "2026-09-23T00:05:25.139681+00:00",
+      "evidenceUrl": "https://github.com/AbdelStark/awesome-typesafe-jev/blob/ebb32cdc9e7a288e5066592fb05a608e62578c71/README.md",
+      "reason": "目录自身提供检索指引和已保存的文档示例；检查材料未证明目录调用 Jev。原名 awesome-typesafe，按当前规范仓库名记录。"
+    },
+    {
+      "repository": "wfzyx/von",
+      "stars": 487,
+      "revision": "a1867ee4de61ebab03e20e33380f4abda402f414",
+      "checkedAt": "2026-09-23T00:05:24.768742+00:00",
+      "evidenceUrl": "https://github.com/wfzyx/von/blob/a1867ee4de61ebab03e20e33380f4abda402f414/README.md",
+      "reason": "已检查比较脚本使用公开结果或本地模型，未据此核实真实 Jev 调用；协议相似和引用成绩不等于接入。"
+    },
+    {
+      "repository": "heyjunpenn/awesome-jev",
+      "stars": 534,
+      "revision": "24279e3fb0a949ae87abd0d772530c1227cf86a7",
+      "checkedAt": "2026-09-23T00:05:24.956287+00:00",
+      "evidenceUrl": "https://github.com/heyjunpenn/awesome-jev/blob/24279e3fb0a949ae87abd0d772530c1227cf86a7/README.md",
+      "reason": "项目、用例或演示资源目录；检查材料未显示目录自身实际调用 Jev。"
+    },
+    {
+      "repository": "TheoLeeCJ/SemIf",
+      "stars": 3843,
+      "revision": "1f2dea3e25379f9dfc98cb83c324f00ab5deda37",
+      "checkedAt": "2026-09-23T00:05:27.293373+00:00",
+      "evidenceUrl": "https://github.com/TheoLeeCJ/SemIf/blob/1f2dea3e25379f9dfc98cb83c324f00ab5deda37/README.md",
+      "reason": "已检查比较脚本使用公开结果或本地模型，未据此核实真实 Jev 调用；协议相似和引用成绩不等于接入。"
+    },
+    {
+      "repository": "undefined-ui/second-brain-os",
+      "stars": 149,
+      "revision": "ca92af9cea7815b5897f98733a7974ba80638c91",
+      "checkedAt": "2026-09-23T00:05:27.410737+00:00",
+      "evidenceUrl": "https://github.com/undefined-ui/second-brain-os/blob/ca92af9cea7815b5897f98733a7974ba80638c91/README.md",
+      "reason": "README 标注等待 Jev 接入，替换指引中的 Jev import 仍为注释示例；未核实当前可用的 Jev 后端。"
+    },
+    {
+      "repository": "malevrigns/agent-jev",
+      "stars": 202,
+      "revision": "b66a8cef7abdf66e6795eb229b55b387709f6ff7",
+      "checkedAt": "2026-09-23T00:05:27.914100+00:00",
+      "evidenceUrl": "https://github.com/malevrigns/agent-jev/blob/b66a8cef7abdf66e6795eb229b55b387709f6ff7/README.md",
+      "reason": "检查材料展示本地模型、模型转换或协议兼容；未核实此仓库直接调用 TypeSafe Jev 的实现。"
+    },
+    {
+      "repository": "vinnylarouge/jevlike",
+      "stars": 1235,
+      "revision": "94f5fd1b0b11d52bbdfdf4e0ee6aa96b568f8452",
+      "checkedAt": "2026-09-23T00:05:27.884527+00:00",
+      "evidenceUrl": "https://github.com/vinnylarouge/jevlike/blob/94f5fd1b0b11d52bbdfdf4e0ee6aa96b568f8452/README.md",
+      "reason": "已检查材料展示本地替代实现、协议兼容或其他提供商适配；尚未核实此仓库直接调用真实 Jev 的能力，不按接入项目收录。"
+    },
+    {
+      "repository": "razorback16/openjev",
+      "stars": 315,
+      "revision": "e04794ab36e4f7e6040c2547baecdb2737ce2e79",
+      "checkedAt": "2026-09-23T00:05:27.592063+00:00",
+      "evidenceUrl": "https://github.com/razorback16/openjev/blob/e04794ab36e4f7e6040c2547baecdb2737ce2e79/README.md",
+      "reason": "已检查材料展示本地替代实现、协议兼容或其他提供商适配；尚未核实此仓库直接调用真实 Jev 的能力，不按接入项目收录。"
+    },
+    {
+      "repository": "john-rocky/coreai-model-zoo",
+      "stars": 444,
+      "revision": "df8829de627803c2a5ddbb76d1090e4d26b1806d",
+      "checkedAt": "2026-09-23T00:05:29.851575+00:00",
+      "evidenceUrl": "https://github.com/john-rocky/coreai-model-zoo/blob/df8829de627803c2a5ddbb76d1090e4d26b1806d/README.md",
+      "reason": "检查材料展示本地模型、模型转换或协议兼容；未核实此仓库直接调用 TypeSafe Jev 的实现。"
+    },
+    {
+      "repository": "Rizzo-AI-Academy/rizzo-flow",
+      "stars": 347,
+      "revision": "d34665b7a28c62b79f37939f2fd83f5fe659fbf9",
+      "checkedAt": "2026-09-23T00:05:30.117473+00:00",
+      "evidenceUrl": "https://github.com/Rizzo-AI-Academy/rizzo-flow/blob/d34665b7a28c62b79f37939f2fd83f5fe659fbf9/README.md",
+      "reason": "检查材料展示本地替代模型和 TypeSafe 协议兼容，未核实真实 Jev 请求入口。"
+    },
+    {
+      "repository": "receptron/laya",
+      "stars": 289,
+      "revision": "6478649e723122ca24bbf5fb69ed1010023c9750",
+      "checkedAt": "2026-09-23T00:05:30.478184+00:00",
+      "evidenceUrl": "https://github.com/receptron/laya/blob/6478649e723122ca24bbf5fb69ed1010023c9750/README.md",
+      "reason": "检查材料展示本地替代模型和 TypeSafe 协议兼容，未核实真实 Jev 请求入口。"
+    },
+    {
+      "repository": "hellogumbo/awesome-jev",
+      "stars": 143,
+      "revision": "e2014cdb35d7d699795c8ca28904e8f42568bf45",
+      "checkedAt": "2026-09-23T00:05:33.153084+00:00",
+      "evidenceUrl": "https://github.com/hellogumbo/awesome-jev/blob/e2014cdb35d7d699795c8ca28904e8f42568bf45/README.md",
+      "reason": "项目或研究资源目录；检查材料未显示目录自身实际调用 Jev。"
+    },
+    {
+      "repository": "valentynkit/awesome-jev-typesafe",
+      "stars": 130,
+      "revision": "2ef1e454daa3a7b8cfd0852d6e3a3698f6cc9eeb",
+      "checkedAt": "2026-09-23T00:05:34.776940+00:00",
+      "evidenceUrl": "https://github.com/valentynkit/awesome-jev-typesafe/blob/2ef1e454daa3a7b8cfd0852d6e3a3698f6cc9eeb/readme.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "logicrw/awesome-jev-projects",
+      "stars": 388,
+      "revision": "a62b282464ce2dfd197cdef302c7a6b87c8ace57",
+      "checkedAt": "2026-09-23T00:05:35.853824+00:00",
+      "evidenceUrl": "https://github.com/logicrw/awesome-jev-projects/blob/a62b282464ce2dfd197cdef302c7a6b87c8ace57/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "githubnext/localjev",
+      "stars": 730,
+      "revision": "3f23e36e1a3bff46c7e83e8e3781d3512bc82021",
+      "checkedAt": "2026-09-23T00:05:35.115339+00:00",
+      "evidenceUrl": "https://github.com/githubnext/localjev/blob/3f23e36e1a3bff46c7e83e8e3781d3512bc82021/README.md",
+      "reason": "已检查材料展示本地替代实现、协议兼容或其他提供商适配；尚未核实此仓库直接调用真实 Jev 的能力，不按接入项目收录。"
+    },
+    {
+      "repository": "AnotiaWang/awesome-jev",
+      "stars": 298,
+      "revision": "06c6f5422b215d4fcefb94c31f598a3939ac5dc7",
+      "checkedAt": "2026-09-23T00:05:36.412727+00:00",
+      "evidenceUrl": "https://github.com/AnotiaWang/awesome-jev/blob/06c6f5422b215d4fcefb94c31f598a3939ac5dc7/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "typesafe-ai/system-one-adapter-python",
+      "stars": 265,
+      "revision": "e1d4cc938204b22fc5a3c3aca7044072fe3f712d",
+      "checkedAt": "2026-09-23T00:05:35.713949+00:00",
+      "evidenceUrl": "https://github.com/typesafe-ai/system-one-adapter-python/blob/e1d4cc938204b22fc5a3c3aca7044072fe3f712d/README.md",
+      "reason": "已检查材料展示本地替代实现、协议兼容或其他提供商适配；尚未核实此仓库直接调用真实 Jev 的能力，不按接入项目收录。"
+    },
+    {
+      "repository": "cxyfreedom/website-hot-hub",
+      "stars": 410,
+      "revision": "89f8f5ecf7e4aba4e96ae66e4b62cfd63610a48a",
+      "checkedAt": "2026-09-23T00:05:37.341893+00:00",
+      "evidenceUrl": "https://github.com/cxyfreedom/website-hot-hub/blob/89f8f5ecf7e4aba4e96ae66e4b62cfd63610a48a/README.md",
+      "reason": "热点、文章或学习路线中的提及，未核实当前仓库实际接入。"
+    },
+    {
+      "repository": "jevajs/Jeva",
+      "stars": 226,
+      "revision": "ee0218ccb52d9a48bb3f391501402997c3fcfbd8",
+      "checkedAt": "2026-09-23T00:05:37.603183+00:00",
+      "evidenceUrl": "https://github.com/jevajs/Jeva/blob/ee0218ccb52d9a48bb3f391501402997c3fcfbd8/README.md",
+      "reason": "同名片段或普通 type-safe 用语；检查材料未找到 TypeSafe AI / Jev 实际集成。"
+    },
+    {
+      "repository": "Amal-David/awesome-jev",
+      "stars": 141,
+      "revision": "81aca4d850b0d2cfd0d42094274d00303f42ab52",
+      "checkedAt": "2026-09-23T00:05:37.496036+00:00",
+      "evidenceUrl": "https://github.com/Amal-David/awesome-jev/blob/81aca4d850b0d2cfd0d42094274d00303f42ab52/.github/README.md",
+      "reason": "项目、用例或演示资源目录；检查材料未显示目录自身实际调用 Jev。"
+    },
+    {
+      "repository": "featherless-ai/simple-jev",
+      "stars": 484,
+      "revision": "b02aa81c915a8193759b3cd33fef74721d6e005b",
+      "checkedAt": "2026-09-23T00:05:38.335731+00:00",
+      "evidenceUrl": "https://github.com/featherless-ai/simple-jev/blob/b02aa81c915a8193759b3cd33fef74721d6e005b/README.md",
+      "reason": "已检查材料展示本地替代实现、协议兼容或其他提供商适配；尚未核实此仓库直接调用真实 Jev 的能力，不按接入项目收录。"
+    },
+    {
+      "repository": "kshetrajna12/reflex",
+      "stars": 120,
+      "revision": "231f896d818a62b94fec305ed553df1088486dcb",
+      "checkedAt": "2026-09-23T00:05:38.787774+00:00",
+      "evidenceUrl": "https://github.com/kshetrajna12/reflex/blob/231f896d818a62b94fec305ed553df1088486dcb/README.md",
+      "reason": "本轮再次确认 scripts/jev_latency_probe.py 为 0 字节。占位文件、协议兼容和引用成绩不足以证明实际 Jev 接入。"
+    },
+    {
+      "repository": "GoldenGnu/jeveassets",
+      "stars": 193,
+      "revision": "04f72717a4047998ec3bafc531849d99eb7337d0",
+      "checkedAt": "2026-09-23T00:05:38.883953+00:00",
+      "evidenceUrl": "https://github.com/GoldenGnu/jeveassets/blob/04f72717a4047998ec3bafc531849d99eb7337d0/readme.txt",
+      "reason": "同名片段或普通 type-safe 用语；检查材料未找到 TypeSafe AI / Jev 实际集成。"
+    },
+    {
+      "repository": "OmniJev/awesome-jev-gallery",
+      "stars": 196,
+      "revision": "bedd462483773a3fdba914bfb7e0a059b30e97c6",
+      "checkedAt": "2026-09-23T00:05:40.426361+00:00",
+      "evidenceUrl": "https://github.com/OmniJev/awesome-jev-gallery/blob/bedd462483773a3fdba914bfb7e0a059b30e97c6/README.md",
+      "reason": "项目或研究资源目录；检查材料未显示目录自身实际调用 Jev。"
+    },
+    {
+      "repository": "Yinsongxu/LLM2Jev",
+      "stars": 136,
+      "revision": "4f1059f2e6bab9305fad6b9e3ceb9dd8da28bc88",
+      "checkedAt": "2026-09-23T00:05:40.100150+00:00",
+      "evidenceUrl": "https://github.com/Yinsongxu/LLM2Jev/blob/4f1059f2e6bab9305fad6b9e3ceb9dd8da28bc88/README.md",
+      "reason": "检查材料展示本地替代模型和 TypeSafe 协议兼容，未核实真实 Jev 请求入口。"
+    },
+    {
+      "repository": "embabel/embabel-agent",
+      "stars": 4462,
+      "revision": "39e376dbb6a6188ed3f519fbcfb8bc05611d3df7",
+      "checkedAt": "2026-09-23T00:05:41.275710+00:00",
+      "evidenceUrl": "https://github.com/embabel/embabel-agent/blob/39e376dbb6a6188ed3f519fbcfb8bc05611d3df7/README.md",
+      "reason": "同名片段或普通 type-safe 用语；检查材料未找到 TypeSafe AI / Jev 实际集成。"
+    },
+    {
+      "repository": "Heman10x-NGU/openJev-verdict-2.0",
+      "stars": 266,
+      "revision": "bff28567cff463b833bf044f351a8b7945d53e07",
+      "checkedAt": "2026-09-23T00:05:42.134630+00:00",
+      "evidenceUrl": "https://github.com/Heman10x-NGU/openJev-verdict-2.0/blob/bff28567cff463b833bf044f351a8b7945d53e07/README.md",
+      "reason": "已检查材料展示本地替代实现、协议兼容或其他提供商适配；尚未核实此仓库直接调用真实 Jev 的能力，不按接入项目收录。"
+    },
+    {
+      "repository": "1c7/chinese-independent-developer",
+      "stars": 61535,
+      "revision": "db5f3a8cbf3de0b89e92287fe2925af9bc05d8f9",
+      "checkedAt": "2026-09-23T00:05:42.870923+00:00",
+      "evidenceUrl": "https://github.com/1c7/chinese-independent-developer/blob/db5f3a8cbf3de0b89e92287fe2925af9bc05d8f9/README.md",
+      "reason": "仅项目、文章、招聘或资料中的提及，未核实当前仓库实际接入。"
+    },
+    {
+      "repository": "Mapika/decider",
+      "stars": 311,
+      "revision": "7557fe058e0b31ffcf754b7c5bb31a452454ce89",
+      "checkedAt": "2026-09-23T00:05:42.746003+00:00",
+      "evidenceUrl": "https://github.com/Mapika/decider/blob/7557fe058e0b31ffcf754b7c5bb31a452454ce89/README.md",
+      "reason": "已检查材料展示本地替代实现、协议兼容或其他提供商适配；尚未核实此仓库直接调用真实 Jev 的能力，不按接入项目收录。"
+    },
+    {
+      "repository": "walidboulanouar/awesome-jev-use-cases",
+      "stars": 108,
+      "revision": "80bd47333db768044cec10b1327c9ca3bb247994",
+      "checkedAt": "2026-09-23T00:05:43.486317+00:00",
+      "evidenceUrl": "https://github.com/walidboulanouar/awesome-jev-use-cases/blob/80bd47333db768044cec10b1327c9ca3bb247994/README.md",
+      "reason": "项目、用例或演示资源目录；检查材料未显示目录自身实际调用 Jev。"
+    },
+    {
+      "repository": "hashgraph-online/awesome-codex-plugins",
+      "stars": 1067,
+      "revision": "e1eee36009f77e3d9a3c129560621d148be45a98",
+      "checkedAt": "2026-09-23T00:05:44.480806+00:00",
+      "evidenceUrl": "https://github.com/hashgraph-online/awesome-codex-plugins/blob/e1eee36009f77e3d9a3c129560621d148be45a98/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "amitshekhariitbhu/ai-engineering-interview-questions",
+      "stars": 3163,
+      "revision": "2daf2ab0058516665365ab1c162b3a8122d087b5",
+      "checkedAt": "2026-09-23T00:05:44.394271+00:00",
+      "evidenceUrl": "https://github.com/amitshekhariitbhu/ai-engineering-interview-questions/blob/2daf2ab0058516665365ab1c162b3a8122d087b5/README.md",
+      "reason": "仅项目、文章、招聘或资料中的提及，未核实当前仓库实际接入。"
+    },
+    {
+      "repository": "ryana/jevify",
+      "stars": 171,
+      "revision": "87a9ef3674f111c74bb33cccd3bfa56bd0c4a15c",
+      "checkedAt": "2026-09-23T00:05:44.933995+00:00",
+      "evidenceUrl": "https://github.com/ryana/jevify/blob/87a9ef3674f111c74bb33cccd3bfa56bd0c4a15c/README.md",
+      "reason": "这是调查项目如何使用 Jev 的提示词，未实现 Jev 集成。"
+    },
+    {
+      "repository": "daseinlabs/open-jev",
+      "stars": 102,
+      "revision": "d0458147d49d0159371154a18938bce760d2af72",
+      "checkedAt": "2026-09-23T00:05:45.094536+00:00",
+      "evidenceUrl": "https://github.com/daseinlabs/open-jev/blob/d0458147d49d0159371154a18938bce760d2af72/README.md",
+      "reason": "检查材料展示本地模型、模型转换或协议兼容；未核实此仓库直接调用 TypeSafe Jev 的实现。"
+    },
+    {
+      "repository": "12britz/awesome-free-models",
+      "stars": 2285,
+      "revision": "69fc7494a3dfcdaf9a1a904acf2098940cd6ee88",
+      "checkedAt": "2026-09-23T00:05:45.269634+00:00",
+      "evidenceUrl": "https://github.com/12britz/awesome-free-models/blob/69fc7494a3dfcdaf9a1a904acf2098940cd6ee88/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "cobanov/awesome-jev",
+      "stars": 345,
+      "revision": "bf6e99bebabdaa5cb6038d798fb1c3257ff9b37f",
+      "checkedAt": "2026-09-23T00:05:47.013631+00:00",
+      "evidenceUrl": "https://github.com/cobanov/awesome-jev/blob/bf6e99bebabdaa5cb6038d798fb1c3257ff9b37f/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "kraayenjon/awesome-jev",
+      "stars": 111,
+      "revision": "22570dcd8662ae039860a1dfad7d7aec4aff8e15",
+      "checkedAt": "2026-09-23T00:05:47.931841+00:00",
+      "evidenceUrl": "https://github.com/kraayenjon/awesome-jev/blob/22570dcd8662ae039860a1dfad7d7aec4aff8e15/README.md",
+      "reason": "项目、用例或演示资源目录；检查材料未显示目录自身实际调用 Jev。"
+    },
+    {
+      "repository": "hasso5703/dgx-spark-qwen38",
+      "stars": 196,
+      "revision": "4b2c9defacb20c2641ceff214f156ca6f42080fd",
+      "checkedAt": "2026-09-23T00:05:48.007117+00:00",
+      "evidenceUrl": "https://github.com/hasso5703/dgx-spark-qwen38/blob/4b2c9defacb20c2641ceff214f156ca6f42080fd/README.md",
+      "reason": "检查材料展示本地模型、模型转换或协议兼容；未核实此仓库直接调用 TypeSafe Jev 的实现。"
+    },
+    {
+      "repository": "simonw/simonw",
+      "stars": 443,
+      "revision": "6e5b59c7b4b9f0bd6f6023f0f1b914ab3a31fdac",
+      "checkedAt": "2026-09-23T00:05:48.113829+00:00",
+      "evidenceUrl": "https://github.com/simonw/simonw/blob/6e5b59c7b4b9f0bd6f6023f0f1b914ab3a31fdac/README.md",
+      "reason": "热点、文章或学习路线中的提及，未核实当前仓库实际接入。"
+    },
+    {
+      "repository": "APUS-AI-Lab/fast-browser-use",
+      "stars": 116,
+      "revision": "59f28463f29020925e006a99f67e40949fc02218",
+      "checkedAt": "2026-09-23T00:05:50.082799+00:00",
+      "evidenceUrl": "https://github.com/APUS-AI-Lab/fast-browser-use/blob/59f28463f29020925e006a99f67e40949fc02218/README.md",
+      "reason": "检查材料展示本地模型、模型转换或协议兼容；未核实此仓库直接调用 TypeSafe Jev 的实现。"
+    },
+    {
+      "repository": "reticlehq/reticle",
+      "stars": 818,
+      "revision": "12d18dd4cb772da46ae20d7bbcccc9a7a227cfeb",
+      "checkedAt": "2026-09-23T00:05:50.129960+00:00",
+      "evidenceUrl": "https://github.com/reticlehq/reticle/blob/12d18dd4cb772da46ae20d7bbcccc9a7a227cfeb/README.md",
+      "reason": "README 的 On the roadmap 明确说明 Jev 层尚未交付，不将规划当作已接入。"
+    },
+    {
+      "repository": "v-modal/awesome-jev-tools",
+      "stars": 657,
+      "revision": "f117e0c368d6e293bf5fdf99244a1173a6dc2ae0",
+      "checkedAt": "2026-09-23T00:05:50.362654+00:00",
+      "evidenceUrl": "https://github.com/v-modal/awesome-jev-tools/blob/f117e0c368d6e293bf5fdf99244a1173a6dc2ae0/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "ikaijua/Awesome-AITools",
+      "stars": 6192,
+      "revision": "c32cbf1dd6d76b4507114ca9d05491a30488b257",
+      "checkedAt": "2026-09-23T00:05:51.049327+00:00",
+      "evidenceUrl": "https://github.com/ikaijua/Awesome-AITools/blob/c32cbf1dd6d76b4507114ca9d05491a30488b257/README.md",
+      "reason": "工具榜单、教程资源、论文或 RSS 中的提及，未核实当前仓库实际接入 Jev。"
+    },
+    {
+      "repository": "amitshekhariitbhu/ai-engineer-roadmap",
+      "stars": 177,
+      "revision": "a4a74568b652f7e52adf670b8a9fa6aeb7a39f3f",
+      "checkedAt": "2026-09-23T00:05:52.827628+00:00",
+      "evidenceUrl": "https://github.com/amitshekhariitbhu/ai-engineer-roadmap/blob/a4a74568b652f7e52adf670b8a9fa6aeb7a39f3f/README.md",
+      "reason": "热点、文章或学习路线中的提及，未核实当前仓库实际接入。"
+    },
+    {
+      "repository": "hr98w/jev-visual",
+      "stars": 240,
+      "revision": "4382bba455647400951429134ceb012ca155e3fe",
+      "checkedAt": "2026-09-23T00:05:52.623500+00:00",
+      "evidenceUrl": "https://github.com/hr98w/jev-visual/blob/4382bba455647400951429134ceb012ca155e3fe/README.md",
+      "reason": "已检查材料展示本地替代实现、协议兼容或其他提供商适配；尚未核实此仓库直接调用真实 Jev 的能力，不按接入项目收录。"
+    },
+    {
+      "repository": "ai-that-works/ai-that-works",
+      "stars": 1959,
+      "revision": "82081feb764cfd76ec478b4ea439602ad7246e35",
+      "checkedAt": "2026-09-23T00:05:53.632320+00:00",
+      "evidenceUrl": "https://github.com/ai-that-works/ai-that-works/blob/82081feb764cfd76ec478b4ea439602ad7246e35/README.md",
+      "reason": "本轮检查 2026-09-22-all-about-jev 目录仍只有活动元数据和缩略图，未核实 Jev 接入实现。"
+    },
+    {
+      "repository": "frutik/awesome-search",
+      "stars": 1563,
+      "revision": "986d3e59c93f7c530f69d936c6fd449c2acfcf29",
+      "checkedAt": "2026-09-23T00:05:54.009981+00:00",
+      "evidenceUrl": "https://github.com/frutik/awesome-search/blob/986d3e59c93f7c530f69d936c6fd449c2acfcf29/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "Danielskry/Awesome-RAG",
+      "stars": 1375,
+      "revision": "c1af6bbc4ecf9ba50c38fafc440286400fe4d85e",
+      "checkedAt": "2026-09-23T00:05:55.436890+00:00",
+      "evidenceUrl": "https://github.com/Danielskry/Awesome-RAG/blob/c1af6bbc4ecf9ba50c38fafc440286400fe4d85e/README.md",
+      "reason": "工具榜单、教程资源、论文或 RSS 中的提及，未核实当前仓库实际接入 Jev。"
+    },
+    {
+      "repository": "LinklyAI/best-skills",
+      "stars": 589,
+      "revision": "a6751098db82ae96b6cdb3de944022046b68b460",
+      "checkedAt": "2026-09-23T00:05:56.007145+00:00",
+      "evidenceUrl": "https://github.com/LinklyAI/best-skills/blob/a6751098db82ae96b6cdb3de944022046b68b460/README.md",
+      "reason": "工具榜单、教程资源、论文或 RSS 中的提及，未核实当前仓库实际接入 Jev。"
+    },
+    {
+      "repository": "Futureppo/typesafe_register",
+      "stars": 113,
+      "revision": "c62c1433d7e30b1b90fd16ae303798057218753b",
+      "checkedAt": "2026-09-23T00:05:55.437721+00:00",
+      "evidenceUrl": "https://github.com/Futureppo/typesafe_register/blob/c62c1433d7e30b1b90fd16ae303798057218753b/README.md",
+      "reason": "README 描述批量注册账号和创建 API key，不是本次收录的 Jev 判断应用、SDK 或执行工具。"
+    },
+    {
+      "repository": "maurobonfietti/remote-jobs",
+      "stars": 384,
+      "revision": "fc1d271b8976ad485b55ceaf48ca5c632b34f89d",
+      "checkedAt": "2026-09-23T00:05:56.514710+00:00",
+      "evidenceUrl": "https://github.com/maurobonfietti/remote-jobs/blob/fc1d271b8976ad485b55ceaf48ca5c632b34f89d/README.md",
+      "reason": "仅项目、文章、招聘或资料中的提及，未核实当前仓库实际接入。"
+    },
+    {
+      "repository": "shaftoe/awesome-pi-coding-agent",
+      "stars": 129,
+      "revision": "c093aa96f2fb34d9d2fd9f95d718044ce0152ab2",
+      "checkedAt": "2026-09-23T00:05:56.868051+00:00",
+      "evidenceUrl": "https://github.com/shaftoe/awesome-pi-coding-agent/blob/c093aa96f2fb34d9d2fd9f95d718044ce0152ab2/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "mohitsoni48/TurboLLM",
+      "stars": 276,
+      "revision": "93ea2276b87a8f41fa39a66f7c3609f327f39b16",
+      "checkedAt": "2026-09-23T00:05:58.159291+00:00",
+      "evidenceUrl": "https://github.com/mohitsoni48/TurboLLM/blob/93ea2276b87a8f41fa39a66f7c3609f327f39b16/README.md",
+      "reason": "检查材料展示本地模型、模型转换或协议兼容；未核实此仓库直接调用 TypeSafe Jev 的实现。"
+    },
+    {
+      "repository": "cookiespiggy/agentic-rl",
+      "stars": 108,
+      "revision": "072bdd8c69deb96adb97ca5b85ad4d9b267c220b",
+      "checkedAt": "2026-09-23T00:05:57.750409+00:00",
+      "evidenceUrl": "https://github.com/cookiespiggy/agentic-rl/blob/072bdd8c69deb96adb97ca5b85ad4d9b267c220b/README.md",
+      "reason": "Jev 与强化学习关系的教程章节，检查材料未显示实际 Jev 集成。"
+    },
+    {
+      "repository": "peter123023/awesome-free-llm-api",
+      "stars": 127,
+      "revision": "e6e148181e79b9908204dbcf93b3dbed7ea186b1",
+      "checkedAt": "2026-09-23T00:05:57.940620+00:00",
+      "evidenceUrl": "https://github.com/peter123023/awesome-free-llm-api/blob/e6e148181e79b9908204dbcf93b3dbed7ea186b1/README.md",
+      "reason": "项目目录或资源链接；检查材料未显示目录自身调用 Jev，不仅凭列出 Jev 项目收录。"
+    },
+    {
+      "repository": "Promethe-us/awesome-jev",
+      "stars": 122,
+      "revision": "636623538eda3c363b8c396880ccdc8aba70d424",
+      "checkedAt": "2026-09-23T00:05:58.528245+00:00",
+      "evidenceUrl": "https://github.com/Promethe-us/awesome-jev/blob/636623538eda3c363b8c396880ccdc8aba70d424/README.md",
+      "reason": "项目或研究资源目录；检查材料未显示目录自身实际调用 Jev。"
+    },
+    {
+      "repository": "Tavish9/awesome-daily-AI-arxiv",
+      "stars": 121,
+      "revision": "c1abebd5c68ff3f4793c89c3362b812597085837",
+      "checkedAt": "2026-09-23T00:05:59.303780+00:00",
+      "evidenceUrl": "https://github.com/Tavish9/awesome-daily-AI-arxiv/blob/c1abebd5c68ff3f4793c89c3362b812597085837/README.md",
+      "reason": "工具榜单、教程资源、论文或 RSS 中的提及，未核实当前仓库实际接入 Jev。"
+    },
+    {
+      "repository": "YanjieZe/Paper-List",
+      "stars": 603,
+      "revision": "d2c0088639280699d8d609f3cbc80ec9a491b981",
+      "checkedAt": "2026-09-23T00:06:00.165534+00:00",
+      "evidenceUrl": "https://github.com/YanjieZe/Paper-List/blob/d2c0088639280699d8d609f3cbc80ec9a491b981/README.md",
+      "reason": "仅项目、文章、招聘或资料中的提及，未核实当前仓库实际接入。"
+    },
+    {
+      "repository": "zhaoolee/garss",
+      "stars": 1429,
+      "revision": "dd67fedd0dedf4538fa981710e57118663a7c35b",
+      "checkedAt": "2026-09-23T00:06:00.616677+00:00",
+      "evidenceUrl": "https://github.com/zhaoolee/garss/blob/dd67fedd0dedf4538fa981710e57118663a7c35b/README.md",
+      "reason": "工具榜单、教程资源、论文或 RSS 中的提及，未核实当前仓库实际接入 Jev。"
+    },
+    {
+      "repository": "j-east/JevonsCameraViewer",
+      "stars": 161,
+      "revision": "e9548d74d83df747211bfba3cd280433395ac976",
+      "checkedAt": "2026-09-23T00:06:00.679019+00:00",
+      "evidenceUrl": "https://github.com/j-east/JevonsCameraViewer/blob/e9548d74d83df747211bfba3cd280433395ac976/README.md",
+      "reason": "同名片段或普通 type-safe 用语；检查材料未找到 TypeSafe AI / Jev 实际集成。"
+    },
+    {
+      "repository": "jevois/jevois",
+      "stars": 164,
+      "revision": "4fa3eb1537bd9a76695097d4357d7248e4d4f7e8",
+      "checkedAt": "2026-09-23T00:06:01.144364+00:00",
+      "evidenceUrl": "https://github.com/jevois/jevois/blob/4fa3eb1537bd9a76695097d4357d7248e4d4f7e8/README",
+      "reason": "同名片段或普通 type-safe 用语；检查材料未找到 TypeSafe AI / Jev 实际集成。"
+    },
+    {
+      "repository": "chujianyun/skills",
+      "stars": 737,
+      "revision": "3f971e78b426131477fca63b238050ee9c695abe",
+      "checkedAt": "2026-09-23T00:06:03.002495+00:00",
+      "evidenceUrl": "https://github.com/chujianyun/skills/blob/3f971e78b426131477fca63b238050ee9c695abe/README.md",
+      "reason": "typesafe-wiki 为文档查询封装；未核实此仓库调用 Jev 模型，不按实际模型接入收录。"
+    }
+  ]
+}
