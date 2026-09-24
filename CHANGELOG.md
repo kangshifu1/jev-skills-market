@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-09-24 — daily external discovery
+
+- Add 9 external tools from 197 GitHub candidates; the catalog now contains 137
+  entries, with 121 existing sources deduplicated and 67 candidates excluded.
+- Record pinned Jev calls for UI intent classification, workflow review, graph
+  navigation, Windows chat assistance, evaluation, agent routing and module discovery.
+- Revisit Reticle's earlier exclusion and register its now-implemented Jev page
+  exploration driver, keeping its other roadmap work separate.
+- Preserve all earlier entries and the pending September 23 commit. New entries
+  remain source-reviewed and unexecuted, outside live routing.
+
 ## Unreleased — 2026-09-23 — daily external discovery
 
 - Add 23 external tools from 185 GitHub candidates, bringing the catalog to 128

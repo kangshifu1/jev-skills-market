@@ -5257,6 +5257,426 @@
       ],
       "usageUrl": "https://github.com/umputun/tg-spam/blob/d66bd841e80f2ad772bac0cc13228991d4549c86/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置该工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "shapeshift-jev",
+      "kind": "tool",
+      "category": "interface",
+      "description": "交互界面演示通过 Jev 对输入意图作类型化判断，再由确定性代码选择界面卡片和计算参数。",
+      "distribution": "external",
+      "repository": "anishfn/shapeshift",
+      "url": "https://github.com/anishfn/shapeshift",
+      "version": "5e24166dcbde6e794f0bd5b1b4bd395aaee5fc19",
+      "revision": "5e24166dcbde6e794f0bd5b1b4bd395aaee5fc19",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 1381152958,
+        "owner": "anishfn",
+        "stars": 404,
+        "pushedAt": "2026-09-23T23:57:19Z",
+        "updatedAt": "2026-09-23T23:57:21Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-24T00:05:49.419082+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/anishfn/shapeshift/blob/5e24166dcbde6e794f0bd5b1b4bd395aaee5fc19/src/lib/jev/client.ts#L50",
+          "summary": "交互界面演示通过 Jev 对输入意图作类型化判断，再由确定性代码选择界面卡片和计算参数。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/anishfn/shapeshift/blob/5e24166dcbde6e794f0bd5b1b4bd395aaee5fc19/README.md#L18",
+          "summary": "交互界面演示通过 Jev 对输入意图作类型化判断，再由确定性代码选择界面卡片和计算参数。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/anishfn/shapeshift/blob/5e24166dcbde6e794f0bd5b1b4bd395aaee5fc19/README.md",
+      "usageNote": "上游有离线回退与在线 Jev 两种模式；配置服务端 TypeSafe 凭据后才启用在线路径。未运行任何模式或复现延迟。"
+    },
+    {
+      "id": "jevrev",
+      "kind": "tool",
+      "category": "testing",
+      "description": "智能体工作流工具提供云端 Jev 判断，用于方案筛选、产物证据复核和会话观察；另有回放模式。",
+      "distribution": "external",
+      "repository": "Alex314618-create/JevRev",
+      "url": "https://github.com/Alex314618-create/JevRev",
+      "version": "931499f03743508660030488bbb837d70b800868",
+      "revision": "931499f03743508660030488bbb837d70b800868",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 1378958030,
+        "owner": "Alex314618-create",
+        "stars": 213,
+        "pushedAt": "2026-09-23T16:23:14Z",
+        "updatedAt": "2026-09-23T23:52:52Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-24T00:05:50.346906+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Alex314618-create/JevRev/blob/931499f03743508660030488bbb837d70b800868/src/judge.ts#L145",
+          "summary": "智能体工作流工具提供云端 Jev 判断，用于方案筛选、产物证据复核和会话观察；另有回放模式。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Alex314618-create/JevRev/blob/931499f03743508660030488bbb837d70b800868/README.md#L144",
+          "summary": "智能体工作流工具提供云端 Jev 判断，用于方案筛选、产物证据复核和会话观察；另有回放模式。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Alex314618-create/JevRev/blob/931499f03743508660030488bbb837d70b800868/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "neo4jev",
+      "kind": "tool",
+      "category": "data",
+      "description": "Neo4j 图导航演示使用 TypeSafe SDK 在相邻关系候选中选择下一步，并进行有界图搜索。",
+      "distribution": "external",
+      "repository": "jexp/neo4jev",
+      "url": "https://github.com/jexp/neo4jev",
+      "version": "d157bbe496eb91813475156942bef1c6badfb342",
+      "revision": "d157bbe496eb91813475156942bef1c6badfb342",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 1372296290,
+        "owner": "jexp",
+        "stars": 123,
+        "pushedAt": "2026-09-18T09:26:18Z",
+        "updatedAt": "2026-09-23T23:25:27Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-24T00:05:56.214124+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/jexp/neo4jev/blob/d157bbe496eb91813475156942bef1c6badfb342/src/neo4jev/navigator.py#L421",
+          "summary": "Neo4j 图导航演示使用 TypeSafe SDK 在相邻关系候选中选择下一步，并进行有界图搜索。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/jexp/neo4jev/blob/d157bbe496eb91813475156942bef1c6badfb342/README.md#L4",
+          "summary": "Neo4j 图导航演示使用 TypeSafe SDK 在相邻关系候选中选择下一步，并进行有界图搜索。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/jexp/neo4jev/blob/d157bbe496eb91813475156942bef1c6badfb342/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "lab332-jev-chat-windows",
+      "kind": "tool",
+      "category": "assistant",
+      "description": "仓库的独立 Windows 模块将 UI Automation 或本机 OCR 取得的聊天文本交给 Jev 判断，再可选生成候选回复。",
+      "distribution": "external",
+      "repository": "Liyucheng1997/332_lab-jev-chat",
+      "url": "https://github.com/Liyucheng1997/332_lab-jev-chat",
+      "version": "37628e384ca07fcffa21e7fcd922575ba1b29f7b",
+      "revision": "37628e384ca07fcffa21e7fcd922575ba1b29f7b",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 1380291359,
+        "owner": "Liyucheng1997",
+        "stars": 113,
+        "pushedAt": "2026-09-21T18:10:41Z",
+        "updatedAt": "2026-09-23T23:05:19Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-24T00:05:57.523768+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Liyucheng1997/332_lab-jev-chat/blob/37628e384ca07fcffa21e7fcd922575ba1b29f7b/windows/jev_windows/jev_api.py#L37",
+          "summary": "仓库的独立 Windows 模块将 UI Automation 或本机 OCR 取得的聊天文本交给 Jev 判断，再可选生成候选回复。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Liyucheng1997/332_lab-jev-chat/blob/37628e384ca07fcffa21e7fcd922575ba1b29f7b/windows/README.md#L3",
+          "summary": "Windows 模块说明 UI Automation、本机 OCR、TypeSafe 判断和可选回复生成的分工。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Liyucheng1997/332_lab-jev-chat/blob/37628e384ca07fcffa21e7fcd922575ba1b29f7b/windows/README.md",
+      "usageNote": "只登记 windows/ 模块。该仓库与已有聊天助手的仓库 ID 不同，已查看其独立 Windows 文档和 Jev HTTP 客户端；未读取聊天、安装或启动应用。"
+    },
+    {
+      "id": "reticle-jev-driver",
+      "kind": "tool",
+      "category": "computer-use",
+      "description": "应用验证工具提供 Jev 页面探索驱动，从代码列举的 DOM 动作候选中选择下一步；支持直连与平台代理。",
+      "distribution": "external",
+      "repository": "reticlehq/reticle",
+      "url": "https://github.com/reticlehq/reticle",
+      "version": "4914daa33f02dd5255e8309d9a77dce28f655c30",
+      "revision": "4914daa33f02dd5255e8309d9a77dce28f655c30",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 1265947881,
+        "owner": "reticlehq",
+        "stars": 827,
+        "pushedAt": "2026-09-23T23:52:00Z",
+        "updatedAt": "2026-09-23T22:42:08Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-09-24T00:05:58.381914+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/reticlehq/reticle/blob/4914daa33f02dd5255e8309d9a77dce28f655c30/server/src/features/harness/jev-driver.ts#L616",
+          "summary": "应用验证工具提供 Jev 页面探索驱动，从代码列举的 DOM 动作候选中选择下一步；支持直连与平台代理。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/reticlehq/reticle/blob/4914daa33f02dd5255e8309d9a77dce28f655c30/README.md#L309",
+          "summary": "应用验证工具提供 Jev 页面探索驱动，从代码列举的 DOM 动作候选中选择下一步；支持直连与平台代理。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/reticlehq/reticle/blob/4914daa33f02dd5255e8309d9a77dce28f655c30/docs/autodrive.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。",
+      "reviewNote": "此前只核实到内部验证流程路由的规划；当前 README 309 行及 jev-driver.ts 已确认新增页面探索驱动。此收录只对应已存在的驱动，不把其余规划当作完成。"
+    },
+    {
+      "id": "jevbench",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "类型化决策模型评价工具包含 TypeSafe Jev 原生 API 适配器；未在本市场运行或复现上游榜单。",
+      "distribution": "external",
+      "repository": "fstandhartinger/jevbench",
+      "url": "https://github.com/fstandhartinger/jevbench",
+      "version": "2fa63fa3226cb369795525ed011800f57dcbd894",
+      "revision": "2fa63fa3226cb369795525ed011800f57dcbd894",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 1376848968,
+        "owner": "fstandhartinger",
+        "stars": 105,
+        "pushedAt": "2026-09-23T19:55:18Z",
+        "updatedAt": "2026-09-23T22:31:58Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-24T00:05:58.830764+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/fstandhartinger/jevbench/blob/2fa63fa3226cb369795525ed011800f57dcbd894/jevbench/adapters/typesafe.py#L59",
+          "summary": "类型化决策模型评价工具包含 TypeSafe Jev 原生 API 适配器；未在本市场运行或复现上游榜单。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fstandhartinger/jevbench/blob/2fa63fa3226cb369795525ed011800f57dcbd894/README.md#L11",
+          "summary": "类型化决策模型评价工具包含 TypeSafe Jev 原生 API 适配器；未在本市场运行或复现上游榜单。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/fstandhartinger/jevbench/blob/2fa63fa3226cb369795525ed011800f57dcbd894/README.md",
+      "usageNote": "仅核实 TypeSafe 请求适配器和上游使用说明；未执行基准、取得私有测试集或复现榜单结果。"
+    },
+    {
+      "id": "agent-squad-jev",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "多智能体框架在 Python 和 TypeScript 中提供 JevClassifier，用类型化 Choice 请求选择目标智能体。",
+      "distribution": "external",
+      "repository": "2FastLabs/agent-squad",
+      "url": "https://github.com/2FastLabs/agent-squad",
+      "version": "3d67629ca564eaf35ec7779115c45a42ee23a2bd",
+      "revision": "3d67629ca564eaf35ec7779115c45a42ee23a2bd",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 832647441,
+        "owner": "2FastLabs",
+        "stars": 7770,
+        "pushedAt": "2026-09-23T11:09:25Z",
+        "updatedAt": "2026-09-23T20:33:44Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-09-24T00:06:03.994827+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/2FastLabs/agent-squad/blob/3d67629ca564eaf35ec7779115c45a42ee23a2bd/python/src/agent_squad/classifiers/jev_classifier.py#L198",
+          "summary": "多智能体框架在 Python 和 TypeScript 中提供 JevClassifier，用类型化 Choice 请求选择目标智能体。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/2FastLabs/agent-squad/blob/3d67629ca564eaf35ec7779115c45a42ee23a2bd/README.md#L154",
+          "summary": "多智能体框架在 Python 和 TypeScript 中提供 JevClassifier，用类型化 Choice 请求选择目标智能体。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/2FastLabs/agent-squad/blob/3d67629ca564eaf35ec7779115c45a42ee23a2bd/typescript/src/classifiers/jevClassifier.ts#L289",
+          "summary": "TypeScript 分类器通过 HTTP 调用 Jev，与本次查看的 Python 实现分别核实。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/2FastLabs/agent-squad/blob/3d67629ca564eaf35ec7779115c45a42ee23a2bd/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "castflow-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "开发框架提供默认关闭的 Jev 模块分类器，仅对结构规则无法判断的候选模块请求模型判断。",
+      "distribution": "external",
+      "repository": "yunzeforbetter/CastFlow",
+      "url": "https://github.com/yunzeforbetter/CastFlow",
+      "version": "32a39831b56ea74db79c24705cb0f3a3719163f4",
+      "revision": "32a39831b56ea74db79c24705cb0f3a3719163f4",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 1206894250,
+        "owner": "yunzeforbetter",
+        "stars": 109,
+        "pushedAt": "2026-09-23T08:23:41Z",
+        "updatedAt": "2026-09-23T08:23:46Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-24T00:06:12.821156+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/yunzeforbetter/CastFlow/blob/32a39831b56ea74db79c24705cb0f3a3719163f4/.castflow/jev/mark.py#L406",
+          "summary": "开发框架提供默认关闭的 Jev 模块分类器，仅对结构规则无法判断的候选模块请求模型判断。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/yunzeforbetter/CastFlow/blob/32a39831b56ea74db79c24705cb0f3a3719163f4/README.md#L138",
+          "summary": "开发框架提供默认关闭的 Jev 模块分类器，仅对结构规则无法判断的候选模块请求模型判断。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/yunzeforbetter/CastFlow/blob/32a39831b56ea74db79c24705cb0f3a3719163f4/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "superterminal-jev",
+      "kind": "tool",
+      "category": "agent-context",
+      "description": "终端应用提供可选 Jev 自然语言面板检索，将查询与候选行交给 TypeSafe 或 OpenCode Zen 的 Jev 后端排序。",
+      "distribution": "external",
+      "repository": "sonnylazuardi/superterminal",
+      "url": "https://github.com/sonnylazuardi/superterminal",
+      "version": "4a4727ee2bac8629ea181cb3bb104fbe1af11609",
+      "revision": "4a4727ee2bac8629ea181cb3bb104fbe1af11609",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-24",
+      "github": {
+        "repositoryId": 1352197947,
+        "owner": "sonnylazuardi",
+        "stars": 101,
+        "pushedAt": "2026-09-21T06:37:08Z",
+        "updatedAt": "2026-09-23T07:06:51Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-24T00:06:12.687008+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/sonnylazuardi/superterminal/blob/4a4727ee2bac8629ea181cb3bb104fbe1af11609/packages/app/src/ai/jev.ts#L217",
+          "summary": "终端应用提供可选 Jev 自然语言面板检索，将查询与候选行交给 TypeSafe 或 OpenCode Zen 的 Jev 后端排序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/sonnylazuardi/superterminal/blob/4a4727ee2bac8629ea181cb3bb104fbe1af11609/README.md#L59",
+          "summary": "终端应用提供可选 Jev 自然语言面板检索，将查询与候选行交给 TypeSafe 或 OpenCode Zen 的 Jev 后端排序。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/sonnylazuardi/superterminal/blob/4a4727ee2bac8629ea181cb3bb104fbe1af11609/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
     }
   ]
 }

@@ -73,6 +73,30 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-24（main）
+
+本轮搜索 197 个去重候选，新增 **9 个外部工具**，目录总数为 **137 项**。
+以下 Star 为本次 GitHub API 快照，新增项按 `updated_at` 倒序排列。
+**仅完成来源核实，未安装或运行上游代码。** 新项目可通过 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-24.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [anishfn/shapeshift](https://github.com/anishfn/shapeshift) | 404 | 交互界面演示通过 Jev 对输入意图作类型化判断，再由确定性代码选择界面卡片和计算参数。 |
+| [Alex314618-create/JevRev](https://github.com/Alex314618-create/JevRev) | 213 | 智能体工作流工具提供云端 Jev 判断，用于方案筛选、产物证据复核和会话观察；另有回放模式。 |
+| [jexp/neo4jev](https://github.com/jexp/neo4jev) | 123 | Neo4j 图导航演示使用 TypeSafe SDK 在相邻关系候选中选择下一步，并进行有界图搜索。 |
+| [Liyucheng1997/332_lab-jev-chat](https://github.com/Liyucheng1997/332_lab-jev-chat) | 113 | 仓库的独立 Windows 模块将 UI Automation 或本机 OCR 取得的聊天文本交给 Jev 判断，再可选生成候选回复。 |
+| [reticlehq/reticle](https://github.com/reticlehq/reticle) | 827 | 应用验证工具提供 Jev 页面探索驱动，从代码列举的 DOM 动作候选中选择下一步；支持直连与平台代理。 |
+| [fstandhartinger/jevbench](https://github.com/fstandhartinger/jevbench) | 105 | 类型化决策模型评价工具包含 TypeSafe Jev 原生 API 适配器；未在本市场运行或复现上游榜单。 |
+| [2FastLabs/agent-squad](https://github.com/2FastLabs/agent-squad) | 7,770 | 多智能体框架在 Python 和 TypeScript 中提供 JevClassifier，用类型化 Choice 请求选择目标智能体。 |
+| [yunzeforbetter/CastFlow](https://github.com/yunzeforbetter/CastFlow) | 109 | 开发框架提供默认关闭的 Jev 模块分类器，仅对结构规则无法判断的候选模块请求模型判断。 |
+| [sonnylazuardi/superterminal](https://github.com/sonnylazuardi/superterminal) | 101 | 终端应用提供可选 Jev 自然语言面板检索，将查询与候选行交给 TypeSafe 或 OpenCode Zen 的 Jev 后端排序。 |
+
+例如 `npm run jev -- show neo4jev`、`npm run jev -- show agent-squad-jev` 可查看具体提交与上游用法。
+本轮均为独立工具、框架或应用，`install: null`；不会生成虚构的 Skill 安装命令。
+
 ## 每日发现：2026-09-23（main）
 
 本轮搜索 185 个去重候选，98 个已有条目或来源；新增 **23 个外部工具**，市场共 **128 项**。
