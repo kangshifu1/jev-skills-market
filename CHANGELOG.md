@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — 2026-09-25 — daily external discovery
+
+- Add 7 projects from 206 GitHub candidates: 5 tools, 1 tutorial collection and
+  1 standalone Skill. Catalog now contains 144 entries; 127 sources were already
+  represented and 72 candidates were excluded.
+- Verify the CodexQA browser Skill's actual name and documented installation path.
+  Keep Fable Foreman as a complete tool bundle because its external agent definitions
+  are required alongside the Skill folder.
+- Record source evidence for desktop assistants, typed decisions, browser automation
+  and evaluation. Notebook code was inspected without executing cells or using outputs
+  as verification. Existing routing and runtime code remain unchanged.
+
 ## Unreleased — 2026-09-24 — daily external discovery
 
 - Add 9 external tools from 197 GitHub candidates; the catalog now contains 137

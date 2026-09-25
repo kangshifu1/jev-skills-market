@@ -5677,6 +5677,345 @@
       ],
       "usageUrl": "https://github.com/sonnylazuardi/superterminal/blob/4a4727ee2bac8629ea181cb3bb104fbe1af11609/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置上游工具或插件；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "pygpt-jev",
+      "kind": "tool",
+      "category": "assistant",
+      "description": "桌面 AI 助手包含 Jev 内联插件，将结构化状态交给 TypeSafe 作分类、选择、验证和评分。",
+      "distribution": "external",
+      "repository": "szczyglis-dev/py-gpt",
+      "url": "https://github.com/szczyglis-dev/py-gpt",
+      "version": "c9f67199aa01f25421d5d6e95858e16e96ffc81a",
+      "revision": "c9f67199aa01f25421d5d6e95858e16e96ffc81a",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-25",
+      "github": {
+        "repositoryId": 625710399,
+        "owner": "szczyglis-dev",
+        "stars": 1941,
+        "pushedAt": "2026-09-24T23:28:17Z",
+        "updatedAt": "2026-09-24T23:27:35Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-09-25T00:02:25.872592+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/szczyglis-dev/py-gpt/blob/c9f67199aa01f25421d5d6e95858e16e96ffc81a/src/pygpt_net/plugin/jev/worker.py#L139",
+          "summary": "桌面 AI 助手包含 Jev 内联插件，将结构化状态交给 TypeSafe 作分类、选择、验证和评分。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/szczyglis-dev/py-gpt/blob/c9f67199aa01f25421d5d6e95858e16e96ffc81a/README.md#L1699",
+          "summary": "桌面 AI 助手包含 Jev 内联插件，将结构化状态交给 TypeSafe 作分类、选择、验证和评分。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/szczyglis-dev/py-gpt/blob/c9f67199aa01f25421d5d6e95858e16e96ffc81a/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或集合；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-arena",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "评论标注评价应用通过 OpenRouter 调用 Jev，并可与聊天模型比较结果；未复现上游速度、成本或准确率。",
+      "distribution": "external",
+      "repository": "NanmiCoder/jev-arena",
+      "url": "https://github.com/NanmiCoder/jev-arena",
+      "version": "2ca160cc4aa9ac72a4341e2ac5903258e8c69c84",
+      "revision": "2ca160cc4aa9ac72a4341e2ac5903258e8c69c84",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-25",
+      "github": {
+        "repositoryId": 1377049125,
+        "owner": "NanmiCoder",
+        "stars": 101,
+        "pushedAt": "2026-09-20T15:00:39Z",
+        "updatedAt": "2026-09-24T23:21:19Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-25T00:02:26.196811+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/NanmiCoder/jev-arena/blob/2ca160cc4aa9ac72a4341e2ac5903258e8c69c84/src/backends/jev.mjs#L114",
+          "summary": "评论标注评价应用通过 OpenRouter 调用 Jev，并可与聊天模型比较结果；未复现上游速度、成本或准确率。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/NanmiCoder/jev-arena/blob/2ca160cc4aa9ac72a4341e2ac5903258e8c69c84/README.md#L7",
+          "summary": "评论标注评价应用通过 OpenRouter 调用 Jev，并可与聊天模型比较结果；未复现上游速度、成本或准确率。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/NanmiCoder/jev-arena/blob/2ca160cc4aa9ac72a4341e2ac5903258e8c69c84/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或集合；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "yao-jev",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "Yao Agents 内置类型化决策连接器，预设中配置 TypeSafe Jev，可供智能体和决策工具调用。",
+      "distribution": "external",
+      "repository": "YaoApp/yao",
+      "url": "https://github.com/YaoApp/yao",
+      "version": "20efb9d42d8a8f88b22c15e05175ba2b964c412b",
+      "revision": "20efb9d42d8a8f88b22c15e05175ba2b964c412b",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-25",
+      "github": {
+        "repositoryId": 403559729,
+        "owner": "YaoApp",
+        "stars": 8006,
+        "pushedAt": "2026-09-24T06:07:22Z",
+        "updatedAt": "2026-09-24T22:12:14Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-09-25T00:02:30.456020+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/YaoApp/yao/blob/20efb9d42d8a8f88b22c15e05175ba2b964c412b/agent/decision/decision.go#L24",
+          "summary": "Yao Agents 内置类型化决策连接器，预设中配置 TypeSafe Jev，可供智能体和决策工具调用。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YaoApp/yao/blob/20efb9d42d8a8f88b22c15e05175ba2b964c412b/README.md#L17",
+          "summary": "Yao Agents 内置类型化决策连接器，预设中配置 TypeSafe Jev，可供智能体和决策工具调用。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/YaoApp/yao/blob/20efb9d42d8a8f88b22c15e05175ba2b964c412b/llmprovider/presets.yml#L2577",
+          "summary": "TypeSafe 预设指定 api.typesafe.ai、jev-latest 和 decision 能力，与 decision.Call 连接器对应。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/YaoApp/yao/blob/20efb9d42d8a8f88b22c15e05175ba2b964c412b/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或集合；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "fable-foreman",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "Claude 编排工具包可选使用 Jev 对审查发现和任务信息分流；完整使用还依赖仓库内的智能体定义。",
+      "distribution": "external",
+      "repository": "olsenbrands/fable-foreman",
+      "url": "https://github.com/olsenbrands/fable-foreman",
+      "version": "9041c07f031d5c90feb31f6dd6f552bf49e025b3",
+      "revision": "9041c07f031d5c90feb31f6dd6f552bf49e025b3",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-25",
+      "github": {
+        "repositoryId": 1296324767,
+        "owner": "olsenbrands",
+        "stars": 141,
+        "pushedAt": "2026-09-24T16:04:01Z",
+        "updatedAt": "2026-09-24T19:52:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-25T00:02:37.157851+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/olsenbrands/fable-foreman/blob/9041c07f031d5c90feb31f6dd6f552bf49e025b3/skills/fable-foreman/scripts/jev-decide.py#L138",
+          "summary": "Claude 编排工具包可选使用 Jev 对审查发现和任务信息分流；完整使用还依赖仓库内的智能体定义。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/olsenbrands/fable-foreman/blob/9041c07f031d5c90feb31f6dd6f552bf49e025b3/README.md#L13",
+          "summary": "Claude 编排工具包可选使用 Jev 对审查发现和任务信息分流；完整使用还依赖仓库内的智能体定义。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/olsenbrands/fable-foreman/blob/9041c07f031d5c90feb31f6dd6f552bf49e025b3/README.md#L102",
+          "summary": "上游明确 Skill 与 agents 两份安装都必需，因此不生成单独 Skill 安装器。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/olsenbrands/fable-foreman/blob/9041c07f031d5c90feb31f6dd6f552bf49e025b3/README.md",
+      "usageNote": "虽含 fable-foreman Skill，README 明确要求同时安装五个外层 agent 定义；这里只登记完整工具包。完整编排依赖 Claude Code，单独复制 Skill 不足。未安装、运行访问探测或启动子智能体。"
+    },
+    {
+      "id": "fastbrowse",
+      "kind": "tool",
+      "category": "computer-use",
+      "description": "浏览器智能体通过 Jev 从页面控件候选中选择操作，由独立语言模型规划与读取页面。",
+      "distribution": "external",
+      "repository": "agent-labs-dev/fastbrowse",
+      "url": "https://github.com/agent-labs-dev/fastbrowse",
+      "version": "73b6cdfd53266a601070d295e79aa72fb55b1eae",
+      "revision": "73b6cdfd53266a601070d295e79aa72fb55b1eae",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-25",
+      "github": {
+        "repositoryId": 1374627765,
+        "owner": "agent-labs-dev",
+        "stars": 101,
+        "pushedAt": "2026-09-24T14:22:15Z",
+        "updatedAt": "2026-09-24T17:06:25Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-25T00:02:41.283945+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/agent-labs-dev/fastbrowse/blob/73b6cdfd53266a601070d295e79aa72fb55b1eae/src/fastbrowse/clients/typesafe.py#L46",
+          "summary": "浏览器智能体通过 Jev 从页面控件候选中选择操作，由独立语言模型规划与读取页面。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/agent-labs-dev/fastbrowse/blob/73b6cdfd53266a601070d295e79aa72fb55b1eae/README.md#L26",
+          "summary": "浏览器智能体通过 Jev 从页面控件候选中选择操作，由独立语言模型规划与读取页面。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/agent-labs-dev/fastbrowse/blob/73b6cdfd53266a601070d295e79aa72fb55b1eae/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置上游工具或集合；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "marktechpost-jev-tutorial",
+      "kind": "catalog",
+      "category": "development",
+      "description": "开发教程集合包含 TypeSafe SDK 实际请求代码，演示 Choice、Noul、Score、异步调用与类型化结果处理。",
+      "distribution": "external",
+      "repository": "MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials",
+      "url": "https://github.com/MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials",
+      "version": "344a5c4c77df1bfe9c7d095c642ba0c051cf937f",
+      "revision": "344a5c4c77df1bfe9c7d095c642ba0c051cf937f",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-25",
+      "github": {
+        "repositoryId": 984011683,
+        "owner": "MARKTECHPOST-AI-MEDIA-INC",
+        "stars": 2908,
+        "pushedAt": "2026-09-24T01:01:16Z",
+        "updatedAt": "2026-09-24T16:52:22Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-09-25T00:02:41.693314+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials/blob/344a5c4c77df1bfe9c7d095c642ba0c051cf937f/LLM%20Projects/typesafe_jev_system_one_typed_decisions_tutorial_Marktechpost.ipynb",
+          "summary": "开发教程集合包含 TypeSafe SDK 实际请求代码，演示 Choice、Noul、Score、异步调用与类型化结果处理。",
+          "basis": "notebook-code-inspection"
+        },
+        {
+          "url": "https://github.com/MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials/blob/344a5c4c77df1bfe9c7d095c642ba0c051cf937f/README.md#L7",
+          "summary": "开发教程集合包含 TypeSafe SDK 实际请求代码，演示 Choice、Noul、Score、异步调用与类型化结果处理。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials/blob/344a5c4c77df1bfe9c7d095c642ba0c051cf937f/LLM%20Projects/typesafe_jev_system_one_typed_decisions_tutorial_Marktechpost.ipynb",
+      "usageNote": "入口是一个 Jupyter 教程笔记本。仅检查代码单元中的 TypeSafeClient.system_one 与异步调用，未执行笔记本，也未将缓存输出当成市场测试结果。"
+    },
+    {
+      "id": "codexqa-jev-browser",
+      "kind": "skill",
+      "category": "computer-use",
+      "description": "独立浏览器 Skill 使用 Jev 选择页面索引中的控件，并提供 Playwright 回放、目标执行和用例生成入口。",
+      "distribution": "external",
+      "repository": "openqa-cn/jev-browser",
+      "url": "https://github.com/openqa-cn/jev-browser",
+      "version": "d839d10687d7e84824691efde944c1735228b385",
+      "revision": "d839d10687d7e84824691efde944c1735228b385",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "支持 SKILL.md 的智能体宿主。",
+        "Skill 目录中的 npm 依赖与 Playwright Chromium，按上游说明安装。",
+        "实时 Jev 模式另需 TypeSafe 凭据；回放等模式依照上游说明配置。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-25",
+      "github": {
+        "repositoryId": 1382997872,
+        "owner": "openqa-cn",
+        "stars": 104,
+        "pushedAt": "2026-09-23T17:14:06Z",
+        "updatedAt": "2026-09-24T14:23:27Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-25T00:02:43.401859+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/openqa-cn/jev-browser/blob/d839d10687d7e84824691efde944c1735228b385/src/jev.ts#L48",
+          "summary": "独立浏览器 Skill 使用 Jev 选择页面索引中的控件，并提供 Playwright 回放、目标执行和用例生成入口。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/openqa-cn/jev-browser/blob/d839d10687d7e84824691efde944c1735228b385/README.md#L128",
+          "summary": "独立浏览器 Skill 使用 Jev 选择页面索引中的控件，并提供 Playwright 回放、目标执行和用例生成入口。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/openqa-cn/jev-browser/blob/d839d10687d7e84824691efde944c1735228b385/SKILL.md#L2",
+          "summary": "独立 Skill 的 frontmatter 名称与目录选择器 codexqa-jev-browser 一致。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/openqa-cn/jev-browser/blob/d839d10687d7e84824691efde944c1735228b385/README.md",
+      "usageNote": "已核对根 SKILL.md 的 name: codexqa-jev-browser 和 README 中的 Skills CLI 安装说明。安装命令只分发 Skill，运行前仍需其 npm 依赖和浏览器；本轮未安装或运行。",
+      "path": "."
     }
   ]
 }

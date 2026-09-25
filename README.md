@@ -73,6 +73,29 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-25（main）
+
+本轮搜索 206 个去重候选，新增 **7 个外部项目**：5 个工具、1 个教程集合、1 个独立 Skill。
+目录现有 **144 项**。Star 为本次 GitHub API 快照，新增项按 `updated_at` 倒序排列。
+**来源已核实，运行未实测。** 新条目可 list/show 查询，暂不加入模型路由。
+更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-25.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [szczyglis-dev/py-gpt](https://github.com/szczyglis-dev/py-gpt) | 1,941 | 工具 | 桌面 AI 助手包含 Jev 内联插件，将结构化状态交给 TypeSafe 作分类、选择、验证和评分。 |
+| [NanmiCoder/jev-arena](https://github.com/NanmiCoder/jev-arena) | 101 | 工具 | 评论标注评价应用通过 OpenRouter 调用 Jev，并可与聊天模型比较结果；未复现上游速度、成本或准确率。 |
+| [YaoApp/yao](https://github.com/YaoApp/yao) | 8,006 | 工具 | Yao Agents 内置类型化决策连接器，预设中配置 TypeSafe Jev，可供智能体和决策工具调用。 |
+| [olsenbrands/fable-foreman](https://github.com/olsenbrands/fable-foreman) | 141 | 工具 | Claude 编排工具包可选使用 Jev 对审查发现和任务信息分流；完整使用还依赖仓库内的智能体定义。 |
+| [agent-labs-dev/fastbrowse](https://github.com/agent-labs-dev/fastbrowse) | 101 | 工具 | 浏览器智能体通过 Jev 从页面控件候选中选择操作，由独立语言模型规划与读取页面。 |
+| [MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials](https://github.com/MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials) | 2,908 | 教程集合 | 开发教程集合包含 TypeSafe SDK 实际请求代码，演示 Choice、Noul、Score、异步调用与类型化结果处理。 |
+| [openqa-cn/jev-browser](https://github.com/openqa-cn/jev-browser) | 104 | Skill | 独立浏览器 Skill 使用 Jev 选择页面索引中的控件，并提供 Playwright 回放、目标执行和用例生成入口。 |
+
+`npm run jev -- show codexqa-jev-browser` 可查看与已核实 Skill 名称匹配的固定提交安装命令；
+运行还需上游 npm 依赖与浏览器。Fable Foreman 需要 Skill 和外层 agent 定义一起安装，
+按工具包登记，`show fable-foreman` 返回上游说明及 `install: null`。
+
 ## 每日发现：2026-09-24（main）
 
 本轮搜索 197 个去重候选，新增 **9 个外部工具**，目录总数为 **137 项**。
