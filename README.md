@@ -73,6 +73,30 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-26（main）
+
+关键词搜索得到 217 个去重候选，沿来源链接补核 1 个，共检查 218 个候选。
+新增 **7 个项目**（1 个 Skill、6 个工具），目录现有 **151 项**。
+以下按本次 GitHub API 的 `updated_at` 倒序列出；Star 是检查快照。
+**只核实来源，未运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-26.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [trycua/cua](https://github.com/trycua/cua) | 26,420 | 工具 | Cua Driver 的独立示例提供 Python 和 TypeScript TypeSafe 适配器，由 Jev 选择有界浏览器动作。 |
+| [AgriciDaniel/jev-seo](https://github.com/AgriciDaniel/jev-seo) | 131 | Skill | 独立 SEO 审计 Skill 和 CLI 将页面内容交给 Jev 作类型化判断，再由代码评分并生成报告。 |
+| [codejunkie99/keel](https://github.com/codejunkie99/keel) | 204 | 工具 | macOS 编程工作区提供可选托管 Jev 路由选择器；本地 Laya 与 Jev 是不同决策后端。 |
+| [keltokhy/jgrep](https://github.com/keltokhy/jgrep) | 101 | 工具 | 语义 grep CLI 通过 JevKit runtime 把文本候选转换为 Noul 问题，支持 TypeSafe Jev 与其他可配置后端。 |
+| [LLPhant/LLPhant](https://github.com/LLPhant/LLPhant) | 1,711 | 工具 | PHP AI 框架提供 JevClassifier，向 TypeSafe 发出 Noul、Choice 和 Score 类型化分类请求。 |
+| [merijjeyn/jive](https://github.com/merijjeyn/jive) | 124 | 工具 | 终端编程智能体把工具调用和 Jev 判断组合成可执行任务图，提供 TypeSafe 请求客户端。 |
+| [michaelswissa/jevry](https://github.com/michaelswissa/jevry) | 102 | 工具 | 桌面浏览器使用 Jev 的类型化请求选择操作，生成模型负责规划；页面动作由 Chromium 执行。 |
+
+`show jev-seo` 提供按已核实 Skill 名称生成的固定提交安装命令；上游依赖仍需另装。
+Cua 条目只对应其 `jev-use` 示例。已收录的 `itsmostafa/typesafe-mcp` 改名为
+`itsmostafa/system-one-connector`，仓库 ID 相同，补充别名而不重复增加条目。
+
 ## 每日发现：2026-09-25（main）
 
 本轮搜索 206 个去重候选，新增 **7 个外部项目**：5 个工具、1 个教程集合、1 个独立 Skill。

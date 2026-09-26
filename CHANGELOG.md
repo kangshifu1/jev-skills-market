@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — 2026-09-26 — daily external discovery
+
+- Add 7 projects: one standalone SEO Skill and six tools. Catalog now contains
+  151 entries. Search returned 217 candidates; one linked Cua example repository
+  was independently checked, for 218 candidates in total.
+- Deduplicate 131 existing sources, including the verified rename from typesafe-mcp
+  to system-one-connector, and record 80 exclusions.
+- Scope Cua registration to its pinned Jev Driver example. Record direct clients,
+  delegated runtime calls and local-versus-hosted model distinctions accurately.
+- Preserve existing source snapshots and runtime behavior; new entries remain
+  source-reviewed, unexecuted and outside live routing.
+
 ## Unreleased — 2026-09-25 — daily external discovery
 
 - Add 7 projects from 206 GitHub candidates: 5 tools, 1 tutorial collection and

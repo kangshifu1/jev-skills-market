@@ -200,7 +200,10 @@
         }
       ],
       "usageUrl": "https://github.com/itsmostafa/typesafe-mcp/blob/d4c110c7edd82127a4ca962c9d60fb96f748eb6e/README.md",
-      "usageNote": "先阅读 usageUrl 的固定提交说明；此条目的 install 为 null，不代表可以用 Skills CLI 安装整个仓库。"
+      "usageNote": "先阅读 usageUrl 的固定提交说明；此条目的 install 为 null，不代表可以用 Skills CLI 安装整个仓库。",
+      "repositoryAliases": [
+        "itsmostafa/system-one-connector"
+      ]
     },
     {
       "id": "jev-ultrafast",
@@ -6016,6 +6019,355 @@
       "usageUrl": "https://github.com/openqa-cn/jev-browser/blob/d839d10687d7e84824691efde944c1735228b385/README.md",
       "usageNote": "已核对根 SKILL.md 的 name: codexqa-jev-browser 和 README 中的 Skills CLI 安装说明。安装命令只分发 Skill，运行前仍需其 npm 依赖和浏览器；本轮未安装或运行。",
       "path": "."
+    },
+    {
+      "id": "cua-driver-jev-use",
+      "kind": "tool",
+      "category": "computer-use",
+      "description": "Cua Driver 的独立示例提供 Python 和 TypeScript TypeSafe 适配器，由 Jev 选择有界浏览器动作。",
+      "distribution": "external",
+      "repository": "trycua/cua",
+      "url": "https://github.com/trycua/cua",
+      "version": "74e7fa92f997d23ba3013e205ad950cdbd61172b",
+      "revision": "74e7fa92f997d23ba3013e205ad950cdbd61172b",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-26",
+      "github": {
+        "repositoryId": 925270205,
+        "owner": "trycua",
+        "stars": 26420,
+        "pushedAt": "2026-09-26T00:04:45Z",
+        "updatedAt": "2026-09-26T00:05:17Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-26T00:06:06.995297+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/trycua/cua/blob/74e7fa92f997d23ba3013e205ad950cdbd61172b/libs/cua-driver/examples/jev-use/python/jev_adapter.py#L31",
+          "summary": "Cua Driver 的独立示例提供 Python 和 TypeScript TypeSafe 适配器，由 Jev 选择有界浏览器动作。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/trycua/cua/blob/74e7fa92f997d23ba3013e205ad950cdbd61172b/libs/cua-driver/examples/jev-use/typescript/jev_adapter.ts#L25",
+          "summary": "TypeScript 示例通过 TypeSafeClient.systemOne 请求有界动作选择。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/trycua/cua/blob/74e7fa92f997d23ba3013e205ad950cdbd61172b/libs/cua-driver/examples/jev-use/README.md#L3",
+          "summary": "示例说明 Jev 选择动作、Driver 执行；模拟夹具与真实服务验证分开。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/trycua/cua/blob/74e7fa92f997d23ba3013e205ad950cdbd61172b/libs/cua-driver/examples/jev-use/README.md",
+      "usageNote": "这里只登记 libs/cua-driver/examples/jev-use 示例，不将整个 Cua 框架都标为 Jev 实现。按示例准备 Driver 与语言依赖；夹具演示不等于真实 Jev 测试。"
+    },
+    {
+      "id": "jev-seo",
+      "kind": "skill",
+      "category": "seo",
+      "description": "独立 SEO 审计 Skill 和 CLI 将页面内容交给 Jev 作类型化判断，再由代码评分并生成报告。",
+      "distribution": "external",
+      "repository": "AgriciDaniel/jev-seo",
+      "url": "https://github.com/AgriciDaniel/jev-seo",
+      "version": "55a184a3b0d09565a4c84268f725a47784e62528",
+      "revision": "55a184a3b0d09565a4c84268f725a47784e62528",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "支持 SKILL.md 的宿主；上游主要说明 Claude Code 工作流与 CLI。",
+        "上游 Python 依赖、抓取与报告生成组件，按固定版本说明安装。",
+        "实际审计需要 TypeSafe 凭据，可选服务另行配置。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-26",
+      "github": {
+        "repositoryId": 1380683591,
+        "owner": "AgriciDaniel",
+        "stars": 131,
+        "pushedAt": "2026-09-22T00:45:41Z",
+        "updatedAt": "2026-09-25T23:51:24Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-26T00:02:46.815586+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/AgriciDaniel/jev-seo/blob/55a184a3b0d09565a4c84268f725a47784e62528/jevseo/jev.py#L357",
+          "summary": "独立 SEO 审计 Skill 和 CLI 将页面内容交给 Jev 作类型化判断，再由代码评分并生成报告。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/AgriciDaniel/jev-seo/blob/55a184a3b0d09565a4c84268f725a47784e62528/README.md#L11",
+          "summary": "独立 SEO 审计 Skill 和 CLI 将页面内容交给 Jev 作类型化判断，再由代码评分并生成报告。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/AgriciDaniel/jev-seo/blob/55a184a3b0d09565a4c84268f725a47784e62528/SKILL.md#L2",
+          "summary": "根 Skill 名称为 jev-seo，安装选择器与该名称一致。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/AgriciDaniel/jev-seo/blob/55a184a3b0d09565a4c84268f725a47784e62528/README.md",
+      "usageNote": "根 SKILL.md 名称已核对为 jev-seo，上游说明把整个项目目录链接为 Skill。生成的命令只分发文件，运行仍需上游依赖；未验证 Codex 宿主运行兼容性，也未执行网站审计。",
+      "path": "."
+    },
+    {
+      "id": "keel-jev",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "macOS 编程工作区提供可选托管 Jev 路由选择器；本地 Laya 与 Jev 是不同决策后端。",
+      "distribution": "external",
+      "repository": "codejunkie99/keel",
+      "url": "https://github.com/codejunkie99/keel",
+      "version": "5cef4569e7f850b3a85dc998cc64c64e944c80a0",
+      "revision": "5cef4569e7f850b3a85dc998cc64c64e944c80a0",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-26",
+      "github": {
+        "repositoryId": 1382409238,
+        "owner": "codejunkie99",
+        "stars": 204,
+        "pushedAt": "2026-09-25T18:00:43Z",
+        "updatedAt": "2026-09-25T23:45:40Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-26T00:02:48.562896+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/codejunkie99/keel/blob/5cef4569e7f850b3a85dc998cc64c64e944c80a0/crates/jev-core/src/lib.rs#L235",
+          "summary": "macOS 编程工作区提供可选托管 Jev 路由选择器；本地 Laya 与 Jev 是不同决策后端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/codejunkie99/keel/blob/5cef4569e7f850b3a85dc998cc64c64e944c80a0/README.md#L59",
+          "summary": "macOS 编程工作区提供可选托管 Jev 路由选择器；本地 Laya 与 Jev 是不同决策后端。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/codejunkie99/keel/blob/5cef4569e7f850b3a85dc998cc64c64e944c80a0/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jgrep",
+      "kind": "tool",
+      "category": "search",
+      "description": "语义 grep CLI 通过 JevKit runtime 把文本候选转换为 Noul 问题，支持 TypeSafe Jev 与其他可配置后端。",
+      "distribution": "external",
+      "repository": "keltokhy/jgrep",
+      "url": "https://github.com/keltokhy/jgrep",
+      "version": "4ea243329fa80d1992743c1ae6b2d8671f477759",
+      "revision": "4ea243329fa80d1992743c1ae6b2d8671f477759",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-26",
+      "github": {
+        "repositoryId": 1375750028,
+        "owner": "keltokhy",
+        "stars": 101,
+        "pushedAt": "2026-09-25T22:04:13Z",
+        "updatedAt": "2026-09-25T22:04:14Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-26T00:02:55.590242+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/keltokhy/jgrep/blob/4ea243329fa80d1992743c1ae6b2d8671f477759/src/jgrep/core.py#L5",
+          "summary": "语义 grep CLI 通过 JevKit runtime 把文本候选转换为 Noul 问题，支持 TypeSafe Jev 与其他可配置后端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/keltokhy/jgrep/blob/4ea243329fa80d1992743c1ae6b2d8671f477759/README.md#L16",
+          "summary": "语义 grep CLI 通过 JevKit runtime 把文本候选转换为 Noul 问题，支持 TypeSafe Jev 与其他可配置后端。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/keltokhy/jgrep/blob/4ea243329fa80d1992743c1ae6b2d8671f477759/src/jgrep/cli.py#L271",
+          "summary": "CLI 对候选文本调用 JevKit runtime 的 ask；core.py 声明 TypeSafe 等提供商。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/keltokhy/jgrep/blob/4ea243329fa80d1992743c1ae6b2d8671f477759/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "llphant-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "PHP AI 框架提供 JevClassifier，向 TypeSafe 发出 Noul、Choice 和 Score 类型化分类请求。",
+      "distribution": "external",
+      "repository": "LLPhant/LLPhant",
+      "url": "https://github.com/LLPhant/LLPhant",
+      "version": "d85d902e91ee7a02552bab7a980cf36601be0029",
+      "revision": "d85d902e91ee7a02552bab7a980cf36601be0029",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-26",
+      "github": {
+        "repositoryId": 672847735,
+        "owner": "LLPhant",
+        "stars": 1711,
+        "pushedAt": "2026-09-25T14:14:24Z",
+        "updatedAt": "2026-09-25T21:14:34Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-26T00:02:57.899884+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/LLPhant/LLPhant/blob/d85d902e91ee7a02552bab7a980cf36601be0029/src/Classification/JevClassifier.php#L88",
+          "summary": "PHP AI 框架提供 JevClassifier，向 TypeSafe 发出 Noul、Choice 和 Score 类型化分类请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/LLPhant/LLPhant/blob/d85d902e91ee7a02552bab7a980cf36601be0029/README.md#L15",
+          "summary": "PHP AI 框架提供 JevClassifier，向 TypeSafe 发出 Noul、Choice 和 Score 类型化分类请求。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/LLPhant/LLPhant/blob/d85d902e91ee7a02552bab7a980cf36601be0029/src/Classification/JevConfig.php#L13",
+          "summary": "JevConfig 的默认请求地址是 TypeSafe 的 v1/systemone。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/LLPhant/LLPhant/blob/d85d902e91ee7a02552bab7a980cf36601be0029/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jive-jev",
+      "kind": "tool",
+      "category": "agent-automation",
+      "description": "终端编程智能体把工具调用和 Jev 判断组合成可执行任务图，提供 TypeSafe 请求客户端。",
+      "distribution": "external",
+      "repository": "merijjeyn/jive",
+      "url": "https://github.com/merijjeyn/jive",
+      "version": "5963328c47bf201ead2297c6cf8d9187ff3115a3",
+      "revision": "5963328c47bf201ead2297c6cf8d9187ff3115a3",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-26",
+      "github": {
+        "repositoryId": 1379986944,
+        "owner": "merijjeyn",
+        "stars": 124,
+        "pushedAt": "2026-09-25T16:15:53Z",
+        "updatedAt": "2026-09-25T20:40:51Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-26T00:02:59.921939+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/merijjeyn/jive/blob/5963328c47bf201ead2297c6cf8d9187ff3115a3/src/jev/client.ts#L79",
+          "summary": "终端编程智能体把工具调用和 Jev 判断组合成可执行任务图，提供 TypeSafe 请求客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/merijjeyn/jive/blob/5963328c47bf201ead2297c6cf8d9187ff3115a3/README.md#L11",
+          "summary": "终端编程智能体把工具调用和 Jev 判断组合成可执行任务图，提供 TypeSafe 请求客户端。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/merijjeyn/jive/blob/5963328c47bf201ead2297c6cf8d9187ff3115a3/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具；install 为 null，不生成整个项目的 Skill 安装命令。"
+    },
+    {
+      "id": "jevry",
+      "kind": "tool",
+      "category": "computer-use",
+      "description": "桌面浏览器使用 Jev 的类型化请求选择操作，生成模型负责规划；页面动作由 Chromium 执行。",
+      "distribution": "external",
+      "repository": "michaelswissa/jevry",
+      "url": "https://github.com/michaelswissa/jevry",
+      "version": "40301a6d920bd32dcf31c61e557e16b5340da78f",
+      "revision": "40301a6d920bd32dcf31c61e557e16b5340da78f",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-26",
+      "github": {
+        "repositoryId": 1385271151,
+        "owner": "michaelswissa",
+        "stars": 102,
+        "pushedAt": "2026-09-24T20:04:18Z",
+        "updatedAt": "2026-09-25T07:32:30Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-26T00:03:13.598909+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/michaelswissa/jevry/blob/40301a6d920bd32dcf31c61e557e16b5340da78f/desktop/jev-transport.ts#L75",
+          "summary": "桌面浏览器使用 Jev 的类型化请求选择操作，生成模型负责规划；页面动作由 Chromium 执行。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/michaelswissa/jevry/blob/40301a6d920bd32dcf31c61e557e16b5340da78f/README.md#L10",
+          "summary": "桌面浏览器使用 Jev 的类型化请求选择操作，生成模型负责规划；页面动作由 Chromium 执行。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/michaelswissa/jevry/blob/40301a6d920bd32dcf31c61e557e16b5340da78f/desktop/engine.ts#L219",
+          "summary": "浏览器引擎将类型化请求传给 Jev transport；默认 API 基址在同文件 204 行。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/michaelswissa/jevry/blob/40301a6d920bd32dcf31c61e557e16b5340da78f/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具；install 为 null，不生成整个项目的 Skill 安装命令。"
     }
   ]
 }
