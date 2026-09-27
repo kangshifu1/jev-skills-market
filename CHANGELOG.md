@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-09-27 — daily external discovery
+
+- Add 9 external tools from 228 GitHub candidates, bringing the catalog to 160
+  entries. Deduplicate 136 existing sources and record 83 exclusions.
+- Pin integration evidence for agent runtimes, code search, project management,
+  GUI delegation, Scala clients and transcript-based sponsor detection.
+- Verify OpenHuman and OpenCompany as distinct repositories. Keep proxy-based Jev
+  calls, hosted/local backends and audio transcription responsibilities explicit.
+- Retry all transient source-read failures before registration. No upstream code or
+  models were run; new entries remain outside the existing model router.
+
 ## Unreleased — 2026-09-26 — daily external discovery
 
 - Add 7 projects: one standalone SEO Skill and six tools. Catalog now contains

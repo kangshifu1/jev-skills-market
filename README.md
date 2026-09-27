@@ -73,6 +73,30 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-27（main）
+
+本轮搜索 228 个去重候选，新增 **9 个外部工具**，目录现有 **160 项**。
+以下 Star 为本次 GitHub API 快照，新增项按 `updated_at` 倒序排列。
+**来源已核实，运行未实测。** 新条目可 list/show 查询，暂不加入模型路由。
+更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-27.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [dzhng/jevgrep](https://github.com/dzhng/jevgrep) | 191 | 代码检索 CLI 调用 Jev 评价文件和源码上下文的相关性，支持配置不同提供商。 |
+| [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | 40,134 | 智能体平台通过 TinyHumans System One 代理请求 Jev，进行工具检索排序和浏览器步骤判断。 |
+| [PerpetualSoftware/pad](https://github.com/PerpetualSoftware/pad) | 182 | 项目管理工具提供默认关闭的 TypeSafe 决策后端，可对项目条目和工作手册匹配作类型化判断。 |
+| [getanyapi-com/lurk](https://github.com/getanyapi-com/lurk) | 101 | 公开 Reddit 研究工具通过 Jev 评价标题、帖子和评论的相关性，支持 OpenRouter 和 Vercel Gateway。 |
+| [ThinkFlowLab/system1-agents](https://github.com/ThinkFlowLab/system1-agents) | 122 | 多场景智能体框架提供 Jev 决策后端，覆盖浏览器、桌面和模拟任务；本地模型后端另行选择。 |
+| [YUTA-fywoo/jev-gui-delegate](https://github.com/YUTA-fywoo/jev-gui-delegate) | 131 | Windows 与 Chrome GUI 委派原型在确定性步骤需要语义选择时调用 TypeSafe Jev，按任务契约检查结果。 |
+| [rohitg00/pro-workflow](https://github.com/rohitg00/pro-workflow) | 2,885 | 编程工作流提供可选 Jev 分类器，产生纠错与风险提示；分类器不授予或拒绝工具执行权限。 |
+| [softwaremill/sttp-ai](https://github.com/softwaremill/sttp-ai) | 102 | Scala 工具包提供 Jev 类型化请求客户端，支持 System One 问题及响应解码。 |
+| [trungdq88/youtube-sponsor-detection](https://github.com/trungdq88/youtube-sponsor-detection) | 105 | 浏览器扩展和网页应用将字幕或音频转写文本交给 Jev 判断赞助片段，时间戳与跳过动作由代码处理。 |
+
+例如 `npm run jev -- show jevgrep`、`npm run jev -- show jev-gui-delegate` 可查看固定来源与依赖。
+本轮按完整工具、框架或应用登记，均返回 `install: null`；不会虚构独立 Skill 安装器。
+
 ## 每日发现：2026-09-26（main）
 
 关键词搜索得到 217 个去重候选，沿来源链接补核 1 个，共检查 218 个候选。
