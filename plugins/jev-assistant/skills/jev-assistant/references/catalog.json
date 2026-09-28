@@ -6798,6 +6798,493 @@
       ],
       "usageUrl": "https://github.com/trungdq88/youtube-sponsor-detection/blob/de01f0568d043035889a296a61ce21e0accc8b16/README.md",
       "usageNote": "字幕与转写后的文本进入 Jev，未把 Jev 描述为音频模型。浏览器扩展与网页分别按上游配置；未播放、抓取或分析真实视频。"
+    },
+    {
+      "id": "lattereview-jev",
+      "kind": "tool",
+      "category": "research",
+      "description": "文献筛选库通过 SystemOneProvider 调用 Jev，对标题、摘要及评分问题返回类型化判断，并可接入混合审阅流程。",
+      "distribution": "external",
+      "repository": "PouriaRouzrokh/LatteReview",
+      "url": "https://github.com/PouriaRouzrokh/LatteReview",
+      "version": "d4e3786fcdf56c000f76615670b3716670d056b4",
+      "revision": "d4e3786fcdf56c000f76615670b3716670d056b4",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 901454241,
+        "owner": "PouriaRouzrokh",
+        "stars": 121,
+        "pushedAt": "2026-09-27T23:25:03Z",
+        "updatedAt": "2026-09-27T23:20:39Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-09-28T00:06:11.978431+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/PouriaRouzrokh/LatteReview/blob/d4e3786fcdf56c000f76615670b3716670d056b4/lattereview/providers/system_one_provider.py#L323",
+          "summary": "文献筛选库通过 SystemOneProvider 调用 Jev，对标题、摘要及评分问题返回类型化判断，并可接入混合审阅流程。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/PouriaRouzrokh/LatteReview/blob/d4e3786fcdf56c000f76615670b3716670d056b4/README.md#L24",
+          "summary": "文献筛选库通过 SystemOneProvider 调用 Jev，对标题、摘要及评分问题返回类型化判断，并可接入混合审阅流程。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/PouriaRouzrokh/LatteReview/blob/d4e3786fcdf56c000f76615670b3716670d056b4/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "laya-vs-jev",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "对照演示让本地 Laya 与托管 TypeSafe Jev 操作同一游戏环境，包含真实 Jev 请求入口；未复现上游指标。",
+      "distribution": "external",
+      "repository": "virajbhartiya/laya-vs-jev",
+      "url": "https://github.com/virajbhartiya/laya-vs-jev",
+      "version": "28541781c863fcdf20348e5bb3a2073d672fffe6",
+      "revision": "28541781c863fcdf20348e5bb3a2073d672fffe6",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 1379915055,
+        "owner": "virajbhartiya",
+        "stars": 102,
+        "pushedAt": "2026-09-21T14:37:49Z",
+        "updatedAt": "2026-09-27T23:07:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-09-28T00:06:14.955172+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/virajbhartiya/laya-vs-jev/blob/28541781c863fcdf20348e5bb3a2073d672fffe6/laya_mlx/trex/backends.py#L218",
+          "summary": "对照演示让本地 Laya 与托管 TypeSafe Jev 操作同一游戏环境，包含真实 Jev 请求入口；未复现上游指标。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/virajbhartiya/laya-vs-jev/blob/28541781c863fcdf20348e5bb3a2073d672fffe6/README.md#L3",
+          "summary": "对照演示让本地 Laya 与托管 TypeSafe Jev 操作同一游戏环境，包含真实 Jev 请求入口；未复现上游指标。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/virajbhartiya/laya-vs-jev/blob/28541781c863fcdf20348e5bb3a2073d672fffe6/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "beebots-jev",
+      "kind": "tool",
+      "category": "finance",
+      "description": "OKX 交易演示使用 TypeSafe SDK 请求 Jev 选择有界动作，上游默认纸上交易；本市场未连接交易账户。",
+      "distribution": "external",
+      "repository": "imikerussell/beebots",
+      "url": "https://github.com/imikerussell/beebots",
+      "version": "5ddd6d18e9646f068c5ee2f5703d1e829461c76a",
+      "revision": "5ddd6d18e9646f068c5ee2f5703d1e829461c76a",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 1387780207,
+        "owner": "imikerussell",
+        "stars": 146,
+        "pushedAt": "2026-09-27T05:07:43Z",
+        "updatedAt": "2026-09-27T22:56:47Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-28T00:06:14.967102+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/imikerussell/beebots/blob/5ddd6d18e9646f068c5ee2f5703d1e829461c76a/src/jev.ts#L111",
+          "summary": "OKX 交易演示使用 TypeSafe SDK 请求 Jev 选择有界动作，上游默认纸上交易；本市场未连接交易账户。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/imikerussell/beebots/blob/5ddd6d18e9646f068c5ee2f5703d1e829461c76a/README.md#L5",
+          "summary": "OKX 交易演示使用 TypeSafe SDK 请求 Jev 选择有界动作，上游默认纸上交易；本市场未连接交易账户。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/imikerussell/beebots/blob/5ddd6d18e9646f068c5ee2f5703d1e829461c76a/README.md",
+      "usageNote": "上游默认纸上交易且另有交易所连接能力。这里只登记 TypeSafe 调用代码，不连接账户、不启动策略、不复现收益。"
+    },
+    {
+      "id": "jev-social",
+      "kind": "skill",
+      "category": "computer-use",
+      "description": "社交媒体研究应用的 Skill 入口调用 Jev 选择有界操作，再由独立 socai CLI 执行并返回来源证据。",
+      "distribution": "external",
+      "repository": "socai-io/jev-social",
+      "url": "https://github.com/socai-io/jev-social",
+      "version": "616de81d202949162c68cacd44d8163e5473c625",
+      "revision": "616de81d202949162c68cacd44d8163e5473c625",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "支持 SKILL.md 的宿主。",
+        "Node.js、上游 Skill 固定版本的 Jev Social CLI、本地 socai CLI 及对应平台登录状态。",
+        "OpenRouter Jev 凭据，或明确配置的本地兼容模型；本地模型不等于 Jev。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 1376303804,
+        "owner": "socai-io",
+        "stars": 102,
+        "pushedAt": "2026-09-27T22:32:30Z",
+        "updatedAt": "2026-09-27T22:50:27Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-28T00:06:15.213242+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/socai-io/jev-social/blob/616de81d202949162c68cacd44d8163e5473c625/src/classifier.js#L222",
+          "summary": "分类器提交类型化请求；提供商配置定义 OpenRouter Jev 与显式本地后端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/socai-io/jev-social/blob/616de81d202949162c68cacd44d8163e5473c625/src/decision-provider.js#L3",
+          "summary": "社交媒体研究应用的 Skill 入口调用 Jev 选择有界操作，再由独立 socai CLI 执行并返回来源证据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/socai-io/jev-social/blob/616de81d202949162c68cacd44d8163e5473c625/README.md#L15",
+          "summary": "社交媒体研究应用的 Skill 入口调用 Jev 选择有界操作，再由独立 socai CLI 执行并返回来源证据。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/socai-io/jev-social/blob/616de81d202949162c68cacd44d8163e5473c625/skills/jev-social/SKILL.md#L2",
+          "summary": "Skill 名称为 jev-social，README 提供按此名称安装的 Skills CLI 示例。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/socai-io/jev-social/blob/616de81d202949162c68cacd44d8163e5473c625/skills/jev-social/SKILL.md",
+      "usageNote": "安装命令只分发 Skill 文件。已分别检查当前 Skill 和它固定的 CLI 提供商配置；CLI 与本地 socai 需独立就绪，未安装、登录或采集用户浏览器数据。",
+      "path": "skills/jev-social",
+      "runtimeRevision": "baf3cd6aa4f9c881665c29ed29a10391f761760b",
+      "runtimeSourceUrl": "https://github.com/socai-io/jev-social/tree/baf3cd6aa4f9c881665c29ed29a10391f761760b",
+      "runtimeEvidenceUrl": "https://github.com/socai-io/jev-social/blob/baf3cd6aa4f9c881665c29ed29a10391f761760b/src/decision-provider.js#L3"
+    },
+    {
+      "id": "stately-jev-judgments",
+      "kind": "tool",
+      "category": "development",
+      "description": "框架官方集成文档演示在 XState actor 中通过 AI SDK 调用 Jev 判断；这是集成示例，不是内置 Jev 后端。",
+      "distribution": "external",
+      "repository": "statelyai/agent",
+      "url": "https://github.com/statelyai/agent",
+      "version": "752290e6621ec95ce80c7ab0c989a10a914a45e7",
+      "revision": "752290e6621ec95ce80c7ab0c989a10a914a45e7",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 734513626,
+        "owner": "statelyai",
+        "stars": 464,
+        "pushedAt": "2026-09-27T20:48:00Z",
+        "updatedAt": "2026-09-27T20:46:46Z",
+        "defaultBranch": "next",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-28T00:06:24.888871+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/statelyai/agent/blob/752290e6621ec95ce80c7ab0c989a10a914a45e7/docs/judgments.md#L55",
+          "summary": "框架官方集成文档演示在 XState actor 中通过 AI SDK 调用 Jev 判断；这是集成示例，不是内置 Jev 后端。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/statelyai/agent/blob/752290e6621ec95ce80c7ab0c989a10a914a45e7/readme.md#L43",
+          "summary": "框架官方集成文档演示在 XState actor 中通过 AI SDK 调用 Jev 判断；这是集成示例，不是内置 Jev 后端。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/statelyai/agent/blob/752290e6621ec95ce80c7ab0c989a10a914a45e7/docs/judgments.md",
+      "usageNote": "此条目对应官方文档里的 AI SDK + TypeSafe actor 示例，需按示例配置依赖与凭据；不声称 src/decision.ts 本身是 Jev 客户端，也未运行示例。"
+    },
+    {
+      "id": "jev-mem",
+      "kind": "tool",
+      "category": "agent-context",
+      "description": "智能体记忆框架使用 TypeSafe Jev 判断记忆写入、关系及检索控制，将记忆管理与回答生成分开。",
+      "distribution": "external",
+      "repository": "libingzheren/Jev-Mem",
+      "url": "https://github.com/libingzheren/Jev-Mem",
+      "version": "81574eb23f3fd8d1a6c4d54a1e7d6f2dd539e9bb",
+      "revision": "81574eb23f3fd8d1a6c4d54a1e7d6f2dd539e9bb",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 1377956199,
+        "owner": "libingzheren",
+        "stars": 105,
+        "pushedAt": "2026-09-22T03:43:26Z",
+        "updatedAt": "2026-09-27T20:29:04Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-28T00:06:35.132791+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/libingzheren/Jev-Mem/blob/81574eb23f3fd8d1a6c4d54a1e7d6f2dd539e9bb/memory/jev_client.py#L162",
+          "summary": "智能体记忆框架使用 TypeSafe Jev 判断记忆写入、关系及检索控制，将记忆管理与回答生成分开。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/libingzheren/Jev-Mem/blob/81574eb23f3fd8d1a6c4d54a1e7d6f2dd539e9bb/README.md#L116",
+          "summary": "智能体记忆框架使用 TypeSafe Jev 判断记忆写入、关系及检索控制，将记忆管理与回答生成分开。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/libingzheren/Jev-Mem/blob/81574eb23f3fd8d1a6c4d54a1e7d6f2dd539e9bb/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "mac-jev-use",
+      "kind": "tool",
+      "category": "computer-use",
+      "description": "macOS 应用从辅助功能树生成屏幕控件候选，由 TypeSafe Jev 选择目标；支持语音和文字入口。",
+      "distribution": "external",
+      "repository": "savka777/jev-use",
+      "url": "https://github.com/savka777/jev-use",
+      "version": "b22e568adf110eeb64f89bf4d731a69d23c461dc",
+      "revision": "b22e568adf110eeb64f89bf4d731a69d23c461dc",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 1377227263,
+        "owner": "savka777",
+        "stars": 103,
+        "pushedAt": "2026-09-21T23:08:58Z",
+        "updatedAt": "2026-09-27T20:26:59Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-28T00:06:36.870520+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/savka777/jev-use/blob/b22e568adf110eeb64f89bf4d731a69d23c461dc/Sources/JevCore/Decision.swift#L177",
+          "summary": "macOS 应用从辅助功能树生成屏幕控件候选，由 TypeSafe Jev 选择目标；支持语音和文字入口。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/savka777/jev-use/blob/b22e568adf110eeb64f89bf4d731a69d23c461dc/README.md#L5",
+          "summary": "macOS 应用从辅助功能树生成屏幕控件候选，由 TypeSafe Jev 选择目标；支持语音和文字入口。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/savka777/jev-use/blob/b22e568adf110eeb64f89bf4d731a69d23c461dc/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "system-one",
+      "kind": "skill",
+      "category": "development",
+      "description": "System One 开发 Skill 提供 Jev 集成、评价和故障诊断指引，并包含默认离线、显式开启真实调用的示例脚本。",
+      "distribution": "external",
+      "repository": "magnus919/agent-skills",
+      "url": "https://github.com/magnus919/agent-skills",
+      "version": "2cb54d3e737a8c20cf64544c5f5511ca663d77b7",
+      "revision": "2cb54d3e737a8c20cf64544c5f5511ca663d77b7",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "支持 SKILL.md 的宿主。",
+        "上游 Python 环境、参考文档及按所选工作流配置的依赖。",
+        "真实 Jev 调用需显式 live 模式和凭据；其他本地模型或跨 Skill 工作流另行配置。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 1297797901,
+        "owner": "magnus919",
+        "stars": 101,
+        "pushedAt": "2026-09-27T20:13:15Z",
+        "updatedAt": "2026-09-27T20:11:17Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-28T00:06:36.575735+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/magnus919/agent-skills/blob/2cb54d3e737a8c20cf64544c5f5511ca663d77b7/system-one/scripts/decision_demo.py#L46",
+          "summary": "System One 开发 Skill 提供 Jev 集成、评价和故障诊断指引，并包含默认离线、显式开启真实调用的示例脚本。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/magnus919/agent-skills/blob/2cb54d3e737a8c20cf64544c5f5511ca663d77b7/README.md#L592",
+          "summary": "System One 开发 Skill 提供 Jev 集成、评价和故障诊断指引，并包含默认离线、显式开启真实调用的示例脚本。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/magnus919/agent-skills/blob/2cb54d3e737a8c20cf64544c5f5511ca663d77b7/system-one/scripts/systemone_probe.py#L149",
+          "summary": "显式 live 模式通过 HTTP 发送请求，默认地址为 TypeSafe System One；未执行脚本。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/magnus919/agent-skills/blob/2cb54d3e737a8c20cf64544c5f5511ca663d77b7/system-one/SKILL.md#L2",
+          "summary": "system-one 子目录的 Skill 名称与安装选择器一致。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/magnus919/agent-skills/blob/2cb54d3e737a8c20cf64544c5f5511ca663d77b7/system-one/README.md",
+      "usageNote": "只登记 system-one 子目录，不把整个技能集合都标为 Jev 实现。安装选择器依据已核实 frontmatter 和仓库 Skills CLI 安装说明生成；未安装或调用模型。",
+      "path": "system-one"
+    },
+    {
+      "id": "goutoujunshi-jev-chat",
+      "kind": "tool",
+      "category": "assistant",
+      "description": "聊天辅助应用的 Mac 实现提供可选 TypeSafe Jev 策略判断层；其他平台的完成范围按上游说明分别确认。",
+      "distribution": "external",
+      "repository": "shengjidaguai-china/goutoujunshi-jev-chat",
+      "url": "https://github.com/shengjidaguai-china/goutoujunshi-jev-chat",
+      "version": "cb8f8d79ae9b763d9938645e18c8ba5af6bc1f51",
+      "revision": "cb8f8d79ae9b763d9938645e18c8ba5af6bc1f51",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 1383161277,
+        "owner": "shengjidaguai-china",
+        "stars": 104,
+        "pushedAt": "2026-09-26T14:54:42Z",
+        "updatedAt": "2026-09-27T17:43:51Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-28T00:06:53.943009+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/shengjidaguai-china/goutoujunshi-jev-chat/blob/cb8f8d79ae9b763d9938645e18c8ba5af6bc1f51/integrations/jev_mac/jev.py#L130",
+          "summary": "聊天辅助应用的 Mac 实现提供可选 TypeSafe Jev 策略判断层；其他平台的完成范围按上游说明分别确认。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/shengjidaguai-china/goutoujunshi-jev-chat/blob/cb8f8d79ae9b763d9938645e18c8ba5af6bc1f51/README.md#L74",
+          "summary": "聊天辅助应用的 Mac 实现提供可选 TypeSafe Jev 策略判断层；其他平台的完成范围按上游说明分别确认。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/shengjidaguai-china/goutoujunshi-jev-chat/blob/cb8f8d79ae9b763d9938645e18c8ba5af6bc1f51/README.md",
+      "usageNote": "本轮只核实 Mac 目录的可选 Jev 策略调用。上游明确各平台范围不同，Windows 尚待实机验收，Android 暂不支持微信截取；未将这些范围扩写为已测能力。"
+    },
+    {
+      "id": "jev-voice",
+      "kind": "tool",
+      "category": "voice",
+      "description": "Mac 语音助手用本地 whisper.cpp 转写，再请求 TypeSafe Jev 选择命令与参数，由本地代码执行动作。",
+      "distribution": "external",
+      "repository": "kevinbadi/jev-voice",
+      "url": "https://github.com/kevinbadi/jev-voice",
+      "version": "fdc23e26644df1e68d1991f41221df21620263d6",
+      "revision": "fdc23e26644df1e68d1991f41221df21620263d6",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的上游说明准备运行环境；本市场不提供该项目运行时。",
+        "实时 Jev 调用需要相应提供商凭据，数据发送范围按上游文档检查。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-28",
+      "github": {
+        "repositoryId": 1376451543,
+        "owner": "kevinbadi",
+        "stars": 101,
+        "pushedAt": "2026-09-23T22:48:52Z",
+        "updatedAt": "2026-09-27T09:34:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-28T00:06:59.982438+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/kevinbadi/jev-voice/blob/fdc23e26644df1e68d1991f41221df21620263d6/jev_voice/brain.py#L298",
+          "summary": "Mac 语音助手用本地 whisper.cpp 转写，再请求 TypeSafe Jev 选择命令与参数，由本地代码执行动作。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kevinbadi/jev-voice/blob/fdc23e26644df1e68d1991f41221df21620263d6/README.md#L5",
+          "summary": "Mac 语音助手用本地 whisper.cpp 转写，再请求 TypeSafe Jev 选择命令与参数，由本地代码执行动作。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/kevinbadi/jev-voice/blob/fdc23e26644df1e68d1991f41221df21620263d6/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
     }
   ]
 }

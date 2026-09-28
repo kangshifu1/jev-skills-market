@@ -73,6 +73,31 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-28（main）
+
+本轮搜索 238 个去重候选，新增 **10 个项目**（2 个 Skill 入口、8 个工具），目录共 **170 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-28.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [PouriaRouzrokh/LatteReview](https://github.com/PouriaRouzrokh/LatteReview) | 121 | 工具 | 文献筛选库通过 SystemOneProvider 调用 Jev，对标题、摘要及评分问题返回类型化判断，并可接入混合审阅流程。 |
+| [virajbhartiya/laya-vs-jev](https://github.com/virajbhartiya/laya-vs-jev) | 102 | 工具 | 对照演示让本地 Laya 与托管 TypeSafe Jev 操作同一游戏环境，包含真实 Jev 请求入口；未复现上游指标。 |
+| [imikerussell/beebots](https://github.com/imikerussell/beebots) | 146 | 工具 | OKX 交易演示使用 TypeSafe SDK 请求 Jev 选择有界动作，上游默认纸上交易；本市场未连接交易账户。 |
+| [socai-io/jev-social](https://github.com/socai-io/jev-social) | 102 | Skill | 社交媒体研究应用的 Skill 入口调用 Jev 选择有界操作，再由独立 socai CLI 执行并返回来源证据。 |
+| [statelyai/agent](https://github.com/statelyai/agent) | 464 | 工具 | 框架官方集成文档演示在 XState actor 中通过 AI SDK 调用 Jev 判断；这是集成示例，不是内置 Jev 后端。 |
+| [libingzheren/Jev-Mem](https://github.com/libingzheren/Jev-Mem) | 105 | 工具 | 智能体记忆框架使用 TypeSafe Jev 判断记忆写入、关系及检索控制，将记忆管理与回答生成分开。 |
+| [savka777/jev-use](https://github.com/savka777/jev-use) | 103 | 工具 | macOS 应用从辅助功能树生成屏幕控件候选，由 TypeSafe Jev 选择目标；支持语音和文字入口。 |
+| [magnus919/agent-skills](https://github.com/magnus919/agent-skills) | 101 | Skill | System One 开发 Skill 提供 Jev 集成、评价和故障诊断指引，并包含默认离线、显式开启真实调用的示例脚本。 |
+| [shengjidaguai-china/goutoujunshi-jev-chat](https://github.com/shengjidaguai-china/goutoujunshi-jev-chat) | 104 | 工具 | 聊天辅助应用的 Mac 实现提供可选 TypeSafe Jev 策略判断层；其他平台的完成范围按上游说明分别确认。 |
+| [kevinbadi/jev-voice](https://github.com/kevinbadi/jev-voice) | 101 | 工具 | Mac 语音助手用本地 whisper.cpp 转写，再请求 TypeSafe Jev 选择命令与参数，由本地代码执行动作。 |
+
+`npm run jev -- show system-one` 和 `npm run jev -- show jev-social` 可查看按真实 Skill 名称生成的安装命令。
+安装文件不代表依赖或账号已配置。Jev Social 的 Skill 与固定 CLI 版本分别记录；Stately 条目明确为官方集成示例。
+
 ## 每日发现：2026-09-27（main）
 
 本轮搜索 228 个去重候选，新增 **9 个外部工具**，目录现有 **160 项**。

@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-09-28 — daily external discovery
+
+- Add 10 projects from 238 GitHub candidates: 2 Skill entries and 8 tools. Catalog
+  now contains 170 entries; 145 sources were already represented and 83 excluded.
+- Pin source evidence for literature screening, memory control, Mac voice and GUI
+  tools, social research and a paper-trading example.
+- Verify System One and Jev Social Skill names and installation references. Record
+  Jev Social's separately pinned CLI runtime and its inspected provider configuration.
+- Scope Stately's entry to its official integration recipe and chat-platform claims
+  to the inspected implementation. No upstream programs or model calls were run.
+
 ## Unreleased — 2026-09-27 — daily external discovery
 
 - Add 9 external tools from 228 GitHub candidates, bringing the catalog to 160
