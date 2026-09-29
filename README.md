@@ -73,6 +73,32 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-29（main）
+
+本轮搜索 252 个去重候选，新增 **9 个项目**（3 个 Skill 入口、6 个工具），目录共 **179 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-29.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [Sidiora-Labs/codify](https://github.com/Sidiora-Labs/codify) | 105 | 工具 | 编程工作流通过 OpenRouter 调用 Jev，辅助记忆分类和失败检查分析；模型判断不替代代码中的检查结果。 |
+| [aaddrick/building-with-typesafe-jev](https://github.com/aaddrick/building-with-typesafe-jev) | 113 | Skill | 社区 TypeSafe 开发 Skill，提供类型化问题、判断组合与 SDK 示例；属于开发指引，不是独立模型服务。 |
+| [alisaitteke/photoshop-mcp](https://github.com/alisaitteke/photoshop-mcp) | 532 | 工具 | Photoshop MCP 的可选 Jev 路由先判断编辑请求，选择直接执行单步命令或交给生成模型规划。 |
+| [JunMa11/MedJev](https://github.com/JunMa11/MedJev) | 102 | 工具 | 本地医学变量提取模型提供可选托管 TypeSafe Jev 对照脚本；仅登记该评价入口，未验证临床效果。 |
+| [mizchi/jev-lint](https://github.com/mizchi/jev-lint) | 109 | Skill | 语义检查 Skill 与独立 CLI 先用 ast-grep 选择代码，再调用 Jev 判断自然语言规则，并支持阈值校准。 |
+| [timrogers/formanator](https://github.com/timrogers/formanator) | 101 | 工具 | 费用申报 CLI 提供 Jev 福利与费用类别选择器，基于商户、描述和有效类别作选择；未提交任何申报。 |
+| [qkal/Canny](https://github.com/qkal/Canny) | 104 | 工具 | 编程智能体检查工具用可选 Jev Noul 判断完成声明和规则偏离，结合本地检查记录给出提示与完成门槛。 |
+| [egma-ai/jev-code-reviewer](https://github.com/egma-ai/jev-code-reviewer) | 102 | Skill | PR 审阅 Skill 调用独立 CLI，用 Jev 分类审阅优先级与风险，再由生成模型提供解释和浏览器审阅卡片。 |
+| [w3cj/jev-chat](https://github.com/w3cj/jev-chat) | 103 | 工具 | 聊天应用由 Jev 选择工具及已有文本候选，服务端代码执行流程并组织回复；Jev 不生成自由文本。 |
+
+`npm run jev -- show building-with-typesafe-jev`、`npm run jev -- show jev-lint` 和
+`npm run jev -- show jev-reviewer` 可查看固定版本的 Skill 安装命令；CLI 与浏览器扩展需另配。
+MedJev 仅按托管 Jev 对照评价入口收录，不把其本地模型或临床指标标为已验证。
+已通过 GitHub 仓库 ID 确认 `uehaj/jev-semgrep` 更名为 `uehaj/sys1grep`，补充别名而不重复入库。
+
 ## 每日发现：2026-09-28（main）
 
 本轮搜索 238 个去重候选，新增 **10 个项目**（2 个 Skill 入口、8 个工具），目录共 **170 项**。

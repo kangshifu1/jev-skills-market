@@ -623,7 +623,10 @@
         }
       ],
       "usageUrl": "https://github.com/uehaj/jev-semgrep/blob/8c78ac7ecb4081cdb2ca40d198d6003aa0e1a506/README.md",
-      "usageNote": "先阅读 usageUrl 的固定提交说明；此条目的 install 为 null，不代表可以用 Skills CLI 安装整个仓库。"
+      "usageNote": "先阅读 usageUrl 的固定提交说明；此条目的 install 为 null，不代表可以用 Skills CLI 安装整个仓库。",
+      "repositoryAliases": [
+        "uehaj/sys1grep"
+      ]
     },
     {
       "id": "hermes-jev-skills",
@@ -7284,6 +7287,448 @@
         }
       ],
       "usageUrl": "https://github.com/kevinbadi/jev-voice/blob/fdc23e26644df1e68d1991f41221df21620263d6/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "codify-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "编程工作流通过 OpenRouter 调用 Jev，辅助记忆分类和失败检查分析；模型判断不替代代码中的检查结果。",
+      "distribution": "external",
+      "repository": "Sidiora-Labs/codify",
+      "url": "https://github.com/Sidiora-Labs/codify",
+      "version": "a0f120eca214ab53afd52d1b457475e92415b8f0",
+      "revision": "a0f120eca214ab53afd52d1b457475e92415b8f0",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按上游说明准备 codify 与 curl；Jev 功能需要 OpenRouter 凭据。",
+        "仅登记可选 Jev 决策能力，基础本地工作流与模型判断分别核实。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 1332840481,
+        "owner": "Sidiora-Labs",
+        "stars": 105,
+        "pushedAt": "2026-09-28T18:34:41Z",
+        "updatedAt": "2026-09-29T00:04:54Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-29T00:05:09.275418+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Sidiora-Labs/codify/blob/a0f120eca214ab53afd52d1b457475e92415b8f0/src/jev.c#L551",
+          "summary": "编程工作流通过 OpenRouter 调用 Jev，辅助记忆分类和失败检查分析；模型判断不替代代码中的检查结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Sidiora-Labs/codify/blob/a0f120eca214ab53afd52d1b457475e92415b8f0/README.md#L43",
+          "summary": "编程工作流通过 OpenRouter 调用 Jev，辅助记忆分类和失败检查分析；模型判断不替代代码中的检查结果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Sidiora-Labs/codify/blob/a0f120eca214ab53afd52d1b457475e92415b8f0/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "building-with-typesafe-jev",
+      "kind": "skill",
+      "category": "development",
+      "description": "社区 TypeSafe 开发 Skill，提供类型化问题、判断组合与 SDK 示例；属于开发指引，不是独立模型服务。",
+      "distribution": "external",
+      "repository": "aaddrick/building-with-typesafe-jev",
+      "url": "https://github.com/aaddrick/building-with-typesafe-jev",
+      "version": "db95c54abf6cbaa3c2e0e9059051508675e3649b",
+      "revision": "db95c54abf6cbaa3c2e0e9059051508675e3649b",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "支持 SKILL.md 的智能体；安装时保留完整 Skill 目录和引用文件。",
+        "示例涉及真实调用时需另配提供商凭据；该 Skill 不是 TypeSafe 官方产品。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 1388304414,
+        "owner": "aaddrick",
+        "stars": 113,
+        "pushedAt": "2026-09-28T02:25:46Z",
+        "updatedAt": "2026-09-28T22:35:49Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-29T00:05:19.947859+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/aaddrick/building-with-typesafe-jev/blob/db95c54abf6cbaa3c2e0e9059051508675e3649b/skills/building-with-typesafe-jev/api-reference.md#L96",
+          "summary": "社区 TypeSafe 开发 Skill，提供类型化问题、判断组合与 SDK 示例；属于开发指引，不是独立模型服务。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/aaddrick/building-with-typesafe-jev/blob/db95c54abf6cbaa3c2e0e9059051508675e3649b/README.md#L27",
+          "summary": "社区 TypeSafe 开发 Skill，提供类型化问题、判断组合与 SDK 示例；属于开发指引，不是独立模型服务。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/aaddrick/building-with-typesafe-jev/blob/db95c54abf6cbaa3c2e0e9059051508675e3649b/skills/building-with-typesafe-jev/SKILL.md#L1",
+          "summary": "已核实 Skill frontmatter 名称 building-with-typesafe-jev 与目录 skills/building-with-typesafe-jev；安装命令仅针对 Skill 文件，未执行安装。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/aaddrick/building-with-typesafe-jev/blob/db95c54abf6cbaa3c2e0e9059051508675e3649b/README.md",
+      "path": "skills/building-with-typesafe-jev",
+      "usageNote": "目录命令按固定提交与已核实的 Skill 名称生成，仅安装 Skill 文件；运行依赖、账户和权限按 usageUrl 另行配置。未执行安装或上游功能。 此为社区开发指引，示例以 TypeSafe 最新官方文档为准。"
+    },
+    {
+      "id": "photoshop-mcp-jev",
+      "kind": "tool",
+      "category": "creative-tools",
+      "description": "Photoshop MCP 的可选 Jev 路由先判断编辑请求，选择直接执行单步命令或交给生成模型规划。",
+      "distribution": "external",
+      "repository": "alisaitteke/photoshop-mcp",
+      "url": "https://github.com/alisaitteke/photoshop-mcp",
+      "version": "25d914a6b637230e77410479d0b8f1f715c14c49",
+      "revision": "25d914a6b637230e77410479d0b8f1f715c14c49",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明配置 Photoshop、Node.js 与上游 MCP/UI 运行时。",
+        "Jev 路由需 TypeSafe 凭据；模型返回值仍须经过应用的动作策略。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 1142857237,
+        "owner": "alisaitteke",
+        "stars": 532,
+        "pushedAt": "2026-09-28T00:53:32Z",
+        "updatedAt": "2026-09-28T18:10:40Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-29T00:05:33.232096+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/alisaitteke/photoshop-mcp/blob/25d914a6b637230e77410479d0b8f1f715c14c49/src/ui/intent/router.ts#L228",
+          "summary": "Photoshop MCP 的可选 Jev 路由先判断编辑请求，选择直接执行单步命令或交给生成模型规划。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/alisaitteke/photoshop-mcp/blob/25d914a6b637230e77410479d0b8f1f715c14c49/README.md#L40",
+          "summary": "Photoshop MCP 的可选 Jev 路由先判断编辑请求，选择直接执行单步命令或交给生成模型规划。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/alisaitteke/photoshop-mcp/blob/25d914a6b637230e77410479d0b8f1f715c14c49/src/ui/intent/service.ts#L83",
+          "summary": "服务端创建 TypeSafe SDK 客户端；未配置凭据时不启用 Jev 路由。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/alisaitteke/photoshop-mcp/blob/25d914a6b637230e77410479d0b8f1f715c14c49/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "medjev-hosted-evaluation",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "本地医学变量提取模型提供可选托管 TypeSafe Jev 对照脚本；仅登记该评价入口，未验证临床效果。",
+      "distribution": "external",
+      "repository": "JunMa11/MedJev",
+      "url": "https://github.com/JunMa11/MedJev",
+      "version": "22291436ead34ce4cc3386441512c25ed5d3d715",
+      "revision": "22291436ead34ce4cc3386441512c25ed5d3d715",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按上游固定提交准备 Python 评价环境；托管对照需要 TypeSafe 凭据。",
+        "本地模型与托管 Jev 为不同系统；本市场未上传病历、运行评价或复现指标。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 1380739864,
+        "owner": "JunMa11",
+        "stars": 102,
+        "pushedAt": "2026-09-22T03:03:40Z",
+        "updatedAt": "2026-09-28T17:58:37Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-09-29T00:05:33.701226+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/JunMa11/MedJev/blob/22291436ead34ce4cc3386441512c25ed5d3d715/medjev/run_jev.py#L49",
+          "summary": "本地医学变量提取模型提供可选托管 TypeSafe Jev 对照脚本；仅登记该评价入口，未验证临床效果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/JunMa11/MedJev/blob/22291436ead34ce4cc3386441512c25ed5d3d715/README.md#L45",
+          "summary": "本地医学变量提取模型提供可选托管 TypeSafe Jev 对照脚本；仅登记该评价入口，未验证临床效果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/JunMa11/MedJev/blob/22291436ead34ce4cc3386441512c25ed5d3d715/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。 只核实 medjev/run_jev.py 的托管对照入口，不声称本地模型即 Jev、临床适用或性能已实测。"
+    },
+    {
+      "id": "jev-lint",
+      "kind": "skill",
+      "category": "testing",
+      "description": "语义检查 Skill 与独立 CLI 先用 ast-grep 选择代码，再调用 Jev 判断自然语言规则，并支持阈值校准。",
+      "distribution": "external",
+      "repository": "mizchi/jev-lint",
+      "url": "https://github.com/mizchi/jev-lint",
+      "version": "1123887e5929a7be0256b23d29f6cf1961675d24",
+      "revision": "1123887e5929a7be0256b23d29f6cf1961675d24",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "Skill 之外还需按上游说明准备 Node.js 24+ 和 jev-lint CLI。",
+        "真实检查需要 TypeSafe 凭据；判断结果是待审阅候选，不能当作确定的代码缺陷。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 1376978038,
+        "owner": "mizchi",
+        "stars": 109,
+        "pushedAt": "2026-09-24T08:58:28Z",
+        "updatedAt": "2026-09-28T16:09:21Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-29T00:05:35.648248+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/mizchi/jev-lint/blob/1123887e5929a7be0256b23d29f6cf1961675d24/src/jev.ts#L361",
+          "summary": "语义检查 Skill 与独立 CLI 先用 ast-grep 选择代码，再调用 Jev 判断自然语言规则，并支持阈值校准。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mizchi/jev-lint/blob/1123887e5929a7be0256b23d29f6cf1961675d24/README.md#L219",
+          "summary": "语义检查 Skill 与独立 CLI 先用 ast-grep 选择代码，再调用 Jev 判断自然语言规则，并支持阈值校准。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/mizchi/jev-lint/blob/1123887e5929a7be0256b23d29f6cf1961675d24/skills/jev-lint/SKILL.md#L1",
+          "summary": "已核实 Skill frontmatter 名称 jev-lint 与目录 skills/jev-lint；安装命令仅针对 Skill 文件，未执行安装。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/mizchi/jev-lint/blob/1123887e5929a7be0256b23d29f6cf1961675d24/README.md",
+      "path": "skills/jev-lint",
+      "usageNote": "目录命令按固定提交与已核实的 Skill 名称生成，仅安装 Skill 文件；运行依赖、账户和权限按 usageUrl 另行配置。未执行安装或上游功能。"
+    },
+    {
+      "id": "formanator-jev",
+      "kind": "tool",
+      "category": "finance",
+      "description": "费用申报 CLI 提供 Jev 福利与费用类别选择器，基于商户、描述和有效类别作选择；未提交任何申报。",
+      "distribution": "external",
+      "repository": "timrogers/formanator",
+      "url": "https://github.com/timrogers/formanator",
+      "version": "bb8aa6231737512f647bf1a46d0ab147246523c7",
+      "revision": "bb8aa6231737512f647bf1a46d0ab147246523c7",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明安装 Formanator；业务功能的账户与提供商配置需另行准备。",
+        "Jev 分类需要 TypeSafe 凭据；本市场未连接报销账户、读取票据或提交报销。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 672323348,
+        "owner": "timrogers",
+        "stars": 101,
+        "pushedAt": "2026-09-28T22:05:19Z",
+        "updatedAt": "2026-09-28T12:56:32Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-29T00:05:40.060514+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/timrogers/formanator/blob/bb8aa6231737512f647bf1a46d0ab147246523c7/src/typesafe.rs#L237",
+          "summary": "费用申报 CLI 提供 Jev 福利与费用类别选择器，基于商户、描述和有效类别作选择；未提交任何申报。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/timrogers/formanator/blob/bb8aa6231737512f647bf1a46d0ab147246523c7/README.md#L80",
+          "summary": "费用申报 CLI 提供 Jev 福利与费用类别选择器，基于商户、描述和有效类别作选择；未提交任何申报。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/timrogers/formanator/blob/bb8aa6231737512f647bf1a46d0ab147246523c7/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "canny-jev",
+      "kind": "tool",
+      "category": "testing",
+      "description": "编程智能体检查工具用可选 Jev Noul 判断完成声明和规则偏离，结合本地检查记录给出提示与完成门槛。",
+      "distribution": "external",
+      "repository": "qkal/Canny",
+      "url": "https://github.com/qkal/Canny",
+      "version": "f2c5e53779445d60dc4a09d2dbced2308fccb820",
+      "revision": "f2c5e53779445d60dc4a09d2dbced2308fccb820",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按上游说明准备 Node.js 22+、Git 与支持的编程智能体。",
+        "可选判断需 TypeSafe 凭据；阻断基于本地检查记录，Jev 对非完成声明可放宽门槛，不作为安全边界。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 1366680224,
+        "owner": "qkal",
+        "stars": 104,
+        "pushedAt": "2026-09-22T23:25:11Z",
+        "updatedAt": "2026-09-28T12:00:23Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-29T00:05:41.612923+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/qkal/Canny/blob/f2c5e53779445d60dc4a09d2dbced2308fccb820/src/jev.ts#L92",
+          "summary": "编程智能体检查工具用可选 Jev Noul 判断完成声明和规则偏离，结合本地检查记录给出提示与完成门槛。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/qkal/Canny/blob/f2c5e53779445d60dc4a09d2dbced2308fccb820/README.md#L155",
+          "summary": "编程智能体检查工具用可选 Jev Noul 判断完成声明和规则偏离，结合本地检查记录给出提示与完成门槛。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/qkal/Canny/blob/f2c5e53779445d60dc4a09d2dbced2308fccb820/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-reviewer",
+      "kind": "skill",
+      "category": "testing",
+      "description": "PR 审阅 Skill 调用独立 CLI，用 Jev 分类审阅优先级与风险，再由生成模型提供解释和浏览器审阅卡片。",
+      "distribution": "external",
+      "repository": "egma-ai/jev-code-reviewer",
+      "url": "https://github.com/egma-ai/jev-code-reviewer",
+      "version": "d1966f537a09efacd96408b364c885f9ae424282",
+      "revision": "d1966f537a09efacd96408b364c885f9ae424282",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "Skill 文件、jev-reviewer CLI 和浏览器扩展分别配置；Skill 不会建立后台 GitHub 监听。",
+        "实时分析需 TypeSafe 与 OpenAI 凭据；内置 demo 为录制报告回放，不是实时模型分析。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 1376570509,
+        "owner": "egma-ai",
+        "stars": 102,
+        "pushedAt": "2026-09-25T04:47:19Z",
+        "updatedAt": "2026-09-28T11:51:33Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-29T00:05:41.613265+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/egma-ai/jev-code-reviewer/blob/d1966f537a09efacd96408b364c885f9ae424282/src/providers.mjs#L275",
+          "summary": "PR 审阅 Skill 调用独立 CLI，用 Jev 分类审阅优先级与风险，再由生成模型提供解释和浏览器审阅卡片。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/egma-ai/jev-code-reviewer/blob/d1966f537a09efacd96408b364c885f9ae424282/README.md#L42",
+          "summary": "PR 审阅 Skill 调用独立 CLI，用 Jev 分类审阅优先级与风险，再由生成模型提供解释和浏览器审阅卡片。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/egma-ai/jev-code-reviewer/blob/d1966f537a09efacd96408b364c885f9ae424282/skill/jev-reviewer/SKILL.md#L1",
+          "summary": "已核实 Skill frontmatter 名称 jev-reviewer 与目录 skill/jev-reviewer；安装命令仅针对 Skill 文件，未执行安装。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/egma-ai/jev-code-reviewer/blob/d1966f537a09efacd96408b364c885f9ae424282/install/README.md#L3",
+          "summary": "上游确认独立 Skill 安装范围；CLI、扩展与凭据均需单独配置。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/egma-ai/jev-code-reviewer/blob/d1966f537a09efacd96408b364c885f9ae424282/README.md",
+      "path": "skill/jev-reviewer",
+      "usageNote": "目录命令按固定提交与已核实的 Skill 名称生成，仅安装 Skill 文件；运行依赖、账户和权限按 usageUrl 另行配置。未执行安装或上游功能。"
+    },
+    {
+      "id": "jev-chat-w3cj",
+      "kind": "tool",
+      "category": "assistant",
+      "description": "聊天应用由 Jev 选择工具及已有文本候选，服务端代码执行流程并组织回复；Jev 不生成自由文本。",
+      "distribution": "external",
+      "repository": "w3cj/jev-chat",
+      "url": "https://github.com/w3cj/jev-chat",
+      "version": "e543aba8c21b57a28a748ef41966502130f0f69e",
+      "revision": "e543aba8c21b57a28a748ef41966502130f0f69e",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Node.js 24+、pnpm 11 和应用服务。",
+        "Jev 需要 TypeSafe 凭据；其他工具的权限和提供商凭据按上游逐项配置。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-29",
+      "github": {
+        "repositoryId": 1376436152,
+        "owner": "w3cj",
+        "stars": 103,
+        "pushedAt": "2026-09-18T21:16:11Z",
+        "updatedAt": "2026-09-28T10:13:10Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-29T00:05:43.867278+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/w3cj/jev-chat/blob/e543aba8c21b57a28a748ef41966502130f0f69e/apps/server/src/jev/client.ts#L59",
+          "summary": "聊天应用由 Jev 选择工具及已有文本候选，服务端代码执行流程并组织回复；Jev 不生成自由文本。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/w3cj/jev-chat/blob/e543aba8c21b57a28a748ef41966502130f0f69e/README.md#L29",
+          "summary": "聊天应用由 Jev 选择工具及已有文本候选，服务端代码执行流程并组织回复；Jev 不生成自由文本。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/w3cj/jev-chat/blob/e543aba8c21b57a28a748ef41966502130f0f69e/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
     }
   ]

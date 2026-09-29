@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — 2026-09-29 — daily external discovery
+
+- Add 9 projects from 252 GitHub candidates: 3 Skill entries and 6 tools. Catalog
+  now contains 179 entries; 155 existing sources and 88 exclusions are recorded.
+- Pin source evidence for coding checks, Photoshop routing, expense categorization,
+  candidate-based chat and MedJev's optional hosted Jev evaluation entry point.
+- Verify three Skill names and directories; keep their runtime dependencies separate.
+- Confirm the jev-semgrep to sys1grep rename by repository ID and add a deduplication
+  alias while retaining the original source snapshot. No upstream code or models ran.
+
 ## Unreleased — 2026-09-28 — daily external discovery
 
 - Add 10 projects from 238 GitHub candidates: 2 Skill entries and 8 tools. Catalog
