@@ -7730,6 +7730,385 @@
       ],
       "usageUrl": "https://github.com/w3cj/jev-chat/blob/e543aba8c21b57a28a748ef41966502130f0f69e/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+    },
+    {
+      "id": "hyper-jev",
+      "kind": "skill",
+      "category": "development",
+      "description": "可移植 Jev 开发 Skill，附类型化决策客户端、示例与 cookbook；支持 TypeSafe 和 OpenRouter，应用代码保留执行控制。",
+      "distribution": "external",
+      "repository": "disler/ten-levels-of-jev",
+      "url": "https://github.com/disler/ten-levels-of-jev",
+      "version": "777adaf47d37ae0553220d35b2f15b3a3a063305",
+      "revision": "777adaf47d37ae0553220d35b2f15b3a3a063305",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "支持 SKILL.md 的智能体；安装时保留完整 Skill 目录及引用文件。",
+        "实际集成需要 TypeScript 运行环境与所选提供商凭据；本市场未安装、运行示例或复现上游指标。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-30",
+      "github": {
+        "repositoryId": 1391197420,
+        "owner": "disler",
+        "stars": 108,
+        "pushedAt": "2026-09-27T17:19:07Z",
+        "updatedAt": "2026-09-29T23:31:17Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-30T00:03:04.318989+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/disler/ten-levels-of-jev/blob/777adaf47d37ae0553220d35b2f15b3a3a063305/.claude/skills/hyper-jev/templates/starter/src/core/client.ts#L194",
+          "summary": "可移植 Jev 开发 Skill，附类型化决策客户端、示例与 cookbook；支持 TypeSafe 和 OpenRouter，应用代码保留执行控制。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/disler/ten-levels-of-jev/blob/777adaf47d37ae0553220d35b2f15b3a3a063305/README.md#L322",
+          "summary": "可移植 Jev 开发 Skill，附类型化决策客户端、示例与 cookbook；支持 TypeSafe 和 OpenRouter，应用代码保留执行控制。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/disler/ten-levels-of-jev/blob/777adaf47d37ae0553220d35b2f15b3a3a063305/.claude/skills/hyper-jev/SKILL.md#L1",
+          "summary": "已核实 hyper-jev frontmatter 和可移植目录，附带客户端与引用资源。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/disler/ten-levels-of-jev/blob/777adaf47d37ae0553220d35b2f15b3a3a063305/README.md",
+      "path": ".claude/skills/hyper-jev",
+      "usageNote": "目录安装命令按固定提交和真实 Skill 名称生成，仅安装 Skill 文件；运行环境和凭据需另配，安装和上游功能均未实测。"
+    },
+    {
+      "id": "jev-pokemon",
+      "kind": "tool",
+      "category": "simulation",
+      "description": "宝可梦红版控制程序从游戏状态构造候选动作，通过 Vercel AI Gateway 请求 Jev 选择；本市场未复现通关演示。",
+      "distribution": "external",
+      "repository": "christianmat/jev-pokemon",
+      "url": "https://github.com/christianmat/jev-pokemon",
+      "version": "20cdcb846ff995383fe3da1d48ad5eac6d8d1abd",
+      "revision": "20cdcb846ff995383fe3da1d48ad5eac6d8d1abd",
+      "license": "GPL-2.0",
+      "licenseStatus": "GitHub API identifies GPL-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Node.js 20+ 与游戏模拟环境；游戏文件需用户自行合法准备。",
+        "上游默认 mock；真实 Jev 模式需显式选择 gateway 并配置网关凭据，本市场未运行游戏。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-30",
+      "github": {
+        "repositoryId": 1386544905,
+        "owner": "christianmat",
+        "stars": 106,
+        "pushedAt": "2026-09-28T17:46:13Z",
+        "updatedAt": "2026-09-29T22:49:19Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "GPL-2.0",
+        "checkedAt": "2026-09-30T00:03:08.315621+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/christianmat/jev-pokemon/blob/20cdcb846ff995383fe3da1d48ad5eac6d8d1abd/src/jev/gateway.ts#L22",
+          "summary": "宝可梦红版控制程序从游戏状态构造候选动作，通过 Vercel AI Gateway 请求 Jev 选择；本市场未复现通关演示。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/christianmat/jev-pokemon/blob/20cdcb846ff995383fe3da1d48ad5eac6d8d1abd/README.md#L72",
+          "summary": "宝可梦红版控制程序从游戏状态构造候选动作，通过 Vercel AI Gateway 请求 Jev 选择；本市场未复现通关演示。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/christianmat/jev-pokemon/blob/20cdcb846ff995383fe3da1d48ad5eac6d8d1abd/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置工具与依赖；install 为 null，不生成整个应用、框架或 SDK 的 Skill 安装命令。"
+    },
+    {
+      "id": "jev-showcase",
+      "kind": "tool",
+      "category": "development",
+      "description": "社区 Jev 演示实验室及 CLI 提供智能家居、分类与路由示例，Python 客户端实际请求 TypeSafe System One。",
+      "distribution": "external",
+      "repository": "cobusgreyling/Jev",
+      "url": "https://github.com/cobusgreyling/Jev",
+      "version": "c636087edf4100a097a456e559c4b2fa769b80e8",
+      "revision": "c636087edf4100a097a456e559c4b2fa769b80e8",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按上游说明配置 Python 实验室或 TypeScript CLI；真实调用需要 TypeSafe 凭据。",
+        "本条目登记完整实验室和 CLI；上游另有多个 Skill，安装范围见其固定版本 README。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-30",
+      "github": {
+        "repositoryId": 1377029403,
+        "owner": "cobusgreyling",
+        "stars": 122,
+        "pushedAt": "2026-09-20T07:32:08Z",
+        "updatedAt": "2026-09-29T21:25:28Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-30T00:03:13.124480+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/cobusgreyling/Jev/blob/c636087edf4100a097a456e559c4b2fa769b80e8/jev_lab/client.py#L62",
+          "summary": "社区 Jev 演示实验室及 CLI 提供智能家居、分类与路由示例，Python 客户端实际请求 TypeSafe System One。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cobusgreyling/Jev/blob/c636087edf4100a097a456e559c4b2fa769b80e8/README.md#L72",
+          "summary": "社区 Jev 演示实验室及 CLI 提供智能家居、分类与路由示例，Python 客户端实际请求 TypeSafe System One。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/cobusgreyling/Jev/blob/c636087edf4100a097a456e559c4b2fa769b80e8/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置工具与依赖；install 为 null，不生成整个应用、框架或 SDK 的 Skill 安装命令。 上游另提供 jev、jev-fanout、jev-guardrail、jev-route；此处按实验室整体登记，避免与已有来源不同的同名 jev Skill 混淆。"
+    },
+    {
+      "id": "jevmeter",
+      "kind": "tool",
+      "category": "media-analysis",
+      "description": "视频工具先转写音频，再请求 Jev 对句子作 Noul 判断并生成评分叠层；这些概率不是事实核查结论。",
+      "distribution": "external",
+      "repository": "ChetasLua/jevmeter",
+      "url": "https://github.com/ChetasLua/jevmeter",
+      "version": "cbf8e117b5b8835e3294c3a8ee652c7dfa737a9a",
+      "revision": "cbf8e117b5b8835e3294c3a8ee652c7dfa737a9a",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按上游说明准备 Python、FFmpeg 和转写依赖；模型调用需要 TypeSafe 凭据。",
+        "只核实调用和处理流程，未读取个人视频、转写音频、复现费用或验证内容判断准确率。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-30",
+      "github": {
+        "repositoryId": 1374340897,
+        "owner": "ChetasLua",
+        "stars": 103,
+        "pushedAt": "2026-09-17T12:36:32Z",
+        "updatedAt": "2026-09-29T20:46:35Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-30T00:03:14.224582+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ChetasLua/jevmeter/blob/cbf8e117b5b8835e3294c3a8ee652c7dfa737a9a/jevmeter/score.py#L103",
+          "summary": "视频工具先转写音频，再请求 Jev 对句子作 Noul 判断并生成评分叠层；这些概率不是事实核查结论。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ChetasLua/jevmeter/blob/cbf8e117b5b8835e3294c3a8ee652c7dfa737a9a/README.md#L109",
+          "summary": "视频工具先转写音频，再请求 Jev 对句子作 Noul 判断并生成评分叠层；这些概率不是事实核查结论。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/ChetasLua/jevmeter/blob/cbf8e117b5b8835e3294c3a8ee652c7dfa737a9a/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置工具与依赖；install 为 null，不生成整个应用、框架或 SDK 的 Skill 安装命令。"
+    },
+    {
+      "id": "system-design-trainer",
+      "kind": "tool",
+      "category": "education",
+      "description": "系统设计练习白板使用 Jev 分类组件并评价设计，容量计算由代码处理；未配置凭据时使用带标识的 mock。",
+      "distribution": "external",
+      "repository": "santtiago49/system-design-trainer",
+      "url": "https://github.com/santtiago49/system-design-trainer",
+      "version": "00fa16df9c3e48616043cb764544069c46b8d4c7",
+      "revision": "00fa16df9c3e48616043cb764544069c46b8d4c7",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交 README 准备网页应用依赖。",
+        "真实 Jev 评价需要服务端 TypeSafe 凭据；未把无凭据的 mock 当作模型实测。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-30",
+      "github": {
+        "repositoryId": 1391520507,
+        "owner": "santtiago49",
+        "stars": 107,
+        "pushedAt": "2026-09-28T00:11:10Z",
+        "updatedAt": "2026-09-29T20:37:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-09-30T00:03:14.856521+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/santtiago49/system-design-trainer/blob/00fa16df9c3e48616043cb764544069c46b8d4c7/lib/server/jev.ts#L203",
+          "summary": "系统设计练习白板使用 Jev 分类组件并评价设计，容量计算由代码处理；未配置凭据时使用带标识的 mock。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/santtiago49/system-design-trainer/blob/00fa16df9c3e48616043cb764544069c46b8d4c7/README.md#L41",
+          "summary": "系统设计练习白板使用 Jev 分类组件并评价设计，容量计算由代码处理；未配置凭据时使用带标识的 mock。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/santtiago49/system-design-trainer/blob/00fa16df9c3e48616043cb764544069c46b8d4c7/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置工具与依赖；install 为 null，不生成整个应用、框架或 SDK 的 Skill 安装命令。"
+    },
+    {
+      "id": "makerai-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Delphi AI 框架提供 TAiJev 客户端及类型化决策组件，可接入工具分派、路由和评价；模型判断不是安全授权。",
+      "distribution": "external",
+      "repository": "gustavoeenriquez/MakerAi",
+      "url": "https://github.com/gustavoeenriquez/MakerAi",
+      "version": "23bebeae48a13de991c24bdd9e9d68b998e5b5fd",
+      "revision": "23bebeae48a13de991c24bdd9e9d68b998e5b5fd",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按上游说明准备 Delphi 与 MakerAi 框架依赖。",
+        "Jev 组件需要 TypeSafe 凭据；本市场未编译 Delphi、运行示例或验证上游防护指标。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-30",
+      "github": {
+        "repositoryId": 808346066,
+        "owner": "gustavoeenriquez",
+        "stars": 209,
+        "pushedAt": "2026-09-29T19:28:33Z",
+        "updatedAt": "2026-09-29T17:21:19Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-09-30T00:03:20.099581+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/gustavoeenriquez/MakerAi/blob/23bebeae48a13de991c24bdd9e9d68b998e5b5fd/Source/Tools/uMakerAi.Jev.pas#L854",
+          "summary": "Delphi AI 框架提供 TAiJev 客户端及类型化决策组件，可接入工具分派、路由和评价；模型判断不是安全授权。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/gustavoeenriquez/MakerAi/blob/23bebeae48a13de991c24bdd9e9d68b998e5b5fd/README.md#L44",
+          "summary": "Delphi AI 框架提供 TAiJev 客户端及类型化决策组件，可接入工具分派、路由和评价；模型判断不是安全授权。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/gustavoeenriquez/MakerAi/blob/23bebeae48a13de991c24bdd9e9d68b998e5b5fd/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置工具与依赖；install 为 null，不生成整个应用、框架或 SDK 的 Skill 安装命令。"
+    },
+    {
+      "id": "invaders-jev",
+      "kind": "tool",
+      "category": "simulation",
+      "description": "太空侵略者游戏可选编译 Jev 自动控制器，由代码预测状态、Jev 选择位置及开火选项，再由本地代码执行。",
+      "distribution": "external",
+      "repository": "sausheong/invadersapp",
+      "url": "https://github.com/sausheong/invadersapp",
+      "version": "c548d7972a6647177a53f9355914ebcf6a0d2e81",
+      "revision": "c548d7972a6647177a53f9355914ebcf6a0d2e81",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按上游说明准备 Go 与游戏平台依赖；自动控制器仅在启用 jev 构建标签时存在。",
+        "真实控制需要 TypeSafe 凭据；本市场未构建游戏、请求模型或复现游戏成绩。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-30",
+      "github": {
+        "repositoryId": 143795945,
+        "owner": "sausheong",
+        "stars": 198,
+        "pushedAt": "2026-09-29T15:11:47Z",
+        "updatedAt": "2026-09-29T15:13:54Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-09-30T00:03:21.869953+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/sausheong/invadersapp/blob/c548d7972a6647177a53f9355914ebcf6a0d2e81/internal/typesafe/client.go#L69",
+          "summary": "太空侵略者游戏可选编译 Jev 自动控制器，由代码预测状态、Jev 选择位置及开火选项，再由本地代码执行。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/sausheong/invadersapp/blob/c548d7972a6647177a53f9355914ebcf6a0d2e81/README.md#L69",
+          "summary": "太空侵略者游戏可选编译 Jev 自动控制器，由代码预测状态、Jev 选择位置及开火选项，再由本地代码执行。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/sausheong/invadersapp/blob/c548d7972a6647177a53f9355914ebcf6a0d2e81/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置工具与依赖；install 为 null，不生成整个应用、框架或 SDK 的 Skill 安装命令。"
+    },
+    {
+      "id": "emacs-llm-typesafe",
+      "kind": "tool",
+      "category": "sdk",
+      "description": "Emacs llm 包增加 TypeSafe 决策提供商，将类型化问题发送至 Jev；托管 TypeSafe 与本地兼容服务可分别配置。",
+      "distribution": "external",
+      "repository": "ahyatt/llm",
+      "url": "https://github.com/ahyatt/llm",
+      "version": "d1f5b810236e6279e2dcbe2db355dbb2076db537",
+      "revision": "d1f5b810236e6279e2dcbe2db355dbb2076db537",
+      "license": "GPL-3.0",
+      "licenseStatus": "GitHub API identifies GPL-3.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "在 Emacs 中按固定提交说明配置 llm 包和依赖。",
+        "托管 Jev 提供商需要 TypeSafe 凭据；兼容本地服务不等同于 TypeSafe Jev。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-09-30",
+      "github": {
+        "repositoryId": 675489853,
+        "owner": "ahyatt",
+        "stars": 388,
+        "pushedAt": "2026-09-29T05:04:14Z",
+        "updatedAt": "2026-09-29T05:04:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "GPL-3.0",
+        "checkedAt": "2026-09-30T00:03:30.236220+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ahyatt/llm/blob/d1f5b810236e6279e2dcbe2db355dbb2076db537/llm-typesafe.el#L45",
+          "summary": "Emacs llm 包增加 TypeSafe 决策提供商，将类型化问题发送至 Jev；托管 TypeSafe 与本地兼容服务可分别配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ahyatt/llm/blob/d1f5b810236e6279e2dcbe2db355dbb2076db537/README.org#L372",
+          "summary": "Emacs llm 包增加 TypeSafe 决策提供商，将类型化问题发送至 Jev；托管 TypeSafe 与本地兼容服务可分别配置。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/ahyatt/llm/blob/d1f5b810236e6279e2dcbe2db355dbb2076db537/llm-provider-utils.el#L549",
+          "summary": "公共决定函数根据所选提供商的 URL、认证和请求数据调用同步 HTTP 请求层。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/ahyatt/llm/blob/d1f5b810236e6279e2dcbe2db355dbb2076db537/README.org",
+      "usageNote": "按 usageUrl 的固定提交说明配置工具与依赖；install 为 null，不生成整个应用、框架或 SDK 的 Skill 安装命令。"
     }
   ]
 }

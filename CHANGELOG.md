@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased — 2026-09-30 — daily external discovery
+
+- Add 8 projects from 267 GitHub candidates: the portable hyper-jev Skill and
+  7 tools. Catalog now contains 187 entries; 165 existing sources and 94 exclusions
+  are recorded with fixed source revisions.
+- Verify Jev calls for game control, video sentence judgments, system-design
+  practice, a demonstration lab, Delphi components and an Emacs decision provider.
+- Keep mock modes, gateway providers and runtime requirements explicit. Scope the
+  showcase as a complete tool instead of conflating its jev Skill with an existing
+  same-named Skill from another source.
+- Preserve previous entries and model routing. No upstream programs, model calls,
+  personal media or game benchmarks were run.
+
 ## Unreleased — 2026-09-29 — daily external discovery
 
 - Add 9 projects from 252 GitHub candidates: 3 Skill entries and 6 tools. Catalog

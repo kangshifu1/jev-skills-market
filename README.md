@@ -73,6 +73,30 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-09-30（main）
+
+本轮搜索 267 个去重候选，新增 **8 个项目**（1 个 Skill 入口、7 个工具），目录共 **187 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-09-30.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [disler/ten-levels-of-jev](https://github.com/disler/ten-levels-of-jev) | 108 | Skill | 可移植 Jev 开发 Skill，附类型化决策客户端、示例与 cookbook；支持 TypeSafe 和 OpenRouter，应用代码保留执行控制。 |
+| [christianmat/jev-pokemon](https://github.com/christianmat/jev-pokemon) | 106 | 工具 | 宝可梦红版控制程序从游戏状态构造候选动作，通过 Vercel AI Gateway 请求 Jev 选择；本市场未复现通关演示。 |
+| [cobusgreyling/Jev](https://github.com/cobusgreyling/Jev) | 122 | 工具 | 社区 Jev 演示实验室及 CLI 提供智能家居、分类与路由示例，Python 客户端实际请求 TypeSafe System One。 |
+| [ChetasLua/jevmeter](https://github.com/ChetasLua/jevmeter) | 103 | 工具 | 视频工具先转写音频，再请求 Jev 对句子作 Noul 判断并生成评分叠层；这些概率不是事实核查结论。 |
+| [santtiago49/system-design-trainer](https://github.com/santtiago49/system-design-trainer) | 107 | 工具 | 系统设计练习白板使用 Jev 分类组件并评价设计，容量计算由代码处理；未配置凭据时使用带标识的 mock。 |
+| [gustavoeenriquez/MakerAi](https://github.com/gustavoeenriquez/MakerAi) | 209 | 工具 | Delphi AI 框架提供 TAiJev 客户端及类型化决策组件，可接入工具分派、路由和评价；模型判断不是安全授权。 |
+| [sausheong/invadersapp](https://github.com/sausheong/invadersapp) | 198 | 工具 | 太空侵略者游戏可选编译 Jev 自动控制器，由代码预测状态、Jev 选择位置及开火选项，再由本地代码执行。 |
+| [ahyatt/llm](https://github.com/ahyatt/llm) | 388 | 工具 | Emacs llm 包增加 TypeSafe 决策提供商，将类型化问题发送至 Jev；托管 TypeSafe 与本地兼容服务可分别配置。 |
+
+`npm run jev -- show hyper-jev` 可查看固定版本的 Skill 安装命令；文件安装不代表依赖和凭据已配置。
+`npm run jev -- show jev-pokemon` 与 `npm run jev -- show emacs-llm-typesafe` 可查看工具来源和使用条件。
+JevMeter 的概率叠层不是事实核查；游戏成绩、成本、延迟和其他上游指标均未在本市场复现。
+
 ## 每日发现：2026-09-29（main）
 
 本轮搜索 252 个去重候选，新增 **9 个项目**（3 个 Skill 入口、6 个工具），目录共 **179 项**。
