@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-02 — daily external discovery
+
+- Add 9 external tools from 280 GitHub candidates, bringing the catalog to 196
+  entries. Record 172 existing sources and 99 exclusions.
+- Refresh candidates from the interrupted October 1 run; verify memory, evaluation,
+  content-research and application-framework integrations at fixed source commits.
+- Scope Laya to its community diagnostic Jev backend, JevForge to its explicit
+  comparison endpoint, and gbrain-evals to a separately pinned external runtime.
+- Exclude ComfyUI's replica-only connector and keep provider routes, configuration
+  and untested status explicit. Prior catalog entries and routing remain unchanged.
+
 ## Unreleased — 2026-09-30 — daily external discovery
 
 - Add 8 projects from 267 GitHub candidates: the portable hyper-jev Skill and

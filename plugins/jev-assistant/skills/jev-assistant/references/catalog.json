@@ -8109,6 +8109,430 @@
       ],
       "usageUrl": "https://github.com/ahyatt/llm/blob/d1f5b810236e6279e2dcbe2db355dbb2076db537/README.org",
       "usageNote": "按 usageUrl 的固定提交说明配置工具与依赖；install 为 null，不生成整个应用、框架或 SDK 的 Skill 安装命令。"
+    },
+    {
+      "id": "laya-jev-evaluation",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "Laya 的中文社区诊断脚本提供显式 Jev 后端，调用 TypeSafe 对固定场景作对照评价；只登记该入口，不把本地 Laya 模型当作 Jev。",
+      "distribution": "external",
+      "repository": "NandhaKishorM/laya",
+      "url": "https://github.com/NandhaKishorM/laya",
+      "version": "4aa6761be8173de4ce6d92c31b3e40b6eaf59a7c",
+      "revision": "4aa6761be8173de4ce6d92c31b3e40b6eaf59a7c",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Python 诊断环境，真实 Jev 后端需要 TypeSafe 凭据。",
+        "仅核实社区诊断脚本，主基准的第三方引用成绩不当作本市场实测。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1375382253,
+        "owner": "NandhaKishorM",
+        "stars": 29845,
+        "pushedAt": "2026-10-01T18:20:33Z",
+        "updatedAt": "2026-10-01T23:55:58Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-02T00:05:39.011971+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/NandhaKishorM/laya/blob/4aa6761be8173de4ce6d92c31b3e40b6eaf59a7c/research/benchmarks/feishu_zh/run.py#L63",
+          "summary": "Laya 的中文社区诊断脚本提供显式 Jev 后端，调用 TypeSafe 对固定场景作对照评价；只登记该入口，不把本地 Laya 模型当作 Jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/NandhaKishorM/laya/blob/4aa6761be8173de4ce6d92c31b3e40b6eaf59a7c/README.md#L1247",
+          "summary": "Laya 的中文社区诊断脚本提供显式 Jev 后端，调用 TypeSafe 对固定场景作对照评价；只登记该入口，不把本地 Laya 模型当作 Jev。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/NandhaKishorM/laya/blob/4aa6761be8173de4ce6d92c31b3e40b6eaf59a7c/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。 只登记 research/benchmarks/feishu_zh 的托管 Jev 对照入口；本地模型与上游主基准中的引用成绩不作为 Jev 接入实测。"
+    },
+    {
+      "id": "jev-forge-evaluation",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "JevForge 的对照脚本向显式配置的决策端点提交 Jev 模型、状态和问题，并评价返回答案；本地训练模型是独立系统。",
+      "distribution": "external",
+      "repository": "zwliJay/jev-forge",
+      "url": "https://github.com/zwliJay/jev-forge",
+      "version": "6cf0dfe3b811d623331c0cc8b1c00ff13614772e",
+      "revision": "6cf0dfe3b811d623331c0cc8b1c00ff13614772e",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交说明准备 Python 和评价输入。",
+        "托管对照需配置 JEVFORGE_DECISIONS_ENDPOINT 与 JEVFORGE_API_KEY；代码没有默认端点。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1376779168,
+        "owner": "zwliJay",
+        "stars": 112,
+        "pushedAt": "2026-09-23T04:17:08Z",
+        "updatedAt": "2026-10-01T22:21:00Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-10-02T00:05:50.001080+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/zwliJay/jev-forge/blob/6cf0dfe3b811d623331c0cc8b1c00ff13614772e/jevforge/bench_jev.py#L27",
+          "summary": "JevForge 的对照脚本向显式配置的决策端点提交 Jev 模型、状态和问题，并评价返回答案；本地训练模型是独立系统。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zwliJay/jev-forge/blob/6cf0dfe3b811d623331c0cc8b1c00ff13614772e/README.md#L35",
+          "summary": "JevForge 的对照脚本向显式配置的决策端点提交 Jev 模型、状态和问题，并评价返回答案；本地训练模型是独立系统。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/zwliJay/jev-forge/blob/6cf0dfe3b811d623331c0cc8b1c00ff13614772e/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "gbrain-jev-evals",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "记忆系统评测工具可调用固定版本的外部 gbrain System One 运行时，对 Jev 决策环节进行配对评价；未复现上游成绩。",
+      "distribution": "external",
+      "repository": "garrytan/gbrain-evals",
+      "url": "https://github.com/garrytan/gbrain-evals",
+      "version": "f94e98d8dae349a570e18226cda325aa189ec4a1",
+      "revision": "f94e98d8dae349a570e18226cda325aa189ec4a1",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按上游说明准备 Bun 及支持 System One 的独立 gbrain checkout；固定运行时提交另行记录。",
+        "实时评价需要相关凭据和显式运行选项；保存答案的重算不等于实时 Jev 测试。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1217594636,
+        "owner": "garrytan",
+        "stars": 428,
+        "pushedAt": "2026-10-01T22:19:20Z",
+        "updatedAt": "2026-10-01T22:19:26Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-02T00:05:51.786837+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/garrytan/gbrain-evals/blob/f94e98d8dae349a570e18226cda325aa189ec4a1/eval/runner/system-one-jev.ts#L438",
+          "summary": "记忆系统评测工具可调用固定版本的外部 gbrain System One 运行时，对 Jev 决策环节进行配对评价；未复现上游成绩。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/garrytan/gbrain-evals/blob/f94e98d8dae349a570e18226cda325aa189ec4a1/README.md#L276",
+          "summary": "记忆系统评测工具可调用固定版本的外部 gbrain System One 运行时，对 Jev 决策环节进行配对评价；未复现上游成绩。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/garrytan/gbrain-evals/blob/f94e98d8dae349a570e18226cda325aa189ec4a1/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。 评测依赖另行固定的 gbrain System One 运行时，不声明其默认主分支已包含该能力。",
+      "runtimeSource": {
+        "repository": "garrytan/gbrain",
+        "revision": "9196543dffd8c6b918b232559956f4693874e67b",
+        "url": "https://github.com/garrytan/gbrain/tree/9196543dffd8c6b918b232559956f4693874e67b",
+        "evidence": [
+          "https://github.com/garrytan/gbrain/blob/9196543dffd8c6b918b232559956f4693874e67b/src/core/ai/recipes/typesafe.ts#L25",
+          "https://github.com/garrytan/gbrain/blob/9196543dffd8c6b918b232559956f4693874e67b/src/core/ai/decide/index.ts#L183"
+        ],
+        "status": "source-reviewed-not-run"
+      }
+    },
+    {
+      "id": "jevmem",
+      "kind": "tool",
+      "category": "memory",
+      "description": "项目记忆 CLI 与智能体插件通过 TypeSafe SDK 调用 Jev，判断记忆保存、召回和规则相关性；本市场未启用其 hook。",
+      "distribution": "external",
+      "repository": "Avinash-jetwani/jevmem",
+      "url": "https://github.com/Avinash-jetwani/jevmem",
+      "version": "8db1f0fd32c79afc19fb50fecbd539c74eb1349a",
+      "revision": "8db1f0fd32c79afc19fb50fecbd539c74eb1349a",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Node.js、jevmem CLI 和所选智能体接入。",
+        "实时判断需要 TypeSafe 凭据；本市场未读取聊天记录、记忆文件或运行插件。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1381397567,
+        "owner": "Avinash-jetwani",
+        "stars": 104,
+        "pushedAt": "2026-10-01T19:01:43Z",
+        "updatedAt": "2026-10-01T19:01:48Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-02T00:05:59.350948+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Avinash-jetwani/jevmem/blob/8db1f0fd32c79afc19fb50fecbd539c74eb1349a/src/jev.ts#L251",
+          "summary": "项目记忆 CLI 与智能体插件通过 TypeSafe SDK 调用 Jev，判断记忆保存、召回和规则相关性；本市场未启用其 hook。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Avinash-jetwani/jevmem/blob/8db1f0fd32c79afc19fb50fecbd539c74eb1349a/README.md#L3",
+          "summary": "项目记忆 CLI 与智能体插件通过 TypeSafe SDK 调用 Jev，判断记忆保存、召回和规则相关性；本市场未启用其 hook。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Avinash-jetwani/jevmem/blob/8db1f0fd32c79afc19fb50fecbd539c74eb1349a/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jevals",
+      "kind": "tool",
+      "category": "testing",
+      "description": "Python 评价库可将智能体轨迹的多个判断合并为 Jev 请求，并提供直接 TypeSafe 后端；本地兼容模型后端单独选择。",
+      "distribution": "external",
+      "repository": "openlayer-ai/jevals",
+      "url": "https://github.com/openlayer-ai/jevals",
+      "version": "0a8f895a0428b89c865f953d5295b6b516e4018c",
+      "revision": "0a8f895a0428b89c865f953d5295b6b516e4018c",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Python 与 jevals 依赖。",
+        "托管 Jev 需要所选提供商凭据；未提交真实轨迹或验证上游速度、成本和防护指标。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1378726612,
+        "owner": "openlayer-ai",
+        "stars": 102,
+        "pushedAt": "2026-10-01T16:48:21Z",
+        "updatedAt": "2026-10-01T18:09:49Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-02T00:06:02.414478+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/openlayer-ai/jevals/blob/0a8f895a0428b89c865f953d5295b6b516e4018c/src/jevals/backends/typesafe.py#L50",
+          "summary": "Python 评价库可将智能体轨迹的多个判断合并为 Jev 请求，并提供直接 TypeSafe 后端；本地兼容模型后端单独选择。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/openlayer-ai/jevals/blob/0a8f895a0428b89c865f953d5295b6b516e4018c/README.md#L5",
+          "summary": "Python 评价库可将智能体轨迹的多个判断合并为 Jev 请求，并提供直接 TypeSafe 后端；本地兼容模型后端单独选择。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/openlayer-ai/jevals/blob/0a8f895a0428b89c865f953d5295b6b516e4018c/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "creator-lab",
+      "kind": "tool",
+      "category": "research",
+      "description": "本地短视频研究应用获取公开素材并转写，再通过 TypeSafe Jev 分类脚本；样本表现比较不等于因果结论。",
+      "distribution": "external",
+      "repository": "artemnovitckii/creator-lab",
+      "url": "https://github.com/artemnovitckii/creator-lab",
+      "version": "14f83569977fac0821ddaa98706e3c8b6253b1d8",
+      "revision": "14f83569977fac0821ddaa98706e3c8b6253b1d8",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Node.js 与本地网页应用。",
+        "完整流程需要 Apify、TypeSafe 及 Fireworks 或 Groq 凭据；未采集账号、音频或视频。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1383725580,
+        "owner": "artemnovitckii",
+        "stars": 115,
+        "pushedAt": "2026-09-24T05:51:10Z",
+        "updatedAt": "2026-10-01T18:05:42Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-02T00:06:01.728662+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/artemnovitckii/creator-lab/blob/14f83569977fac0821ddaa98706e3c8b6253b1d8/lib/providers.mjs#L107",
+          "summary": "本地短视频研究应用获取公开素材并转写，再通过 TypeSafe Jev 分类脚本；样本表现比较不等于因果结论。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/artemnovitckii/creator-lab/blob/14f83569977fac0821ddaa98706e3c8b6253b1d8/README.md#L49",
+          "summary": "本地短视频研究应用获取公开素材并转写，再通过 TypeSafe Jev 分类脚本；样本表现比较不等于因果结论。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/artemnovitckii/creator-lab/blob/14f83569977fac0821ddaa98706e3c8b6253b1d8/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "nestjs-agentic-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "NestJS 智能体框架的 Jev 包使用 TypeSafe SDK 判断工具调用、输出和评价问题，由应用策略处理允许、人工复核或拒绝。",
+      "distribution": "external",
+      "repository": "irzix/nestjs-agentic",
+      "url": "https://github.com/irzix/nestjs-agentic",
+      "version": "dc905c5154eb6ca7136643c56d90df498b114509",
+      "revision": "dc905c5154eb6ca7136643c56d90df498b114509",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Node.js 20+、NestJS 与 @nestjs-agentic/jev 相关依赖。",
+        "TypeSafe 凭据须留在服务端；模型判断不是独立的安全授权边界，本市场未运行智能体。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1327071007,
+        "owner": "irzix",
+        "stars": 131,
+        "pushedAt": "2026-10-01T17:15:35Z",
+        "updatedAt": "2026-10-01T17:14:38Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-02T00:06:04.418677+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/irzix/nestjs-agentic/blob/dc905c5154eb6ca7136643c56d90df498b114509/packages/jev/src/ask-jev.ts#L67",
+          "summary": "NestJS 智能体框架的 Jev 包使用 TypeSafe SDK 判断工具调用、输出和评价问题，由应用策略处理允许、人工复核或拒绝。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/irzix/nestjs-agentic/blob/dc905c5154eb6ca7136643c56d90df498b114509/README.md#L52",
+          "summary": "NestJS 智能体框架的 Jev 包使用 TypeSafe SDK 判断工具调用、输出和评价问题，由应用策略处理允许、人工复核或拒绝。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/irzix/nestjs-agentic/blob/dc905c5154eb6ca7136643c56d90df498b114509/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "engraphis-jev",
+      "kind": "tool",
+      "category": "memory",
+      "description": "记忆引擎提供可选 Jev 判断后端；显式 BYOK 路径直接请求 TypeSafe，默认本地判断及托管代理路径分别配置。",
+      "distribution": "external",
+      "repository": "Coding-Dev-Tools/engraphis",
+      "url": "https://github.com/Coding-Dev-Tools/engraphis",
+      "version": "c00b8e6807ba18413a88e205ac892df8cfa52d59",
+      "revision": "c00b8e6807ba18413a88e205ac892df8cfa52d59",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明配置 Engraphis 与所需 MCP 运行时。",
+        "直接调用要求显式 BYOK 配置及逐次远程同意；未连接 MCP、读取记忆或调用模型。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1284672605,
+        "owner": "Coding-Dev-Tools",
+        "stars": 174,
+        "pushedAt": "2026-10-01T12:29:13Z",
+        "updatedAt": "2026-10-01T12:29:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-02T00:06:07.973619+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Coding-Dev-Tools/engraphis/blob/c00b8e6807ba18413a88e205ac892df8cfa52d59/engraphis/backends/jev_transport.py#L393",
+          "summary": "记忆引擎提供可选 Jev 判断后端；显式 BYOK 路径直接请求 TypeSafe，默认本地判断及托管代理路径分别配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Coding-Dev-Tools/engraphis/blob/c00b8e6807ba18413a88e205ac892df8cfa52d59/README.md#L698",
+          "summary": "记忆引擎提供可选 Jev 判断后端；显式 BYOK 路径直接请求 TypeSafe，默认本地判断及托管代理路径分别配置。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Coding-Dev-Tools/engraphis/blob/c00b8e6807ba18413a88e205ac892df8cfa52d59/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。 本条目登记记忆引擎的 Jev 后端；附带 MCP 使用 Skill 不等于已安装或连接运行时。"
+    },
+    {
+      "id": "active-harness-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Ruby/Rails 智能体框架通过 Vercel AI Gateway 的 System One 兼容端点请求 Jev，提交类型化问题并返回概率与答案。",
+      "distribution": "external",
+      "repository": "the-teacher/active_harness",
+      "url": "https://github.com/the-teacher/active_harness",
+      "version": "088fbf4b7fee9042339d96aa1a53a9fd9646451a",
+      "revision": "088fbf4b7fee9042339d96aa1a53a9fd9646451a",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Ruby/Rails 和 Active Harness 依赖。",
+        "Jev 路径需 Vercel AI Gateway 配置及凭据；不是普通聊天生成或 token 流式接口。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-02",
+      "github": {
+        "repositoryId": 1229560631,
+        "owner": "the-teacher",
+        "stars": 106,
+        "pushedAt": "2026-09-25T13:02:50Z",
+        "updatedAt": "2026-10-01T05:52:22Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-02T00:06:12.983744+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/the-teacher/active_harness/blob/088fbf4b7fee9042339d96aa1a53a9fd9646451a/lib/active_harness/providers/vercel.rb#L61",
+          "summary": "Ruby/Rails 智能体框架通过 Vercel AI Gateway 的 System One 兼容端点请求 Jev，提交类型化问题并返回概率与答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/the-teacher/active_harness/blob/088fbf4b7fee9042339d96aa1a53a9fd9646451a/README.md#L87",
+          "summary": "Ruby/Rails 智能体框架通过 Vercel AI Gateway 的 System One 兼容端点请求 Jev，提交类型化问题并返回概率与答案。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/the-teacher/active_harness/blob/088fbf4b7fee9042339d96aa1a53a9fd9646451a/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }

@@ -73,6 +73,31 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-02（main）
+
+本轮搜索 280 个去重候选，新增 **9 个外部工具**，目录共 **196 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-02.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | 29,845 | Laya 的中文社区诊断脚本提供显式 Jev 后端，调用 TypeSafe 对固定场景作对照评价；只登记该入口，不把本地 Laya 模型当作 Jev。 |
+| [zwliJay/jev-forge](https://github.com/zwliJay/jev-forge) | 112 | JevForge 的对照脚本向显式配置的决策端点提交 Jev 模型、状态和问题，并评价返回答案；本地训练模型是独立系统。 |
+| [garrytan/gbrain-evals](https://github.com/garrytan/gbrain-evals) | 428 | 记忆系统评测工具可调用固定版本的外部 gbrain System One 运行时，对 Jev 决策环节进行配对评价；未复现上游成绩。 |
+| [Avinash-jetwani/jevmem](https://github.com/Avinash-jetwani/jevmem) | 104 | 项目记忆 CLI 与智能体插件通过 TypeSafe SDK 调用 Jev，判断记忆保存、召回和规则相关性；本市场未启用其 hook。 |
+| [openlayer-ai/jevals](https://github.com/openlayer-ai/jevals) | 102 | Python 评价库可将智能体轨迹的多个判断合并为 Jev 请求，并提供直接 TypeSafe 后端；本地兼容模型后端单独选择。 |
+| [artemnovitckii/creator-lab](https://github.com/artemnovitckii/creator-lab) | 115 | 本地短视频研究应用获取公开素材并转写，再通过 TypeSafe Jev 分类脚本；样本表现比较不等于因果结论。 |
+| [irzix/nestjs-agentic](https://github.com/irzix/nestjs-agentic) | 131 | NestJS 智能体框架的 Jev 包使用 TypeSafe SDK 判断工具调用、输出和评价问题，由应用策略处理允许、人工复核或拒绝。 |
+| [Coding-Dev-Tools/engraphis](https://github.com/Coding-Dev-Tools/engraphis) | 174 | 记忆引擎提供可选 Jev 判断后端；显式 BYOK 路径直接请求 TypeSafe，默认本地判断及托管代理路径分别配置。 |
+| [the-teacher/active_harness](https://github.com/the-teacher/active_harness) | 106 | Ruby/Rails 智能体框架通过 Vercel AI Gateway 的 System One 兼容端点请求 Jev，提交类型化问题并返回概率与答案。 |
+
+`npm run jev -- show jevmem`、`npm run jev -- show jevals` 可查看固定来源与依赖。
+本轮均按工具登记，返回 `install: null`。Laya 仅收录社区诊断脚本中的 Jev 对照入口；
+gbrain 评价工具依赖的独立运行时提交另行固定，未把本地模型或保存结果当作实时测试。
+
 ## 每日发现：2026-09-30（main）
 
 本轮搜索 267 个去重候选，新增 **8 个项目**（1 个 Skill 入口、7 个工具），目录共 **187 项**。
