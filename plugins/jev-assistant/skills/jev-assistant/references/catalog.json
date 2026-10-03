@@ -8533,6 +8533,292 @@
       ],
       "usageUrl": "https://github.com/the-teacher/active_harness/blob/088fbf4b7fee9042339d96aa1a53a9fd9646451a/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置该工具及依赖；install 为 null，不生成整个应用、框架或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "opencodex-jev-routing",
+      "kind": "tool",
+      "category": "routing",
+      "description": "代理工具的可选 Jev Auto 模式通过 TypeSafe 选择目标模型和推理强度；直连路由、本地兼容服务与 Jev 路径分别配置。",
+      "distribution": "external",
+      "repository": "lidge-jun/opencodex",
+      "url": "https://github.com/lidge-jun/opencodex",
+      "version": "249462bf570555aad103957025eea96f7489c7eb",
+      "revision": "249462bf570555aad103957025eea96f7489c7eb",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明配置 OpenCodex 代理及目标模型提供商。",
+        "Jev Auto 需显式启用并配置 TypeSafe 凭据；未接管现有客户端、读取密钥库或转发真实会话。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-03",
+      "github": {
+        "repositoryId": 1273824907,
+        "owner": "lidge-jun",
+        "stars": 16818,
+        "pushedAt": "2026-10-02T18:41:45Z",
+        "updatedAt": "2026-10-03T00:04:49Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-03T00:05:47.140550+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/lidge-jun/opencodex/blob/249462bf570555aad103957025eea96f7489c7eb/src/combos/jev.ts#L768",
+          "summary": "代理工具的可选 Jev Auto 模式通过 TypeSafe 选择目标模型和推理强度；直连路由、本地兼容服务与 Jev 路径分别配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lidge-jun/opencodex/blob/249462bf570555aad103957025eea96f7489c7eb/README.md#L352",
+          "summary": "代理工具的可选 Jev Auto 模式通过 TypeSafe 选择目标模型和推理强度；直连路由、本地兼容服务与 Jev 路径分别配置。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/lidge-jun/opencodex/blob/249462bf570555aad103957025eea96f7489c7eb/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、插件或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jev-sees",
+      "kind": "tool",
+      "category": "computer-vision",
+      "description": "视觉前端把图像、视频或深度相机观察转换为状态，再通过官方 TypeSafe SDK 请求 Jev 判断；未验证视觉准确率或物理控制效果。",
+      "distribution": "external",
+      "repository": "CharlesFeng0314/JEV_sees",
+      "url": "https://github.com/CharlesFeng0314/JEV_sees",
+      "version": "8cf89cbb8455ec11e2aaefc3746e5697b1ea49c2",
+      "revision": "8cf89cbb8455ec11e2aaefc3746e5697b1ea49c2",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Python、视觉依赖及输入设备或样例。",
+        "Jev 判断需要 TypeSafe 凭据；本地 observe/state 处理与远程判断分开，未读取摄像头或个人媒体。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-03",
+      "github": {
+        "repositoryId": 1397049383,
+        "owner": "CharlesFeng0314",
+        "stars": 133,
+        "pushedAt": "2026-10-02T04:20:08Z",
+        "updatedAt": "2026-10-02T23:48:33Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-03T00:05:47.399736+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/CharlesFeng0314/JEV_sees/blob/8cf89cbb8455ec11e2aaefc3746e5697b1ea49c2/jev_sees/session.py#L303",
+          "summary": "视觉前端把图像、视频或深度相机观察转换为状态，再通过官方 TypeSafe SDK 请求 Jev 判断；未验证视觉准确率或物理控制效果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/CharlesFeng0314/JEV_sees/blob/8cf89cbb8455ec11e2aaefc3746e5697b1ea49c2/README.md#L83",
+          "summary": "视觉前端把图像、视频或深度相机观察转换为状态，再通过官方 TypeSafe SDK 请求 Jev 判断；未验证视觉准确率或物理控制效果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/CharlesFeng0314/JEV_sees/blob/8cf89cbb8455ec11e2aaefc3746e5697b1ea49c2/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、插件或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "sub2api-typesafe",
+      "kind": "tool",
+      "category": "gateway",
+      "description": "中转服务提供 TypeSafe API Key 账户及原生 System One 请求转发，保留 Jev 的非流式 JSON 结构。",
+      "distribution": "external",
+      "repository": "Wei-Shaw/sub2api",
+      "url": "https://github.com/Wei-Shaw/sub2api",
+      "version": "b8dece9000c68815a5b867ca5a1e6f236e173905",
+      "revision": "b8dece9000c68815a5b867ca5a1e6f236e173905",
+      "license": "LGPL-3.0",
+      "licenseStatus": "GitHub API identifies LGPL-3.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明部署 Sub2API 与依赖，再单独配置 TypeSafe 账户及路由。",
+        "本条目只核实 Jev 原生转发路径；未部署服务、导入账户或验证订阅与计费功能。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-03",
+      "github": {
+        "repositoryId": 1118601518,
+        "owner": "Wei-Shaw",
+        "stars": 43212,
+        "pushedAt": "2026-10-02T16:02:42Z",
+        "updatedAt": "2026-10-02T23:29:40Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "LGPL-3.0",
+        "checkedAt": "2026-10-03T00:05:49.961932+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Wei-Shaw/sub2api/blob/b8dece9000c68815a5b867ca5a1e6f236e173905/backend/internal/service/gateway_systemone.go#L55",
+          "summary": "中转服务提供 TypeSafe API Key 账户及原生 System One 请求转发，保留 Jev 的非流式 JSON 结构。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Wei-Shaw/sub2api/blob/b8dece9000c68815a5b867ca5a1e6f236e173905/README.md#L830",
+          "summary": "中转服务提供 TypeSafe API Key 账户及原生 System One 请求转发，保留 Jev 的非流式 JSON 结构。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/Wei-Shaw/sub2api/blob/b8dece9000c68815a5b867ca5a1e6f236e173905/backend/internal/pkg/typesafe/client.go#L17",
+          "summary": "请求构造器固定原生 System One 路径与默认 TypeSafe 源；这里只核实 Jev 转发能力。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/Wei-Shaw/sub2api/blob/b8dece9000c68815a5b867ca5a1e6f236e173905/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、插件或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jegrep",
+      "kind": "tool",
+      "category": "development",
+      "description": "Rust 语义搜索 CLI 将代码候选交给 Jev 评价，支持 TypeSafe 直连和 OpenRouter，并允许显式限制提供商。",
+      "distribution": "external",
+      "repository": "can1357/jegrep",
+      "url": "https://github.com/can1357/jegrep",
+      "version": "197e674285eb321e2be4b5f6797d755af2c32c77",
+      "revision": "197e674285eb321e2be4b5f6797d755af2c32c77",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Rust 或上游提供的 CLI。",
+        "托管搜索需要所选提供商凭据；需注意上游的提供商选择与失败切换设置，本市场未发送本地代码。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-03",
+      "github": {
+        "repositoryId": 1377650013,
+        "owner": "can1357",
+        "stars": 103,
+        "pushedAt": "2026-09-26T12:11:27Z",
+        "updatedAt": "2026-10-02T23:16:12Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-03T00:05:51.186385+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/can1357/jegrep/blob/197e674285eb321e2be4b5f6797d755af2c32c77/src/jev.rs#L388",
+          "summary": "Rust 语义搜索 CLI 将代码候选交给 Jev 评价，支持 TypeSafe 直连和 OpenRouter，并允许显式限制提供商。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/can1357/jegrep/blob/197e674285eb321e2be4b5f6797d755af2c32c77/README.md#L49",
+          "summary": "Rust 语义搜索 CLI 将代码候选交给 Jev 评价，支持 TypeSafe 直连和 OpenRouter，并允许显式限制提供商。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/can1357/jegrep/blob/197e674285eb321e2be4b5f6797d755af2c32c77/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、插件或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jevgym",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "历史预测市场评价工具提供官方 TypeSafe Jev 后端，将固定时点的状态与问题用于概率评价；未验证收益或执行交易。",
+      "distribution": "external",
+      "repository": "ruyianry/JevGym",
+      "url": "https://github.com/ruyianry/JevGym",
+      "version": "6f75c550423e16d6abc7fa30f99fc6c53cbada00",
+      "revision": "6f75c550423e16d6abc7fa30f99fc6c53cbada00",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交说明准备 Python 评价环境与合法可用的数据集。",
+        "真实 Jev 评价需要 TypeSafe 凭据；本市场未获取账户、采集市场数据、下单或复现上游收益。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-03",
+      "github": {
+        "repositoryId": 1382097323,
+        "owner": "ruyianry",
+        "stars": 104,
+        "pushedAt": "2026-09-23T02:41:05Z",
+        "updatedAt": "2026-10-02T14:17:33Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-10-03T00:06:11.157150+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ruyianry/JevGym/blob/6f75c550423e16d6abc7fa30f99fc6c53cbada00/src/jevgym/providers/jev_wire.py#L68",
+          "summary": "历史预测市场评价工具提供官方 TypeSafe Jev 后端，将固定时点的状态与问题用于概率评价；未验证收益或执行交易。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ruyianry/JevGym/blob/6f75c550423e16d6abc7fa30f99fc6c53cbada00/README.md#L16",
+          "summary": "历史预测市场评价工具提供官方 TypeSafe Jev 后端，将固定时点的状态与问题用于概率评价；未验证收益或执行交易。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/ruyianry/JevGym/blob/6f75c550423e16d6abc7fa30f99fc6c53cbada00/src/jevgym/config.py#L24",
+          "summary": "官方 TypeSafe 后端默认源为 api.typesafe.ai；本地兼容模型另行配置，未混同为官方 Jev。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/ruyianry/JevGym/blob/6f75c550423e16d6abc7fa30f99fc6c53cbada00/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、插件或评价工具的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "winnow",
+      "kind": "tool",
+      "category": "context-management",
+      "description": "编程智能体插件用 Jev Noul 判断工具输出块的相关性，筛选进入上下文的内容并提供回读接口；生成式适配器是另一条路径。",
+      "distribution": "external",
+      "repository": "GhalebDweikat/winnow",
+      "url": "https://github.com/GhalebDweikat/winnow",
+      "version": "7fe08546e8b9d42f7660a45777f360cfecd3b0e7",
+      "revision": "7fe08546e8b9d42f7660a45777f360cfecd3b0e7",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明配置插件、Python sidecar 与相关工具接口。",
+        "默认 TypeSafe 判断需要凭据；附带 Skill 只解释结果标记，不替代完整运行时，未读取会话或启用 hook。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-03",
+      "github": {
+        "repositoryId": 1372467327,
+        "owner": "GhalebDweikat",
+        "stars": 101,
+        "pushedAt": "2026-09-30T02:32:52Z",
+        "updatedAt": "2026-10-02T04:42:59Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-03T00:06:15.413258+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/GhalebDweikat/winnow/blob/7fe08546e8b9d42f7660a45777f360cfecd3b0e7/sidecar/src/winnow/judge.py#L82",
+          "summary": "编程智能体插件用 Jev Noul 判断工具输出块的相关性，筛选进入上下文的内容并提供回读接口；生成式适配器是另一条路径。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/GhalebDweikat/winnow/blob/7fe08546e8b9d42f7660a45777f360cfecd3b0e7/README.md#L9",
+          "summary": "编程智能体插件用 Jev Noul 判断工具输出块的相关性，筛选进入上下文的内容并提供回读接口；生成式适配器是另一条路径。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/GhalebDweikat/winnow/blob/7fe08546e8b9d42f7660a45777f360cfecd3b0e7/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、插件或评价工具的 Skill 安装命令。未安装或运行上游功能。 附带 winnow Skill 用于解释筛选标记；完整功能仍依赖 hook、sidecar 和回读工具。"
     }
   ]
 }

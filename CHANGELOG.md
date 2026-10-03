@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-03 — daily external discovery
+
+- Add 6 external tools from 285 GitHub candidates, bringing the catalog to 202
+  entries. Record 181 existing sources and 98 exclusions.
+- Pin Jev integration evidence for model routing, visual-state judgments, native
+  System One forwarding, semantic code search, historical evaluation and context filtering.
+- Keep direct TypeSafe, gateway and local-compatible backends distinct. Describe
+  Winnow as a complete plugin, and JevGym as an unexecuted historical evaluation tool.
+- Preserve all prior entries, source snapshots and routing. No upstream code,
+  live provider calls, personal data collection or trades were run.
+
 ## Unreleased — 2026-10-02 — daily external discovery
 
 - Add 9 external tools from 280 GitHub candidates, bringing the catalog to 196

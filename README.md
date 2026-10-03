@@ -73,6 +73,28 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-03（main）
+
+本轮搜索 285 个去重候选，新增 **6 个外部工具**，目录共 **202 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-03.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [lidge-jun/opencodex](https://github.com/lidge-jun/opencodex) | 16,818 | 代理工具的可选 Jev Auto 模式通过 TypeSafe 选择目标模型和推理强度；直连路由、本地兼容服务与 Jev 路径分别配置。 |
+| [CharlesFeng0314/JEV_sees](https://github.com/CharlesFeng0314/JEV_sees) | 133 | 视觉前端把图像、视频或深度相机观察转换为状态，再通过官方 TypeSafe SDK 请求 Jev 判断；未验证视觉准确率或物理控制效果。 |
+| [Wei-Shaw/sub2api](https://github.com/Wei-Shaw/sub2api) | 43,212 | 中转服务提供 TypeSafe API Key 账户及原生 System One 请求转发，保留 Jev 的非流式 JSON 结构。 |
+| [can1357/jegrep](https://github.com/can1357/jegrep) | 103 | Rust 语义搜索 CLI 将代码候选交给 Jev 评价，支持 TypeSafe 直连和 OpenRouter，并允许显式限制提供商。 |
+| [ruyianry/JevGym](https://github.com/ruyianry/JevGym) | 104 | 历史预测市场评价工具提供官方 TypeSafe Jev 后端，将固定时点的状态与问题用于概率评价；未验证收益或执行交易。 |
+| [GhalebDweikat/winnow](https://github.com/GhalebDweikat/winnow) | 101 | 编程智能体插件用 Jev Noul 判断工具输出块的相关性，筛选进入上下文的内容并提供回读接口；生成式适配器是另一条路径。 |
+
+例如 `npm run jev -- show jegrep`、`npm run jev -- show jev-sees` 可查看固定来源与依赖。
+本轮均按完整工具登记，返回 `install: null`；winnow 的附带 Skill 不替代其运行时。
+JevGym 只按历史评价工具收录，未验证收益或执行交易；JEV Sees 的本地视觉处理与远程 Jev 判断分开描述。
+
 ## 每日发现：2026-10-02（main）
 
 本轮搜索 280 个去重候选，新增 **9 个外部工具**，目录共 **196 项**。
