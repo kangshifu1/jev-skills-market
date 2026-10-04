@@ -73,6 +73,27 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-04（main）
+
+本轮搜索 293 个去重候选，新增 **5 个项目**（4 个工具、1 个资源集合），目录共 **207 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-04.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [extend-hq/jevbox](https://github.com/extend-hq/jevbox) | 266 | 工具 | 文档库通过 Jev 搜索分类、文档与章节层级，并评价来源片段的可用性，供带来源引用的问答流程使用。 |
+| [anteloc/ldraw-nova](https://github.com/anteloc/ldraw-nova) | 184 | 工具 | LDraw 建模工具调用独立 jev-rerank CLI，利用 Jev 为零件、模型和子模型描述重排序；几何检查由本地工具处理。 |
+| [codegirl-007/jevlint](https://github.com/codegirl-007/jevlint) | 123 | 工具 | Go 代码检查工具用 Tree-sitter 提取代码单元，再通过 TypeSafe Jev 判断自然语言规则；检查结论仍需结合代码审阅。 |
+| [datawhalechina/jev-cookbook](https://github.com/datawhalechina/jev-cookbook) | 132 | 资源集合 | 社区中文 Jev 教程与示例集合，包含实际 TypeSafe 评价适配器和 DSH 决策客户端；按学习资源收录，不作为独立 Skill。 |
+| [PerryLink/jevcore](https://github.com/PerryLink/jevcore) | 102 | 工具 | 提供独立 Node 决策核心、DeepSeek Harness 插件和 MCP 接口；显式 live 模式通过官方 SDK 调用 Jev，默认 mock 与真实请求分开。 |
+
+例如 `npm run jev -- show jevlint`、`npm run jev -- show datawhale-jev-cookbook` 可查看来源和依赖。
+这些条目返回 `install: null`；教程不是独立 Skill，jevcore 默认 mock 也不代表真实模型实测。
+LDraw 的外部重排序 CLI 需要另装，已记录所读源码版本及其未绑定到应用版本的限制。
+
 ## 每日发现：2026-10-03（main）
 
 本轮搜索 285 个去重候选，新增 **6 个外部工具**，目录共 **202 项**。

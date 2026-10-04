@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — 2026-10-04 — daily external discovery
+
+- Add 5 projects from 293 GitHub candidates: 4 tools and a Chinese tutorial
+  collection. Catalog now contains 207 entries; 188 sources already represented
+  and 100 exclusions are recorded.
+- Pin implementation evidence for document retrieval, LDraw discovery, semantic
+  linting, tutorial clients and the jevcore Node/DSH/MCP packages.
+- Inspect the independent reranker without treating its one star as eligible
+  for a separate entry or claiming the application pins its CLI version.
+- Preserve previous source snapshots and routing; no upstream code, Notebook,
+  live model call, document upload or installation was executed.
+
 ## Unreleased — 2026-10-03 — daily external discovery
 
 - Add 6 external tools from 285 GitHub candidates, bringing the catalog to 202
