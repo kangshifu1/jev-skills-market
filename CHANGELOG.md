@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-05 — daily external discovery
+
+- Add 4 external tools from 297 GitHub candidates, bringing the catalog to 211
+  entries. Record 192 existing sources and 101 exclusions.
+- Pin implementation evidence for PostgreSQL semantic operations, a native DSH
+  plugin, dataset curation and agent/model routing.
+- Verify the DSH plugin's old repository address by matching GitHub repository ID;
+  retain disabled defaults, configuration requirements and current-main scope.
+- Keep mock throughput, cluster targets and local compatible models distinct from
+  live Jev results. No upstream code, provider calls or account operations ran.
+
 ## Unreleased — 2026-10-04 — daily external discovery
 
 - Add 5 projects from 293 GitHub candidates: 4 tools and a Chinese tutorial

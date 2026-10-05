@@ -9072,6 +9072,198 @@
       ],
       "usageUrl": "https://github.com/PerryLink/jevcore/blob/9b50597fb5a42de6f825752f21c3209875c221eb/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置所选工具或示例及其依赖；install 为 null，不生成整个应用、资源集合或插件包的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jev4pg",
+      "kind": "tool",
+      "category": "database",
+      "description": "PostgreSQL 语义工具通过 Jev 对筛选、提取、排序和查询计划作类型化判断，SQL 的构造与执行仍由代码负责。",
+      "distribution": "external",
+      "repository": "Sheltercosmo/jev4pg",
+      "url": "https://github.com/Sheltercosmo/jev4pg",
+      "version": "4d6b03c14a98e943659f05b1300b0bfb5c5c9b9f",
+      "revision": "4d6b03c14a98e943659f05b1300b0bfb5c5c9b9f",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备数据库、服务端及所选接口依赖。",
+        "默认托管后端需要 TypeSafe 凭据；本市场未连接数据库、发送业务数据、执行 SQL 或复现上游成绩。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-05",
+      "github": {
+        "repositoryId": 1383309982,
+        "owner": "Sheltercosmo",
+        "stars": 103,
+        "pushedAt": "2026-10-04T16:36:29Z",
+        "updatedAt": "2026-10-04T23:56:23Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-05T00:05:29.175231+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Sheltercosmo/jev4pg/blob/4d6b03c14a98e943659f05b1300b0bfb5c5c9b9f/sdd/evaluators.py#L108",
+          "summary": "PostgreSQL 语义工具通过 Jev 对筛选、提取、排序和查询计划作类型化判断，SQL 的构造与执行仍由代码负责。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Sheltercosmo/jev4pg/blob/4d6b03c14a98e943659f05b1300b0bfb5c5c9b9f/README.md#L29",
+          "summary": "PostgreSQL 语义工具通过 Jev 对筛选、提取、排序和查询计划作类型化判断，SQL 的构造与执行仍由代码负责。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Sheltercosmo/jev4pg/blob/4d6b03c14a98e943659f05b1300b0bfb5c5c9b9f/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、框架或插件包的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "dsh-jev-plugin",
+      "kind": "tool",
+      "category": "agent-tools",
+      "description": "原生 DSH 插件将选择、监督和工具输出等判断提交至配置的 Jev System One 端点；各功能按当前 main 范围分别启用，默认关闭。",
+      "distribution": "external",
+      "repository": "luobosibing2/dsh-jev-plugin",
+      "url": "https://github.com/luobosibing2/dsh-jev-plugin",
+      "version": "a326a4460a7fe64cdb509f1970babf2953bb5aa7",
+      "revision": "a326a4460a7fe64cdb509f1970babf2953bb5aa7",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备兼容的 DeepSeek Harness，并设置完整端点、模型和凭据引用。",
+        "只登记当前 main 的实现；未运行插件、启用审批功能或把暂停的原生网页执行分支描述为已验收能力。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-05",
+      "github": {
+        "repositoryId": 1391049410,
+        "owner": "luobosibing2",
+        "stars": 115,
+        "pushedAt": "2026-10-03T12:20:35Z",
+        "updatedAt": "2026-10-04T22:57:47Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-05T00:05:34.507878+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/luobosibing2/dsh-jev-plugin/blob/a326a4460a7fe64cdb509f1970babf2953bb5aa7/packages/jev/src/adapter.ts#L41",
+          "summary": "原生 DSH 插件将选择、监督和工具输出等判断提交至配置的 Jev System One 端点；各功能按当前 main 范围分别启用，默认关闭。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/luobosibing2/dsh-jev-plugin/blob/a326a4460a7fe64cdb509f1970babf2953bb5aa7/README.md#L119",
+          "summary": "原生 DSH 插件将选择、监督和工具输出等判断提交至配置的 Jev System One 端点；各功能按当前 main 范围分别启用，默认关闭。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/luobosibing2/dsh-jev-plugin/blob/a326a4460a7fe64cdb509f1970babf2953bb5aa7/packages/jev/src/index.ts#L85",
+          "summary": "默认端点为空、功能开关为空，模型默认 jev-latest；不是安装即自动运行。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/luobosibing2/dsh-jev-plugin/blob/a326a4460a7fe64cdb509f1970babf2953bb5aa7/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、框架或插件包的 Skill 安装命令。未安装或运行上游功能。 上游旧安装地址现重定向到本仓库，已用相同仓库 ID 核实；默认空端点和关闭的功能需用户单独配置。",
+      "repositoryAliases": [
+        "luobosibing2/deepseek-harness-jev"
+      ]
+    },
+    {
+      "id": "jev-curate",
+      "kind": "tool",
+      "category": "data-processing",
+      "description": "Rust/Python 数据筛选工具将 Parquet 或 JSONL 行按问题集提交给 TypeSafe Jev，用返回的 Choice、Score、Noul 答案筛选和评分。",
+      "distribution": "external",
+      "repository": "AkashPriyadarshii/jev-curate",
+      "url": "https://github.com/AkashPriyadarshii/jev-curate",
+      "version": "ea7048c1d2ff67253c3afa8fec7a0738983595cd",
+      "revision": "ea7048c1d2ff67253c3afa8fec7a0738983595cd",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 CLI 或 Python 包及数据处理依赖。",
+        "真实判断需要 TypeSafe 凭据；未读取个人数据集、调用模型或把 mock 吞吐与集群目标当作实测性能。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-05",
+      "github": {
+        "repositoryId": 1375477393,
+        "owner": "AkashPriyadarshii",
+        "stars": 101,
+        "pushedAt": "2026-10-02T08:01:12Z",
+        "updatedAt": "2026-10-04T20:56:12Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-05T00:05:42.585790+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/AkashPriyadarshii/jev-curate/blob/ea7048c1d2ff67253c3afa8fec7a0738983595cd/src/client.rs#L149",
+          "summary": "Rust/Python 数据筛选工具将 Parquet 或 JSONL 行按问题集提交给 TypeSafe Jev，用返回的 Choice、Score、Noul 答案筛选和评分。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/AkashPriyadarshii/jev-curate/blob/ea7048c1d2ff67253c3afa8fec7a0738983595cd/README.md#L40",
+          "summary": "Rust/Python 数据筛选工具将 Parquet 或 JSONL 行按问题集提交给 TypeSafe Jev，用返回的 Choice、Score、Noul 答案筛选和评分。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/AkashPriyadarshii/jev-curate/blob/ea7048c1d2ff67253c3afa8fec7a0738983595cd/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、框架或插件包的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "agent-router",
+      "kind": "tool",
+      "category": "routing",
+      "description": "智能体路由 CLI 通过 TypeSafe 从可用代理、模型与推理强度中作选择，再由本地代码启动工具；本市场未执行代理或改动账户配置。",
+      "distribution": "external",
+      "repository": "nidhi-singh02/agent-router",
+      "url": "https://github.com/nidhi-singh02/agent-router",
+      "version": "fb24d06a62fb33a92c7836b4920ae9f4b1216c63",
+      "revision": "fb24d06a62fb33a92c7836b4920ae9f4b1216c63",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 CLI、受支持的智能体及其账户配置。",
+        "路由需要 TypeSafe 凭据；未读取密钥库、调用路由、创建工作树或启动任何第三方智能体。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-05",
+      "github": {
+        "repositoryId": 1374235614,
+        "owner": "nidhi-singh02",
+        "stars": 103,
+        "pushedAt": "2026-09-27T09:20:40Z",
+        "updatedAt": "2026-10-04T15:05:26Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-05T00:05:54.208577+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/nidhi-singh02/agent-router/blob/fb24d06a62fb33a92c7836b4920ae9f4b1216c63/packages/router/src/semantic/typesafe-client.ts#L20",
+          "summary": "智能体路由 CLI 通过 TypeSafe 从可用代理、模型与推理强度中作选择，再由本地代码启动工具；本市场未执行代理或改动账户配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nidhi-singh02/agent-router/blob/fb24d06a62fb33a92c7836b4920ae9f4b1216c63/README.md#L13",
+          "summary": "智能体路由 CLI 通过 TypeSafe 从可用代理、模型与推理强度中作选择，再由本地代码启动工具；本市场未执行代理或改动账户配置。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/nidhi-singh02/agent-router/blob/fb24d06a62fb33a92c7836b4920ae9f4b1216c63/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、框架或插件包的 Skill 安装命令。未安装或运行上游功能。 附带 model-router Skill 是 CLI 工作流说明，不替代已配置的运行时或账户。"
     }
   ]
 }

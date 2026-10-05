@@ -73,6 +73,26 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-05（main）
+
+本轮搜索 297 个去重候选，新增 **4 个外部工具**，目录共 **211 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-05.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [Sheltercosmo/jev4pg](https://github.com/Sheltercosmo/jev4pg) | 103 | PostgreSQL 语义工具通过 Jev 对筛选、提取、排序和查询计划作类型化判断，SQL 的构造与执行仍由代码负责。 |
+| [luobosibing2/dsh-jev-plugin](https://github.com/luobosibing2/dsh-jev-plugin) | 115 | 原生 DSH 插件将选择、监督和工具输出等判断提交至配置的 Jev System One 端点；各功能按当前 main 范围分别启用，默认关闭。 |
+| [AkashPriyadarshii/jev-curate](https://github.com/AkashPriyadarshii/jev-curate) | 101 | Rust/Python 数据筛选工具将 Parquet 或 JSONL 行按问题集提交给 TypeSafe Jev，用返回的 Choice、Score、Noul 答案筛选和评分。 |
+| [nidhi-singh02/agent-router](https://github.com/nidhi-singh02/agent-router) | 103 | 智能体路由 CLI 通过 TypeSafe 从可用代理、模型与推理强度中作选择，再由本地代码启动工具；本市场未执行代理或改动账户配置。 |
+
+`npm run jev -- show jev4pg`、`npm run jev -- show jev-curate` 可查看固定来源与依赖。
+本轮均返回 `install: null`。DSH 插件的旧地址已确认为同一仓库并登记别名；
+本地 basal 模型及其兼容协议不作为真实 Jev 接入收录，上游性能与收益类结果均未复现。
+
 ## 每日发现：2026-10-04（main）
 
 本轮搜索 293 个去重候选，新增 **5 个项目**（4 个工具、1 个资源集合），目录共 **207 项**。
