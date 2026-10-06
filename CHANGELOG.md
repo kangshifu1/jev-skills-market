@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-06 — daily external discovery
+
+- Add mu and Surf CLI as 2 external tools from 302 GitHub candidates, bringing
+  the catalog to 213 entries. Record 197 existing sources and 103 exclusions.
+- Pin source evidence for mu's TypeSafe judge and Surf's explicit Jev semantic
+  provider; keep local/generative judges and ordinary browser commands distinct.
+- Preserve previous entries, source snapshots and routing. No upstream code,
+  browser connection, live model request or agent execution was performed.
+
 ## Unreleased — 2026-10-05 — daily external discovery
 
 - Add 4 external tools from 297 GitHub candidates, bringing the catalog to 211

@@ -9264,6 +9264,98 @@
       ],
       "usageUrl": "https://github.com/nidhi-singh02/agent-router/blob/fb24d06a62fb33a92c7836b4920ae9f4b1216c63/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、框架或插件包的 Skill 安装命令。未安装或运行上游功能。 附带 model-router Skill 是 CLI 工作流说明，不替代已配置的运行时或账户。"
+    },
+    {
+      "id": "mu-jev",
+      "kind": "tool",
+      "category": "agent-tools",
+      "description": "基于 pi 的编程智能体通过 Jev 对工具流程和上下文等问题作类型化判断，支持直接 TypeSafe 与网关；生成和执行仍由宿主流程处理。",
+      "distribution": "external",
+      "repository": "qybaihe/mu",
+      "url": "https://github.com/qybaihe/mu",
+      "version": "f354409bfad8cc2aba4e4015ec9718d295bd954c",
+      "revision": "f354409bfad8cc2aba4e4015ec9718d295bd954c",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 mu 的 CLI 或桌面运行环境及主模型。",
+        "按所选 judge 路径配置连接；托管 Jev、本地 Laya 和生成式判断分别处理，未启动智能体、读取会话或验证权限策略。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-06",
+      "github": {
+        "repositoryId": 1381412852,
+        "owner": "qybaihe",
+        "stars": 374,
+        "pushedAt": "2026-10-05T23:24:33Z",
+        "updatedAt": "2026-10-05T23:24:38Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-06T00:05:18.888167+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/qybaihe/mu/blob/f354409bfad8cc2aba4e4015ec9718d295bd954c/packages/kyrn-judge/src/providers/typesafe.ts#L133",
+          "summary": "基于 pi 的编程智能体通过 Jev 对工具流程和上下文等问题作类型化判断，支持直接 TypeSafe 与网关；生成和执行仍由宿主流程处理。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/qybaihe/mu/blob/f354409bfad8cc2aba4e4015ec9718d295bd954c/README.md#L134",
+          "summary": "基于 pi 的编程智能体通过 Jev 对工具流程和上下文等问题作类型化判断，支持直接 TypeSafe 与网关；生成和执行仍由宿主流程处理。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/qybaihe/mu/blob/f354409bfad8cc2aba4e4015ec9718d295bd954c/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用或浏览器 CLI 的 Skill 安装命令。未安装或运行上游功能。 本地 Laya、生成式 judge 与托管 Jev 是不同路径；没有复现上游速度、费用或权限控制结论。"
+    },
+    {
+      "id": "surf-cli-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Chrome 控制 CLI 的显式语义命令通过官方 TypeSafe SDK 调用 Jev，用于页面目标判断和语义检查；普通浏览器操作与模型路径分开。",
+      "distribution": "external",
+      "repository": "nicobailon/surf-cli",
+      "url": "https://github.com/nicobailon/surf-cli",
+      "version": "139597a1cd36d7cb57449a1f6ca5c13c3a5ca875",
+      "revision": "139597a1cd36d7cb57449a1f6ca5c13c3a5ca875",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Chrome、Surf 扩展及 CLI/原生连接。",
+        "Jev 语义命令需要 TypeSafe 凭据和相应显式选项；未连接用户浏览器、读取页面或验证自动操作效果。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-06",
+      "github": {
+        "repositoryId": 1124070604,
+        "owner": "nicobailon",
+        "stars": 632,
+        "pushedAt": "2026-10-05T14:24:32Z",
+        "updatedAt": "2026-10-05T13:19:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-06T00:05:45.712782+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/nicobailon/surf-cli/blob/139597a1cd36d7cb57449a1f6ca5c13c3a5ca875/native/semantic-provider.cjs#L57",
+          "summary": "Chrome 控制 CLI 的显式语义命令通过官方 TypeSafe SDK 调用 Jev，用于页面目标判断和语义检查；普通浏览器操作与模型路径分开。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nicobailon/surf-cli/blob/139597a1cd36d7cb57449a1f6ca5c13c3a5ca875/README.md#L1044",
+          "summary": "Chrome 控制 CLI 的显式语义命令通过官方 TypeSafe SDK 调用 Jev，用于页面目标判断和语义检查；普通浏览器操作与模型路径分开。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/nicobailon/surf-cli/blob/139597a1cd36d7cb57449a1f6ca5c13c3a5ca875/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用或浏览器 CLI 的 Skill 安装命令。未安装或运行上游功能。 仅登记所读 Jev 语义后端，普通浏览器命令和其他分类模型的行为分别处理；附带 Skill 不等于已安装扩展或连接浏览器。"
     }
   ]
 }

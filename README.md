@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-06（main）
+
+本轮搜索 302 个去重候选，新增 **2 个外部工具**，目录共 **213 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新面向 main，不包含在既有 v0.1.2 安装快照中；发布结果见本轮审核记录与提交历史。
+
+[本轮审核记录](docs/discovery/2026-10-06.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [qybaihe/mu](https://github.com/qybaihe/mu) | 374 | 基于 pi 的编程智能体通过 Jev 对工具流程和上下文等问题作类型化判断，支持直接 TypeSafe 与网关；生成和执行仍由宿主流程处理。 |
+| [nicobailon/surf-cli](https://github.com/nicobailon/surf-cli) | 632 | Chrome 控制 CLI 的显式语义命令通过官方 TypeSafe SDK 调用 Jev，用于页面目标判断和语义检查；普通浏览器操作与模型路径分开。 |
+
+`npm run jev -- show mu-jev`、`npm run jev -- show surf-cli-jev` 可查看固定来源与依赖。
+两个条目均返回 `install: null`。Surf 的 Jev 能力限定为显式语义路径；
+mu 的托管判断、本地模型和生成式 judge 分开记录，未启动任何浏览器或智能体。
+
 ## 每日发现：2026-10-05（main）
 
 本轮搜索 297 个去重候选，新增 **4 个外部工具**，目录共 **211 项**。
