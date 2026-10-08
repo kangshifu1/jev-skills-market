@@ -73,6 +73,26 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-08（main）
+
+本轮搜索 309 个去重候选，新增 **4 个项目**（1 个 Skill、3 个工具），目录共 **217 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-08.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [UditAkhourii/quicksilver](https://github.com/UditAkhourii/quicksilver) | 107 | Skill | 批量判断 Skill 附带 Node 脚本，通过 TypeSafe Jev 筛选、分类和排序文件或条目；生成、编辑与最终复核由宿主负责。 |
+| [VectifyAI/jev-doc-search](https://github.com/VectifyAI/jev-doc-search) | 108 | 工具 | 长文档检索脚本通过 TypeSafe Jev 选择页面或 PageIndex 树节点，并用 Noul 检查候选内容；树构建与文档上传由独立服务处理。 |
+| [finch-xu/cc-router](https://github.com/finch-xu/cc-router) | 271 | 工具 | 本地聚合网关提供独立 System One 通道及 TypeSafe 配置，通过 model-jev 转发原生决策请求；聊天接口与该通道分开。 |
+| [nassim-arifette/jevgrep](https://github.com/nassim-arifette/jevgrep) | 101 | 工具 | 代码搜索 CLI/MCP 将获准外发的源码片段交给 Jev 评分，返回带位置的源片段；与已收录的其他同名项目分别记录。 |
+
+`npm run jev -- show quicksilver` 可查看固定版本的 Skill 文件安装命令；凭据与运行环境需另配。
+Quicksilver 的密钥只用环境变量或本地隐藏输入配置，不采用上游可选的聊天粘贴流程。
+另三个工具返回 `install: null`；本轮 JevGrep 使用完整包名 `@nassim-arifette/jevgrep`，与既有同名来源区分。
+
 ## 每日发现：2026-10-06（main）
 
 本轮搜索 302 个去重候选，新增 **2 个外部工具**，目录共 **213 项**。

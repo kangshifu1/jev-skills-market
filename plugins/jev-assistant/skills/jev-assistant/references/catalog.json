@@ -9356,6 +9356,210 @@
       ],
       "usageUrl": "https://github.com/nicobailon/surf-cli/blob/139597a1cd36d7cb57449a1f6ca5c13c3a5ca875/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用或浏览器 CLI 的 Skill 安装命令。未安装或运行上游功能。 仅登记所读 Jev 语义后端，普通浏览器命令和其他分类模型的行为分别处理；附带 Skill 不等于已安装扩展或连接浏览器。"
+    },
+    {
+      "id": "quicksilver",
+      "kind": "skill",
+      "category": "development",
+      "description": "批量判断 Skill 附带 Node 脚本，通过 TypeSafe Jev 筛选、分类和排序文件或条目；生成、编辑与最终复核由宿主负责。",
+      "distribution": "external",
+      "repository": "UditAkhourii/quicksilver",
+      "url": "https://github.com/UditAkhourii/quicksilver",
+      "version": "5d6fe5cd4f9d9a9d086a81c797e59b77c0724043",
+      "revision": "5d6fe5cd4f9d9a9d086a81c797e59b77c0724043",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "Node.js 18+；glob 输入需 Node.js 22+，保留完整 Skill 目录与 scripts/qs.mjs。",
+        "凭据仅通过环境变量或本地隐藏输入配置，不粘贴到聊天或命令参数；上游主要面向 Claude Code，其他宿主及安装均未实测。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-08",
+      "github": {
+        "repositoryId": 1387763129,
+        "owner": "UditAkhourii",
+        "stars": 107,
+        "pushedAt": "2026-09-25T15:20:51Z",
+        "updatedAt": "2026-10-07T23:35:40Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-08T00:05:31.512321+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/UditAkhourii/quicksilver/blob/5d6fe5cd4f9d9a9d086a81c797e59b77c0724043/skills/quicksilver/scripts/qs.mjs#L241",
+          "summary": "批量判断 Skill 附带 Node 脚本，通过 TypeSafe Jev 筛选、分类和排序文件或条目；生成、编辑与最终复核由宿主负责。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/UditAkhourii/quicksilver/blob/5d6fe5cd4f9d9a9d086a81c797e59b77c0724043/README.md#L21",
+          "summary": "批量判断 Skill 附带 Node 脚本，通过 TypeSafe Jev 筛选、分类和排序文件或条目；生成、编辑与最终复核由宿主负责。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/UditAkhourii/quicksilver/blob/5d6fe5cd4f9d9a9d086a81c797e59b77c0724043/skills/quicksilver/SKILL.md#L1",
+          "summary": "已核实 quicksilver frontmatter 名称与随附 scripts/qs.mjs；目录安装命令只针对 Skill 文件，未执行。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/UditAkhourii/quicksilver/blob/5d6fe5cd4f9d9a9d086a81c797e59b77c0724043/README.md",
+      "usageNote": "按固定提交与已核实名称生成的命令只复制 Skill 文件；不代表凭据、依赖或宿主兼容性已配置或实测。上游主要面向 Claude Code；不要按其可选流程把密钥贴进聊天或命令参数，使用环境变量或本地隐藏输入。",
+      "path": "skills/quicksilver",
+      "reviewNotes": [
+        "Upstream SKILL.md offers pasting an API key into chat as an option. That flow was not followed; use environment variables or the documented local hidden-input setup instead.",
+        "Source review is not a security audit or runtime validation; upstream token-saving and latency claims were not reproduced."
+      ]
+    },
+    {
+      "id": "jev-doc-search",
+      "kind": "tool",
+      "category": "research",
+      "description": "长文档检索脚本通过 TypeSafe Jev 选择页面或 PageIndex 树节点，并用 Noul 检查候选内容；树构建与文档上传由独立服务处理。",
+      "distribution": "external",
+      "repository": "VectifyAI/jev-doc-search",
+      "url": "https://github.com/VectifyAI/jev-doc-search",
+      "version": "7b1008c437c8c9a88da8a427a76052fb0454977a",
+      "revision": "7b1008c437c8c9a88da8a427a76052fb0454977a",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Python、TypeSafe SDK 与 PageIndex 依赖。",
+        "真实搜索需要 TypeSafe 和 PageIndex 凭据；输入 PDF 的流程会上传文档，本市场未读取、上传个人文档或验证检索准确率。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-08",
+      "github": {
+        "repositoryId": 1398194468,
+        "owner": "VectifyAI",
+        "stars": 108,
+        "pushedAt": "2026-10-03T14:18:16Z",
+        "updatedAt": "2026-10-07T20:18:39Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-08T00:05:45.135297+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/VectifyAI/jev-doc-search/blob/7b1008c437c8c9a88da8a427a76052fb0454977a/tree_search.py#L44",
+          "summary": "长文档检索脚本通过 TypeSafe Jev 选择页面或 PageIndex 树节点，并用 Noul 检查候选内容；树构建与文档上传由独立服务处理。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/VectifyAI/jev-doc-search/blob/7b1008c437c8c9a88da8a427a76052fb0454977a/README.md#L106",
+          "summary": "长文档检索脚本通过 TypeSafe Jev 选择页面或 PageIndex 树节点，并用 Noul 检查候选内容；树构建与文档上传由独立服务处理。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/VectifyAI/jev-doc-search/blob/7b1008c437c8c9a88da8a427a76052fb0454977a/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用或服务的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "cc-router-jev",
+      "kind": "tool",
+      "category": "gateway",
+      "description": "本地聚合网关提供独立 System One 通道及 TypeSafe 配置，通过 model-jev 转发原生决策请求；聊天接口与该通道分开。",
+      "distribution": "external",
+      "repository": "finch-xu/cc-router",
+      "url": "https://github.com/finch-xu/cc-router",
+      "version": "90a955a8fc0ddd035624a493399126ee6a5b674e",
+      "revision": "90a955a8fc0ddd035624a493399126ee6a5b674e",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备桌面网关并单独配置 TypeSafe 提供商与凭据。",
+        "只核实 System One 转发路径；未启动网关、导入账户、修改代理设置或验证计费与订阅功能。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-08",
+      "github": {
+        "repositoryId": 1219634836,
+        "owner": "finch-xu",
+        "stars": 271,
+        "pushedAt": "2026-10-06T15:30:57Z",
+        "updatedAt": "2026-10-07T10:46:40Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-08T00:05:59.455530+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/finch-xu/cc-router/blob/90a955a8fc0ddd035624a493399126ee6a5b674e/src-tauri/src/proxy/systemone.rs#L372",
+          "summary": "本地聚合网关提供独立 System One 通道及 TypeSafe 配置，通过 model-jev 转发原生决策请求；聊天接口与该通道分开。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/finch-xu/cc-router/blob/90a955a8fc0ddd035624a493399126ee6a5b674e/README.md#L239",
+          "summary": "本地聚合网关提供独立 System One 通道及 TypeSafe 配置，通过 model-jev 转发原生决策请求；聊天接口与该通道分开。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/finch-xu/cc-router/blob/90a955a8fc0ddd035624a493399126ee6a5b674e/src-tauri/providers/typesafe.yaml#L39",
+          "summary": "TypeSafe 提供商配置指向 api.typesafe.ai 的原生 System One 路径，与聊天协议分离。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/finch-xu/cc-router/blob/90a955a8fc0ddd035624a493399126ee6a5b674e/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用或服务的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jevgrep-nassim",
+      "kind": "tool",
+      "category": "development",
+      "description": "代码搜索 CLI/MCP 将获准外发的源码片段交给 Jev 评分，返回带位置的源片段；与已收录的其他同名项目分别记录。",
+      "distribution": "external",
+      "repository": "nassim-arifette/jevgrep",
+      "url": "https://github.com/nassim-arifette/jevgrep",
+      "version": "a4e764ac09a62e696307b61d42eaaf0e13ece9b9",
+      "revision": "a4e764ac09a62e696307b61d42eaaf0e13ece9b9",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明配置完整包名 @nassim-arifette/jevgrep、允许搜索的仓库和远程评价范围。",
+        "真实评价需要 TypeSafe、Vercel 或 OpenRouter 凭据；未读取业务仓库、发送私有源码或连接 MCP。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-08",
+      "github": {
+        "repositoryId": 1377737136,
+        "owner": "nassim-arifette",
+        "stars": 101,
+        "pushedAt": "2026-09-27T11:11:52Z",
+        "updatedAt": "2026-10-07T10:44:35Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-08T00:06:00.591641+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/nassim-arifette/jevgrep/blob/a4e764ac09a62e696307b61d42eaaf0e13ece9b9/src/evaluation/jev.ts#L139",
+          "summary": "代码搜索 CLI/MCP 将获准外发的源码片段交给 Jev 评分，返回带位置的源片段；与已收录的其他同名项目分别记录。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nassim-arifette/jevgrep/blob/a4e764ac09a62e696307b61d42eaaf0e13ece9b9/README.md#L13",
+          "summary": "代码搜索 CLI/MCP 将获准外发的源码片段交给 Jev 评分，返回带位置的源片段；与已收录的其他同名项目分别记录。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/nassim-arifette/jevgrep/blob/a4e764ac09a62e696307b61d42eaaf0e13ece9b9/src/contracts.ts#L260",
+          "summary": "默认 TypeSafe 直连配置及凭据环境变量；完整 npm 包名属于本作者，与其他同名项目不混同。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/nassim-arifette/jevgrep/blob/a4e764ac09a62e696307b61d42eaaf0e13ece9b9/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用或服务的 Skill 安装命令。未安装或运行上游功能。 npm 包名为 @nassim-arifette/jevgrep；不使用未限定作用域的同名包。本市场 ID 用 jevgrep-nassim 区分来源。"
     }
   ]
 }

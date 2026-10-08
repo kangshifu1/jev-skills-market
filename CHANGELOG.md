@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-08 — daily external discovery
+
+- Add 4 projects from 309 GitHub candidates: Quicksilver's standalone Skill and
+  3 tools for document search, System One forwarding and semantic code search.
+  Catalog now contains 217 entries; 199 existing sources and 106 exclusions.
+- Pin source implementations and verify the Skill name and bundled script. Record
+  Quicksilver's credential-setup caveat without executing its installer or instructions.
+- Distinguish the scoped JevGrep package, PageIndex upload requirements and native
+  TypeSafe routing from similarly named tools, chat routes and local compatible models.
+- Preserve previous entries and routing. No upstream code or live model call ran.
+
 ## Unreleased — 2026-10-06 — daily external discovery
 
 - Add mu and Surf CLI as 2 external tools from 302 GitHub candidates, bringing
