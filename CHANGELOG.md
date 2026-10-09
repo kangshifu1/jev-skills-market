@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — 2026-10-09 — daily external discovery
+
+- Add 4 external tools from 313 GitHub candidates, bringing the catalog to 221
+  entries. Record 201 existing sources and 108 exclusions.
+- Pin Jev integration evidence for browser action selection, prompt/action scoring,
+  terminal System One evaluation and a Go SDK/router component.
+- Keep host execution, code policy and typed model judgments separate. No security,
+  latency or accuracy claims were validated and no upstream code was executed.
+- Preserve previous entries and routing; retain the independent computer-use repo.
+
 ## Unreleased — 2026-10-08 — daily external discovery
 
 - Add 4 projects from 309 GitHub candidates: Quicksilver's standalone Skill and

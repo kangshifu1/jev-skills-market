@@ -73,6 +73,26 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-09（main）
+
+本轮搜索 313 个去重候选，新增 **4 个外部工具**，目录共 **221 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-09.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [Ying-Kai-Liao/jev-browser](https://github.com/Ying-Kai-Liao/jev-browser) | 104 | 独立浏览器库、CLI 和 MCP 服务由上层模型规划，调用 TypeSafe Jev 对页面状态与动作候选作有界判断，再由浏览器执行层操作。 |
+| [JamesANZ/JevPromptShield](https://github.com/JamesANZ/JevPromptShield) | 202 | 提示与动作检查工具调用 Jev 生成风险判断，由代码策略映射为放行、询问或阻断；未验证防护效果或安全授权边界。 |
+| [baalimago/clai](https://github.com/baalimago/clai) | 146 | 终端 AI 工具提供 Jev 原生 System One 评价后端，根据问题定义返回类型化答案，与普通聊天模型的生成路径分开。 |
+| [Ingenimax/agent-sdk-go](https://github.com/Ingenimax/agent-sdk-go) | 634 | Go 智能体框架提供原生 TypeSafe Jev 客户端及代理路由组件，发送类型化问题并处理决策结果；生成任务由其他模型承担。 |
+
+`npm run jev -- show jev-browser-ying`、`npm run jev -- show agent-sdk-go-jev` 可查看来源与运行条件。
+本轮均返回 `install: null`。防护项目的模型分值与代码策略不视为已验证的安全效果；
+本地开放模型、同名项目和托管 TypeSafe Jev 保持区分。
+
 ## 每日发现：2026-10-08（main）
 
 本轮搜索 309 个去重候选，新增 **4 个项目**（1 个 Skill、3 个工具），目录共 **217 项**。

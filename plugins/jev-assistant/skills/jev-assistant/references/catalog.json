@@ -9560,6 +9560,205 @@
       ],
       "usageUrl": "https://github.com/nassim-arifette/jevgrep/blob/a4e764ac09a62e696307b61d42eaaf0e13ece9b9/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用或服务的 Skill 安装命令。未安装或运行上游功能。 npm 包名为 @nassim-arifette/jevgrep；不使用未限定作用域的同名包。本市场 ID 用 jevgrep-nassim 区分来源。"
+    },
+    {
+      "id": "jev-browser-ying",
+      "kind": "tool",
+      "category": "automation",
+      "description": "独立浏览器库、CLI 和 MCP 服务由上层模型规划，调用 TypeSafe Jev 对页面状态与动作候选作有界判断，再由浏览器执行层操作。",
+      "distribution": "external",
+      "repository": "Ying-Kai-Liao/jev-browser",
+      "url": "https://github.com/Ying-Kai-Liao/jev-browser",
+      "version": "84745e9059916ddf177e6abbe624d1659071e717",
+      "revision": "84745e9059916ddf177e6abbe624d1659071e717",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Node.js、浏览器依赖及所选库/CLI/MCP 入口。",
+        "实时判断需要 TypeSafe 凭据；未连接登录会话、读取个人页面或执行点击与表单操作，未复现上游延迟。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-09",
+      "github": {
+        "repositoryId": 1373227372,
+        "owner": "Ying-Kai-Liao",
+        "stars": 104,
+        "pushedAt": "2026-10-08T17:56:37Z",
+        "updatedAt": "2026-10-08T23:12:20Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-09T00:04:12.489245+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Ying-Kai-Liao/jev-browser/blob/84745e9059916ddf177e6abbe624d1659071e717/src/jev.mjs#L34",
+          "summary": "独立浏览器库、CLI 和 MCP 服务由上层模型规划，调用 TypeSafe Jev 对页面状态与动作候选作有界判断，再由浏览器执行层操作。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Ying-Kai-Liao/jev-browser/blob/84745e9059916ddf177e6abbe624d1659071e717/README.md#L5",
+          "summary": "独立浏览器库、CLI 和 MCP 服务由上层模型规划，调用 TypeSafe Jev 对页面状态与动作候选作有界判断，再由浏览器执行层操作。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Ying-Kai-Liao/jev-browser/blob/84745e9059916ddf177e6abbe624d1659071e717/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、CLI、MCP 服务或 SDK 的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jev-prompt-shield",
+      "kind": "tool",
+      "category": "security",
+      "description": "提示与动作检查工具调用 Jev 生成风险判断，由代码策略映射为放行、询问或阻断；未验证防护效果或安全授权边界。",
+      "distribution": "external",
+      "repository": "JamesANZ/JevPromptShield",
+      "url": "https://github.com/JamesANZ/JevPromptShield",
+      "version": "aa09e9f7adb70ab3af0183df8c84de114b7607db",
+      "revision": "aa09e9f7adb70ab3af0183df8c84de114b7607db",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交说明准备 Node.js、CLI 及需要使用的宿主接入。",
+        "真实判断需要 TypeSafe 凭据；未安装 hook、读取本机 MCP 配置、执行命令或测试真实攻击输入。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-09",
+      "github": {
+        "repositoryId": 65865666,
+        "owner": "JamesANZ",
+        "stars": 202,
+        "pushedAt": "2026-10-08T05:48:57Z",
+        "updatedAt": "2026-10-08T05:49:00Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-09T00:04:44.081144+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/JamesANZ/JevPromptShield/blob/aa09e9f7adb70ab3af0183df8c84de114b7607db/src/jev/client.ts#L139",
+          "summary": "提示与动作检查工具调用 Jev 生成风险判断，由代码策略映射为放行、询问或阻断；未验证防护效果或安全授权边界。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/JamesANZ/JevPromptShield/blob/aa09e9f7adb70ab3af0183df8c84de114b7607db/README.md#L5",
+          "summary": "提示与动作检查工具调用 Jev 生成风险判断，由代码策略映射为放行、询问或阻断；未验证防护效果或安全授权边界。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/JamesANZ/JevPromptShield/blob/aa09e9f7adb70ab3af0183df8c84de114b7607db/src/jev/action.ts#L143",
+          "summary": "动作评价代码通过官方 SDK 请求 Jev；模型评分和代码策略不等于已验证的安全边界。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/JamesANZ/JevPromptShield/blob/aa09e9f7adb70ab3af0183df8c84de114b7607db/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、CLI、MCP 服务或 SDK 的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "clai-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "终端 AI 工具提供 Jev 原生 System One 评价后端，根据问题定义返回类型化答案，与普通聊天模型的生成路径分开。",
+      "distribution": "external",
+      "repository": "baalimago/clai",
+      "url": "https://github.com/baalimago/clai",
+      "version": "cca04859632fdc034060acf7e596ab9564aa9830",
+      "revision": "cca04859632fdc034060acf7e596ab9564aa9830",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 clai 与所选评价问题文件；源码构建遵循其 Go 版本要求。",
+        "Jev 评价需要 TypeSafe 凭据；未调用 CLI、发送终端上下文或修改任何本地配置。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-09",
+      "github": {
+        "repositoryId": 766496226,
+        "owner": "baalimago",
+        "stars": 146,
+        "pushedAt": "2026-10-08T05:28:47Z",
+        "updatedAt": "2026-10-08T05:26:25Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-09T00:04:44.228971+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/baalimago/clai/blob/cca04859632fdc034060acf7e596ab9564aa9830/internal/vendors/jev/jev.go#L115",
+          "summary": "终端 AI 工具提供 Jev 原生 System One 评价后端，根据问题定义返回类型化答案，与普通聊天模型的生成路径分开。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/baalimago/clai/blob/cca04859632fdc034060acf7e596ab9564aa9830/README.md#L75",
+          "summary": "终端 AI 工具提供 Jev 原生 System One 评价后端，根据问题定义返回类型化答案，与普通聊天模型的生成路径分开。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/baalimago/clai/blob/cca04859632fdc034060acf7e596ab9564aa9830/internal/text/create_querier.go#L78",
+          "summary": "CLI 将 jev- 模型选择路由到专用后端，区别于通用聊天生成。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/baalimago/clai/blob/cca04859632fdc034060acf7e596ab9564aa9830/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、CLI、MCP 服务或 SDK 的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "agent-sdk-go-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Go 智能体框架提供原生 TypeSafe Jev 客户端及代理路由组件，发送类型化问题并处理决策结果；生成任务由其他模型承担。",
+      "distribution": "external",
+      "repository": "Ingenimax/agent-sdk-go",
+      "url": "https://github.com/Ingenimax/agent-sdk-go",
+      "version": "0b45bcd4b6bcbd95bfe92a8f5acdcf059939520c",
+      "revision": "0b45bcd4b6bcbd95bfe92a8f5acdcf059939520c",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交说明准备 Go SDK、相关依赖及所需调用方配置。",
+        "实际 Jev 客户端需要 TypeSafe 凭据；未启动代理、连接外部工具或验证路由准确率。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-09",
+      "github": {
+        "repositoryId": 948725367,
+        "owner": "Ingenimax",
+        "stars": 634,
+        "pushedAt": "2026-10-08T16:54:52Z",
+        "updatedAt": "2026-10-08T04:30:07Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-09T00:04:45.519186+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Ingenimax/agent-sdk-go/blob/0b45bcd4b6bcbd95bfe92a8f5acdcf059939520c/pkg/jev/client.go#L163",
+          "summary": "Go 智能体框架提供原生 TypeSafe Jev 客户端及代理路由组件，发送类型化问题并处理决策结果；生成任务由其他模型承担。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Ingenimax/agent-sdk-go/blob/0b45bcd4b6bcbd95bfe92a8f5acdcf059939520c/README.md#L913",
+          "summary": "Go 智能体框架提供原生 TypeSafe Jev 客户端及代理路由组件，发送类型化问题并处理决策结果；生成任务由其他模型承担。",
+          "basis": "upstream-documentation"
+        },
+        {
+          "url": "https://github.com/Ingenimax/agent-sdk-go/blob/0b45bcd4b6bcbd95bfe92a8f5acdcf059939520c/pkg/orchestration/jev_router.go#L128",
+          "summary": "JevRouter 实际调用 SystemOne 客户端作代理选择；没有验证其路由准确率。",
+          "basis": "source-inspection"
+        }
+      ],
+      "usageUrl": "https://github.com/Ingenimax/agent-sdk-go/blob/0b45bcd4b6bcbd95bfe92a8f5acdcf059939520c/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成整个应用、CLI、MCP 服务或 SDK 的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }
