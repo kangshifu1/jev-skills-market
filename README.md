@@ -73,6 +73,23 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-10（main）
+
+本轮搜索 311 个去重候选，新增 **1 个外部工具**，目录共 **222 项**。
+Star 为本次 GitHub API 快照；候选按 `updated_at` 倒序核查。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-10.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [BingoWon/apple-rag-mcp](https://github.com/BingoWon/apple-rag-mcp) | 120 | Apple 文档与 WWDC 字幕检索服务，混合检索后调用 TypeSafe Jev 对候选片段作相关性评分，由代码排序并经 MCP 返回；调用失败时使用备用重排器。 |
+
+`npm run jev -- show apple-rag-mcp` 可查看固定来源与使用条件，返回 `install: null`。
+这是完整 MCP 服务，托管连接与自托管有不同配置要求；凭据只放在受保护的客户端配置或服务端环境变量中。
+本轮没有连接服务、读取真实查询日志或复现上游评价，服务可用性与检索效果尚未验证。
+
 ## 每日发现：2026-10-09（main）
 
 本轮搜索 313 个去重候选，新增 **4 个外部工具**，目录共 **221 项**。

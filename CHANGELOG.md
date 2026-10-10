@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-10 — daily external discovery
+
+- Add Apple RAG MCP as an external tool with pinned TypeSafe scoring and RAG
+  integration evidence. Catalog now contains 222 entries from 311 candidates,
+  with 202 existing sources and 108 exclusions recorded for this run.
+- Record hosted-client and self-hosting requirements, provider fallback and
+  source-only verification. No endpoint, user query log or upstream program ran.
+- Preserve prior entries, routing, release tags and the independent computer-use repo.
+
 ## Unreleased — 2026-10-09 — daily external discovery
 
 - Add 4 external tools from 313 GitHub candidates, bringing the catalog to 221
