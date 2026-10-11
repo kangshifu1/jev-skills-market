@@ -73,6 +73,26 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-11（main）
+
+本轮搜索 316 个去重候选，新增 **4 个外部工具**，目录共 **226 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-11.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [crow-hq/llm-wiki-v2](https://github.com/crow-hq/llm-wiki-v2) | 141 | Markdown 知识库在 CROW 模式下通过 Jev 的 Choice 与 Noul 判断文档归类、笔记匹配和检索候选；文本生成与文件写入由其他模型及代码负责。 |
+| [Bodila51/grok-bot-jev](https://github.com/Bodila51/grok-bot-jev) | 102 | Grok Bot 的 Python 路由参考实现调用 TypeSafe SDK，返回缓存复用、停止重试、研究限额等建议；执行及权限判断仍由宿主处理。 |
+| [danielgshea/jev-as-a-judge](https://github.com/danielgshea/jev-as-a-judge) | 102 | 智能体评价工具通过 langchain-typesafe 调用 Jev，评估天气助手结果的依据、工具行为、实用性和通过概率，并与其他评价模型比较。 |
+| [turantekin/Parrot](https://github.com/turantekin/Parrot) | 101 | macOS 会议助手在可选的 Claude 模式中调用 Jev，用 Noul 判断候选文档是否回答问题及提示卡是否重复；语音转写和生成回答由其他组件承担。 |
+
+`npm run jev -- show llm-wiki-v2`、`npm run jev -- show parrot-jev` 可查看固定来源与使用条件。
+本轮均返回 `install: null`。Grok Bot 的模板需配合 Python 路由器；评价流程仍可能访问外部服务，
+Parrot 的 Jev 功能会发送问题与候选片段。未导入私人文档、连接会议或运行上游评价。
+
 ## 每日发现：2026-10-10（main）
 
 本轮搜索 311 个去重候选，新增 **1 个外部工具**，目录共 **222 项**。

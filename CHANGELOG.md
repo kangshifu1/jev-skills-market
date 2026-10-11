@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — 2026-10-11 — daily external discovery
+
+- Add 4 external tools from 316 GitHub candidates, bringing the catalog to 226
+  entries. Record 203 existing sources and 109 exclusions.
+- Pin Jev integration evidence for wiki classification/retrieval, Grok Bot routing,
+  agent evaluation, and optional document matching in a macOS meeting assistant.
+- Distinguish host-dependent templates, provider configuration, external evaluation
+  calls and optional cloud document processing. No upstream program or model ran.
+- Preserve prior entries, routing, release tags and the independent computer-use repo.
+
 ## Unreleased — 2026-10-10 — daily external discovery
 
 - Add Apple RAG MCP as an external tool with pinned TypeSafe scoring and RAG

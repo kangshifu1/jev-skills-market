@@ -9816,6 +9816,219 @@
       ],
       "usageUrl": "https://github.com/BingoWon/apple-rag-mcp/blob/e7a07de982bd5e829c00bb2edda7b4e2598076fe/README.md",
       "usageNote": "这是完整 MCP 服务及其自托管应用，install 为 null；按固定提交 README 的托管连接或自托管说明配置，不生成 Skill 安装命令。未验证托管端点、客户端兼容、索引覆盖率、隐私承诺或检索效果。"
+    },
+    {
+      "id": "llm-wiki-v2",
+      "kind": "tool",
+      "category": "development",
+      "description": "Markdown 知识库在 CROW 模式下通过 Jev 的 Choice 与 Noul 判断文档归类、笔记匹配和检索候选；文本生成与文件写入由其他模型及代码负责。",
+      "distribution": "external",
+      "repository": "crow-hq/llm-wiki-v2",
+      "url": "https://github.com/crow-hq/llm-wiki-v2",
+      "version": "46f2421505798511a03dfee346c93eda361b9cdd",
+      "revision": "46f2421505798511a03dfee346c93eda361b9cdd",
+      "license": "AGPL-3.0",
+      "licenseStatus": "GitHub API identifies AGPL-3.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交准备 Python 应用、知识库目录和生成模型；分类器与生成模型分别配置。",
+        "分类器可选 OpenRouter、TypeSafe 或本地兼容服务；本地兼容服务不等同于 Jev，TypeSafe 直连需按上游说明核对模型 ID。",
+        "未导入私人文档、写入知识库或验证上游性能数据；凭据仅使用本机受保护配置或服务端环境变量。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-11",
+      "github": {
+        "repositoryId": 1386278131,
+        "owner": "crow-hq",
+        "stars": 141,
+        "pushedAt": "2026-10-09T14:50:05Z",
+        "updatedAt": "2026-10-10T23:56:48Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "AGPL-3.0",
+        "checkedAt": "2026-10-11T00:00:23.261979+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/crow-hq/llm-wiki-v2/blob/46f2421505798511a03dfee346c93eda361b9cdd/src/llmw2/models/classifier.py#L54",
+          "summary": "分类器向 System One 发送状态及类型化问题，并读取 Choice 与 Noul 答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/crow-hq/llm-wiki-v2/blob/46f2421505798511a03dfee346c93eda361b9cdd/src/llmw2/config.py#L51",
+          "summary": "分类器提供商配置包含 TypeSafe 原生 API 地址，并将其与 OpenRouter 和本地兼容服务区分。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/crow-hq/llm-wiki-v2/blob/46f2421505798511a03dfee346c93eda361b9cdd/src/llmw2/agents/steps_crow.py#L130",
+          "summary": "知识库工作流实际调用分类器完成笔记匹配、合并选择和检索。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/crow-hq/llm-wiki-v2/blob/46f2421505798511a03dfee346c93eda361b9cdd/README.md#L272",
+          "summary": "Markdown 知识库在 CROW 模式下通过 Jev 的 Choice 与 Noul 判断文档归类、笔记匹配和检索候选；文本生成与文件写入由其他模型及代码负责。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/crow-hq/llm-wiki-v2/blob/46f2421505798511a03dfee346c93eda361b9cdd/docs/wiki/providers.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、评价框架或依赖专属运行时的模板的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "grok-bot-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Grok Bot 的 Python 路由参考实现调用 TypeSafe SDK，返回缓存复用、停止重试、研究限额等建议；执行及权限判断仍由宿主处理。",
+      "distribution": "external",
+      "repository": "Bodila51/grok-bot-jev",
+      "url": "https://github.com/Bodila51/grok-bot-jev",
+      "version": "d01527914012ccd75d3d16e0dcfc26e6e1fc56ff",
+      "revision": "d01527914012ccd75d3d16e0dcfc26e6e1fc56ff",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交准备 Python 依赖和路由配置，并由 Grok Bot 宿主主动调用路由器。",
+        "随附 Skill 是依赖仓库运行时的接入模板；shadow 模式仅记录建议，active 模式仍依赖宿主遵守结果。",
+        "未接入 Grok Bot、执行工具或复现节省成本与速度对比；模型建议不授予执行权限。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-11",
+      "github": {
+        "repositoryId": 1377426282,
+        "owner": "Bodila51",
+        "stars": 102,
+        "pushedAt": "2026-09-28T17:32:37Z",
+        "updatedAt": "2026-10-10T21:40:03Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-11T00:00:31.806067+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Bodila51/grok-bot-jev/blob/d01527914012ccd75d3d16e0dcfc26e6e1fc56ff/src/jev_client.py#L10",
+          "summary": "使用官方 TypeSafeClient 调用 system_one，将状态与问题发往 Jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Bodila51/grok-bot-jev/blob/d01527914012ccd75d3d16e0dcfc26e6e1fc56ff/src/router.py#L88",
+          "summary": "路由器实际取得类型化结果，再由代码组合成宿主建议。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Bodila51/grok-bot-jev/blob/d01527914012ccd75d3d16e0dcfc26e6e1fc56ff/README.md#L17",
+          "summary": "Grok Bot 的 Python 路由参考实现调用 TypeSafe SDK，返回缓存复用、停止重试、研究限额等建议；执行及权限判断仍由宿主处理。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Bodila51/grok-bot-jev/blob/d01527914012ccd75d3d16e0dcfc26e6e1fc56ff/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、评价框架或依赖专属运行时的模板的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jev-as-a-judge",
+      "kind": "tool",
+      "category": "testing",
+      "description": "智能体评价工具通过 langchain-typesafe 调用 Jev，评估天气助手结果的依据、工具行为、实用性和通过概率，并与其他评价模型比较。",
+      "distribution": "external",
+      "repository": "danielgshea/jev-as-a-judge",
+      "url": "https://github.com/danielgshea/jev-as-a-judge",
+      "version": "adfea74905f721ea2594e22804c8c8edf1693163",
+      "revision": "adfea74905f721ea2594e22804c8c8edf1693163",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交准备 Python 3.13+、TypeSafe 与所选评价流程所需的搜索、模型和 LangSmith 凭据。",
+        "local 或 offline 命名不代表无需联网；LangSmith 数据上传、追踪与真实模型评价需单独配置和授权。",
+        "未运行评价、上传数据或复现准确率、方差、成本及延迟；上游结果不视为本市场测试。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-11",
+      "github": {
+        "repositoryId": 1374575487,
+        "owner": "danielgshea",
+        "stars": 102,
+        "pushedAt": "2026-09-23T18:36:09Z",
+        "updatedAt": "2026-10-10T09:13:23Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-11T00:00:57.280500+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/danielgshea/jev-as-a-judge/blob/adfea74905f721ea2594e22804c8c8edf1693163/src/evals/judges/system_one.py#L46",
+          "summary": "通过 TypeSafeClassifier.invoke 执行 Noul 与 Choice 评价，并由代码汇总。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/danielgshea/jev-as-a-judge/blob/adfea74905f721ea2594e22804c8c8edf1693163/src/evals/judge_reliability.py#L165",
+          "summary": "重复评价流程注册并调用 Jev 评价函数，而非只引用 Jev 基准结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/danielgshea/jev-as-a-judge/blob/adfea74905f721ea2594e22804c8c8edf1693163/README.md#L107",
+          "summary": "智能体评价工具通过 langchain-typesafe 调用 Jev，评估天气助手结果的依据、工具行为、实用性和通过概率，并与其他评价模型比较。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/danielgshea/jev-as-a-judge/blob/adfea74905f721ea2594e22804c8c8edf1693163/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、评价框架或依赖专属运行时的模板的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "parrot-jev",
+      "kind": "tool",
+      "category": "voice",
+      "description": "macOS 会议助手在可选的 Claude 模式中调用 Jev，用 Noul 判断候选文档是否回答问题及提示卡是否重复；语音转写和生成回答由其他组件承担。",
+      "distribution": "external",
+      "repository": "turantekin/Parrot",
+      "url": "https://github.com/turantekin/Parrot",
+      "version": "893da137df566d7b60837ba5f9590ac675170aa3",
+      "revision": "893da137df566d7b60837ba5f9590ac675170aa3",
+      "license": "GPL-3.0",
+      "licenseStatus": "GitHub API identifies GPL-3.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的 macOS 应用说明安装或构建；Jev 文档匹配需启用相应助手模式并在 Keychain 配置 TypeSafe 凭据。",
+        "启用后会向 TypeSafe 发送问题、少量上下文和候选片段；不能把整个应用视为完全离线。",
+        "未安装应用、连接麦克风或会议、读取个人资料、访问 Keychain 或复现上游延迟。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-11",
+      "github": {
+        "repositoryId": 1212294710,
+        "owner": "turantekin",
+        "stars": 101,
+        "pushedAt": "2026-10-09T16:44:03Z",
+        "updatedAt": "2026-10-10T06:31:37Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "GPL-3.0",
+        "checkedAt": "2026-10-11T00:01:00.647399+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/turantekin/Parrot/blob/893da137df566d7b60837ba5f9590ac675170aa3/Parrot/Services/JevDocMatcher.swift#L141",
+          "summary": "Swift 客户端实际向 TypeSafe System One 发起 POST 请求，消费片段相关性及重复卡片的 Noul 概率。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/turantekin/Parrot/blob/893da137df566d7b60837ba5f9590ac675170aa3/Parrot/Services/CallAnalysisEngine.swift#L657",
+          "summary": "会议分析流程实际检索候选并调用 JevDocMatcher，按阈值选择已有文档片段。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/turantekin/Parrot/blob/893da137df566d7b60837ba5f9590ac675170aa3/README.md#L176",
+          "summary": "macOS 会议助手在可选的 Claude 模式中调用 Jev，用 Noul 判断候选文档是否回答问题及提示卡是否重复；语音转写和生成回答由其他组件承担。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/turantekin/Parrot/blob/893da137df566d7b60837ba5f9590ac675170aa3/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、评价框架或依赖专属运行时的模板的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }
