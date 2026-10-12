@@ -73,6 +73,28 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-12（main）
+
+本轮搜索 319 个去重候选，新增 **6 个项目**（1 个 Skill、5 个工具），目录共 **232 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-12.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [NandhaKishorM/vegaml](https://github.com/NandhaKishorM/vegaml) | 166 | 工具 | VegaML 的对比评价 Notebook 提供可选的托管 Jev 客户端，在同组问题上记录类型化答案；本地 Vega 推理引擎本身与 Jev 服务分开。 |
+| [zazencodes/zazencodes-season-3](https://github.com/zazencodes/zazencodes-season-3) | 117 | 工具 | 视频源码合集中的 Jev Python 示例子目录调用官方 SDK，以 Choice、Score 和 Noul 评价示例工单并生成分流记录；只登记这一子项目。 |
+| [peterfriese/system-one-foundation-models](https://github.com/peterfriese/system-one-foundation-models) | 112 | Skill | 面向 Swift 的 Jev Foundation Models 开发指引；配套桥接 SDK 将受约束结构转换为类型化问题并调用托管 Jev，指引文件与 SDK 运行环境分别安装。 |
+| [MiaoWuNYA/rikkahub-sillytavern-android](https://github.com/MiaoWuNYA/rikkahub-sillytavern-android) | 101 | 工具 | Android 聊天应用的可选 Jev 决策层通过 TypeSafe System One 筛选记忆，并向主模型提供 judge 工具；回答生成由其他模型承担。 |
+| [henryklunaris/hey-jev](https://github.com/henryklunaris/hey-jev) | 110 | 工具 | macOS 语音助手将转写文本交给 Jev 选择类别与动作参数，再由本机代码执行命令；语音识别、语音合成和开放问答使用其他组件。 |
+| [jmagly/aiwg](https://github.com/jmagly/aiwg) | 222 | 工具 | AIWG 的可选 decision-engine 插件通过原生 Jev 适配器发送有界判断，供 CLI/工作流消费类型化结果；未配置或不可用时返回回退状态。 |
+
+`npm run jev -- show jev-foundation-models` 可查看固定版本的 Skill 指引安装命令；Swift SDK 与工具链需另配。
+其余五个工具返回 `install: null`。VegaML 只登记可选 Jev 对比入口，ZazenCodes 只登记 Jev 示例子目录；
+本轮未执行 Notebook、接入移动端或语音权限，也未安装 AIWG 插件。
+
 ## 每日发现：2026-10-11（main）
 
 本轮搜索 316 个去重候选，新增 **4 个外部工具**，目录共 **226 项**。

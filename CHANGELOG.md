@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-12 — daily external discovery
+
+- Add 6 projects from 319 GitHub candidates: 1 Swift development Skill and
+  5 tools. Catalog now contains 232 entries; record 205 existing sources
+  and 108 exclusions.
+- Pin evidence for optional Jev benchmark calls, a Python tutorial subproject,
+  Swift transport, Android memory/judge integration, voice actions and AIWG decisions.
+- Verify the Swift Skill name and path; keep SDK/toolchain setup separate.
+  No upstream code, notebook cell, installer, microphone or model call ran.
+- Preserve prior entries, routing, release tags and the independent computer-use repo.
+
 ## Unreleased — 2026-10-11 — daily external discovery
 
 - Add 4 external tools from 316 GitHub candidates, bringing the catalog to 226

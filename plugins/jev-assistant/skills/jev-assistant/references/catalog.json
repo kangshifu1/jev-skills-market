@@ -10029,6 +10029,318 @@
       ],
       "usageUrl": "https://github.com/turantekin/Parrot/blob/893da137df566d7b60837ba5f9590ac675170aa3/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、评价框架或依赖专属运行时的模板的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "vegaml-jev-eval",
+      "kind": "tool",
+      "category": "testing",
+      "description": "VegaML 的对比评价 Notebook 提供可选的托管 Jev 客户端，在同组问题上记录类型化答案；本地 Vega 推理引擎本身与 Jev 服务分开。",
+      "distribution": "external",
+      "repository": "NandhaKishorM/vegaml",
+      "url": "https://github.com/NandhaKishorM/vegaml",
+      "version": "3bf76b71437fc58d5ffa21b680e30fb5887a1bb4",
+      "revision": "3bf76b71437fc58d5ffa21b680e30fb5887a1bb4",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的 Notebook 说明准备 Kaggle/GPU 环境、依赖及公开模型和数据；未下载或执行这些内容。",
+        "仅启用 Jev 对比列时才需要相应凭据；无凭据时该列跳过，不能据本地运行推断 Jev 已调用。",
+        "未复现上游准确率、校准、时延或成本，仅登记已核实的评价调用入口。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-12",
+      "github": {
+        "repositoryId": 1412238989,
+        "owner": "NandhaKishorM",
+        "stars": 166,
+        "pushedAt": "2026-10-11T16:30:48Z",
+        "updatedAt": "2026-10-11T23:20:34Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-12T00:03:01.176110+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/NandhaKishorM/vegaml/blob/3bf76b71437fc58d5ffa21b680e30fb5887a1bb4/notebooks/vega_benchmark_2xT4.ipynb",
+          "summary": "Notebook 的 JevClient 构建 TypeSafe System One POST 请求，评价阶段实际调用该客户端；源码单元仅静态读取，未执行。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/NandhaKishorM/vegaml/blob/3bf76b71437fc58d5ffa21b680e30fb5887a1bb4/README.md#L393",
+          "summary": "VegaML 的对比评价 Notebook 提供可选的托管 Jev 客户端，在同组问题上记录类型化答案；本地 Vega 推理引擎本身与 Jev 服务分开。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/NandhaKishorM/vegaml/blob/3bf76b71437fc58d5ffa21b680e30fb5887a1bb4/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、Notebook 或项目集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jev-python-demo-zazen",
+      "kind": "tool",
+      "category": "development",
+      "description": "视频源码合集中的 Jev Python 示例子目录调用官方 SDK，以 Choice、Score 和 Noul 评价示例工单并生成分流记录；只登记这一子项目。",
+      "distribution": "external",
+      "repository": "zazencodes/zazencodes-season-3",
+      "url": "https://github.com/zazencodes/zazencodes-season-3",
+      "version": "555467c365e6750278efba09349369109f62f65f",
+      "revision": "555467c365e6750278efba09349369109f62f65f",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "在固定提交的 src/jev-system-one-model-python-demo 子目录按依赖说明准备 Python 与 TypeSafe 凭据。",
+        "上游 README 的个人绝对路径应替换为使用者自己的克隆目录；本市场不复制该路径或运行安装命令。",
+        "未运行演示；退款服务、防火墙与人工升级在脚本中是分流标签，不代表已经接通这些服务。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-12",
+      "github": {
+        "repositoryId": 1185964118,
+        "owner": "zazencodes",
+        "stars": 117,
+        "pushedAt": "2026-10-07T15:27:09Z",
+        "updatedAt": "2026-10-11T23:13:57Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-12T00:03:00.415245+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/zazencodes/zazencodes-season-3/blob/555467c365e6750278efba09349369109f62f65f/src/jev-system-one-model-python-demo/demo.py#L79",
+          "summary": "triage_ticket 实际调用 TypeSafeClient.system_one，再由代码返回动作和处理方标签。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zazencodes/zazencodes-season-3/blob/555467c365e6750278efba09349369109f62f65f/src/jev-system-one-model-python-demo/README.md#L58",
+          "summary": "视频源码合集中的 Jev Python 示例子目录调用官方 SDK，以 Choice、Score 和 Noul 评价示例工单并生成分流记录；只登记这一子项目。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/zazencodes/zazencodes-season-3/blob/555467c365e6750278efba09349369109f62f65f/src/jev-system-one-model-python-demo/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、Notebook 或项目集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jev-foundation-models",
+      "kind": "skill",
+      "category": "development",
+      "description": "面向 Swift 的 Jev Foundation Models 开发指引；配套桥接 SDK 将受约束结构转换为类型化问题并调用托管 Jev，指引文件与 SDK 运行环境分别安装。",
+      "distribution": "external",
+      "repository": "peterfriese/system-one-foundation-models",
+      "url": "https://github.com/peterfriese/system-one-foundation-models",
+      "version": "c3068589139643cab045c984dd485168103cfbb7",
+      "revision": "c3068589139643cab045c984dd485168103cfbb7",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "Skill 安装只取得开发指引；实际使用需另外配置配套 Swift 包、上游要求的 Apple 工具链与目标平台。",
+        "托管 Jev 凭据留在服务端或受保护的 CLI 环境；移动应用使用后端代理，不把共享密钥打包进应用。",
+        "未安装 Skill、编译 SDK、验证代理或复现上游延迟；示例概率阈值需要按业务数据验证，模型结果不授予执行权限。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-12",
+      "github": {
+        "repositoryId": 1380219642,
+        "owner": "peterfriese",
+        "stars": 112,
+        "pushedAt": "2026-10-09T08:40:29Z",
+        "updatedAt": "2026-10-11T22:11:13Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-12T00:03:03.798981+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/peterfriese/system-one-foundation-models/blob/c3068589139643cab045c984dd485168103cfbb7/Sources/JevFoundationModels/Transport/JevTransport.swift#L63",
+          "summary": "原生传输构造带认证头的 HTTP POST 并读取响应，默认地址由 JevLanguageModel 指向 TypeSafe。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/peterfriese/system-one-foundation-models/blob/c3068589139643cab045c984dd485168103cfbb7/Sources/JevFoundationModels/JevExecutor.swift#L47",
+          "summary": "Foundation Models 执行器实际调用 JevClient，并将类型化答案转换回受约束结构。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/peterfriese/system-one-foundation-models/blob/c3068589139643cab045c984dd485168103cfbb7/skills/jev-foundation-models/SKILL.md#L1",
+          "summary": "已核实 Skill frontmatter 名称、Apache-2.0 声明和标准 skills/jev-foundation-models 路径；只生成指引文件安装命令，未执行。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/peterfriese/system-one-foundation-models/blob/c3068589139643cab045c984dd485168103cfbb7/README.md#L138",
+          "summary": "面向 Swift 的 Jev Foundation Models 开发指引；配套桥接 SDK 将受约束结构转换为类型化问题并调用托管 Jev，指引文件与 SDK 运行环境分别安装。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/peterfriese/system-one-foundation-models/blob/c3068589139643cab045c984dd485168103cfbb7/README.md",
+      "usageNote": "按固定提交和已核实名称生成的命令仅安装 Skill 指引；配套 Swift 包、Apple 平台依赖、后端代理与凭据需另行配置。安装、编译、真实模型调用和宿主兼容性均未测试。",
+      "path": "skills/jev-foundation-models",
+      "reviewNotes": [
+        "Only Skill guidance is installable through the generated command; the Swift SDK and platform toolchain are separate dependencies.",
+        "Upstream example thresholds, API snippets and latency claims were not runtime-tested; source review is not a security audit."
+      ]
+    },
+    {
+      "id": "rikkahub-sillytavern-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Android 聊天应用的可选 Jev 决策层通过 TypeSafe System One 筛选记忆，并向主模型提供 judge 工具；回答生成由其他模型承担。",
+      "distribution": "external",
+      "repository": "MiaoWuNYA/rikkahub-sillytavern-android",
+      "url": "https://github.com/MiaoWuNYA/rikkahub-sillytavern-android",
+      "version": "e9c670247163e4ac708facbad2fdf08ad36ed696",
+      "revision": "e9c670247163e4ac708facbad2fdf08ad36ed696",
+      "license": "AGPL-3.0",
+      "licenseStatus": "GitHub API identifies AGPL-3.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交配置完整 Android 应用与 TypeSafe 地址、模型和凭据；记忆筛选与 judge 工具分别启用。",
+        "启用对应功能会发送会话查询、候选记忆或评价状态；需先确认允许外发的数据范围。",
+        "未安装应用、导入聊天记录或调用设备工具；回退、阈值和速度仅核实实现与说明，未做运行验收。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-12",
+      "github": {
+        "repositoryId": 1377857628,
+        "owner": "MiaoWuNYA",
+        "stars": 101,
+        "pushedAt": "2026-10-11T21:59:46Z",
+        "updatedAt": "2026-10-11T21:59:50Z",
+        "defaultBranch": "huadeng",
+        "archived": false,
+        "licenseSpdxId": "AGPL-3.0",
+        "checkedAt": "2026-10-12T00:03:05.988365+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/MiaoWuNYA/rikkahub-sillytavern-android/blob/e9c670247163e4ac708facbad2fdf08ad36ed696/app/src/main/java/me/rerere/rikkahub/data/ai/jev/JevClient.kt#L94",
+          "summary": "Kotlin 客户端构建 System One POST 请求，默认服务地址为 TypeSafe。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/MiaoWuNYA/rikkahub-sillytavern-android/blob/e9c670247163e4ac708facbad2fdf08ad36ed696/app/src/main/java/me/rerere/rikkahub/data/ai/transformers/MemoryRetrievalTransformer.kt#L283",
+          "summary": "记忆检索流程实际批量调用 JevClient 判断候选相关性。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/MiaoWuNYA/rikkahub-sillytavern-android/blob/e9c670247163e4ac708facbad2fdf08ad36ed696/app/src/main/java/me/rerere/rikkahub/data/ai/tools/JudgeTool.kt#L95",
+          "summary": "judge 工具实际调用 JevClient.judgeOne 并处理类型化结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/MiaoWuNYA/rikkahub-sillytavern-android/blob/e9c670247163e4ac708facbad2fdf08ad36ed696/README.md#L151",
+          "summary": "Android 聊天应用的可选 Jev 决策层通过 TypeSafe System One 筛选记忆，并向主模型提供 judge 工具；回答生成由其他模型承担。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/MiaoWuNYA/rikkahub-sillytavern-android/blob/e9c670247163e4ac708facbad2fdf08ad36ed696/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、Notebook 或项目集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "hey-jev",
+      "kind": "tool",
+      "category": "voice",
+      "description": "macOS 语音助手将转写文本交给 Jev 选择类别与动作参数，再由本机代码执行命令；语音识别、语音合成和开放问答使用其他组件。",
+      "distribution": "external",
+      "repository": "henryklunaris/hey-jev",
+      "url": "https://github.com/henryklunaris/hey-jev",
+      "version": "24e4b378350d999d2b45ff2549ea039c2bc7863d",
+      "revision": "24e4b378350d999d2b45ff2549ea039c2bc7863d",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "按固定提交准备 macOS、Python、TypeSafe 及所选语音/问答服务凭据；麦克风和辅助功能权限需另行配置。",
+        "普通命令虽在本机转写，文本仍会发送给 Jev；可选云端听写还会外发音频。",
+        "未安装应用、读取 Keychain、启用麦克风或辅助功能、执行 AppleScript/系统命令；未验证执行授权边界和上游成本。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-12",
+      "github": {
+        "repositoryId": 1380877128,
+        "owner": "henryklunaris",
+        "stars": 110,
+        "pushedAt": "2026-09-29T20:26:59Z",
+        "updatedAt": "2026-10-11T21:24:32Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-12T00:03:07.543149+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/henryklunaris/hey-jev/blob/24e4b378350d999d2b45ff2549ea039c2bc7863d/siri.py#L109",
+          "summary": "jev 函数直接向 TypeSafe System One 发送类型化问题并解析答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/henryklunaris/hey-jev/blob/24e4b378350d999d2b45ff2549ea039c2bc7863d/siri.py#L611",
+          "summary": "主处理流程实际消费 Jev 结果，选择后续问答或由本机动作表执行。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/henryklunaris/hey-jev/blob/24e4b378350d999d2b45ff2549ea039c2bc7863d/README.md#L120",
+          "summary": "macOS 语音助手将转写文本交给 Jev 选择类别与动作参数，再由本机代码执行命令；语音识别、语音合成和开放问答使用其他组件。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/henryklunaris/hey-jev/blob/24e4b378350d999d2b45ff2549ea039c2bc7863d/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、Notebook 或项目集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "aiwg-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "AIWG 的可选 decision-engine 插件通过原生 Jev 适配器发送有界判断，供 CLI/工作流消费类型化结果；未配置或不可用时返回回退状态。",
+      "distribution": "external",
+      "repository": "jmagly/aiwg",
+      "url": "https://github.com/jmagly/aiwg",
+      "version": "21935112bc5795b23c826c5d693185b40a2296b3",
+      "revision": "21935112bc5795b23c826c5d693185b40a2296b3",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的 Jev quickstart 准备 AIWG 与单独启用的 decision-engine；上游明确该插件不随批量安装自动启用。",
+        "使用受保护凭据配置及显式启用设置；发送的问题与上下文需排除密钥等敏感内容。",
+        "未安装框架、部署规则、运行验证调用或更改本机配置；模型输出只作建议，不构成执行授权。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-12",
+      "github": {
+        "repositoryId": 1038153811,
+        "owner": "jmagly",
+        "stars": 222,
+        "pushedAt": "2026-10-11T16:59:04Z",
+        "updatedAt": "2026-10-11T19:47:35Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-12T00:03:12.064542+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/jmagly/aiwg/blob/21935112bc5795b23c826c5d693185b40a2296b3/src/decision/adapters/jev.ts#L120",
+          "summary": "适配器取得授权凭据、组装 System One 请求并发起真实 HTTP 调用，默认地址为 TypeSafe。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/jmagly/aiwg/blob/21935112bc5795b23c826c5d693185b40a2296b3/docs/decision/jev-quickstart.md#L19",
+          "summary": "AIWG 的可选 decision-engine 插件通过原生 Jev 适配器发送有界判断，供 CLI/工作流消费类型化结果；未配置或不可用时返回回退状态。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/jmagly/aiwg/blob/21935112bc5795b23c826c5d693185b40a2296b3/docs/decision/jev-quickstart.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、Notebook 或项目集合的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }
