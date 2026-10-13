@@ -10341,6 +10341,234 @@
       ],
       "usageUrl": "https://github.com/jmagly/aiwg/blob/21935112bc5795b23c826c5d693185b40a2296b3/docs/decision/jev-quickstart.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用、Notebook 或项目集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "awesome-jev-guide",
+      "kind": "skill",
+      "category": "development",
+      "description": "Jev 方案发现与开发指引，附带示例助手；仓库中的教学客户端可直接调用 TypeSafe，提供离线样例与显式启用的实时判断。",
+      "distribution": "external",
+      "repository": "AppitStudio/awesome-jev",
+      "url": "https://github.com/AppitStudio/awesome-jev",
+      "version": "3e47874a59addc1084c7b0f3004039ddf628e643",
+      "revision": "3e47874a59addc1084c7b0f3004039ddf628e643",
+      "license": "CC0-1.0 AND MIT",
+      "licenseStatus": "GitHub API reports NOASSERTION. Pinned LICENSE.md assigns CC0-1.0 to original Markdown documentation and MIT to original source code, fixtures and configuration. Third-party linked resources retain their own licenses.",
+      "requires": [
+        "Skill 安装仅取得指引、相对引用和助手脚本；运行脚本还需单独的完整仓库 checkout，通过 --repo 指向包含 examples 的目录。",
+        "实时模式需要私有进程环境中的 TypeSafe 凭据或本机隐藏输入；离线样例不调用模型，也不证明模型效果。",
+        "未安装 Skill、运行脚本或复制被列出的第三方项目；Markdown 与代码的许可按上游文件类型分别适用。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-13",
+      "github": {
+        "repositoryId": 1376243548,
+        "owner": "AppitStudio",
+        "stars": 102,
+        "pushedAt": "2026-10-12T22:42:38Z",
+        "updatedAt": "2026-10-12T22:42:40Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-10-13T00:02:38.633235+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/AppitStudio/awesome-jev/blob/3e47874a59addc1084c7b0f3004039ddf628e643/examples/jev_examples/client.py#L113",
+          "summary": "教学客户端直接构建 TypeSafe System One POST 请求并验证答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/AppitStudio/awesome-jev/blob/3e47874a59addc1084c7b0f3004039ddf628e643/skills/awesome-jev-guide/SKILL.md#L1",
+          "summary": "已核实 awesome-jev-guide 的名称和标准 Skill 目录；相对引用及 scripts/try_example.py 均存在。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/AppitStudio/awesome-jev/blob/3e47874a59addc1084c7b0f3004039ddf628e643/skills/awesome-jev-guide/scripts/try_example.py#L17",
+          "summary": "助手脚本从另行指定的仓库 examples 加载运行时；仅 --live 分支调用真实客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/AppitStudio/awesome-jev/blob/3e47874a59addc1084c7b0f3004039ddf628e643/LICENSE.md#L3",
+          "summary": "上游明确 Markdown 为 CC0-1.0，原创代码、样例和配置为 MIT；外链项目不重新授权。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/AppitStudio/awesome-jev/blob/3e47874a59addc1084c7b0f3004039ddf628e643/README.md#L32",
+          "summary": "Jev 方案发现与开发指引，附带示例助手；仓库中的教学客户端可直接调用 TypeSafe，提供离线样例与显式启用的实时判断。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/AppitStudio/awesome-jev/blob/3e47874a59addc1084c7b0f3004039ddf628e643/skills/awesome-jev-guide/references/setup.md",
+      "usageNote": "固定提交安装命令只复制 Skill 文件，不包含仓库根目录的 examples 运行时；示例助手需要完整 checkout 与 --repo 参数。安装、离线样例和实时调用均未执行。",
+      "path": "skills/awesome-jev-guide",
+      "reviewNotes": [
+        "Skill installation does not include the repository-level examples runtime; the helper requires a separate checkout through --repo.",
+        "Source review is not a security audit or runtime validation. Offline fixtures are not live model evaluations."
+      ]
+    },
+    {
+      "id": "text-to-vrma",
+      "kind": "tool",
+      "category": "development",
+      "description": "VRM 动作工具可调用 Jev 解析输入文本的情绪、视线和动作语义，作为规划及生成的辅助信息；Jev 不直接生成动画或动作文件。",
+      "distribution": "external",
+      "repository": "Kirakun0328/text-to-vrma",
+      "url": "https://github.com/Kirakun0328/text-to-vrma",
+      "version": "53c50504d1dc5137d4414b27ae8afaff89a62943",
+      "revision": "53c50504d1dc5137d4414b27ae8afaff89a62943",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交准备完整应用、所选规划与动作引擎；可选 Jev 功能需单独配置 TypeSafe 凭据。",
+        "启用后会向 TypeSafe 发送受长度限制的输入文本及所选状态；密钥只使用应用受保护配置或服务端环境。",
+        "未安装应用、运行动作引擎或调用 Jev；未验证日文解释、动作质量、端到端时延及上游集成测试。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-13",
+      "github": {
+        "repositoryId": 1300781672,
+        "owner": "Kirakun0328",
+        "stars": 197,
+        "pushedAt": "2026-10-12T03:40:35Z",
+        "updatedAt": "2026-10-12T19:32:21Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-13T00:02:47.567123+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Kirakun0328/text-to-vrma/blob/53c50504d1dc5137d4414b27ae8afaff89a62943/src/jevAnalyzer.js#L194",
+          "summary": "分析器直接 POST 到 TypeSafe System One，将类型化答案转为动作辅助上下文。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Kirakun0328/text-to-vrma/blob/53c50504d1dc5137d4414b27ae8afaff89a62943/src/jevService.js#L4",
+          "summary": "本地服务与 Electron 共用入口实际调用严格分析路径。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Kirakun0328/text-to-vrma/blob/53c50504d1dc5137d4414b27ae8afaff89a62943/README.md#L329",
+          "summary": "VRM 动作工具可调用 Jev 解析输入文本的情绪、视线和动作语义，作为规划及生成的辅助信息；Jev 不直接生成动画或动作文件。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Kirakun0328/text-to-vrma/blob/53c50504d1dc5137d4414b27ae8afaff89a62943/docs/jev-generation-integration.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用或依赖专属运行时的插件包的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "paperseek",
+      "kind": "tool",
+      "category": "research",
+      "description": "文献检索应用可在初筛阶段调用 TypeSafe Jev 对候选论文评分，再由代码融合排序并交给主模型处理最终子集。",
+      "distribution": "external",
+      "repository": "paperseek/paperseek",
+      "url": "https://github.com/paperseek/paperseek",
+      "version": "b48485deb9997581b5ddb2ef38243f558420daf9",
+      "revision": "b48485deb9997581b5ddb2ef38243f558420daf9",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交准备 PaperSeek Community、数据来源及主模型配置，并单独选择 TypeSafe System One 连接与初筛方式。",
+        "附带的使用 Skill 依赖 Community 运行时，MCP 接入另需相同版本包；本条目登记完整应用，不生成 Skill 安装命令。",
+        "查询与候选元数据会发送到所选决策服务；未搜索真实课题、配置账户或复现上游检索比较结果。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-13",
+      "github": {
+        "repositoryId": 1256948331,
+        "owner": "paperseek",
+        "stars": 201,
+        "pushedAt": "2026-10-12T18:50:25Z",
+        "updatedAt": "2026-10-12T18:26:58Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-13T00:02:49.444602+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/paperseek/paperseek/blob/b48485deb9997581b5ddb2ef38243f558420daf9/backend/src/paperseek_core/decision_client.py#L18",
+          "summary": "SystemOneAdapter 发送 Score 问题并检查候选答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/paperseek/paperseek/blob/b48485deb9997581b5ddb2ef38243f558420daf9/backend/src/paperseek_core/decision_selection.py#L75",
+          "summary": "初筛批处理实际调用决策适配器，再与本地顺序融合；失败时保留本地排序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/paperseek/paperseek/blob/b48485deb9997581b5ddb2ef38243f558420daf9/web/src/features/search/provider-presets.ts#L47",
+          "summary": "TypeSafe 连接预设指向官方 API 地址和 jev-latest。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/paperseek/paperseek/blob/b48485deb9997581b5ddb2ef38243f558420daf9/README.md#L182",
+          "summary": "文献检索应用可在初筛阶段调用 TypeSafe Jev 对候选论文评分，再由代码融合排序并交给主模型处理最终子集。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/paperseek/paperseek/blob/b48485deb9997581b5ddb2ef38243f558420daf9/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用或依赖专属运行时的插件包的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "dsh-sieve",
+      "kind": "tool",
+      "category": "automation",
+      "description": "DeepSeek Harness 上下文处理插件可使用 Jev 判断工具输出与上下文的保留、筛选和折叠，由插件规则消费结构化结果。",
+      "distribution": "external",
+      "repository": "Sev7eEn7/dsh-sieve",
+      "url": "https://github.com/Sev7eEn7/dsh-sieve",
+      "version": "5b437749c3ef6617bc16008527cbb9e93ea1c4ec",
+      "revision": "5b437749c3ef6617bc16008527cbb9e93ea1c4ec",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需要 DeepSeek Harness 及完整插件运行时；Jev 托管服务与本地 Laya 是不同配置路径。",
+        "auto 配置发现可用 TypeSafe 凭据后会开始调用，使用前需核对环境与外发范围；没有裁判配置时插件保持上下文原样。",
+        "未安装插件、修改 DSH 配置、读取会话或发起判断；旧版主模型自评数据不作为当前 Jev 路径的节省成本证据。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-13",
+      "github": {
+        "repositoryId": 1404374196,
+        "owner": "Sev7eEn7",
+        "stars": 107,
+        "pushedAt": "2026-10-10T07:10:36Z",
+        "updatedAt": "2026-10-12T13:06:01Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-13T00:03:00.438982+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Sev7eEn7/dsh-sieve/blob/5b437749c3ef6617bc16008527cbb9e93ea1c4ec/packages/dsh-sieve/src/judge/providers/system-one.ts#L127",
+          "summary": "System One 提供商实际发起 HTTP POST，默认使用 TypeSafe 的 Jev 地址和模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Sev7eEn7/dsh-sieve/blob/5b437749c3ef6617bc16008527cbb9e93ea1c4ec/packages/dsh-sieve/src/runtime/jev.ts#L120",
+          "summary": "auto 裁判运行时在调用时解析配置的 Jev 服务，并交给该服务执行判断。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Sev7eEn7/dsh-sieve/blob/5b437749c3ef6617bc16008527cbb9e93ea1c4ec/README.md#L114",
+          "summary": "DeepSeek Harness 上下文处理插件可使用 Jev 判断工具输出与上下文的保留、筛选和折叠，由插件规则消费结构化结果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Sev7eEn7/dsh-sieve/blob/5b437749c3ef6617bc16008527cbb9e93ea1c4ec/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用或依赖专属运行时的插件包的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }

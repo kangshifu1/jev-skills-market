@@ -73,6 +73,26 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-13（main）
+
+本轮搜索 324 个去重候选，新增 **4 个项目**（1 个 Skill、3 个工具），目录共 **236 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-13.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 类型 | 已核实的 Jev 用途 |
+| --- | ---: | --- | --- |
+| [AppitStudio/awesome-jev](https://github.com/AppitStudio/awesome-jev) | 102 | Skill | Jev 方案发现与开发指引，附带示例助手；仓库中的教学客户端可直接调用 TypeSafe，提供离线样例与显式启用的实时判断。 |
+| [Kirakun0328/text-to-vrma](https://github.com/Kirakun0328/text-to-vrma) | 197 | 工具 | VRM 动作工具可调用 Jev 解析输入文本的情绪、视线和动作语义，作为规划及生成的辅助信息；Jev 不直接生成动画或动作文件。 |
+| [paperseek/paperseek](https://github.com/paperseek/paperseek) | 201 | 工具 | 文献检索应用可在初筛阶段调用 TypeSafe Jev 对候选论文评分，再由代码融合排序并交给主模型处理最终子集。 |
+| [Sev7eEn7/dsh-sieve](https://github.com/Sev7eEn7/dsh-sieve) | 107 | 工具 | DeepSeek Harness 上下文处理插件可使用 Jev 判断工具输出与上下文的保留、筛选和折叠，由插件规则消费结构化结果。 |
+
+`npm run jev -- show awesome-jev-guide` 可查看固定版本的指引安装命令；示例助手还需完整 checkout 与 `--repo`。
+三个工具返回 `install: null`。DSH Sieve 的 auto 配置可能使用现有 TypeSafe 凭据开始调用，需事先核对；
+本轮未安装插件、运行示例或调用模型，历史上游评价不作为当前功能的实测结果。
+
 ## 每日发现：2026-10-12（main）
 
 本轮搜索 319 个去重候选，新增 **6 个项目**（1 个 Skill、5 个工具），目录共 **232 项**。

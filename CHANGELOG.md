@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-13 — daily external discovery
+
+- Add 4 projects from 324 GitHub candidates: 1 guide Skill and 3 tools.
+  Catalog now contains 236 entries; record 210 existing sources and 110 exclusions.
+- Pin direct Jev calls for learning examples, motion-context analysis, paper
+  screening and DSH context handling; distinguish local model reconstructions.
+- Record the guide's separate examples checkout, file-specific CC0/MIT licensing,
+  and Sieve's automatic credential detection and historical measurement limits.
+- Preserve prior entries, routing, release tags and the independent computer-use repo.
+  No upstream program, installer, private dataset or model call ran.
+
 ## Unreleased — 2026-10-12 — daily external discovery
 
 - Add 6 projects from 319 GitHub candidates: 1 Swift development Skill and
