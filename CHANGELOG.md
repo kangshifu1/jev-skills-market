@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — 2026-10-14 — daily external discovery
+
+- Add Agent Router and Mynah as 2 external tools from 323 GitHub candidates.
+  Catalog now contains 238 entries; record 211 existing sources and 110 exclusions.
+- Pin TypeSafe gateway passthrough and optional Jev gesture-selection evidence.
+- Verify Agent Router's old envoyproxy/ai-gateway address by matching the current
+  GitHub repository ID and register it as an alias for deduplication.
+- Preserve prior entries, routing, release tags and the independent computer-use repo.
+  No gateway deployment, secret creation, avatar session or model call ran.
+
 ## Unreleased — 2026-10-13 — daily external discovery
 
 - Add 4 projects from 324 GitHub candidates: 1 guide Skill and 3 tools.

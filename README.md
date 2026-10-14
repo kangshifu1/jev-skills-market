@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-14（main）
+
+本轮搜索 323 个去重候选，新增 **2 个外部工具**，目录共 **238 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-14.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [theagentrouter/agent-router](https://github.com/theagentrouter/agent-router) | 2,223 | 基于 Envoy 的 AI 网关提供 TypeSafe System One 专用透传路径与 Jev 后端配置，保留类型化请求和响应，支持模型路由及使用量记录。 |
+| [honwee/mynah](https://github.com/honwee/mynah) | 119 | 实时数字人系统的可选 instinct 层调用 Jev，从预制动作片段中选择表情或手势；对话、转写和视频生成由其他组件负责。 |
+
+`npm run jev -- show agent-router-jev`、`npm run jev -- show mynah-jev` 可查看固定来源与使用条件。
+两项均返回 `install: null`。Agent Router 的旧地址 `envoyproxy/ai-gateway` 已核对仓库 ID 并登记为别名。
+本轮未部署网关、创建 Secret、接入数字人会话或调用模型。
+
 ## 每日发现：2026-10-13（main）
 
 本轮搜索 324 个去重候选，新增 **4 个项目**（1 个 Skill、3 个工具），目录共 **236 项**。

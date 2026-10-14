@@ -10569,6 +10569,118 @@
       ],
       "usageUrl": "https://github.com/Sev7eEn7/dsh-sieve/blob/5b437749c3ef6617bc16008527cbb9e93ea1c4ec/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成应用或依赖专属运行时的插件包的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "agent-router-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "基于 Envoy 的 AI 网关提供 TypeSafe System One 专用透传路径与 Jev 后端配置，保留类型化请求和响应，支持模型路由及使用量记录。",
+      "distribution": "external",
+      "repository": "theagentrouter/agent-router",
+      "url": "https://github.com/theagentrouter/agent-router",
+      "version": "38753fb7bfb32bed9c52dfb704e38e234c5b64a7",
+      "revision": "38753fb7bfb32bed9c52dfb704e38e234c5b64a7",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交准备网关及其部署依赖，并配置 TypeSafe 后端、TLS 与服务端凭据；示例清单不代表集群已部署。",
+        "这是原生 System One 路径，不将普通聊天接口自动转换为 Jev 文本生成。",
+        "未部署网关、创建 Secret、连接集群或调用 Jev；旧地址 envoyproxy/ai-gateway 已通过 GitHub 仓库 ID 确认为同一项目。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-14",
+      "github": {
+        "repositoryId": 875880554,
+        "owner": "theagentrouter",
+        "stars": 2223,
+        "pushedAt": "2026-10-13T21:57:10Z",
+        "updatedAt": "2026-10-13T21:57:16Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-14T00:07:21.324451+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/theagentrouter/agent-router/blob/38753fb7bfb32bed9c52dfb704e38e234c5b64a7/internal/endpointspec/endpointspec.go#L631",
+          "summary": "System One 入口为 TypeSafe 后端选择专用透传转换器。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/theagentrouter/agent-router/blob/38753fb7bfb32bed9c52dfb704e38e234c5b64a7/internal/translator/typesafe_systemone.go#L24",
+          "summary": "转换器设置 /v1/systemone 路径并保持 TypeSafe 格式，可覆盖模型名并解析使用量。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/theagentrouter/agent-router/blob/38753fb7bfb32bed9c52dfb704e38e234c5b64a7/examples/basic/typesafe.yaml#L17",
+          "summary": "配置示例将 jev-latest 路由至 api.typesafe.ai，并引用服务端 API key 与 TLS 配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/theagentrouter/agent-router/blob/38753fb7bfb32bed9c52dfb704e38e234c5b64a7/README.md#L30",
+          "summary": "基于 Envoy 的 AI 网关提供 TypeSafe System One 专用透传路径与 Jev 后端配置，保留类型化请求和响应，支持模型路由及使用量记录。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/theagentrouter/agent-router/blob/38753fb7bfb32bed9c52dfb704e38e234c5b64a7/examples/basic/typesafe.yaml",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成网关或完整应用的 Skill 安装命令。未安装、部署或运行上游功能。",
+      "repositoryAliases": [
+        "envoyproxy/ai-gateway"
+      ]
+    },
+    {
+      "id": "mynah-jev",
+      "kind": "tool",
+      "category": "voice",
+      "description": "实时数字人系统的可选 instinct 层调用 Jev，从预制动作片段中选择表情或手势；对话、转写和视频生成由其他组件负责。",
+      "distribution": "external",
+      "repository": "honwee/mynah",
+      "url": "https://github.com/honwee/mynah",
+      "version": "e329b5387d7cb3cd3eebf457e091b928b46126fe",
+      "revision": "e329b5387d7cb3cd3eebf457e091b928b46126fe",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交准备 Mynah 核心及所选数字人、语音与对话引擎；各模型和素材的许可及运行条件分别适用。",
+        "Jev 模式需配置 TypeSafe 凭据与可用服务连接，发送会话文本和动作候选；规则回退不等同于模型判断。",
+        "未部署服务、上传人物或语音资料、连接麦克风或调用模型；未复现动作质量、时延、容量和上游性能数据。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-14",
+      "github": {
+        "repositoryId": 1408550900,
+        "owner": "honwee",
+        "stars": 119,
+        "pushedAt": "2026-10-12T10:11:18Z",
+        "updatedAt": "2026-10-13T15:45:26Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-14T00:07:34.295987+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/honwee/mynah/blob/e329b5387d7cb3cd3eebf457e091b928b46126fe/internal/instinct/jev.go#L135",
+          "summary": "Go 客户端实际向 TypeSafe System One 发送状态与问题，默认模型为 jev-latest。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/honwee/mynah/blob/e329b5387d7cb3cd3eebf457e091b928b46126fe/internal/instinct/engine.go#L283",
+          "summary": "instinct 引擎调用提供商判断，在失败时可切换规则提供商，再经代码门槛决定动作片段。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/honwee/mynah/blob/e329b5387d7cb3cd3eebf457e091b928b46126fe/docs/guide/instinct.md#L3",
+          "summary": "实时数字人系统的可选 instinct 层调用 Jev，从预制动作片段中选择表情或手势；对话、转写和视频生成由其他组件负责。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/honwee/mynah/blob/e329b5387d7cb3cd3eebf457e091b928b46126fe/docs/guide/instinct.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成网关或完整应用的 Skill 安装命令。未安装、部署或运行上游功能。"
     }
   ]
 }
