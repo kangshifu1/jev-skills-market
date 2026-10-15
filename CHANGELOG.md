@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-15 — daily external discovery
+
+- Add 2 external tools from 323 GitHub candidates, bringing the catalog to 240
+  entries. Record 210 existing sources and 111 exclusions.
+- Pin the LangChain System One lesson's actual project branch and StartLux's
+  hosted Jev chess comparison, with dependency and branch provenance.
+- Record the lesson's local override, placeholder step hashes, experimental
+  middleware and absent branch license file without inferring runtime readiness.
+- Preserve prior entries, routing, release tags and the independent computer-use repo.
+  No lesson, benchmark, model download, private data or live provider call ran.
+
 ## Unreleased — 2026-10-14 — daily external discovery
 
 - Add Agent Router and Mynah as 2 external tools from 323 GitHub candidates.

@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-15（main）
+
+本轮搜索 323 个去重候选，新增 **2 个外部工具**，目录共 **240 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-15.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [emarco177/langchain-course](https://github.com/emarco177/langchain-course) | 1,719 | LangChain 课程的 System One 专题分支通过 langchain-typesafe 调用 Jev，演示类型化判断、模型路由和工具调用前的判断；只登记该专题代码。 |
+| [StartLuxLabs/StartLux-Decision](https://github.com/StartLuxLabs/StartLux-Decision) | 406 | StartLux 仓库的国际象棋比较脚本分别调用本地模型与托管 Jev，从合法棋步候选中选招并记录结果；只登记该比较入口。 |
+
+`npm run jev -- show langchain-course-jev`、`npm run jev -- show startlux-jev-chess-eval` 可查看固定来源与使用条件。
+两项均返回 `install: null`。课程代码固定在 `project/system-one-models` 的真实提交，默认分支只提供发现入口；
+StartLux 只登记托管 Jev 的棋局比较路径，不把其本地推理模型当作 Jev 服务。
+
 ## 每日发现：2026-10-14（main）
 
 本轮搜索 323 个去重候选，新增 **2 个外部工具**，目录共 **238 项**。

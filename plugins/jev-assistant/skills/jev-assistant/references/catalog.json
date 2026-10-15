@@ -10681,6 +10681,122 @@
       ],
       "usageUrl": "https://github.com/honwee/mynah/blob/e329b5387d7cb3cd3eebf457e091b928b46126fe/docs/guide/instinct.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整工具及依赖；install 为 null，不生成网关或完整应用的 Skill 安装命令。未安装、部署或运行上游功能。"
+    },
+    {
+      "id": "langchain-course-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "LangChain 课程的 System One 专题分支通过 langchain-typesafe 调用 Jev，演示类型化判断、模型路由和工具调用前的判断；只登记该专题代码。",
+      "distribution": "external",
+      "repository": "emarco177/langchain-course",
+      "url": "https://github.com/emarco177/langchain-course",
+      "version": "3c0d629cd7a28e381a49862ef0a8573d7d1f5cb3",
+      "revision": "3c0d629cd7a28e381a49862ef0a8573d7d1f5cb3",
+      "license": null,
+      "licenseStatus": "GitHub repository API identifies Apache-2.0 on the default branch, but the inspected project/system-one-models commit contains no LICENSE file. Link and original summary only; license scope for this branch is not inferred.",
+      "requires": [
+        "使用本条目固定提交，代码位于 project/system-one-models 分支；Python 3.11+，依赖包含 langchain-typesafe[experimental]==0.0.1a3。",
+        "第二、三课使用托管 TypeSafe 分类器，第四、五课还需生成模型凭据；第一课当前代码会将分类器覆盖为本地 Ollama，不作为托管 Jev 调用的主证据。",
+        "README 逐步表仍含 HASH 占位符，请以本条目真实 revision 为准；未执行示例或验证实验性中间件，模型判断不构成执行授权。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-15",
+      "github": {
+        "repositoryId": 628172054,
+        "owner": "emarco177",
+        "stars": 1719,
+        "pushedAt": "2026-10-14T18:12:38Z",
+        "updatedAt": "2026-10-14T18:12:55Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-15T00:08:57.649945+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/emarco177/langchain-course/blob/3c0d629cd7a28e381a49862ef0a8573d7d1f5cb3/02_three_primitives.py#L48",
+          "summary": "第二课实际调用 TypeSafeClassifier.invoke，一次请求 Noul、Choice 和 Score。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/emarco177/langchain-course/blob/3c0d629cd7a28e381a49862ef0a8573d7d1f5cb3/04_model_router_middleware.py#L15",
+          "summary": "专题代码将 TypeSafe 的实验性模型路由中间件连接到 LangChain agent。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/emarco177/langchain-course/blob/3c0d629cd7a28e381a49862ef0a8573d7d1f5cb3/05_auto_mode_middleware.py#L41",
+          "summary": "实验性 AutoModeMiddleware 被用于示例内存笔记工具；这是教学代码，不是已验证的安全边界。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/emarco177/langchain-course/blob/3c0d629cd7a28e381a49862ef0a8573d7d1f5cb3/README.md#L3",
+          "summary": "LangChain 课程的 System One 专题分支通过 langchain-typesafe 调用 Jev，演示类型化判断、模型路由和工具调用前的判断；只登记该专题代码。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/emarco177/langchain-course/blob/3c0d629cd7a28e381a49862ef0a8573d7d1f5cb3/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置专题代码或比较工具及其依赖；install 为 null，不生成课程或完整评价程序的 Skill 安装命令。未安装或运行上游功能。",
+      "sourceBranch": "project/system-one-models",
+      "discoveryReference": "https://github.com/emarco177/langchain-course/blob/ae34d79997ad270620b7e149e640ac164d3aacc8/README.md#L27"
+    },
+    {
+      "id": "startlux-jev-chess-eval",
+      "kind": "tool",
+      "category": "testing",
+      "description": "StartLux 仓库的国际象棋比较脚本分别调用本地模型与托管 Jev，从合法棋步候选中选招并记录结果；只登记该比较入口。",
+      "distribution": "external",
+      "repository": "StartLuxLabs/StartLux-Decision",
+      "url": "https://github.com/StartLuxLabs/StartLux-Decision",
+      "version": "58df04dd038c1c0a746f4f9465c715a90b45a65d",
+      "revision": "58df04dd038c1c0a746f4f9465c715a90b45a65d",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交的 v1/demos/chess/duel.py 说明准备本地 StartLux 服务、外部 jev-benchmark 依赖、Python chess 与 Stockfish。",
+        "托管 Jev 客户端单独使用 TypeSafe 凭据；本地模型与服务兼容接口不等同于 Jev，运行比较会产生模型请求。",
+        "未安装依赖、下载模型或运行棋局；脚本遇到调用失败可使用随机合法步，上游胜负与延迟未复现。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-15",
+      "github": {
+        "repositoryId": 1395116154,
+        "owner": "StartLuxLabs",
+        "stars": 406,
+        "pushedAt": "2026-10-14T12:17:09Z",
+        "updatedAt": "2026-10-14T14:32:03Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-15T00:09:07.426408+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/StartLuxLabs/StartLux-Decision/blob/58df04dd038c1c0a746f4f9465c715a90b45a65d/v1/demos/chess/duel.py#L57",
+          "summary": "比较脚本创建带本地 base_url 的客户端和独立的托管 Jev 客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/StartLuxLabs/StartLux-Decision/blob/58df04dd038c1c0a746f4f9465c715a90b45a65d/v1/demos/chess/duel.py#L87",
+          "summary": "每步实际调用所选客户端的 system_one，以合法棋步作为 Choice 候选；失败时记录并回退。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/StartLuxLabs/StartLux-Decision/blob/58df04dd038c1c0a746f4f9465c715a90b45a65d/v1/demos/chess/match.py#L47",
+          "summary": "批量比较入口调用 duel.py；依赖和运行需求继承该脚本。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/StartLuxLabs/StartLux-Decision/blob/58df04dd038c1c0a746f4f9465c715a90b45a65d/README.md#L38",
+          "summary": "StartLux 仓库的国际象棋比较脚本分别调用本地模型与托管 Jev，从合法棋步候选中选招并记录结果；只登记该比较入口。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/StartLuxLabs/StartLux-Decision/blob/58df04dd038c1c0a746f4f9465c715a90b45a65d/v1/demos/chess/duel.py",
+      "usageNote": "按 usageUrl 的固定提交说明配置专题代码或比较工具及其依赖；install 为 null，不生成课程或完整评价程序的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }
