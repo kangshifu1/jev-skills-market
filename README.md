@@ -73,6 +73,43 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-16（main）
+
+本轮扩展为 7 类关键词检索，共 348 个去重候选，补录 **19 个外部工具**，目录共 **259 项**。
+新增 `jev-latest` 与 `typesafe_sdk` 条件找到了此前检索未覆盖的 20 个候选；补录不表示仓库都在今天创建。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-16.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [duolahypercho/codex-router](https://github.com/duolahypercho/codex-router) | 3,940 | Codex Router 提供隐藏的 OpenRouter Jev Decisions 转发路由，保留专用结构化请求通道。 |
+| [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 33,327 | AgentScope 的可选 JevClassifierModel 通过 TypeSafe SDK 执行类型化分类；与聊天生成及代理执行分开。 |
+| [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 111,381 | TradingAgents 的可选 Jev 层筛除与公司无关的社交帖，并统计剩余帖子的立场，供情绪分析器读取。 |
+| [getzep/graphiti](https://github.com/getzep/graphiti) | 31,797 | Graphiti 将节点去重与边解析交给 Jev 的结构化判断；其他抽取和生成任务仍需其他模型。 |
+| [agentjido/req_llm](https://github.com/agentjido/req_llm) | 597 | Elixir ReqLLM 提供 TypeSafe evaluate 接口，把状态和类型化问题发送到 System One，解析结构化结果。 |
+| [CopilotKit/OpenIntelligentUI](https://github.com/CopilotKit/OpenIntelligentUI) | 3,220 | OpenIntelligentUI 使用 Jev 选择呈现方式与可视化类型，再由生成模型和 UI 组件产出内容。 |
+| [skyfireitdiy/Jarvis](https://github.com/skyfireitdiy/Jarvis) | 145 | Jarvis 的 Jev 平台适配器将结构化评价请求发送到 TypeSafe，可用于规则或方法论候选选择。 |
+| [kstevica/captain-claw](https://github.com/kstevica/captain-claw) | 168 | Captain Claw 提供 Jev 判断工具及原生 TypeSafe 客户端，供宿主提交状态和 Choice、Noul、Score 问题。 |
+| [SREGym/SREGym](https://github.com/SREGym/SREGym) | 346 | SREGym 为诊断测试与提交提供可选 Jev 建议，将证据送入 TypeSafe 并记录类型化判断。 |
+| [ksenxx/kiss_ai](https://github.com/ksenxx/kiss_ai) | 558 | KISS AI 通过 OpenRouter 的 Jev 决策后端支持任务分类和 decide 工具，把类型化判断与文本生成分开。 |
+| [HarleyCoops/Math-To-Manim](https://github.com/HarleyCoops/Math-To-Manim) | 2,773 | Math-To-Manim 用独立 TypeSafe Jev 调用检查讲解和动画制作过程中的检查点，生成与渲染由其他组件负责。 |
+| [DLYZZT/pi-desktop](https://github.com/DLYZZT/pi-desktop) | 270 | Pi Desktop 经 Pi 模型注册表调用 Jev 分类器，并在桌面层应用权限、取消和使用量记录。 |
+| [moonlight-lupin/agent-skills](https://github.com/moonlight-lupin/agent-skills) | 101 | Hermes 的 skill-retrieval 插件可用 Jev 对 BM25 短名单重排，超时或错误时回退原排序。 |
+| [VKirill/claude-lane-stack](https://github.com/VKirill/claude-lane-stack) | 122 | Claude Lane Stack 的判断模块可选择 TypeSafe Jev，为候选选择、差异审查和浏览器 QA 等流程提供结构化结果。 |
+| [noperator/siftrank](https://github.com/noperator/siftrank) | 226 | SiftRank 的 Jev 提供商比较批次内条目对，再由排序算法组合概率得到顺序。 |
+| [ash-project/ash_ai](https://github.com/ash-project/ash_ai) | 190 | Ash AI 的 evaluate 动作通过 ReqLLM 调用 Jev，把动作参数转成状态与类型化问题，再转换返回值。 |
+| [lofcz/LLMTornado](https://github.com/lofcz/LLMTornado) | 645 | .NET LLMTornado 提供 TypeSafe Jev 决策接口，通过原生 System One 路径发送状态与类型化问题。 |
+| [Raudaschl/rag-fusion](https://github.com/Raudaschl/rag-fusion) | 959 | RAG-Fusion 的评价代码使用 Jev 对检索候选作相关性判断与重排，并比较融合流程中的不同用法。 |
+| [Oqura-ai/deepdoc](https://github.com/Oqura-ai/deepdoc) | 312 | DeepDoc 用 Jev 评价和重排知识库片段，并检查生成小节的证据缺口；报告文本仍由生成模型编写。 |
+
+本轮均为完整工具、SDK 或依赖宿主的插件，`show` 返回 `install: null`。
+`npm run jev -- show tradingagents-jev-screen`、`npm run jev -- show graphiti-jev` 可查看固定来源与配置条件。
+TradingAgents 仅登记帖子筛选，未运行金融分析或交易；Codex Router 的隐藏 Decisions 路由不自动安装输出裁剪器。
+上游阈值、准确率、成本节省、权限与安全主张均未在本市场实测。
+
 ## 每日发现：2026-10-15（main）
 
 本轮搜索 323 个去重候选，新增 **2 个外部工具**，目录共 **240 项**。

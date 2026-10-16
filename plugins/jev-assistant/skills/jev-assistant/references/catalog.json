@@ -10797,6 +10797,979 @@
       ],
       "usageUrl": "https://github.com/StartLuxLabs/StartLux-Decision/blob/58df04dd038c1c0a746f4f9465c715a90b45a65d/v1/demos/chess/duel.py",
       "usageNote": "按 usageUrl 的固定提交说明配置专题代码或比较工具及其依赖；install 为 null，不生成课程或完整评价程序的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "codex-router-jev-decisions",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Codex Router 提供隐藏的 OpenRouter Jev Decisions 转发路由，保留专用结构化请求通道。",
+      "distribution": "external",
+      "repository": "duolahypercho/codex-router",
+      "url": "https://github.com/duolahypercho/codex-router",
+      "version": "7912aa348569fd0bfe1d38131c6497cb62de476d",
+      "revision": "7912aa348569fd0bfe1d38131c6497cb62de476d",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整路由器、网关及显式启用的 OpenRouter Decisions 提供商。",
+        "Jev 路由不列入常规模型选择；它不会自动安装工具输出裁剪器，也不替代原生上下文压缩。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1306065843,
+        "owner": "duolahypercho",
+        "stars": 3940,
+        "pushedAt": "2026-10-14T07:21:01Z",
+        "updatedAt": "2026-10-16T00:04:23Z",
+        "createdAt": "2026-07-19T23:16:41Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:05:02.182354+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/duolahypercho/codex-router/blob/7912aa348569fd0bfe1d38131c6497cb62de476d/src/router.mjs#L6504",
+          "summary": "Codex Router 提供隐藏的 OpenRouter Jev Decisions 转发路由，保留专用结构化请求通道。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/duolahypercho/codex-router/blob/7912aa348569fd0bfe1d38131c6497cb62de476d/config/openrouter/decisions/jev-latest.json#L5",
+          "summary": "Codex Router 提供隐藏的 OpenRouter Jev Decisions 转发路由，保留专用结构化请求通道。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/duolahypercho/codex-router/blob/7912aa348569fd0bfe1d38131c6497cb62de476d/README.md#L664",
+          "summary": "Codex Router 提供隐藏的 OpenRouter Jev Decisions 转发路由，保留专用结构化请求通道。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/duolahypercho/codex-router/blob/7912aa348569fd0bfe1d38131c6497cb62de476d/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "agentscope-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "AgentScope 的可选 JevClassifierModel 通过 TypeSafe SDK 执行类型化分类；与聊天生成及代理执行分开。",
+      "distribution": "external",
+      "repository": "agentscope-ai/agentscope",
+      "url": "https://github.com/agentscope-ai/agentscope",
+      "version": "976e2ffc9c28869282bbcdde9a2661c48147ff3b",
+      "revision": "976e2ffc9c28869282bbcdde9a2661c48147ff3b",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需配置 AgentScope 的 classifier-jev 可选依赖和 TypeSafe 凭据。",
+        "仅核实分类器适配器，未启动代理或验证完整框架。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 742244656,
+        "owner": "agentscope-ai",
+        "stars": 33327,
+        "pushedAt": "2026-10-15T10:49:49Z",
+        "updatedAt": "2026-10-16T00:01:58Z",
+        "createdAt": "2024-01-12T03:41:59Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-16T00:04:40.137145+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/agentscope-ai/agentscope/blob/976e2ffc9c28869282bbcdde9a2661c48147ff3b/src/agentscope/classifier/_jev/_model.py#L146",
+          "summary": "AgentScope 的可选 JevClassifierModel 通过 TypeSafe SDK 执行类型化分类；与聊天生成及代理执行分开。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/agentscope-ai/agentscope/blob/976e2ffc9c28869282bbcdde9a2661c48147ff3b/src/agentscope/credential/_typesafe.py#L1",
+          "summary": "AgentScope 的可选 JevClassifierModel 通过 TypeSafe SDK 执行类型化分类；与聊天生成及代理执行分开。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/agentscope-ai/agentscope/blob/976e2ffc9c28869282bbcdde9a2661c48147ff3b/README.md#L81",
+          "summary": "AgentScope 的可选 JevClassifierModel 通过 TypeSafe SDK 执行类型化分类；与聊天生成及代理执行分开。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/agentscope-ai/agentscope/blob/976e2ffc9c28869282bbcdde9a2661c48147ff3b/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "tradingagents-jev-screen",
+      "kind": "tool",
+      "category": "finance",
+      "description": "TradingAgents 的可选 Jev 层筛除与公司无关的社交帖，并统计剩余帖子的立场，供情绪分析器读取。",
+      "distribution": "external",
+      "repository": "TauricResearch/TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "version": "1394a3f72aa4393e1a98f51b382434c4b4c2d972",
+      "revision": "1394a3f72aa4393e1a98f51b382434c4b4c2d972",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "配置 TypeSafe 凭据后会启用社交帖筛选；未配置或失败时按上游逻辑保留未筛选帖子。",
+        "未获取真实金融数据、运行分析或交易；社交来源并非严格历史时点数据，未验证回测或收益。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 909213664,
+        "owner": "TauricResearch",
+        "stars": 111381,
+        "pushedAt": "2026-10-03T21:30:10Z",
+        "updatedAt": "2026-10-15T23:58:04Z",
+        "createdAt": "2024-12-28T03:31:08Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-16T00:04:40.539380+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/TauricResearch/TradingAgents/blob/1394a3f72aa4393e1a98f51b382434c4b4c2d972/tradingagents/agents/post_screen.py#L68",
+          "summary": "TradingAgents 的可选 Jev 层筛除与公司无关的社交帖，并统计剩余帖子的立场，供情绪分析器读取。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/TauricResearch/TradingAgents/blob/1394a3f72aa4393e1a98f51b382434c4b4c2d972/tradingagents/agents/analysts/sentiment_analyst.py#L69",
+          "summary": "TradingAgents 的可选 Jev 层筛除与公司无关的社交帖，并统计剩余帖子的立场，供情绪分析器读取。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/TauricResearch/TradingAgents/blob/1394a3f72aa4393e1a98f51b382434c4b4c2d972/README.md#L192",
+          "summary": "TradingAgents 的可选 Jev 层筛除与公司无关的社交帖，并统计剩余帖子的立场，供情绪分析器读取。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/TauricResearch/TradingAgents/blob/1394a3f72aa4393e1a98f51b382434c4b4c2d972/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "graphiti-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Graphiti 将节点去重与边解析交给 Jev 的结构化判断；其他抽取和生成任务仍需其他模型。",
+      "distribution": "external",
+      "repository": "getzep/graphiti",
+      "url": "https://github.com/getzep/graphiti",
+      "version": "d50741d1bf463cbe3859eb73914cbff1b66839e6",
+      "revision": "d50741d1bf463cbe3859eb73914cbff1b66839e6",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交配置图数据库、JEV_API_KEY 和其他所需模型。",
+        "仅登记 dedupe_nodes.nodes 与 dedupe_edges.resolve_edge 路径，未写入图数据或验证去重阈值。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 840056306,
+        "owner": "getzep",
+        "stars": 31797,
+        "pushedAt": "2026-10-15T19:00:08Z",
+        "updatedAt": "2026-10-15T23:55:00Z",
+        "createdAt": "2024-08-08T22:08:30Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-16T00:04:42.469253+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/getzep/graphiti/blob/d50741d1bf463cbe3859eb73914cbff1b66839e6/graphiti_core/llm_client/jev_client.py#L217",
+          "summary": "Graphiti 将节点去重与边解析交给 Jev 的结构化判断；其他抽取和生成任务仍需其他模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/getzep/graphiti/blob/d50741d1bf463cbe3859eb73914cbff1b66839e6/README.md#L700",
+          "summary": "Graphiti 将节点去重与边解析交给 Jev 的结构化判断；其他抽取和生成任务仍需其他模型。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/getzep/graphiti/blob/d50741d1bf463cbe3859eb73914cbff1b66839e6/examples/jev/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "req-llm-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Elixir ReqLLM 提供 TypeSafe evaluate 接口，把状态和类型化问题发送到 System One，解析结构化结果。",
+      "distribution": "external",
+      "repository": "agentjido/req_llm",
+      "url": "https://github.com/agentjido/req_llm",
+      "version": "84fc395f20d26a55e4c380627a5b18e4c7558c81",
+      "revision": "84fc395f20d26a55e4c380627a5b18e4c7558c81",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需 Elixir/ReqLLM 运行环境与所选 TypeSafe 或 OpenRouter 凭据。",
+        "评价接口与文本生成分开；未运行请求、重试或多提供商兼容测试。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1051339863,
+        "owner": "agentjido",
+        "stars": 597,
+        "pushedAt": "2026-10-14T23:34:14Z",
+        "updatedAt": "2026-10-15T23:51:19Z",
+        "createdAt": "2025-09-05T20:23:26Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-16T00:04:42.758543+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/agentjido/req_llm/blob/84fc395f20d26a55e4c380627a5b18e4c7558c81/lib/req_llm/providers/typesafe.ex#L18",
+          "summary": "Elixir ReqLLM 提供 TypeSafe evaluate 接口，把状态和类型化问题发送到 System One，解析结构化结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/agentjido/req_llm/blob/84fc395f20d26a55e4c380627a5b18e4c7558c81/lib/req_llm/evaluation.ex#L62",
+          "summary": "Elixir ReqLLM 提供 TypeSafe evaluate 接口，把状态和类型化问题发送到 System One，解析结构化结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/agentjido/req_llm/blob/84fc395f20d26a55e4c380627a5b18e4c7558c81/README.md#L229",
+          "summary": "Elixir ReqLLM 提供 TypeSafe evaluate 接口，把状态和类型化问题发送到 System One，解析结构化结果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/agentjido/req_llm/blob/84fc395f20d26a55e4c380627a5b18e4c7558c81/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "open-intelligent-ui-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "OpenIntelligentUI 使用 Jev 选择呈现方式与可视化类型，再由生成模型和 UI 组件产出内容。",
+      "distribution": "external",
+      "repository": "CopilotKit/OpenIntelligentUI",
+      "url": "https://github.com/CopilotKit/OpenIntelligentUI",
+      "version": "8391a94c1c3939c679e40ddd7bfc08a9ef690e70",
+      "revision": "8391a94c1c3939c679e40ddd7bfc08a9ef690e70",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交配置代理服务、前端及 Jev 和生成模型凭据。",
+        "未启动页面、测试连接或验证图表质量；路由失败不视为已经取得有效呈现建议。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1180226026,
+        "owner": "CopilotKit",
+        "stars": 3220,
+        "pushedAt": "2026-10-13T23:42:37Z",
+        "updatedAt": "2026-10-15T23:31:26Z",
+        "createdAt": "2026-03-12T20:40:06Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:04:44.930256+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/CopilotKit/OpenIntelligentUI/blob/8391a94c1c3939c679e40ddd7bfc08a9ef690e70/apps/agent/src/visualization_router.py#L160",
+          "summary": "OpenIntelligentUI 使用 Jev 选择呈现方式与可视化类型，再由生成模型和 UI 组件产出内容。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/CopilotKit/OpenIntelligentUI/blob/8391a94c1c3939c679e40ddd7bfc08a9ef690e70/README.md#L156",
+          "summary": "OpenIntelligentUI 使用 Jev 选择呈现方式与可视化类型，再由生成模型和 UI 组件产出内容。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/CopilotKit/OpenIntelligentUI/blob/8391a94c1c3939c679e40ddd7bfc08a9ef690e70/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jarvis-jev-platform",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Jarvis 的 Jev 平台适配器将结构化评价请求发送到 TypeSafe，可用于规则或方法论候选选择。",
+      "distribution": "external",
+      "repository": "skyfireitdiy/Jarvis",
+      "url": "https://github.com/skyfireitdiy/Jarvis",
+      "version": "32c183a454732d6309a9f4bdfb6d40c963e876cd",
+      "revision": "32c183a454732d6309a9f4bdfb6d40c963e876cd",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整 Jarvis 环境和明确选择的 eval_llm/jev 配置。",
+        "未启动协作代理、浏览器或电脑操作；结构化评价不等于普通聊天生成。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 896679172,
+        "owner": "skyfireitdiy",
+        "stars": 145,
+        "pushedAt": "2026-10-15T23:25:19Z",
+        "updatedAt": "2026-10-15T23:25:23Z",
+        "createdAt": "2024-12-01T02:24:41Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:04:45.775975+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/skyfireitdiy/Jarvis/blob/32c183a454732d6309a9f4bdfb6d40c963e876cd/src/jarvis/jarvis_platform/jev.py#L459",
+          "summary": "Jarvis 的 Jev 平台适配器将结构化评价请求发送到 TypeSafe，可用于规则或方法论候选选择。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/skyfireitdiy/Jarvis/blob/32c183a454732d6309a9f4bdfb6d40c963e876cd/src/jarvis/jarvis_utils/decision.py#L1",
+          "summary": "Jarvis 的 Jev 平台适配器将结构化评价请求发送到 TypeSafe，可用于规则或方法论候选选择。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/skyfireitdiy/Jarvis/blob/32c183a454732d6309a9f4bdfb6d40c963e876cd/README.md#L412",
+          "summary": "Jarvis 的 Jev 平台适配器将结构化评价请求发送到 TypeSafe，可用于规则或方法论候选选择。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/skyfireitdiy/Jarvis/blob/32c183a454732d6309a9f4bdfb6d40c963e876cd/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "captain-claw-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Captain Claw 提供 Jev 判断工具及原生 TypeSafe 客户端，供宿主提交状态和 Choice、Noul、Score 问题。",
+      "distribution": "external",
+      "repository": "kstevica/captain-claw",
+      "url": "https://github.com/kstevica/captain-claw",
+      "version": "565505714b7877a771ab580ad6e19060100f6a73",
+      "revision": "565505714b7877a771ab580ad6e19060100f6a73",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需 Captain Claw 运行时、宿主配置与对应的 Jev 凭据；独立运行和 Flight Deck 路径分别配置。",
+        "未读取会话、调用外部工具或验证宿主权限和防伪造效果。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1160004652,
+        "owner": "kstevica",
+        "stars": 168,
+        "pushedAt": "2026-10-15T22:11:10Z",
+        "updatedAt": "2026-10-15T22:11:15Z",
+        "createdAt": "2026-02-17T12:33:42Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:04:50.893559+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/kstevica/captain-claw/blob/565505714b7877a771ab580ad6e19060100f6a73/captain_claw/jev_client.py#L498",
+          "summary": "Captain Claw 提供 Jev 判断工具及原生 TypeSafe 客户端，供宿主提交状态和 Choice、Noul、Score 问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kstevica/captain-claw/blob/565505714b7877a771ab580ad6e19060100f6a73/captain_claw/tools/jev.py#L215",
+          "summary": "Captain Claw 提供 Jev 判断工具及原生 TypeSafe 客户端，供宿主提交状态和 Choice、Noul、Score 问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kstevica/captain-claw/blob/565505714b7877a771ab580ad6e19060100f6a73/README.md#L561",
+          "summary": "Captain Claw 提供 Jev 判断工具及原生 TypeSafe 客户端，供宿主提交状态和 Choice、Noul、Score 问题。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/kstevica/captain-claw/blob/565505714b7877a771ab580ad6e19060100f6a73/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "sregym-jev",
+      "kind": "tool",
+      "category": "testing",
+      "description": "SREGym 为诊断测试与提交提供可选 Jev 建议，将证据送入 TypeSafe 并记录类型化判断。",
+      "distribution": "external",
+      "repository": "SREGym/SREGym",
+      "url": "https://github.com/SREGym/SREGym",
+      "version": "9093167a7082402bf553c6efcda1c9dd48dd5138",
+      "revision": "9093167a7082402bf553c6efcda1c9dd48dd5138",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "该功能默认关闭，需显式配置 Jev 模型及凭据并准备完整基准环境。",
+        "未连接集群、制造故障或运行修复；模型建议不构成生产操作授权。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 986527564,
+        "owner": "SREGym",
+        "stars": 346,
+        "pushedAt": "2026-10-15T18:10:33Z",
+        "updatedAt": "2026-10-15T20:49:06Z",
+        "createdAt": "2025-05-19T18:38:08Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:04:55.227805+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/SREGym/SREGym/blob/9093167a7082402bf553c6efcda1c9dd48dd5138/clients/jev/client.py#L176",
+          "summary": "SREGym 为诊断测试与提交提供可选 Jev 建议，将证据送入 TypeSafe 并记录类型化判断。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/SREGym/SREGym/blob/9093167a7082402bf553c6efcda1c9dd48dd5138/clients/jev/config.py#L68",
+          "summary": "SREGym 为诊断测试与提交提供可选 Jev 建议，将证据送入 TypeSafe 并记录类型化判断。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/SREGym/SREGym/blob/9093167a7082402bf553c6efcda1c9dd48dd5138/README.md#L190",
+          "summary": "SREGym 为诊断测试与提交提供可选 Jev 建议，将证据送入 TypeSafe 并记录类型化判断。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/SREGym/SREGym/blob/9093167a7082402bf553c6efcda1c9dd48dd5138/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "kiss-ai-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "KISS AI 通过 OpenRouter 的 Jev 决策后端支持任务分类和 decide 工具，把类型化判断与文本生成分开。",
+      "distribution": "external",
+      "repository": "ksenxx/kiss_ai",
+      "url": "https://github.com/ksenxx/kiss_ai",
+      "version": "57be0b8f9a85c41901647d2d2f36c2d8856aee1f",
+      "revision": "57be0b8f9a85c41901647d2d2f36c2d8856aee1f",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "需完整 KISS 环境及 OpenRouter 凭据；上游 Use Jev 设置默认开启，使用前核对数据外发范围。",
+        "未启动代理或调用任务工具；GitHub 未识别标准许可证，仅登记链接和介绍。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1130752668,
+        "owner": "ksenxx",
+        "stars": 558,
+        "pushedAt": "2026-10-14T00:01:02Z",
+        "updatedAt": "2026-10-15T16:44:29Z",
+        "createdAt": "2026-01-09T00:49:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "NOASSERTION",
+        "checkedAt": "2026-10-16T00:05:03.207956+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ksenxx/kiss_ai/blob/57be0b8f9a85c41901647d2d2f36c2d8856aee1f/src/kiss/core/models/decisions_model.py#L227",
+          "summary": "KISS AI 通过 OpenRouter 的 Jev 决策后端支持任务分类和 decide 工具，把类型化判断与文本生成分开。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ksenxx/kiss_ai/blob/57be0b8f9a85c41901647d2d2f36c2d8856aee1f/README.md#L148",
+          "summary": "KISS AI 通过 OpenRouter 的 Jev 决策后端支持任务分类和 decide 工具，把类型化判断与文本生成分开。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/ksenxx/kiss_ai/blob/57be0b8f9a85c41901647d2d2f36c2d8856aee1f/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "math-to-manim-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Math-To-Manim 用独立 TypeSafe Jev 调用检查讲解和动画制作过程中的检查点，生成与渲染由其他组件负责。",
+      "distribution": "external",
+      "repository": "HarleyCoops/Math-To-Manim",
+      "url": "https://github.com/HarleyCoops/Math-To-Manim",
+      "version": "089ffd51ece10898cc3cdb00a9bb1588268f19e0",
+      "revision": "089ffd51ece10898cc3cdb00a9bb1588268f19e0",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需配套生成模型、Manim 工具链及 TypeSafe 凭据；上游 Jev 复核默认作为建议。",
+        "未运行生成或渲染流程，未验证数学正确性、审核准确率和成本。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 919420364,
+        "owner": "HarleyCoops",
+        "stars": 2773,
+        "pushedAt": "2026-10-13T05:38:47Z",
+        "updatedAt": "2026-10-15T12:14:40Z",
+        "createdAt": "2025-01-20T11:04:50Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:05:09.302276+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/HarleyCoops/Math-To-Manim/blob/089ffd51ece10898cc3cdb00a9bb1588268f19e0/astra/jev.py#L116",
+          "summary": "Math-To-Manim 用独立 TypeSafe Jev 调用检查讲解和动画制作过程中的检查点，生成与渲染由其他组件负责。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HarleyCoops/Math-To-Manim/blob/089ffd51ece10898cc3cdb00a9bb1588268f19e0/README.md#L25",
+          "summary": "Math-To-Manim 用独立 TypeSafe Jev 调用检查讲解和动画制作过程中的检查点，生成与渲染由其他组件负责。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/HarleyCoops/Math-To-Manim/blob/089ffd51ece10898cc3cdb00a9bb1588268f19e0/docs/JEV.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "pi-desktop-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Pi Desktop 经 Pi 模型注册表调用 Jev 分类器，并在桌面层应用权限、取消和使用量记录。",
+      "distribution": "external",
+      "repository": "DLYZZT/pi-desktop",
+      "url": "https://github.com/DLYZZT/pi-desktop",
+      "version": "ce249b4aa301f6c207affe8f8adc102d07046ea6",
+      "revision": "ce249b4aa301f6c207affe8f8adc102d07046ea6",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "依赖配套 Pi SDK；当前 package.json 固定 pi-ai 与 pi-coding-agent 1.1.0，需单独配置 TypeSafe 提供商。",
+        "已读取实际 registry.classify 调用与协议测试源码；未运行测试、启动桌面应用或访问会话。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1297904369,
+        "owner": "DLYZZT",
+        "stars": 270,
+        "pushedAt": "2026-10-10T08:38:13Z",
+        "updatedAt": "2026-10-15T09:35:56Z",
+        "createdAt": "2026-07-12T01:46:30Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-16T00:05:12.860967+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/DLYZZT/pi-desktop/blob/ce249b4aa301f6c207affe8f8adc102d07046ea6/src/agent-host/codemode-models.ts#L114",
+          "summary": "Pi Desktop 经 Pi 模型注册表调用 Jev 分类器，并在桌面层应用权限、取消和使用量记录。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/DLYZZT/pi-desktop/blob/ce249b4aa301f6c207affe8f8adc102d07046ea6/src/agent-host/codemode-classifiers.test.mjs#L133",
+          "summary": "Pi Desktop 经 Pi 模型注册表调用 Jev 分类器，并在桌面层应用权限、取消和使用量记录。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/DLYZZT/pi-desktop/blob/ce249b4aa301f6c207affe8f8adc102d07046ea6/README.md#L170",
+          "summary": "Pi Desktop 经 Pi 模型注册表调用 Jev 分类器，并在桌面层应用权限、取消和使用量记录。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/DLYZZT/pi-desktop/blob/ce249b4aa301f6c207affe8f8adc102d07046ea6/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "moonlight-skill-retrieval-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Hermes 的 skill-retrieval 插件可用 Jev 对 BM25 短名单重排，超时或错误时回退原排序。",
+      "distribution": "external",
+      "repository": "moonlight-lupin/agent-skills",
+      "url": "https://github.com/moonlight-lupin/agent-skills",
+      "version": "8bbbdbab380c7f01c7902bd91308fe532a6923eb",
+      "revision": "8bbbdbab380c7f01c7902bd91308fe532a6923eb",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整 Hermes 插件运行时，Jev 重排默认关闭，须同时启用开关并配置凭据。",
+        "这里只登记依赖宿主的检索插件；未安装技能集合或写入检索日志。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1293924437,
+        "owner": "moonlight-lupin",
+        "stars": 101,
+        "pushedAt": "2026-10-13T04:11:13Z",
+        "updatedAt": "2026-10-15T07:05:33Z",
+        "createdAt": "2026-07-08T16:58:27Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:05:15.951919+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/moonlight-lupin/agent-skills/blob/8bbbdbab380c7f01c7902bd91308fe532a6923eb/plugins/skill-retrieval/scripts/jev_rerank.py#L177",
+          "summary": "Hermes 的 skill-retrieval 插件可用 Jev 对 BM25 短名单重排，超时或错误时回退原排序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/moonlight-lupin/agent-skills/blob/8bbbdbab380c7f01c7902bd91308fe532a6923eb/plugins/skill-retrieval/__init__.py#L525",
+          "summary": "Hermes 的 skill-retrieval 插件可用 Jev 对 BM25 短名单重排，超时或错误时回退原排序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/moonlight-lupin/agent-skills/blob/8bbbdbab380c7f01c7902bd91308fe532a6923eb/README.md#L117",
+          "summary": "Hermes 的 skill-retrieval 插件可用 Jev 对 BM25 短名单重排，超时或错误时回退原排序。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/moonlight-lupin/agent-skills/blob/8bbbdbab380c7f01c7902bd91308fe532a6923eb/plugins/skill-retrieval/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "claude-lane-stack-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Claude Lane Stack 的判断模块可选择 TypeSafe Jev，为候选选择、差异审查和浏览器 QA 等流程提供结构化结果。",
+      "distribution": "external",
+      "repository": "VKirill/claude-lane-stack",
+      "url": "https://github.com/VKirill/claude-lane-stack",
+      "version": "3009ede1b18b77d267d95f42256716a3d565d42c",
+      "revision": "3009ede1b18b77d267d95f42256716a3d565d42c",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整工作流及显式选择的提供商；上游也可优先使用其他兼容服务，不把所有路径都视为 TypeSafe。",
+        "未安装 hooks、修改用户代理配置、执行浏览器操作或自动合并代码。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1297115272,
+        "owner": "VKirill",
+        "stars": 122,
+        "pushedAt": "2026-10-14T08:06:45Z",
+        "updatedAt": "2026-10-14T08:03:38Z",
+        "createdAt": "2026-07-11T04:14:51Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:05:25.749378+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/VKirill/claude-lane-stack/blob/3009ede1b18b77d267d95f42256716a3d565d42c/bin/jev_provider.py#L35",
+          "summary": "Claude Lane Stack 的判断模块可选择 TypeSafe Jev，为候选选择、差异审查和浏览器 QA 等流程提供结构化结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/VKirill/claude-lane-stack/blob/3009ede1b18b77d267d95f42256716a3d565d42c/bin/jev_decisions.py#L197",
+          "summary": "Claude Lane Stack 的判断模块可选择 TypeSafe Jev，为候选选择、差异审查和浏览器 QA 等流程提供结构化结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/VKirill/claude-lane-stack/blob/3009ede1b18b77d267d95f42256716a3d565d42c/README.md#L210",
+          "summary": "Claude Lane Stack 的判断模块可选择 TypeSafe Jev，为候选选择、差异审查和浏览器 QA 等流程提供结构化结果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/VKirill/claude-lane-stack/blob/3009ede1b18b77d267d95f42256716a3d565d42c/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "siftrank-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "SiftRank 的 Jev 提供商比较批次内条目对，再由排序算法组合概率得到顺序。",
+      "distribution": "external",
+      "repository": "noperator/siftrank",
+      "url": "https://github.com/noperator/siftrank",
+      "version": "03e7afe3289a204ea3dcc51613cea91877a651de",
+      "revision": "03e7afe3289a204ea3dcc51613cea91877a651de",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需 SiftRank CLI、TypeSafe 凭据，并明确选择 Jev 提供商。",
+        "待排序内容会发送给所选服务；未处理用户文件或复现排序质量和费用。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 932308179,
+        "owner": "noperator",
+        "stars": 226,
+        "pushedAt": "2026-09-20T05:03:05Z",
+        "updatedAt": "2026-10-14T03:12:01Z",
+        "createdAt": "2025-02-13T17:49:02Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:05:26.360987+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/noperator/siftrank/blob/03e7afe3289a204ea3dcc51613cea91877a651de/pkg/siftrank/jev_provider.go#L147",
+          "summary": "SiftRank 的 Jev 提供商比较批次内条目对，再由排序算法组合概率得到顺序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/noperator/siftrank/blob/03e7afe3289a204ea3dcc51613cea91877a651de/pkg/siftrank/jev_provider.go#L303",
+          "summary": "SiftRank 的 Jev 提供商比较批次内条目对，再由排序算法组合概率得到顺序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/noperator/siftrank/blob/03e7afe3289a204ea3dcc51613cea91877a651de/README.md#L144",
+          "summary": "SiftRank 的 Jev 提供商比较批次内条目对，再由排序算法组合概率得到顺序。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/noperator/siftrank/blob/03e7afe3289a204ea3dcc51613cea91877a651de/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "ash-ai-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Ash AI 的 evaluate 动作通过 ReqLLM 调用 Jev，把动作参数转成状态与类型化问题，再转换返回值。",
+      "distribution": "external",
+      "repository": "ash-project/ash_ai",
+      "url": "https://github.com/ash-project/ash_ai",
+      "version": "831f86af856feef8577bc3df54e75f7dd931f372",
+      "revision": "831f86af856feef8577bc3df54e75f7dd931f372",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a standard SPDX license; link and original summary only, permissions not inferred.",
+      "requires": [
+        "需 Ash/ReqLLM 应用及 TypeSafe 配置，模型与动作参数按固定提交契约配置。",
+        "未运行应用动作或写入业务数据；GitHub 未识别许可证，仅登记链接和介绍。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 849581912,
+        "owner": "ash-project",
+        "stars": 190,
+        "pushedAt": "2026-10-13T20:16:45Z",
+        "updatedAt": "2026-10-13T20:16:51Z",
+        "createdAt": "2024-08-29T21:20:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-16T00:05:27.417932+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ash-project/ash_ai/blob/831f86af856feef8577bc3df54e75f7dd931f372/lib/ash_ai/actions/evaluate.ex#L315",
+          "summary": "Ash AI 的 evaluate 动作通过 ReqLLM 调用 Jev，把动作参数转成状态与类型化问题，再转换返回值。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ash-project/ash_ai/blob/831f86af856feef8577bc3df54e75f7dd931f372/README.md#L494",
+          "summary": "Ash AI 的 evaluate 动作通过 ReqLLM 调用 Jev，把动作参数转成状态与类型化问题，再转换返回值。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/ash-project/ash_ai/blob/831f86af856feef8577bc3df54e75f7dd931f372/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "llmtornado-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": ".NET LLMTornado 提供 TypeSafe Jev 决策接口，通过原生 System One 路径发送状态与类型化问题。",
+      "distribution": "external",
+      "repository": "lofcz/LLMTornado",
+      "url": "https://github.com/lofcz/LLMTornado",
+      "version": "6603aa24f07ba5f1f5d25285bd085894bf3f37fd",
+      "revision": "6603aa24f07ba5f1f5d25285bd085894bf3f37fd",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需 .NET SDK 及所选 TypeSafe 或 OpenRouter 配置；不同提供商的决策路径分别处理。",
+        "未编译 SDK、发起模型请求或验证其他连接器。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 702105555,
+        "owner": "lofcz",
+        "stars": 645,
+        "pushedAt": "2026-10-12T07:46:12Z",
+        "updatedAt": "2026-10-13T00:10:38Z",
+        "createdAt": "2023-10-08T14:09:43Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:05:28.984234+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/lofcz/LLMTornado/blob/6603aa24f07ba5f1f5d25285bd085894bf3f37fd/src/LlmTornado/Decision/DecisionEndpoint.cs#L84",
+          "summary": ".NET LLMTornado 提供 TypeSafe Jev 决策接口，通过原生 System One 路径发送状态与类型化问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lofcz/LLMTornado/blob/6603aa24f07ba5f1f5d25285bd085894bf3f37fd/src/LlmTornado/Code/EndpointProviderConverter.cs#L89",
+          "summary": ".NET LLMTornado 提供 TypeSafe Jev 决策接口，通过原生 System One 路径发送状态与类型化问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lofcz/LLMTornado/blob/6603aa24f07ba5f1f5d25285bd085894bf3f37fd/src/LlmTornado/Vendor/OpenAi/OpenAiEndpointProvider.cs#L110",
+          "summary": ".NET LLMTornado 提供 TypeSafe Jev 决策接口，通过原生 System One 路径发送状态与类型化问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lofcz/LLMTornado/blob/6603aa24f07ba5f1f5d25285bd085894bf3f37fd/README.md#L138",
+          "summary": ".NET LLMTornado 提供 TypeSafe Jev 决策接口，通过原生 System One 路径发送状态与类型化问题。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/lofcz/LLMTornado/blob/6603aa24f07ba5f1f5d25285bd085894bf3f37fd/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "rag-fusion-jev",
+      "kind": "tool",
+      "category": "research",
+      "description": "RAG-Fusion 的评价代码使用 Jev 对检索候选作相关性判断与重排，并比较融合流程中的不同用法。",
+      "distribution": "external",
+      "repository": "Raudaschl/rag-fusion",
+      "url": "https://github.com/Raudaschl/rag-fusion",
+      "version": "1a2a820d1150fc1b9b95dee91f56fd73353ef730",
+      "revision": "1a2a820d1150fc1b9b95dee91f56fd73353ef730",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整评价环境、检索依赖与 TypeSafe 凭据，生成查询与判断使用的模型配置分开。",
+        "未下载语料或运行基准；上游 NDCG、成本及速度数据未复现。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 696503950,
+        "owner": "Raudaschl",
+        "stars": 959,
+        "pushedAt": "2026-10-10T18:54:43Z",
+        "updatedAt": "2026-10-11T12:18:38Z",
+        "createdAt": "2023-09-25T21:58:31Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:05:30.651038+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Raudaschl/rag-fusion/blob/1a2a820d1150fc1b9b95dee91f56fd73353ef730/eval/jev.py#L137",
+          "summary": "RAG-Fusion 的评价代码使用 Jev 对检索候选作相关性判断与重排，并比较融合流程中的不同用法。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Raudaschl/rag-fusion/blob/1a2a820d1150fc1b9b95dee91f56fd73353ef730/eval/jev.py#L195",
+          "summary": "RAG-Fusion 的评价代码使用 Jev 对检索候选作相关性判断与重排，并比较融合流程中的不同用法。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Raudaschl/rag-fusion/blob/1a2a820d1150fc1b9b95dee91f56fd73353ef730/eval/jev_arms.py#L1",
+          "summary": "RAG-Fusion 的评价代码使用 Jev 对检索候选作相关性判断与重排，并比较融合流程中的不同用法。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Raudaschl/rag-fusion/blob/1a2a820d1150fc1b9b95dee91f56fd73353ef730/README.md#L16",
+          "summary": "RAG-Fusion 的评价代码使用 Jev 对检索候选作相关性判断与重排，并比较融合流程中的不同用法。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Raudaschl/rag-fusion/blob/1a2a820d1150fc1b9b95dee91f56fd73353ef730/experiments/jev-in-the-pipeline/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "deepdoc-jev",
+      "kind": "tool",
+      "category": "research",
+      "description": "DeepDoc 用 Jev 评价和重排知识库片段，并检查生成小节的证据缺口；报告文本仍由生成模型编写。",
+      "distribution": "external",
+      "repository": "Oqura-ai/deepdoc",
+      "url": "https://github.com/Oqura-ai/deepdoc",
+      "version": "42c8758292cacb619680bde23f77826f0419c4f2",
+      "revision": "42c8758292cacb619680bde23f77826f0419c4f2",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需配套知识库、Qdrant、生成模型和 TypeSafe 凭据。",
+        "查询、片段与小节内容可能发往模型；未导入私人文档或生成研究报告。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-16",
+      "github": {
+        "repositoryId": 1038357256,
+        "owner": "Oqura-ai",
+        "stars": 312,
+        "pushedAt": "2026-09-26T06:49:20Z",
+        "updatedAt": "2026-10-10T15:20:03Z",
+        "createdAt": "2025-08-15T03:45:30Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-16T00:05:31.067582+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Oqura-ai/deepdoc/blob/42c8758292cacb619680bde23f77826f0419c4f2/deepresearch/jev_integration.py#L98",
+          "summary": "DeepDoc 用 Jev 评价和重排知识库片段，并检查生成小节的证据缺口；报告文本仍由生成模型编写。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Oqura-ai/deepdoc/blob/42c8758292cacb619680bde23f77826f0419c4f2/deepresearch/jev_integration.py#L192",
+          "summary": "DeepDoc 用 Jev 评价和重排知识库片段，并检查生成小节的证据缺口；报告文本仍由生成模型编写。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Oqura-ai/deepdoc/blob/42c8758292cacb619680bde23f77826f0419c4f2/README.md#L41",
+          "summary": "DeepDoc 用 Jev 评价和重排知识库片段，并检查生成小节的证据缺口；报告文本仍由生成模型编写。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Oqura-ai/deepdoc/blob/42c8758292cacb619680bde23f77826f0419c4f2/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }

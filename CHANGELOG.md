@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — 2026-10-16 — expanded daily discovery
+
+- Add 19 external tools from 348 GitHub candidates, bringing the catalog to 259
+  entries. Record 213 existing sources and 116 exclusions.
+- Add jev-latest and typesafe_sdk README queries and restrict discovery to public
+  repositories; these queries contribute 20 previously uncovered candidates.
+- Pin scoped integrations for classifiers, social-post screening, graph dedupe,
+  rendering choices, evaluation SDKs, agent tools, retrieval and research checks.
+- Document indirect SDK dispatch, provider choices and optional/default switches.
+  No upstream program, installer, model, financial analysis or infrastructure operation ran.
+- Preserve prior entries, routing, release tags and the independent computer-use repo.
+
 ## Unreleased — 2026-10-15 — daily external discovery
 
 - Add 2 external tools from 323 GitHub candidates, bringing the catalog to 240
