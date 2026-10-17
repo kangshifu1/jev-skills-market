@@ -11770,6 +11770,117 @@
       ],
       "usageUrl": "https://github.com/Oqura-ai/deepdoc/blob/42c8758292cacb619680bde23f77826f0419c4f2/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整工具、SDK 或宿主插件及其依赖；install 为 null，不生成整个框架或插件集合的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "contextgem-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "ContextGem 经 LiteLLM Decisions 接口调用 Jev，从文本中筛选段落并判断布尔、标签和评分概念；开放式生成由 LLM 处理。",
+      "distribution": "external",
+      "repository": "shcherbak-ai/contextgem",
+      "url": "https://github.com/shcherbak-ai/contextgem",
+      "version": "f64f2ce16708f7d1d598ac607c73d6b1af4e1920",
+      "revision": "f64f2ce16708f7d1d598ac607c73d6b1af4e1920",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "按固定提交准备 Python 3.11 至 3.14 及项目依赖，其中 LiteLLM 固定为 1.105.1。",
+        "选择 typesafe/jev-latest 并配置 TypeSafe 凭据；这是经 LiteLLM 转发的决策模型路径，与普通 LLM 提取分开。",
+        "未导入个人文档、调用模型或复现上游提取测试；概率阈值与文档质量需另行验证。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-17",
+      "github": {
+        "repositoryId": 871373324,
+        "owner": "shcherbak-ai",
+        "stars": 2010,
+        "pushedAt": "2026-10-16T23:38:51Z",
+        "updatedAt": "2026-10-16T23:38:56Z",
+        "createdAt": "2024-10-11T20:36:09Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-17T00:02:10.366043+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/shcherbak-ai/contextgem/blob/f64f2ce16708f7d1d598ac607c73d6b1af4e1920/contextgem/internal/base/decision_models.py#L2128",
+          "summary": "内部决策模型实际调用 litellm.adecisions，传入模型、文本、问题及凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/shcherbak-ai/contextgem/blob/f64f2ce16708f7d1d598ac607c73d6b1af4e1920/dev/usage_examples/readme/quickstart_decision_model.py#L45",
+          "summary": "示例明确选择 typesafe/jev-latest 并将其用于文档提取。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/shcherbak-ai/contextgem/blob/f64f2ce16708f7d1d598ac607c73d6b1af4e1920/README.md#L219",
+          "summary": "ContextGem 经 LiteLLM Decisions 接口调用 Jev，从文本中筛选段落并判断布尔、标签和评分概念；开放式生成由 LLM 处理。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/shcherbak-ai/contextgem/blob/f64f2ce16708f7d1d598ac607c73d6b1af4e1920/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整 SDK 或应用及其依赖；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "vllm-playground-jev",
+      "kind": "tool",
+      "category": "testing",
+      "description": "vLLM Playground 的实验性决策沙箱支持远程 TypeSafe Jev，通过 System One 请求试验 Noul、Choice 与 Score；模拟和本地兼容模型路径单独区分。",
+      "distribution": "external",
+      "repository": "micytao/vllm-playground",
+      "url": "https://github.com/micytao/vllm-playground",
+      "version": "37fb50c3e79e78aa9321508502e46687450d247d",
+      "revision": "37fb50c3e79e78aa9321508502e46687450d247d",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整 Playground 应用及明确配置的远程地址、模型和凭据；连接远程端点时会发起真实认证探测。",
+        "未就绪或实时请求失败时会回退模拟结果，检查 source 与 note；即使为 live，也需核对是否连接托管 TypeSafe 而非本地兼容服务。",
+        "未启动容器、连接端点、保存凭据或运行沙箱；未验证上游示例效果、可靠性与安全主张。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-17",
+      "github": {
+        "repositoryId": 1087915800,
+        "owner": "micytao",
+        "stars": 539,
+        "pushedAt": "2026-10-16T19:39:11Z",
+        "updatedAt": "2026-10-16T19:39:16Z",
+        "createdAt": "2025-11-01T22:49:25Z",
+        "defaultBranch": "development",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-17T00:02:22.841593+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/micytao/vllm-playground/blob/37fb50c3e79e78aa9321508502e46687450d247d/vllm_playground/decision_models.py#L905",
+          "summary": "远程连接流程向配置地址发起 System One 探测，验证认证及模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/micytao/vllm-playground/blob/37fb50c3e79e78aa9321508502e46687450d247d/vllm_playground/decision_models.py#L1101",
+          "summary": "实时评价路径区分远程与本地地址，并通过 HTTP POST 发送状态和类型化问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/micytao/vllm-playground/blob/37fb50c3e79e78aa9321508502e46687450d247d/vllm_playground/decision_models.py#L1077",
+          "summary": "评价入口在未就绪或错误时返回有明确标记的模拟结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/micytao/vllm-playground/blob/37fb50c3e79e78aa9321508502e46687450d247d/README.md#L37",
+          "summary": "vLLM Playground 的实验性决策沙箱支持远程 TypeSafe Jev，通过 System One 请求试验 Noul、Choice 与 Score；模拟和本地兼容模型路径单独区分。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/micytao/vllm-playground/blob/37fb50c3e79e78aa9321508502e46687450d247d/docs/DECISION_MODELS_GUIDE.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整 SDK 或应用及其依赖；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }

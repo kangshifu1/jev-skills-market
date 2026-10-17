@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-17 — daily external discovery
+
+- Add ContextGem and vLLM Playground as 2 external tools from 352 GitHub candidates.
+  Catalog now contains 261 entries; record 231 existing sources and 119 exclusions.
+- Pin LiteLLM-to-Jev document decisions and remote System One probe/evaluation code.
+- Separate closed-question extraction from generation, and mock fallback from live
+  responses and local-compatible backends. No upstream program or model call ran.
+- Preserve prior entries, routing, release tags and the independent computer-use repo.
+
 ## Unreleased — 2026-10-16 — expanded daily discovery
 
 - Add 19 external tools from 348 GitHub candidates, bringing the catalog to 259

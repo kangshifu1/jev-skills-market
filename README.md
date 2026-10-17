@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-17（main）
+
+本轮搜索 352 个去重候选，新增 **2 个外部工具**，目录共 **261 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-17.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [shcherbak-ai/contextgem](https://github.com/shcherbak-ai/contextgem) | 2,010 | ContextGem 经 LiteLLM Decisions 接口调用 Jev，从文本中筛选段落并判断布尔、标签和评分概念；开放式生成由 LLM 处理。 |
+| [micytao/vllm-playground](https://github.com/micytao/vllm-playground) | 539 | vLLM Playground 的实验性决策沙箱支持远程 TypeSafe Jev，通过 System One 请求试验 Noul、Choice 与 Score；模拟和本地兼容模型路径单独区分。 |
+
+`npm run jev -- show contextgem-jev`、`npm run jev -- show vllm-playground-jev` 可查看固定来源与使用条件。
+两项均返回 `install: null`。ContextGem 经 LiteLLM 转发；Playground 的连接探测会调用模型，评价结果需区分 mock/live 及实际后端。
+本轮未处理私人文档、启动容器或连接模型服务。
+
 ## 每日发现：2026-10-16（main）
 
 本轮扩展为 7 类关键词检索，共 348 个去重候选，补录 **19 个外部工具**，目录共 **259 项**。
