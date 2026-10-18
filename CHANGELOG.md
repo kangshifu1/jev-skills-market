@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — 2026-10-18 — daily external discovery
+
+- Add Pollinations, Temporal Agent Harness and Jevmail as 3 external tools from
+  358 candidates, bringing the catalog to 264 entries; record 234 represented
+  sources and 121 exclusions after identity deduplication.
+- Verify Codify's migration to Sidiora-Labs/hyperfide by GitHub repository ID;
+  add only its alias and keep the original pinned revision and metadata.
+- Pin gateway and plugin call chains plus Jevmail's requested read-only Gmail
+  scope and local classification storage, without connecting accounts or models.
+- Exclude local-compatible examples, placeholder decision backends and link lists.
+  Keep routing, release tags and the independent computer-use repo unchanged.
+
 ## Unreleased — 2026-10-17 — daily external discovery
 
 - Add ContextGem and vLLM Playground as 2 external tools from 352 GitHub candidates.

@@ -73,6 +73,25 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-18（main）
+
+本轮搜索 358 个去重候选，新增 **3 个外部工具**，目录共 **264 项**；另为已有 Codify 条目补充迁移别名。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-18.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [pollinations/pollinations](https://github.com/pollinations/pollinations) | 5,218 | Pollinations 为 Jev 提供结构化决策转发，当前配置经 OpenRouter 请求 typesafe/jev-1.13，并由网关处理答案与使用量。 |
+| [temporal-community/temporal-agent-harness](https://github.com/temporal-community/temporal-agent-harness) | 101 | Temporal Agent Harness 通过 temporalio-typesafe 插件执行类型化 Jev 调用，并提供可选的工具调用评估器；结果由框架策略处理。 |
+| [fazlerocks/jevmail](https://github.com/fazlerocks/jevmail) | 101 | Jevmail 经 Vercel AI Gateway 调用 Jev，为邮件分配类别、紧急度和个人邮件概率，并将结果及反馈存入本地 SQLite。 |
+
+三项均返回 `install: null`。`Sidiora-Labs/hyperfide` 与已有 `Sidiora-Labs/codify` 仓库 ID 相同，只新增别名并保留原固定版本。
+Jevmail 源码请求 `gmail.readonly`，分类结果存于本地；邮件状态仍会经模型网关处理，本轮没有连接任何邮箱。
+Temporal 的模型评估不作为已验证的执行授权边界。
+
 ## 每日发现：2026-10-17（main）
 
 本轮搜索 352 个去重候选，新增 **2 个外部工具**，目录共 **261 项**。

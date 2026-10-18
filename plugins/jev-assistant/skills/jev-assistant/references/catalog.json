@@ -7333,7 +7333,10 @@
         }
       ],
       "usageUrl": "https://github.com/Sidiora-Labs/codify/blob/a0f120eca214ab53afd52d1b457475e92415b8f0/README.md",
-      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。"
+      "usageNote": "按 usageUrl 的固定提交说明配置该工具与依赖；install 为 null，不生成整个应用的 Skill 安装命令。",
+      "repositoryAliases": [
+        "Sidiora-Labs/hyperfide"
+      ]
     },
     {
       "id": "building-with-typesafe-jev",
@@ -11881,6 +11884,180 @@
       ],
       "usageUrl": "https://github.com/micytao/vllm-playground/blob/37fb50c3e79e78aa9321508502e46687450d247d/docs/DECISION_MODELS_GUIDE.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整 SDK 或应用及其依赖；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "pollinations-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Pollinations 为 Jev 提供结构化决策转发，当前配置经 OpenRouter 请求 typesafe/jev-1.13，并由网关处理答案与使用量。",
+      "distribution": "external",
+      "repository": "pollinations/pollinations",
+      "url": "https://github.com/pollinations/pollinations",
+      "version": "2b0d85e67d6be18b35b34628fd21e940d4399cc9",
+      "revision": "2b0d85e67d6be18b35b34628fd21e940d4399cc9",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "使用托管平台需相应账户/凭据；自托管需完整网关及服务端提供商配置。",
+        "仅登记 Jev 决策路径，不将其他决策模型或生成模型的能力归给 Jev。",
+        "未部署网关、请求模型或复现费用、延迟及上游示例；提交内容会经过所选平台与提供商。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-18",
+      "github": {
+        "repositoryId": 358226004,
+        "owner": "pollinations",
+        "stars": 5218,
+        "pushedAt": "2026-10-17T23:39:28Z",
+        "updatedAt": "2026-10-17T23:12:41Z",
+        "createdAt": "2021-04-15T10:57:14Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-18T00:01:10.617844+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/pollinations/pollinations/blob/2b0d85e67d6be18b35b34628fd21e940d4399cc9/gen.pollinations.ai/src/text/configs/modelConfigs.ts#L89",
+          "summary": "Jev 配置明确选择 OpenRouter Decisions 地址及 typesafe/jev-1.13。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pollinations/pollinations/blob/2b0d85e67d6be18b35b34628fd21e940d4399cc9/gen.pollinations.ai/src/text/systemOneClient.ts#L191",
+          "summary": "requestDecision 构造并发出带状态与问题的真实 HTTP POST。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pollinations/pollinations/blob/2b0d85e67d6be18b35b34628fd21e940d4399cc9/gen.pollinations.ai/src/text/decisions/handler.ts#L21",
+          "summary": "原生决策处理器实际调用 requestDecision 并处理答案及用量。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pollinations/pollinations/blob/2b0d85e67d6be18b35b34628fd21e940d4399cc9/README.md#L57",
+          "summary": "Pollinations 为 Jev 提供结构化决策转发，当前配置经 OpenRouter 请求 typesafe/jev-1.13，并由网关处理答案与使用量。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/pollinations/pollinations/blob/2b0d85e67d6be18b35b34628fd21e940d4399cc9/gen.pollinations.ai/src/docs/text-generation.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整应用、网关或工作流运行时；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "temporal-agent-harness-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Temporal Agent Harness 通过 temporalio-typesafe 插件执行类型化 Jev 调用，并提供可选的工具调用评估器；结果由框架策略处理。",
+      "distribution": "external",
+      "repository": "temporal-community/temporal-agent-harness",
+      "url": "https://github.com/temporal-community/temporal-agent-harness",
+      "version": "110b7be9cbd2c882ba5113c98c22dbff45110cb1",
+      "revision": "110b7be9cbd2c882ba5113c98c22dbff45110cb1",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需 Temporal 环境、typesafe 可选依赖及 TypeSafe 凭据；worker 按上游要求先注册 TypeSafePlugin，再注册 AgentHarnessPlugin。",
+        "工作流代理与实际提供商执行分层，示例 worker 使用 AsyncTypeSafeClient；模型概率不授予执行权限。",
+        "未启动 worker、执行工作流或验证自动批准机制、安全边界及故障恢复行为。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-18",
+      "github": {
+        "repositoryId": 1273814630,
+        "owner": "temporal-community",
+        "stars": 101,
+        "pushedAt": "2026-10-17T00:37:58Z",
+        "updatedAt": "2026-10-17T18:56:23Z",
+        "createdAt": "2026-06-18T22:43:11Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-18T00:01:25.924095+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/temporal-community/temporal-agent-harness/blob/110b7be9cbd2c882ba5113c98c22dbff45110cb1/python/temporal_agent_harness/ai_sdks/typesafe_harness.py#L81",
+          "summary": "Harness 适配层实际调用 TemporalTypeSafe.system_one 并发布调用事件。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/temporal-community/temporal-agent-harness/blob/110b7be9cbd2c882ba5113c98c22dbff45110cb1/python/temporal_agent_harness/ai_sdks/jev/evaluator.py#L255",
+          "summary": "Jev 评估器实际调用类型化服务，再由代码应用阈值和处理策略。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/temporal-community/temporal-agent-harness/blob/110b7be9cbd2c882ba5113c98c22dbff45110cb1/python/examples/typesafe_hello/worker.py#L13",
+          "summary": "worker 示例将 TypeSafe SDK 客户端注册进插件。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/temporal-community/temporal-agent-harness/blob/110b7be9cbd2c882ba5113c98c22dbff45110cb1/README.md#L202",
+          "summary": "Temporal Agent Harness 通过 temporalio-typesafe 插件执行类型化 Jev 调用，并提供可选的工具调用评估器；结果由框架策略处理。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/temporal-community/temporal-agent-harness/blob/110b7be9cbd2c882ba5113c98c22dbff45110cb1/python/examples/typesafe_hello/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整应用、网关或工作流运行时；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jevmail",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Jevmail 经 Vercel AI Gateway 调用 Jev，为邮件分配类别、紧急度和个人邮件概率，并将结果及反馈存入本地 SQLite。",
+      "distribution": "external",
+      "repository": "fazlerocks/jevmail",
+      "url": "https://github.com/fazlerocks/jevmail",
+      "version": "f6f20af9c2805efd924c29cbea59547e72c558fc",
+      "revision": "f6f20af9c2805efd924c29cbea59547e72c558fc",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整应用、Google OAuth 配置和 Vercel AI Gateway 凭据；源代码请求 gmail.readonly，未验证任何真实账户授权。",
+        "邮件发件人、标题、部分正文和相关状态会送入模型；读取权限与本地结果存储不代表模型处理完全离线。",
+        "后台分类任务可能发起请求，使用前核对轮询与并发设置；未读取邮件、连接账户或复现吞吐、费用和分类效果。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-18",
+      "github": {
+        "repositoryId": 1377417831,
+        "owner": "fazlerocks",
+        "stars": 101,
+        "pushedAt": "2026-09-19T17:07:08Z",
+        "updatedAt": "2026-10-17T07:14:46Z",
+        "createdAt": "2026-09-19T17:07:03Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-18T00:01:40.313500+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/fazlerocks/jevmail/blob/f6f20af9c2805efd924c29cbea59547e72c558fc/src/lib/classify.ts#L109",
+          "summary": "分类器通过 AI SDK experimental_evaluate 请求 typesafe-ai/jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fazlerocks/jevmail/blob/f6f20af9c2805efd924c29cbea59547e72c558fc/src/lib/drainer.ts#L57",
+          "summary": "分类任务实际调用 classifyMessage 并写入本地分类表。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fazlerocks/jevmail/blob/f6f20af9c2805efd924c29cbea59547e72c558fc/src/auth.ts#L8",
+          "summary": "OAuth 配置声明 gmail.readonly，分类流程不以 Gmail 标签写入实现。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fazlerocks/jevmail/blob/f6f20af9c2805efd924c29cbea59547e72c558fc/README.md#L59",
+          "summary": "Jevmail 经 Vercel AI Gateway 调用 Jev，为邮件分配类别、紧急度和个人邮件概率，并将结果及反馈存入本地 SQLite。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/fazlerocks/jevmail/blob/f6f20af9c2805efd924c29cbea59547e72c558fc/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整应用、网关或工作流运行时；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }
