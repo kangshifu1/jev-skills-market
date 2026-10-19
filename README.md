@@ -73,6 +73,25 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-19（main）
+
+本轮搜索 361 个去重候选，新增 **3 个外部工具**，目录共 **267 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-19.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [memos-im/xianyu-slang-helper](https://github.com/memos-im/xianyu-slang-helper) | 135 | 闲鱼词典扩展的词典同步脚本通过 Jev Noul 复核候选暗语变体，按概率阈值过滤模板化噪音；Jev 接入位于维护工具链。 |
+| [Zleap-AI/SAG](https://github.com/Zleap-AI/SAG) | 2,598 | SAG 知识库通过 zleap-sag 引擎接入 Jev，为召回及图扩展证据提供可选的 multi_jev 重排，并保留超时和回退状态。 |
+| [leepokai/jev-guard](https://github.com/leepokai/jev-guard) | 101 | jev-guard 通过 Jev 评估编码代理的工具调用与外部内容，再由钩子策略映射为放行、询问或拒绝；兼容性和安全效果未实测。 |
+
+三项均返回 `install: null`。闲鱼词典的 Jev 接入位于词典维护脚本，且许可证未识别。
+SAG 需要单独启用重排策略；jev-guard 的 API 故障默认放行，固定版本的 Codex ask 分支只返回警告。
+这些来源记录不代表经过安全认证或运行验证。
+
 ## 每日发现：2026-10-18（main）
 
 本轮搜索 358 个去重候选，新增 **3 个外部工具**，目录共 **264 项**；另为已有 Codify 条目补充迁移别名。

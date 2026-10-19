@@ -12058,6 +12058,190 @@
       ],
       "usageUrl": "https://github.com/fazlerocks/jevmail/blob/f6f20af9c2805efd924c29cbea59547e72c558fc/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整应用、网关或工作流运行时；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "xianyu-slang-helper-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "闲鱼词典扩展的词典同步脚本通过 Jev Noul 复核候选暗语变体，按概率阈值过滤模板化噪音；Jev 接入位于维护工具链。",
+      "distribution": "external",
+      "repository": "memos-im/xianyu-slang-helper",
+      "url": "https://github.com/memos-im/xianyu-slang-helper",
+      "version": "5f1912f6c3e9136aecc28023741d77e9825c2ef6",
+      "revision": "5f1912f6c3e9136aecc28023741d77e9825c2ef6",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a license; no root license file or package.json license declaration found at the pinned revision. Link and original summary only, permissions not inferred.",
+      "requires": [
+        "需完整扩展工程、Bun 和词典同步脚本；托管复核需 TypeSafe 服务端凭据并启用 --ai-review。",
+        "缺少凭据或复核失败时可跳过该增益步骤；未验证词典过滤效果，不将浏览器内其他 AI 功能归给 Jev。",
+        "GitHub 未识别标准许可证，根目录及 package.json 未见许可证声明；仅登记链接，不推断再分发权限。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-19",
+      "github": {
+        "repositoryId": 1237448423,
+        "owner": "memos-im",
+        "stars": 135,
+        "pushedAt": "2026-10-18T13:17:59Z",
+        "updatedAt": "2026-10-18T19:19:13Z",
+        "createdAt": "2026-05-13T07:36:02Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-19T00:04:34.703076+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/memos-im/xianyu-slang-helper/blob/5f1912f6c3e9136aecc28023741d77e9825c2ef6/tools/lib/ai-review.ts#L107",
+          "summary": "默认使用 api.typesafe.ai 与 jev-latest，实际发送包含 Noul 问题的 HTTP POST。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/memos-im/xianyu-slang-helper/blob/5f1912f6c3e9136aecc28023741d77e9825c2ef6/tools/sync-awesome.ts#L484",
+          "summary": "同步入口根据 --ai-review 调用复核，再处理候选词典结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/memos-im/xianyu-slang-helper/blob/5f1912f6c3e9136aecc28023741d77e9825c2ef6/.github/workflows/sync-slang.yml#L39",
+          "summary": "上游同步流程传入仓库 Secret 并调用带 --ai-review 的维护脚本；未运行该流程。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/memos-im/xianyu-slang-helper/blob/5f1912f6c3e9136aecc28023741d77e9825c2ef6/README.md#L147",
+          "summary": "闲鱼词典扩展的词典同步脚本通过 Jev Noul 复核候选暗语变体，按概率阈值过滤模板化噪音；Jev 接入位于维护工具链。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/memos-im/xianyu-slang-helper/blob/5f1912f6c3e9136aecc28023741d77e9825c2ef6/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整应用、维护工具链或宿主插件；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "sag-jev-reranking",
+      "kind": "tool",
+      "category": "development",
+      "description": "SAG 知识库通过 zleap-sag 引擎接入 Jev，为召回及图扩展证据提供可选的 multi_jev 重排，并保留超时和回退状态。",
+      "distribution": "external",
+      "repository": "Zleap-AI/SAG",
+      "url": "https://github.com/Zleap-AI/SAG",
+      "version": "76974bcf7a83ca4159b82f6574b26216a25751fc",
+      "revision": "76974bcf7a83ca4159b82f6574b26216a25751fc",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整 SAG 服务及 zleap-sag 0.15.0；配置独立 Jev 地址与凭据后，还需显式选择 multi_jev 检索策略。",
+        "固定版本文档列出 LanceDB 与 Elasticsearch 支持，pgvector 不支持该模式；保存模型配置本身不会启用重排。",
+        "未部署知识库、运行上游测试或复现召回质量、延迟、成本及超时回退；实际提供商请求由依赖引擎实现。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-19",
+      "github": {
+        "repositoryId": 1091563845,
+        "owner": "Zleap-AI",
+        "stars": 2598,
+        "pushedAt": "2026-10-18T14:59:13Z",
+        "updatedAt": "2026-10-18T15:07:42Z",
+        "createdAt": "2025-11-07T07:33:35Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-19T00:04:44.479258+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Zleap-AI/SAG/blob/76974bcf7a83ca4159b82f6574b26216a25751fc/apps/web/components/features/knowledge-config-form.tsx#L34",
+          "summary": "配置表单提供 TypeSafe 官方 System One 端点及 jev-latest 默认值。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Zleap-AI/SAG/blob/76974bcf7a83ca4159b82f6574b26216a25751fc/apps/api/sag_api/sag/config_builder.py#L121",
+          "summary": "应用将独立端点、模型和凭据装入引擎 JevConfig。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Zleap-AI/SAG/blob/76974bcf7a83ca4159b82f6574b26216a25751fc/apps/api/sag_api/sag/search_reader.py#L87",
+          "summary": "multi_jev 检索路径设置重排选项并实际调用 engine.search。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Zleap-AI/SAG/blob/76974bcf7a83ca4159b82f6574b26216a25751fc/apps/api/sag_api/sag/jev_probe.py#L19",
+          "summary": "连接检查构造依赖引擎 JevClient 并调用 score；仅阅读实现，未发出探测。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Zleap-AI/SAG/blob/76974bcf7a83ca4159b82f6574b26216a25751fc/README.md#L570",
+          "summary": "SAG 知识库通过 zleap-sag 引擎接入 Jev，为召回及图扩展证据提供可选的 multi_jev 重排，并保留超时和回退状态。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Zleap-AI/SAG/blob/76974bcf7a83ca4159b82f6574b26216a25751fc/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整应用、维护工具链或宿主插件；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jev-guard",
+      "kind": "tool",
+      "category": "automation",
+      "description": "jev-guard 通过 Jev 评估编码代理的工具调用与外部内容，再由钩子策略映射为放行、询问或拒绝；兼容性和安全效果未实测。",
+      "distribution": "external",
+      "repository": "leepokai/jev-guard",
+      "url": "https://github.com/leepokai/jev-guard",
+      "version": "cda06c49ceaac207904142ec92bfab793bbd18b1",
+      "revision": "cda06c49ceaac207904142ec92bfab793bbd18b1",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需上游完整插件或 CLI、目标宿主钩子支持与提供商凭据；未安装钩子或修改任何代理配置。",
+        "默认 API 故障时放行，可用 JEV_GUARD_FAIL_CLOSED 调整；固定提交的 Codex ask 分支只返回警告，不构成已验证的强制审批。",
+        "源码按概率判断用户请求并影响策略，这不替代真实授权；会把工具状态及相关上下文送给提供商，未验证拦截率、费用或各宿主运行行为。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-19",
+      "github": {
+        "repositoryId": 1374583864,
+        "owner": "leepokai",
+        "stars": 101,
+        "pushedAt": "2026-10-02T03:49:16Z",
+        "updatedAt": "2026-10-18T13:32:48Z",
+        "createdAt": "2026-09-17T14:39:28Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-19T00:04:45.342348+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/leepokai/jev-guard/blob/cda06c49ceaac207904142ec92bfab793bbd18b1/src/jev.js#L58",
+          "summary": "ask 按后端配置实际向 TypeSafe、OpenRouter 或 Vercel Gateway 发出 POST。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/leepokai/jev-guard/blob/cda06c49ceaac207904142ec92bfab793bbd18b1/src/guard.js#L136",
+          "summary": "assessAction 调用 Jev 并由代码策略处理判断结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/leepokai/jev-guard/blob/cda06c49ceaac207904142ec92bfab793bbd18b1/src/hook.js#L118",
+          "summary": "钩子消费策略结果；该固定版本的 Codex ask 路径返回警告。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/leepokai/jev-guard/blob/cda06c49ceaac207904142ec92bfab793bbd18b1/src/hook.js#L181",
+          "summary": "错误分支默认放行，仅在设置 JEV_GUARD_FAIL_CLOSED 时尝试拒绝。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/leepokai/jev-guard/blob/cda06c49ceaac207904142ec92bfab793bbd18b1/README.md#L37",
+          "summary": "jev-guard 通过 Jev 评估编码代理的工具调用与外部内容，再由钩子策略映射为放行、询问或拒绝；兼容性和安全效果未实测。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/leepokai/jev-guard/blob/cda06c49ceaac207904142ec92bfab793bbd18b1/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整应用、维护工具链或宿主插件；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }

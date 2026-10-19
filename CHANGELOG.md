@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-19 — daily external discovery
+
+- Add Xianyu Slang Helper's dictionary review, SAG's Jev reranking and jev-guard
+  as external tools: 3 additions from 361 candidates, bringing the catalog to 267.
+- Pin real call chains, distinguish missing license information, and document
+  opt-in reranking and jev-guard's default fail-open and warning-only adapter behavior.
+- Exclude the independent local Jeva model; preserve existing entries and routing.
+- Recover the October 18 push and confirm its GitHub CI success before this update.
+
 ## Unreleased — 2026-10-18 — daily external discovery
 
 - Add Pollinations, Temporal Agent Harness and Jevmail as 3 external tools from
