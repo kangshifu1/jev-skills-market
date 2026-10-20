@@ -12242,6 +12242,132 @@
       ],
       "usageUrl": "https://github.com/leepokai/jev-guard/blob/cda06c49ceaac207904142ec92bfab793bbd18b1/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整应用、维护工具链或宿主插件；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "embabel-typesafe-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Embabel 的实验性 TypeSafe 模块通过共享 System One HTTP 客户端调用 Jev，为 JVM 应用提供分类、命题判断和评分决策服务。",
+      "distribution": "external",
+      "repository": "embabel/embabel-agent",
+      "url": "https://github.com/embabel/embabel-agent",
+      "version": "2cb8343a442b6d3db3a8ba4f624d9874921d7d5b",
+      "revision": "2cb8343a442b6d3db3a8ba4f624d9874921d7d5b",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需 Embabel 的 TypeSafe / System One 模块或对应 Spring Boot starter，以及服务端 TypeSafe 凭据；默认模型为 jev-latest。",
+        "上游标为实验性；决策结果作为证据，路由、阈值和授权由应用处理，不作为聊天模型替代。",
+        "未构建 Java/Kotlin 工程、启动 Spring、验证凭据轮换或运行上游测试；本条核实官方 TypeSafe 请求路径，不混用其他提供商能力。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-20",
+      "github": {
+        "repositoryId": 963665823,
+        "owner": "embabel",
+        "stars": 4525,
+        "pushedAt": "2026-10-19T19:53:42Z",
+        "updatedAt": "2026-10-19T14:23:46Z",
+        "createdAt": "2025-04-10T03:06:07Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-20T00:00:16.778612+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/embabel/embabel-agent/blob/2cb8343a442b6d3db3a8ba4f624d9874921d7d5b/embabel-agent-typesafe/src/main/java/com/embabel/agent/typesafe/TypeSafeModelFactory.java#L39",
+          "summary": "TypeSafe 工厂配置提供商、jev-latest 默认模型及逐次读取的凭据来源。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/embabel/embabel-agent/blob/2cb8343a442b6d3db3a8ba4f624d9874921d7d5b/embabel-agent-typesafe/src/main/java/com/embabel/agent/typesafe/TypeSafeClientOptions.java#L41",
+          "summary": "默认服务地址为 api.typesafe.ai，并转为共享 System One 端点配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/embabel/embabel-agent/blob/2cb8343a442b6d3db3a8ba4f624d9874921d7d5b/embabel-agent-systemone/src/main/kotlin/com/embabel/agent/systemone/SystemOneDecisionService.kt#L90",
+          "summary": "决策服务编码请求，调用 transport.decide，并解析类型化结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/embabel/embabel-agent/blob/2cb8343a442b6d3db3a8ba4f624d9874921d7d5b/embabel-agent-systemone/src/main/kotlin/com/embabel/agent/systemone/SystemOneTransport.kt#L84",
+          "summary": "共享传输层实际通过 Spring RestClient 发出 JSON POST。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/embabel/embabel-agent/blob/2cb8343a442b6d3db3a8ba4f624d9874921d7d5b/embabel-agent-docs/src/main/asciidoc/reference/typesafe/page.adoc#L2",
+          "summary": "Embabel 的实验性 TypeSafe 模块通过共享 System One HTTP 客户端调用 Jev，为 JVM 应用提供分类、命题判断和评分决策服务。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/embabel/embabel-agent/blob/2cb8343a442b6d3db3a8ba4f624d9874921d7d5b/embabel-agent-docs/src/main/asciidoc/reference/typesafe/page.adoc",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整开发框架及对应模块；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "agent-framework-toolkit-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "AgentFrameworkToolkit.Jev 以自身 HTTP 实现调用 TypeSafe，将文本与 Choice、Noul、Score 问题映射为 C# 类型化决策结果。",
+      "distribution": "external",
+      "repository": "rwjdk/agent-framework-toolkit",
+      "url": "https://github.com/rwjdk/agent-framework-toolkit",
+      "version": "826e35c23a174bf4083dde120c50bb56cd4d43df",
+      "revision": "826e35c23a174bf4083dde120c50bb56cd4d43df",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整 .NET 工程及 AgentFrameworkToolkit.Jev 包；构造工厂必须显式提供 TypeSafe API key 和模型，没有默认模型。",
+        "该固定版本的适配器拒绝图片请求及 SafetyIdentifier；这是包实现的限制，不代表当前 TypeSafe 模型不支持图片。",
+        "未安装 NuGet 包、编译、运行测试或调用真实模型；原始 HTTP 回调可包含请求与响应正文，使用时需控制业务数据记录。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-20",
+      "github": {
+        "repositoryId": 1099026516,
+        "owner": "rwjdk",
+        "stars": 101,
+        "pushedAt": "2026-10-19T17:29:21Z",
+        "updatedAt": "2026-10-19T06:38:24Z",
+        "createdAt": "2025-11-18T13:09:57Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-20T00:00:28.435970+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/rwjdk/agent-framework-toolkit/blob/826e35c23a174bf4083dde120c50bb56cd4d43df/src/AgentFrameworkToolkit.Jev/JevConnection.cs#L29",
+          "summary": "连接默认指向 TypeSafe 官方 /v1/systemone 端点。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/rwjdk/agent-framework-toolkit/blob/826e35c23a174bf4083dde120c50bb56cd4d43df/src/AgentFrameworkToolkit.Jev/JevDecisionFactory.cs#L54",
+          "summary": "工厂检查支持范围后构造模型、状态与问题，并用 HttpClient.SendAsync 发出请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/rwjdk/agent-framework-toolkit/blob/826e35c23a174bf4083dde120c50bb56cd4d43df/src/AgentFrameworkToolkit/Decisions/KeyedDecisionProtocol.cs#L41",
+          "summary": "共享协议将谓词映射为 Noul，检查并转换类型化回答。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/rwjdk/agent-framework-toolkit/blob/826e35c23a174bf4083dde120c50bb56cd4d43df/src/AgentFrameworkToolkit.Jev/ServiceCollectionExtensions.cs#L26",
+          "summary": "DI 入口注册 Jev 工厂及共享 IDecisionFactory。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/rwjdk/agent-framework-toolkit/blob/826e35c23a174bf4083dde120c50bb56cd4d43df/src/AgentFrameworkToolkit.Jev/README.md#L1",
+          "summary": "AgentFrameworkToolkit.Jev 以自身 HTTP 实现调用 TypeSafe，将文本与 Choice、Noul、Score 问题映射为 C# 类型化决策结果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/rwjdk/agent-framework-toolkit/blob/826e35c23a174bf4083dde120c50bb56cd4d43df/src/AgentFrameworkToolkit.Jev/README.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整开发框架及对应模块；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
     }
   ]
 }

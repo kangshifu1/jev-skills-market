@@ -73,6 +73,23 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-20（main）
+
+本轮搜索 360 个去重候选，新增 **2 个外部开发工具**，目录共 **269 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-20.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [embabel/embabel-agent](https://github.com/embabel/embabel-agent) | 4,525 | Embabel 的实验性 TypeSafe 模块通过共享 System One HTTP 客户端调用 Jev，为 JVM 应用提供分类、命题判断和评分决策服务。 |
+| [rwjdk/agent-framework-toolkit](https://github.com/rwjdk/agent-framework-toolkit) | 101 | AgentFrameworkToolkit.Jev 以自身 HTTP 实现调用 TypeSafe，将文本与 Choice、Noul、Score 问题映射为 C# 类型化决策结果。 |
+
+两项均返回 `install: null`。Embabel 保留上游实验性标记；C# 工具包要求显式指定模型，固定适配器只接收文本。
+Valen 的组织迁移经仓库 ID 核对，仍是此前排除的本地模型项目。
+
 ## 每日发现：2026-10-19（main）
 
 本轮搜索 361 个去重候选，新增 **3 个外部工具**，目录共 **267 项**。

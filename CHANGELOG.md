@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-10-20 — daily external discovery
+
+- Add Embabel's experimental TypeSafe decision service and AgentFrameworkToolkit.Jev
+  as external developer tools: 2 additions from 360 candidates, catalog total 269.
+- Reassess Embabel's changed implementation beyond its unchanged root README;
+  pin its complete System One call chain and the C# provider's direct HTTP path.
+- Scope the C# text-only restriction to the inspected adapter, and keep explicit
+  model selection, upstream versions, licenses and source-only status visible.
+- Verify Valen's repository migration while retaining its exclusion as a local model.
+  Preserve existing catalog entries, routing, release tags and the computer-use repo.
+
 ## Unreleased — 2026-10-19 — daily external discovery
 
 - Add Xianyu Slang Helper's dictionary review, SAG's Jev reranking and jev-guard
