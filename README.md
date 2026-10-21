@@ -73,6 +73,23 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-21（main）
+
+本轮搜索 363 个去重候选，新增 **1 个工具和 1 个 Skill**，目录共 **271 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-21.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | 类型 | Star | 已核实的 Jev 用途 |
+| --- | --- | ---: | --- |
+| [RailtownAI/railtracks](https://github.com/RailtownAI/railtracks) | 工具 | 233 | Railtracks 通过 LiteLLM 的 TypeSafe 提供商调用 Jev，将类型化问题组织为可接入工作流的决策节点，并记录结果、用量及错误状态。 |
+| [pedronauck/skills](https://github.com/pedronauck/skills) | Skill | 640 | Jev 工程开发 Skill，提供决策设计、状态构建、评估和发布指引；配套 Python 与 TypeScript 客户端可调用托管 TypeSafe，并附 POC 骨架。 |
+
+Railtracks 返回 `install: null`；`jev-engineering` 的安装命令仅针对已核实的独立 Skill，不安装整个合集。
+后者未识别许可证，且模型别名、价格和上游性能主张未验证；安装与执行状态仍为未测试。
+
 ## 每日发现：2026-10-20（main）
 
 本轮搜索 360 个去重候选，新增 **2 个外部开发工具**，目录共 **269 项**。

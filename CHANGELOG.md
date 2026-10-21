@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-21 — daily external discovery
+
+- Add Railtracks' TypeSafe decision nodes as a tool and jev-engineering as a
+  standalone Skill: 2 additions from 363 candidates, catalog total 271.
+- Pin the LiteLLM call chain and the Skill's direct request implementations;
+  verify nested discovery, name and references without running the installer.
+- Record the Skill's unidentified license and untested dynamic model/performance
+  claims. Preserve existing catalog entries, routing and the pending October 20 commit.
+
 ## Unreleased — 2026-10-20 — daily external discovery
 
 - Add Embabel's experimental TypeSafe decision service and AgentFrameworkToolkit.Jev

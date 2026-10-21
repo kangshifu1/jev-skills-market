@@ -12368,6 +12368,138 @@
       ],
       "usageUrl": "https://github.com/rwjdk/agent-framework-toolkit/blob/826e35c23a174bf4083dde120c50bb56cd4d43df/src/AgentFrameworkToolkit.Jev/README.md",
       "usageNote": "按 usageUrl 的固定提交说明配置完整开发框架及对应模块；install 为 null，不生成整个项目的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "railtracks-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Railtracks 通过 LiteLLM 的 TypeSafe 提供商调用 Jev，将类型化问题组织为可接入工作流的决策节点，并记录结果、用量及错误状态。",
+      "distribution": "external",
+      "repository": "RailtownAI/railtracks",
+      "url": "https://github.com/RailtownAI/railtracks",
+      "version": "3eb131f6bdcd134ac0bdd85ddb71907c74269f53",
+      "revision": "3eb131f6bdcd134ac0bdd85ddb71907c74269f53",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整 Railtracks Python 工程、上游约束的 LiteLLM 版本及服务端 TypeSafe 凭据；TypeSafeDecisions 使用 typesafe 模型前缀。",
+        "该固定适配器接收文本或序列化为文本的 JSON；模型返回值与概率不授予执行权限，阈值需按任务验证。",
+        "未安装依赖、执行工作流或调用真实模型；直接 HTTP 适配由 LiteLLM 承担，未复现成本、延迟和上游测试。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-21",
+      "github": {
+        "repositoryId": 917852255,
+        "owner": "RailtownAI",
+        "stars": 233,
+        "pushedAt": "2026-10-20T23:23:05Z",
+        "updatedAt": "2026-10-20T20:53:21Z",
+        "createdAt": "2025-01-16T19:07:24Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-21T00:04:05.535121+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/RailtownAI/railtracks/blob/3eb131f6bdcd134ac0bdd85ddb71907c74269f53/packages/railtracks/src/railtracks/decisions/providers/typesafe.py#L6",
+          "summary": "TypeSafeDecisions 明确使用 typesafe 提供商前缀及相应凭据变量。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/RailtownAI/railtracks/blob/3eb131f6bdcd134ac0bdd85ddb71907c74269f53/packages/railtracks/src/railtracks/decisions/model.py#L180",
+          "summary": "共享模型实际调用 litellm.adecisions，传递模型、输入、问题及连接配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/RailtownAI/railtracks/blob/3eb131f6bdcd134ac0bdd85ddb71907c74269f53/packages/railtracks/src/railtracks/built_nodes/decisions/invoker.py#L69",
+          "summary": "节点调用模型并发布决策事件，将提供商错误映射为节点错误。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/RailtownAI/railtracks/blob/3eb131f6bdcd134ac0bdd85ddb71907c74269f53/packages/railtracks/pyproject.toml#L56",
+          "summary": "固定源码声明 LiteLLM >=1.104.3、<1.106 的依赖约束。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/RailtownAI/railtracks/blob/3eb131f6bdcd134ac0bdd85ddb71907c74269f53/docs/documentation/agent_design/decision_nodes.md#L33",
+          "summary": "Railtracks 通过 LiteLLM 的 TypeSafe 提供商调用 Jev，将类型化问题组织为可接入工作流的决策节点，并记录结果、用量及错误状态。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/RailtownAI/railtracks/blob/3eb131f6bdcd134ac0bdd85ddb71907c74269f53/docs/documentation/agent_design/decision_nodes.md",
+      "usageNote": "按 usageUrl 的固定提交说明配置完整 Python 工程与依赖；install 为 null，不生成整个框架的 Skill 安装命令。未安装或运行上游功能。"
+    },
+    {
+      "id": "jev-engineering",
+      "kind": "skill",
+      "category": "development",
+      "description": "Jev 工程开发 Skill，提供决策设计、状态构建、评估和发布指引；配套 Python 与 TypeScript 客户端可调用托管 TypeSafe，并附 POC 骨架。",
+      "distribution": "external",
+      "repository": "pedronauck/skills",
+      "url": "https://github.com/pedronauck/skills",
+      "version": "9a5254eba0a80d1245214f0ce476622fb23d762c",
+      "revision": "9a5254eba0a80d1245214f0ce476622fb23d762c",
+      "license": null,
+      "licenseStatus": "GitHub API did not identify a license; no root or jev-engineering license file found at the pinned revision. Link and original summary only, redistribution permissions not inferred.",
+      "requires": [
+        "安装范围为 jev-engineering 的指引、引用和 assets；执行配套示例仍需对应 Python 或 TypeScript 运行环境以及私有进程中的提供商凭据。",
+        "源码含 TypeSafe、OpenRouter 和 Vercel Gateway 路由；本文核实真实调用入口，不复现模型别名、价格、速度、图片或长上下文能力主张。",
+        "GitHub 未识别许可证，根目录与该 Skill 子目录未见许可文件；仅登记链接，不推断第三方内容的再分发许可。未安装 Skill 或运行客户端。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-21",
+      "github": {
+        "repositoryId": 1182067442,
+        "owner": "pedronauck",
+        "stars": 640,
+        "pushedAt": "2026-10-20T14:18:19Z",
+        "updatedAt": "2026-10-20T14:18:26Z",
+        "createdAt": "2026-03-15T01:52:39Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-21T00:04:18.374016+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/pedronauck/skills/blob/9a5254eba0a80d1245214f0ce476622fb23d762c/skills/mine/jev-engineering/SKILL.md#L1",
+          "summary": "frontmatter 名称为 jev-engineering，引用与客户端均位于独立 Skill 子目录。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pedronauck/skills/blob/9a5254eba0a80d1245214f0ce476622fb23d762c/skills/mine/jev-engineering/assets/jev_client.py#L428",
+          "summary": "Python 客户端构建带认证头的 POST 并通过 urllib.request.urlopen 发出请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pedronauck/skills/blob/9a5254eba0a80d1245214f0ce476622fb23d762c/skills/mine/jev-engineering/assets/jev-client.ts#L450",
+          "summary": "TypeScript 客户端使用 fetch 实际发送所选提供商请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pedronauck/skills/blob/9a5254eba0a80d1245214f0ce476622fb23d762c/skills/mine/jev-engineering/assets/poc_skeleton.py#L80",
+          "summary": "POC 骨架在非 dry-run 分支调用配套客户端；未执行该骨架。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pedronauck/skills/blob/9a5254eba0a80d1245214f0ce476622fb23d762c/README.md#L80",
+          "summary": "Jev 工程开发 Skill，提供决策设计、状态构建、评估和发布指引；配套 Python 与 TypeScript 客户端可调用托管 TypeSafe，并附 POC 骨架。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/pedronauck/skills/blob/9a5254eba0a80d1245214f0ce476622fb23d762c/skills/mine/jev-engineering/SKILL.md",
+      "usageNote": "按固定提交和已核实名称生成的命令仅安装该 Skill 的指引、引用及客户端资产；未执行安装或运行示例，动态模型与费用信息需使用时复核。",
+      "path": "skills/mine/jev-engineering",
+      "reviewNotes": [
+        "Skill name and 15 referenced local paths verified at the pinned commit.",
+        "Upstream README documents skills CLI installation; locally cached skills 1.7.0 source confirms nested discovery and name filtering. No installer or upstream code was executed.",
+        "Upstream model aliases, price, latency and danger-zone feature claims were not reproduced; consult current official documentation before use."
+      ]
     }
   ]
 }
