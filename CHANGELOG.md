@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — 2026-10-23 — daily external discovery
+
+- Add pi-durable-news-agent as an external tool from 361 candidates; catalog total 272.
+- Pin its Jev HTTP client, runtime injection, command rendering and HFS persistence.
+  Record provider/model pairing requirements without claiming a tested backend switch.
+- Exclude brand icons, news/paper lists and locally modeled or simulated alternatives.
+  Preserve existing entries, routing, release tags and the independent computer-use repo.
+
 ## Unreleased — 2026-10-21 — daily external discovery
 
 - Add Railtracks' TypeSafe decision nodes as a tool and jev-engineering as a

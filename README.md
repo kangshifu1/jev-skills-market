@@ -73,6 +73,21 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-23（main）
+
+本轮搜索 361 个去重候选，新增 **1 个外部工具**，目录共 **272 项**。
+Star 为本次 GitHub API 快照；**只核实来源，未安装或运行上游功能。**
+新条目可 list/show 查询，暂不加入模型路由；目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-23.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [disler/pi-durable-news-agent](https://github.com/disler/pi-durable-news-agent) | 102 | 基于 pi-durable 的新闻工作流，通过 Jev 客户端完成相关新闻筛选、重要性及 Hype/Facts/Signal 评分，并保存结果与调用记录。 |
+
+该工具返回 `install: null`。固定 HFS 命令使用 OpenRouter 格式模型名，切换 TypeSafe 后端前需核对配置。
+本轮没有执行新闻抓取、定时任务或真实模型请求；不将上游费用、延迟和恢复主张当作本市场实测。
+
 ## 每日发现：2026-10-21（main）
 
 本轮搜索 363 个去重候选，新增 **1 个工具和 1 个 Skill**，目录共 **271 项**。

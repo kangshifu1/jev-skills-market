@@ -12500,6 +12500,74 @@
         "Upstream README documents skills CLI installation; locally cached skills 1.7.0 source confirms nested discovery and name filtering. No installer or upstream code was executed.",
         "Upstream model aliases, price, latency and danger-zone feature claims were not reproduced; consult current official documentation before use."
       ]
+    },
+    {
+      "id": "pi-durable-news-agent",
+      "kind": "tool",
+      "category": "automation",
+      "description": "基于 pi-durable 的新闻工作流，通过 Jev 客户端完成相关新闻筛选、重要性及 Hype/Facts/Signal 评分，并保存结果与调用记录。",
+      "distribution": "external",
+      "repository": "disler/pi-durable-news-agent",
+      "url": "https://github.com/disler/pi-durable-news-agent",
+      "version": "273b79bb8d3d8907cae9fbd6abd3da163ee2a343",
+      "revision": "273b79bb8d3d8907cae9fbd6abd3da163ee2a343",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整应用、Node 24、just 及工作区依赖，按实际运行模式配置生成模型、Jev、搜索和应用令牌；本次不安装或启用定时任务。",
+        "核心客户端支持 TypeSafe/OpenRouter；固定 HFS 命令写有 ~typesafe/jev-latest，且命令模型原样传入客户端。切换原生 TypeSafe 后端前需核对模型名，未验证后端切换。",
+        "mock/fixture 与真实请求分支可区分；未运行任何分支、新闻采集、恢复测试或真实模型请求，费用、延迟、去重与恢复效果均未复现。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-23",
+      "github": {
+        "repositoryId": 1424658181,
+        "owner": "disler",
+        "stars": 102,
+        "pushedAt": "2026-10-18T21:11:02Z",
+        "updatedAt": "2026-10-22T17:24:56Z",
+        "createdAt": "2026-10-18T17:53:41Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-22T23:57:05.331178+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/disler/pi-durable-news-agent/blob/273b79bb8d3d8907cae9fbd6abd3da163ee2a343/apps/shared/packages/jev/src/client.ts#L226",
+          "summary": "Jev 客户端实际发送带认证头的 JSON POST，源码包含 TypeSafe 和 OpenRouter 端点。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/disler/pi-durable-news-agent/blob/273b79bb8d3d8907cae9fbd6abd3da163ee2a343/apps/dna-server-api/src/runtime.ts#L60",
+          "summary": "应用将真实客户端或显式 fixture 分支接入 Judge，未运行应用。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/disler/pi-durable-news-agent/blob/273b79bb8d3d8907cae9fbd6abd3da163ee2a343/apps/shared/packages/jev/src/command.ts#L151",
+          "summary": "命令渲染后调用注入的 decide，并原样传递命令中的模型配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/disler/pi-durable-news-agent/blob/273b79bb8d3d8907cae9fbd6abd3da163ee2a343/apps/dna-server-api/src/news/hfs.ts#L192",
+          "summary": "HFS 评分调用命令并保存三维评分、原始答案与模型信息。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/disler/pi-durable-news-agent/blob/273b79bb8d3d8907cae9fbd6abd3da163ee2a343/apps/dna-server-api/prompt_engineering/jev/hfs/command.json#L5",
+          "summary": "HFS 配置使用三个 Score 问题及 OpenRouter 格式模型名，切换后端前需核对配对。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/disler/pi-durable-news-agent/blob/273b79bb8d3d8907cae9fbd6abd3da163ee2a343/README.md#L137",
+          "summary": "README 列出 Jev 命令、新闻处理阶段、运行前提和独立应用结构；上游性能主张未复现。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/disler/pi-durable-news-agent/blob/273b79bb8d3d8907cae9fbd6abd3da163ee2a343/README.md",
+      "usageNote": "按固定 README 配置完整应用与工作区；install 为 null，不将应用安装流程伪装成 Skill 安装命令。未执行安装、采集、计划任务或模型调用。"
     }
   ]
 }
