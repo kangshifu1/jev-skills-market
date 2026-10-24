@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-24 — daily external discovery
+
+- Add OpenRouter MCP Multimodal's Jev decision path as an external tool from
+  364 candidates; catalog total 273.
+- Pin the decide schema, dispatcher, handler and HTTP request, retaining the
+  exact upstream model default and untested runtime status.
+- Exclude Ollaya's local protocol-compatible service and the gateway resource list.
+  Preserve existing entries, routing, release tags and the independent computer-use repo.
+
 ## Unreleased — 2026-10-23 — daily external discovery
 
 - Add pi-durable-news-agent as an external tool from 361 candidates; catalog total 272.

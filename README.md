@@ -73,6 +73,21 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-24（main）
+
+本轮搜索 364 个去重候选，新增 **1 个外部 MCP 工具**，目录共 **273 项**。
+Star 为本次 GitHub API 快照；**只核实来源，未安装或运行上游功能。**
+新条目可 list/show 查询，暂不加入模型路由；目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-24.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [stabgan/openrouter-mcp-multimodal](https://github.com/stabgan/openrouter-mcp-multimodal) | 101 | OpenRouter MCP 服务的 decide 工具经 Decisions 端点调用 Jev，固定默认模型为 typesafe/jev-1.13，提供 Noul、Choice 和 Score 结构化判断。 |
+
+条目返回 `install: null`，需按上游说明配置完整 MCP 服务。
+只登记 `decide` 的 Jev 路径，不将该服务其他多模态工具或模型的能力归给 Jev；运行兼容性未实测。
+
 ## 每日发现：2026-10-23（main）
 
 本轮搜索 361 个去重候选，新增 **1 个外部工具**，目录共 **272 项**。

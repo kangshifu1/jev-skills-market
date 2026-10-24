@@ -12568,6 +12568,69 @@
       ],
       "usageUrl": "https://github.com/disler/pi-durable-news-agent/blob/273b79bb8d3d8907cae9fbd6abd3da163ee2a343/README.md",
       "usageNote": "按固定 README 配置完整应用与工作区；install 为 null，不将应用安装流程伪装成 Skill 安装命令。未执行安装、采集、计划任务或模型调用。"
+    },
+    {
+      "id": "openrouter-mcp-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "OpenRouter MCP 服务的 decide 工具经 Decisions 端点调用 Jev，固定默认模型为 typesafe/jev-1.13，提供 Noul、Choice 和 Score 结构化判断。",
+      "distribution": "external",
+      "repository": "stabgan/openrouter-mcp-multimodal",
+      "url": "https://github.com/stabgan/openrouter-mcp-multimodal",
+      "version": "ebcd7c01bcf236cc0f106535bcf7794e3dbbc052",
+      "revision": "ebcd7c01bcf236cc0f106535bcf7794e3dbbc052",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整 MCP 服务、Node >=22、相应依赖、兼容 MCP 宿主及服务端 OPENROUTER_API_KEY；本次未安装或连接该服务。",
+        "只登记固定源码中的 decide/Jev 路径；其他聊天、图像、音频、视频生成工具和其他决策模型的能力不归给 Jev。",
+        "固定实现使用 OpenRouter alpha Decisions 地址与 typesafe/jev-1.13 默认模型；模型可用性、请求/响应兼容性、宿主行为、费用及延迟均未实测。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-24",
+      "github": {
+        "repositoryId": 955447940,
+        "owner": "stabgan",
+        "stars": 101,
+        "pushedAt": "2026-10-23T08:32:01Z",
+        "updatedAt": "2026-10-23T00:32:13Z",
+        "createdAt": "2025-03-26T16:49:03Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-23T23:59:17.075676+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/stabgan/openrouter-mcp-multimodal/blob/ebcd7c01bcf236cc0f106535bcf7794e3dbbc052/src/tool-definitions.ts#L1134",
+          "summary": "MCP 清单声明 decide 工具及其结构化问题输入。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/stabgan/openrouter-mcp-multimodal/blob/ebcd7c01bcf236cc0f106535bcf7794e3dbbc052/src/tool-handlers.ts#L246",
+          "summary": "工具分派器将 decide 调用交给实际处理函数。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/stabgan/openrouter-mcp-multimodal/blob/ebcd7c01bcf236cc0f106535bcf7794e3dbbc052/src/tool-handlers/decide.ts#L353",
+          "summary": "处理函数选择模型并调用 submitDecision，固定默认值为 typesafe/jev-1.13。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/stabgan/openrouter-mcp-multimodal/blob/ebcd7c01bcf236cc0f106535bcf7794e3dbbc052/src/openrouter-api.ts#L348",
+          "summary": "客户端实际向 OpenRouter /api/alpha/decisions 发出带认证头的 JSON POST。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/stabgan/openrouter-mcp-multimodal/blob/ebcd7c01bcf236cc0f106535bcf7794e3dbbc052/README.md#L539",
+          "summary": "README 给出 decide 调用示例并列出 Jev 默认模型；未将其他多模态工具的能力归给 Jev。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/stabgan/openrouter-mcp-multimodal/blob/ebcd7c01bcf236cc0f106535bcf7794e3dbbc052/README.md",
+      "usageNote": "按固定 README 配置完整 MCP 服务及宿主；install 为 null，不生成通用 Skill 安装命令。未执行包安装、服务启动、宿主连接或模型请求。"
     }
   ]
 }
