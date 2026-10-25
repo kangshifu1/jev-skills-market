@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-25 — daily external discovery
+
+- Add Warrenduffer's Jev integration as an external finance tool from 366 candidates;
+  catalog total 274. Pin provider requests, ranking and execution-mode boundaries.
+- Distinguish live broker orders from historical replay and model observation;
+  no account access, market-data calls, replay or trading was performed.
+- Exclude PaperJev because its documented Jev implementation could not be verified
+  in the pinned source tree. Preserve existing entries, routing and release tags.
+
 ## Unreleased — 2026-10-24 — daily external discovery
 
 - Add OpenRouter MCP Multimodal's Jev decision path as an external tool from

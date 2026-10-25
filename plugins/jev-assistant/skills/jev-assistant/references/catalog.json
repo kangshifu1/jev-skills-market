@@ -12631,6 +12631,79 @@
       ],
       "usageUrl": "https://github.com/stabgan/openrouter-mcp-multimodal/blob/ebcd7c01bcf236cc0f106535bcf7794e3dbbc052/README.md",
       "usageNote": "按固定 README 配置完整 MCP 服务及宿主；install 为 null，不生成通用 Skill 安装命令。未执行包安装、服务启动、宿主连接或模型请求。"
+    },
+    {
+      "id": "warrenduffer-jev",
+      "kind": "tool",
+      "category": "finance",
+      "description": "印度股票日内交易应用，通过 TypeSafe 原生接口或 Vercel AI Gateway 调用 Jev，为分阶段候选排序提供判断；源码另含券商实盘执行与历史回放。",
+      "distribution": "external",
+      "repository": "arimanyus/warrenduffer",
+      "url": "https://github.com/arimanyus/warrenduffer",
+      "version": "9accc86e872c9925c63b5b04cf6984356c8c08fa",
+      "revision": "9accc86e872c9925c63b5b04cf6984356c8c08fa",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需完整 Node >=20 工程、依赖与所选模式配置；Jev 凭据和券商凭据保留在服务端，本次未安装、启动或连接账户。",
+        "含真实券商下单路径，不能视为只读研究或在线纸面交易工具；历史回放另用模拟执行器，选用 Jev 时仍可能发出真实模型请求。",
+        "默认 MODEL=mock 对应观察分支，但配置允许改变交易行为；本轮未获取实时行情、回放或下单，未验证收益、阈值、止损或风控效果。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-25",
+      "github": {
+        "repositoryId": 1382156557,
+        "owner": "arimanyus",
+        "stars": 101,
+        "pushedAt": "2026-09-23T05:00:33Z",
+        "updatedAt": "2026-10-24T09:19:53Z",
+        "createdAt": "2026-09-22T18:38:48Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-25T01:01:35.808826+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/src/model/jev.ts#L81",
+          "summary": "模型适配器通过 AI SDK/Vercel Gateway 或原生 TypeSafe POST 发出真实判断请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/src/model/index.ts#L5",
+          "summary": "模型工厂按配置选择 JevModel 或 MockModel。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/src/strategy/continuation.ts#L55",
+          "summary": "分阶段候选排序实际调用 model.evaluate，读取类型化结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/src/engine.ts#L67",
+          "summary": "引擎默认使用 LiveExecutor，并将观察、回放及允许交易的条件分开。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/src/executor/live.ts#L20",
+          "summary": "实盘执行器将订单意图传给券商客户端；本次只读取源码。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/scripts/replay.ts#L118",
+          "summary": "历史回放以 SimBroker 和 SimExecutor 构建 replay 引擎，未运行回放。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/README.md#L39",
+          "summary": "README 描述 Jev 配置及实盘、观察和历史回放边界；没有复现策略或交易效果。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/README.md",
+      "usageNote": "按固定 README 审阅完整应用及模式配置；install 为 null，不生成通用 Skill 安装命令。目录登记不启用实盘或回放，未连接模型或券商。"
     }
   ]
 }
