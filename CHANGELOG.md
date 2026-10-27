@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-27 — daily external discovery
+
+- Add Pi Web Access's optional Jev relevance judge and VideoAdGuard's TypeSafe
+  subtitle classifier: 2 external tools from 368 candidates, catalog total 276.
+- Pin call chains and record Pi-only routing, failure behavior and browser-side
+  subtitle data flow; preserve the declared package and GitHub license values.
+- Exclude HealthJev's local JevGate and local comparison-model benchmarks.
+  Preserve existing entries, routing, release tags and the independent computer-use repo.
+
 ## Unreleased — 2026-10-25 — daily external discovery
 
 - Add Warrenduffer's Jev integration as an external finance tool from 366 candidates;

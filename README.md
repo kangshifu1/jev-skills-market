@@ -73,6 +73,23 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-27（main）
+
+本轮搜索 368 个去重候选，新增 **2 个外部工具**，目录共 **276 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-27.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [nicobailon/pi-web-access](https://github.com/nicobailon/pi-web-access) | 1,715 | Pi Web Access 的可选离题检查可经 Pi 模型注册表调用 Jev，判断搜索回复与查询的相关性，并据此切换搜索提供商。 |
+| [ZeroTang05/VideoAdGuard](https://github.com/ZeroTang05/VideoAdGuard) | 761 | VideoAdGuard 的 System One 路径通过官方 TypeSafe SDK 用 Noul 判断字幕是否属于广告，再由代码合并区间供浏览器跳过功能使用。 |
+
+两项均返回 `install: null`。Pi 的离题检查需显式启用，MCP 路径不执行，检查失败时保留原响应。
+VideoAdGuard 在浏览器侧发送字幕上下文；阈值、广告边界和跳过效果未测试。HealthJev 的本地 JevGate 不作为 TypeSafe 接入收录。
+
 ## 每日发现：2026-10-25（main）
 
 本轮搜索 366 个去重候选，新增 **1 个外部金融工具**，目录共 **274 项**。

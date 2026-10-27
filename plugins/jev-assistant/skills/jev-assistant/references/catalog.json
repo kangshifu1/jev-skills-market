@@ -12704,6 +12704,137 @@
       ],
       "usageUrl": "https://github.com/arimanyus/warrenduffer/blob/9accc86e872c9925c63b5b04cf6984356c8c08fa/README.md",
       "usageNote": "按固定 README 审阅完整应用及模式配置；install 为 null，不生成通用 Skill 安装命令。目录登记不启用实盘或回放，未连接模型或券商。"
+    },
+    {
+      "id": "pi-web-access-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Pi Web Access 的可选离题检查可经 Pi 模型注册表调用 Jev，判断搜索回复与查询的相关性，并据此切换搜索提供商。",
+      "distribution": "external",
+      "repository": "nicobailon/pi-web-access",
+      "url": "https://github.com/nicobailon/pi-web-access",
+      "version": "d95fb1eb4350b90bd4285cbc84958085d136aa43",
+      "revision": "d95fb1eb4350b90bd4285cbc84958085d136aa43",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需 Node >=22.19、支持 classifier 模型注册表的 Pi 宿主及所选提供商凭据；需显式配置 off-topic 回退与 Jev 模型。",
+        "只作用于 Pi 内的路由搜索；指定提供商、all/列表搜索和 MCP 路径不执行此判断。检查失败或超时保留原回复，并记录诊断信息。",
+        "查询、回复与结果标题、URL、摘要会送给所选模型提供商；本轮未安装、访问 Pi 凭据或执行搜索，阈值、误判率与延迟未复现。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-27",
+      "github": {
+        "repositoryId": 1129245418,
+        "owner": "nicobailon",
+        "stars": 1715,
+        "pushedAt": "2026-10-26T07:12:12Z",
+        "updatedAt": "2026-10-27T00:32:41Z",
+        "createdAt": "2026-01-06T20:20:03Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-27T01:10:07.623315+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/nicobailon/pi-web-access/blob/d95fb1eb4350b90bd4285cbc84958085d136aa43/offtopic-judge.ts#L14",
+          "summary": "允许的分类模型引用包含 TypeSafe Jev 与 Cloudflare 上的 Jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nicobailon/pi-web-access/blob/d95fb1eb4350b90bd4285cbc84958085d136aa43/offtopic-judge.ts#L31",
+          "summary": "判断函数构造 Choice 问题并实际调用 modelRegistry.classify。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nicobailon/pi-web-access/blob/d95fb1eb4350b90bd4285cbc84958085d136aa43/gemini-search.ts#L220",
+          "summary": "配置校验要求 off-topic 回退同时指定受支持的判断模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nicobailon/pi-web-access/blob/d95fb1eb4350b90bd4285cbc84958085d136aa43/gemini-search.ts#L775",
+          "summary": "搜索路由实际调用判断，并明确跳过无 Pi 注册表的 MCP 路径及保留失败响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nicobailon/pi-web-access/blob/d95fb1eb4350b90bd4285cbc84958085d136aa43/docs/offtopic-judge.md#L18",
+          "summary": "Pi Web Access 的可选离题检查可经 Pi 模型注册表调用 Jev，判断搜索回复与查询的相关性，并据此切换搜索提供商。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/nicobailon/pi-web-access/blob/d95fb1eb4350b90bd4285cbc84958085d136aa43/docs/offtopic-judge.md",
+      "usageNote": "按固定说明配置完整 Pi 扩展、模型注册表与提供商；install 为 null，不生成通用 Skill 安装命令。未安装、连接账户或发出模型请求。"
+    },
+    {
+      "id": "videoadguard-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "VideoAdGuard 的 System One 路径通过官方 TypeSafe SDK 用 Noul 判断字幕是否属于广告，再由代码合并区间供浏览器跳过功能使用。",
+      "distribution": "external",
+      "repository": "ZeroTang05/VideoAdGuard",
+      "url": "https://github.com/ZeroTang05/VideoAdGuard",
+      "version": "23b9799ac8f383d92a815e56e106dd3ff6bd221c",
+      "revision": "23b9799ac8f383d92a815e56e106dd3ff6bd221c",
+      "license": "GPL-2.0-or-later",
+      "licenseStatus": "GitHub API reports GPL-2.0; the pinned package.json declares GPL-2.0-or-later. Both source values are preserved; upstream terms apply. Link and original summary only.",
+      "requires": [
+        "需兼容的浏览器扩展环境，并显式配置 System One 提供商、模型与凭据；本条核实 TypeSafe 官方预设，不将其他兼容模型统一标为 Jev。",
+        "上游通过浏览器侧 SDK 调用并启用 dangerouslyAllowBrowser；广告检测请求包含完整字幕、标题及相关评论/商品信息，本轮未读取浏览器配置或访问视频账户。",
+        "未安装扩展、播放视频或调用模型；字幕阈值、广告边界、误跳和宿主兼容性均未实测。音频转录与其他模型路径不属于本次核实的 Jev 能力。"
+      ],
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-27",
+      "github": {
+        "repositoryId": 954020209,
+        "owner": "ZeroTang05",
+        "stars": 761,
+        "pushedAt": "2026-10-26T13:13:26Z",
+        "updatedAt": "2026-10-26T13:13:30Z",
+        "createdAt": "2025-03-24T12:50:19Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "GPL-2.0",
+        "checkedAt": "2026-10-27T01:10:29.286729+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ZeroTang05/VideoAdGuard/blob/23b9799ac8f383d92a815e56e106dd3ff6bd221c/src/services/llm/system-one-presets.ts#L12",
+          "summary": "预设包含 TypeSafe 官方地址和 jev-latest，SDK 基址处理保留网关路径。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ZeroTang05/VideoAdGuard/blob/23b9799ac8f383d92a815e56e106dd3ff6bd221c/src/services/llm/providers.ts#L41",
+          "summary": "提供商分派在 system_one 分支调用实际处理函数。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ZeroTang05/VideoAdGuard/blob/23b9799ac8f383d92a815e56e106dd3ff6bd221c/src/services/llm/system-one.ts#L118",
+          "summary": "处理函数创建官方 SDK 客户端、调用 systemOne，并把概率合并为广告区间结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ZeroTang05/VideoAdGuard/blob/23b9799ac8f383d92a815e56e106dd3ff6bd221c/src/services/llm/system-one.ts#L24",
+          "summary": "请求构建器提交完整字幕上下文及逐条 Noul 问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ZeroTang05/VideoAdGuard/blob/23b9799ac8f383d92a815e56e106dd3ff6bd221c/package.json#L4",
+          "summary": "固定包清单声明 GPL-2.0-or-later；GitHub API 的识别值为 GPL-2.0。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ZeroTang05/VideoAdGuard/blob/23b9799ac8f383d92a815e56e106dd3ff6bd221c/README.md#L127",
+          "summary": "VideoAdGuard 的 System One 路径通过官方 TypeSafe SDK 用 Noul 判断字幕是否属于广告，再由代码合并区间供浏览器跳过功能使用。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/ZeroTang05/VideoAdGuard/blob/23b9799ac8f383d92a815e56e106dd3ff6bd221c/README.md",
+      "usageNote": "按固定 README 配置完整浏览器扩展及所选提供商；install 为 null，不生成通用 Skill 安装命令。未安装、访问用户视频或发出模型请求。"
     }
   ]
 }
