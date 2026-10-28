@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-28（main）
+
+本轮搜索 375 个去重候选，新增 **3 个外部工具**，目录共 **279 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-28.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [Jigsaw-Code/sensemaking-tools](https://github.com/Jigsaw-Code/sensemaking-tools) | 116 | Sensemaking 的可选 System One 路径可调用 TypeSafe Jev，对调查文本进行主题、观点归类及评级判断；生成式环节仍由其他模型完成。 |
+| [lightsifter/sift-light](https://github.com/lightsifter/sift-light) | 102 | Sift Light 可用 Jev Choice 对混合搜索的代码候选片段分类与重排，区分实现、调用、文档、测试及无关内容，并报告未判断的候选。 |
+| [lktiep/cortex-hub](https://github.com/lktiep/cortex-hub) | 105 | Cortex Hub 的可选 Jev 重排器对代码搜索候选集合提出 Choice 问题，按返回选项顺序重排结果；无凭据时保留原搜索路径。 |
+
+三项均返回 `install: null`。Sensemaking 需显式配置 TypeSafe 托管地址；Sift Light 需同时开启
+向量搜索与语义判断。Cortex 当前源码使用 Choice 排序，以源码为准而不沿用 README 的旧 Noul 描述。
+
 ## 每日发现：2026-10-27（main）
 
 本轮搜索 368 个去重候选，新增 **2 个外部工具**，目录共 **276 项**。

@@ -12835,6 +12835,230 @@
       ],
       "usageUrl": "https://github.com/ZeroTang05/VideoAdGuard/blob/23b9799ac8f383d92a815e56e106dd3ff6bd221c/README.md",
       "usageNote": "按固定 README 配置完整浏览器扩展及所选提供商；install 为 null，不生成通用 Skill 安装命令。未安装、访问用户视频或发出模型请求。"
+    },
+    {
+      "id": "sensemaking-tools-jev",
+      "category": "automation",
+      "description": "Sensemaking 的可选 System One 路径可调用 TypeSafe Jev，对调查文本进行主题、观点归类及评级判断；生成式环节仍由其他模型完成。",
+      "repository": "Jigsaw-Code/sensemaking-tools",
+      "requires": [
+        "需完整 Python 流水线及其依赖；DECISION_ENDPOINT_TYPE=systemone、DECISION_MODEL=jev-latest、DECISION_MODEL_HOST=https://api.typesafe.ai，并通过进程环境提供 DECISION_MODEL_API_KEY。",
+        "仅设置 System One 与模型名时默认连接本地 Ollama；必须显式选择 TypeSafe 托管地址。主题命名、引文提取、报告生成等仍使用原生成模型，不归为 Jev 能力。",
+        "判断会向所选提供商发送调查文本、上下文与候选标签；本轮未读取个人调查数据、运行流水线或调用模型。上游已测声明、阈值与多语言效果未复现。"
+      ],
+      "usageNote": "按固定 README 配置完整流水线与托管决策模型；install 为 null。本次只审阅主题/观点判断调用链，未复现上游关于其他阶段的运行或性能声明。",
+      "kind": "tool",
+      "distribution": "external",
+      "url": "https://github.com/Jigsaw-Code/sensemaking-tools",
+      "version": "c713f86aec1573e0319d36335167ed6c0a781783",
+      "revision": "c713f86aec1573e0319d36335167ed6c0a781783",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-28",
+      "github": {
+        "repositoryId": 845156573,
+        "owner": "Jigsaw-Code",
+        "stars": 116,
+        "pushedAt": "2026-10-27T19:57:14Z",
+        "updatedAt": "2026-10-27T19:57:21Z",
+        "createdAt": "2024-08-20T17:33:38Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-28T00:10:17.206110+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Jigsaw-Code/sensemaking-tools/blob/c713f86aec1573e0319d36335167ed6c0a781783/src/models/model_factory.py#L76",
+          "summary": "工厂从独立决策配置读取托管地址、模型与凭据，并构造 SystemOneClient。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Jigsaw-Code/sensemaking-tools/blob/c713f86aec1573e0319d36335167ed6c0a781783/src/models/systemone.py#L271",
+          "summary": "客户端以 Bearer 认证发送 System One POST 请求并处理响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Jigsaw-Code/sensemaking-tools/blob/c713f86aec1573e0319d36335167ed6c0a781783/src/models/decision.py#L124",
+          "summary": "标签分配构造逐标签 Noul 问题，再按阈值选择标签与 Other。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Jigsaw-Code/sensemaking-tools/blob/c713f86aec1573e0319d36335167ed6c0a781783/src/tasks/categorization.py#L1184",
+          "summary": "主题归类实际选择决策客户端并进入 Jev 可用的标签分配路径。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Jigsaw-Code/sensemaking-tools/blob/c713f86aec1573e0319d36335167ed6c0a781783/src/tasks/categorization.py#L1124",
+          "summary": "观点归类的 autorater 使用结构化评级，低于阈值归入 Other。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Jigsaw-Code/sensemaking-tools/blob/c713f86aec1573e0319d36335167ed6c0a781783/README.md#L142",
+          "summary": "上游配置及用途说明；运行和性能声明未由市场复现，README 与源码差异见本条 requires。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Jigsaw-Code/sensemaking-tools/blob/c713f86aec1573e0319d36335167ed6c0a781783/README.md"
+    },
+    {
+      "id": "sift-light-jev",
+      "category": "development",
+      "description": "Sift Light 可用 Jev Choice 对混合搜索的代码候选片段分类与重排，区分实现、调用、文档、测试及无关内容，并报告未判断的候选。",
+      "repository": "lightsifter/sift-light",
+      "requires": [
+        "需完整 Sift Light 插件或 MCP 运行时及上游依赖；语义判断默认关闭，源码要求同时启用 vectorSearchEnabled 与 semanticJudge.enabled。",
+        "Jev 提供商默认使用 TypeSafe 官方端点与 jev-latest，凭据从进程环境读取；独立 MCP 需显式提供 SIFT_LIGHT_CONFIG，缺少路径时不启用判断。",
+        "启用后发送查询与有界候选片段；失败批次保留未判断候选的本地位置并报告部分覆盖。分类不是运行证明，模型调用、准确率、宿主兼容性均未测试。"
+      ],
+      "usageNote": "按固定 README 选择完整插件或 MCP 安装方式；install 为 null，不提供通用 Skill 安装命令。源码要求两个启用开关，未安装宿主、改动搜索策略或读取用户代码。",
+      "kind": "tool",
+      "distribution": "external",
+      "url": "https://github.com/lightsifter/sift-light",
+      "version": "a124568451028959a5f3a76d69f32a52561597cd",
+      "revision": "a124568451028959a5f3a76d69f32a52561597cd",
+      "license": "AGPL-3.0-only",
+      "licenseStatus": "GitHub API reports AGPL-3.0; pinned package.json declares AGPL-3.0-only. Both values are preserved; upstream terms apply. Link and original summary only.",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-28",
+      "github": {
+        "repositoryId": 1348419690,
+        "owner": "lightsifter",
+        "stars": 102,
+        "pushedAt": "2026-10-27T03:06:12Z",
+        "updatedAt": "2026-10-27T15:35:46Z",
+        "createdAt": "2026-08-27T11:39:55Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "AGPL-3.0",
+        "checkedAt": "2026-10-28T00:10:26.564556+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/src/config-reader.ts#L55",
+          "summary": "默认提供商、端点和模型明确对应 TypeSafe Jev，且默认关闭。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/src/semantic-judge.ts#L131",
+          "summary": "逐候选构造 Choice 问题并提交查询与候选片段。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/src/semantic-judge.ts#L252",
+          "summary": "请求函数以环境凭据认证并发送 POST，处理重试、超时与大小限制。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/src/semantic-judge.ts#L489",
+          "summary": "实际选择 Jev runner；配置层另外要求开启向量搜索。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/src/hybrid-search.ts#L231",
+          "summary": "混合搜索实际调用语义判断，再组合检索结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/src/semantic-judge.ts#L630",
+          "summary": "结果记录失败、部分覆盖及已判断与未判断候选数量。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/src/mcp-semantic-judge.ts#L32",
+          "summary": "独立 MCP 显式读取配置路径，缺少路径时返回关闭的集成。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/package.json#L1",
+          "summary": "固定包清单声明 AGPL-3.0-only，另保留 API 的 AGPL-3.0 识别值。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/README.md#L146",
+          "summary": "上游配置及用途说明；运行和性能声明未由市场复现，README 与源码差异见本条 requires。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/lightsifter/sift-light/blob/a124568451028959a5f3a76d69f32a52561597cd/README.md"
+    },
+    {
+      "id": "cortex-hub-jev",
+      "category": "development",
+      "description": "Cortex Hub 的可选 Jev 重排器对代码搜索候选集合提出 Choice 问题，按返回选项顺序重排结果；无凭据时保留原搜索路径。",
+      "repository": "lktiep/cortex-hub",
+      "requires": [
+        "需完整 Cortex Hub 服务栈、Node.js >=22、pnpm >=10 及已索引代码；TYPESAFE_API_KEY 从服务进程环境读取，默认模型 jev-latest。",
+        "固定源码已改用候选集合的 Choice 分布排序；README 仍描述逐候选 yes/no，本条以源码为准。代码把分布顺序转为名次分值，不将其当成跨候选的正确率保证。",
+        "查询及截断后的文件路径/代码片段会提交 TypeSafe；失败轮次保留检索排序，不保证部分失败时全局顺序完全不变。本轮未部署服务、索引用户仓库或调用模型；性能与检索质量未复现。"
+      ],
+      "usageNote": "按固定 README 审阅完整自托管服务配置；install 为 null。Jev 重排的当前语义以固定源码为准，不复用 README 的旧 Noul 描述或性能宣称。",
+      "kind": "tool",
+      "distribution": "external",
+      "url": "https://github.com/lktiep/cortex-hub",
+      "version": "5aad2fd352945856ddccc05ddef3c9590248edf8",
+      "revision": "5aad2fd352945856ddccc05ddef3c9590248edf8",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-28",
+      "github": {
+        "repositoryId": 1185330435,
+        "owner": "lktiep",
+        "stars": 105,
+        "pushedAt": "2026-10-27T07:26:22Z",
+        "updatedAt": "2026-10-27T09:51:46Z",
+        "createdAt": "2026-03-18T13:26:13Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-28T00:10:39.866466+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/packages/shared-mem9/src/typesafe.ts#L25",
+          "summary": "默认 TypeSafe 基址与模型，客户端在 systemOne 中发送经认证的 HTTP 请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/packages/shared-mem9/src/typesafe.ts#L128",
+          "summary": "真实请求发送 state、questions 与 model，并处理错误和重试。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/packages/shared-mem9/src/typesafe.ts#L233",
+          "summary": "每轮构造一个 Choice 问题，以候选片段作为选项。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/packages/shared-mem9/src/typesafe.ts#L268",
+          "summary": "调用客户端取得选项分布，转换为名次并组合原检索分值；失败轮次保留检索排序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/apps/dashboard-api/src/lib/reranker.ts#L79",
+          "summary": "服务从环境读取凭据，无凭据返回 null；显式创建 Jev 重排器。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/apps/dashboard-api/src/routes/intel.ts#L1780",
+          "summary": "代码搜索路由将检索候选交给重排器并处理失败结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/README.md#L266",
+          "summary": "上游配置及用途说明；运行和性能声明未由市场复现，README 与源码差异见本条 requires。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/README.md"
     }
   ]
 }

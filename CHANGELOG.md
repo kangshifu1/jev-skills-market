@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-28 — daily external discovery
+
+- Add Sensemaking, Sift Light and Cortex Hub as 3 external tools from 375
+  candidates; catalog total 279. Pin their actual Jev request and caller paths.
+- Record opt-in configuration, hosted-provider selection, partial-failure behavior
+  and source/documentation differences without treating source review as runtime tests.
+- Preserve the package and GitHub license values for Sift Light, all existing
+  entries, routing, release tags and the independent computer-use repository.
+
 ## Unreleased — 2026-10-27 — daily external discovery
 
 - Add Pi Web Access's optional Jev relevance judge and VideoAdGuard's TypeSafe
