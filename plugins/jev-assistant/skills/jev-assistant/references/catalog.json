@@ -13059,6 +13059,221 @@
         }
       ],
       "usageUrl": "https://github.com/lktiep/cortex-hub/blob/5aad2fd352945856ddccc05ddef3c9590248edf8/README.md"
+    },
+    {
+      "repository": "antiburn/antiburn",
+      "id": "antiburn-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Antiburn 的可选模型检查通过 Jev 判断编码会话中的命名检查项；本地代码负责事件、启用状态、预算和结果记录。",
+      "requires": [
+        "需完整 Antiburn 桌面应用及检查配置；保存 Jev 连接后仍需手动开启 Run checks，普通本地检查不因此自动联网。",
+        "固定源码从已选连接构造 TypeSafe 判断器，发送带命名问题的请求；Ollama、Cloudflare 和自定义提供商另有分支，不统一标为 Jev。",
+        "启用的模型检查可能向提供商发送选中的公开消息、工具结果与当前文件片段；这里未安装应用、读取会话/凭据、启用检查或测量节省量。"
+      ],
+      "usageNote": "按固定 README 配置完整桌面应用、Jev 连接和模型检查开关。install 为 null；应用内其他修复能力、会话兼容性和成本效果未测试。",
+      "distribution": "external",
+      "url": "https://github.com/antiburn/antiburn",
+      "version": "df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7",
+      "revision": "df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-30",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1331676909,
+        "owner": "antiburn",
+        "stars": 213,
+        "createdAt": "2026-08-12T06:11:00Z",
+        "pushedAt": "2026-10-29T23:33:53Z",
+        "updatedAt": "2026-10-29T23:23:26Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-29T23:59:26.069646+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/antiburn/antiburn/blob/df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7/apps/desktop/src-tauri/src/jev/config.rs#L8",
+          "summary": "TypeSafe 官方端点由协议、主机名与 System One 路径构造。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antiburn/antiburn/blob/df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7/apps/desktop/src-tauri/src/jev/dispatch.rs#L32",
+          "summary": "已选 Jev 连接实际构造 TypeSafe HTTP 客户端，其他提供商走独立分支。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antiburn/antiburn/blob/df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7/apps/desktop/src-tauri/src/jev/client.rs#L161",
+          "summary": "请求构建器通过 Bearer 认证 POST JSON；上层等待发送并校验响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antiburn/antiburn/blob/df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7/apps/desktop/src-tauri/src/installed_checks/execution.rs#L207",
+          "summary": "已安装检查按当前连接快照构造判断器，并附加取消和状态校验。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antiburn/antiburn/blob/df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7/apps/desktop/src-tauri/src/jev/decision_evaluator.rs#L249",
+          "summary": "命名决策块反序列化为请求后交给实际传输与结果处理。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antiburn/antiburn/blob/df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7/apps/desktop/src-tauri/src/installed_checks.rs#L2343",
+          "summary": "桌面运行时将判断器安装进检查宿主。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antiburn/antiburn/blob/df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7/README.md#L61",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/antiburn/antiburn/blob/df3e2873d2df31c6b28ee3b59c0dcabd371bb9d7/README.md"
+    },
+    {
+      "repository": "duriantaco/skylos",
+      "id": "skylos-jev",
+      "kind": "tool",
+      "category": "testing",
+      "description": "Skylos 的可选 Jev 死代码复核以 Choice 判断静态候选是否被引用，并区分 Jev 单独判断与不确定时交给 LLM 的流程。",
+      "requires": [
+        "需完整 Skylos Python 环境；显式选择 dead-code-review 的 jev 或 jev-llm 模式，并通过进程环境提供 TYPESAFE_API_KEY；固定实现使用 jev-1.13.0。",
+        "Jev 只判断已有静态候选；完整项目快照需满足源码中的 64,000 字节 state 上限与文件边界。这个文件检查不是密钥扫描器，项目源码可能发送给 TypeSafe。",
+        "Jev 单独模式无法判断时保留未验证发现，组合模式转给 LLM；Jev 本身不授权自动删除。阈值、扫描准确率和上游基准未复现，未扫描用户项目或调用任何模型。"
+      ],
+      "usageNote": "按固定使用文档选择完整 CLI 的复核模式；install 为 null。这里只登记死代码复核路径，不把其他 AI 审核入口、自动修复或基准宣称作为本市场实测。",
+      "distribution": "external",
+      "url": "https://github.com/duriantaco/skylos",
+      "version": "edff5662d2c7610da06f87b306981567b9c86bbd",
+      "revision": "edff5662d2c7610da06f87b306981567b9c86bbd",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-30",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 974288191,
+        "owner": "duriantaco",
+        "stars": 857,
+        "createdAt": "2025-04-28T14:41:35Z",
+        "pushedAt": "2026-10-29T13:33:31Z",
+        "updatedAt": "2026-10-29T22:09:50Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-29T23:59:31.292147+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/duriantaco/skylos/blob/edff5662d2c7610da06f87b306981567b9c86bbd/skylos/benchmarks/_jev_dead_code_dataset.py#L28",
+          "summary": "固定官方端点、jev-1.13.0 模型及 64,000 字节 state 上限。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/duriantaco/skylos/blob/edff5662d2c7610da06f87b306981567b9c86bbd/skylos/benchmarks/jev_dead_code.py#L130",
+          "summary": "HTTP 传输向固定 Jev 端点发送 JSON，请求失败不自动重试。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/duriantaco/skylos/blob/edff5662d2c7610da06f87b306981567b9c86bbd/skylos/benchmarks/jev_dead_code.py#L184",
+          "summary": "真实调用入口用进程凭据构造 Bearer 认证并解码响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/duriantaco/skylos/blob/edff5662d2c7610da06f87b306981567b9c86bbd/skylos/llm/jev_triage.py#L98",
+          "summary": "复核器读取有界完整源码、构造候选问题并实际调用 Jev；低置信和不可用状态分别保留。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/duriantaco/skylos/blob/edff5662d2c7610da06f87b306981567b9c86bbd/skylos/llm/verify_orchestrator.py#L2767",
+          "summary": "验证流程实际启用 Jev 前置/判断阶段，并按 jev_only 选择是否进入 LLM。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/duriantaco/skylos/blob/edff5662d2c7610da06f87b306981567b9c86bbd/skylos/llm/verification/jev_precheck.py#L24",
+          "summary": "阶段代码消费判断并区分单独模式、组合模式以及不允许自动修复的结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/duriantaco/skylos/blob/edff5662d2c7610da06f87b306981567b9c86bbd/docs/dead-code-review.md#L3",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/duriantaco/skylos/blob/edff5662d2c7610da06f87b306981567b9c86bbd/docs/dead-code-review.md"
+    },
+    {
+      "repository": "OpenRouterTeam/skills",
+      "id": "openrouter-decisions",
+      "kind": "skill",
+      "path": "skills/openrouter-decisions",
+      "category": "development",
+      "description": "OpenRouter Decisions Skill 提供决策问题设计及 HTTP/SDK 调用脚本，参考示例明确使用 TypeSafe Jev，并从 OpenRouter 动态目录选择模型。",
+      "license": null,
+      "licenseStatus": "GitHub API returns no license; no LICENSE/COPYING file found in the pinned tree and the selected Skill/script package declares no license. Link and original summary only; no redistribution permission inferred.",
+      "requires": [
+        "已确认独立 SKILL.md 名称与路径；运行附带 TypeScript 脚本需按上游说明安装依赖，并在环境中提供 OPENROUTER_API_KEY。",
+        "脚本未固定默认 Jev 型号，模型来自显式参数、请求或 DECISION_MODEL；只有选择实际 Jev 模型时才能称作 Jev 调用。示例中的模型名不保证当前账户可用。",
+        "查询目录会联网，decide 发送请求 state/questions，compare 会对多个模型发起调用并可能计费。未运行安装器、脚本、目录查询或模型请求；未验证图片、Box、延迟或正确率。"
+      ],
+      "usageNote": "市场生成固定提交的 Skills CLI 发现命令；这是安装指引而非已安装证明。使用前按固定 README 审阅依赖、许可及提供商配置，模型与阈值需独立验证。",
+      "distribution": "external",
+      "url": "https://github.com/OpenRouterTeam/skills",
+      "version": "fc4b230a5fce0470ccae3a286d8535dd4f8e45fe",
+      "revision": "fc4b230a5fce0470ccae3a286d8535dd4f8e45fe",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-30",
+      "github": {
+        "repositoryId": 1146875291,
+        "owner": "OpenRouterTeam",
+        "stars": 309,
+        "createdAt": "2026-01-31T20:27:41Z",
+        "pushedAt": "2026-10-29T17:03:23Z",
+        "updatedAt": "2026-10-29T16:23:51Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-29T23:59:46.209664+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/OpenRouterTeam/skills/blob/fc4b230a5fce0470ccae3a286d8535dd4f8e45fe/skills/openrouter-decisions/SKILL.md#L1",
+          "summary": "frontmatter 确认可独立发现的 openrouter-decisions Skill，引用均在该技能目录内。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/OpenRouterTeam/skills/blob/fc4b230a5fce0470ccae3a286d8535dd4f8e45fe/skills/openrouter-decisions/references/decisions-api.md#L3",
+          "summary": "固定 API 指引列出 Decisions 端点和明确的 TypeSafe Jev 请求示例。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/OpenRouterTeam/skills/blob/fc4b230a5fce0470ccae3a286d8535dd4f8e45fe/skills/openrouter-decisions/scripts/lib.ts#L288",
+          "summary": "HTTP 路径携带环境凭据和结构化请求调用 OpenRouter Decisions API。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/OpenRouterTeam/skills/blob/fc4b230a5fce0470ccae3a286d8535dd4f8e45fe/skills/openrouter-decisions/scripts/lib.ts#L307",
+          "summary": "SDK 路径调用同一 Decisions 操作并返回结构化结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/OpenRouterTeam/skills/blob/fc4b230a5fce0470ccae3a286d8535dd4f8e45fe/skills/openrouter-decisions/scripts/decide.ts#L55",
+          "summary": "CLI 实际读取请求与凭据，选择单模型或遍历目录的比较路径。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/OpenRouterTeam/skills/blob/fc4b230a5fce0470ccae3a286d8535dd4f8e45fe/skills/openrouter-decisions/README.md#L23",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/OpenRouterTeam/skills/blob/fc4b230a5fce0470ccae3a286d8535dd4f8e45fe/skills/openrouter-decisions/README.md"
     }
   ]
 }

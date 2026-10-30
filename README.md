@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-30（main）
+
+本轮搜索 378 个去重候选，新增 **2 个外部工具、1 个独立 Skill**，目录共 **282 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-30.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [antiburn/antiburn](https://github.com/antiburn/antiburn) | 213 | Antiburn 的可选模型检查通过 Jev 判断编码会话中的命名检查项；本地代码负责事件、启用状态、预算和结果记录。 |
+| [duriantaco/skylos](https://github.com/duriantaco/skylos) | 857 | Skylos 的可选 Jev 死代码复核以 Choice 判断静态候选是否被引用，并区分 Jev 单独判断与不确定时交给 LLM 的流程。 |
+| [OpenRouterTeam/skills](https://github.com/OpenRouterTeam/skills) | 309 | OpenRouter Decisions Skill 提供决策问题设计及 HTTP/SDK 调用脚本，参考示例明确使用 TypeSafe Jev，并从 OpenRouter 动态目录选择模型。 |
+
+Antiburn 和 Skylos 返回 `install: null`；OpenRouter 条目提供固定提交的 Skill 发现命令，
+但其仓库未发现许可证声明。模型检查需显式配置；源码、会话内容发送范围及自动修复边界见审核记录。
+
 ## 每日发现：2026-10-28（main）
 
 本轮搜索 375 个去重候选，新增 **3 个外部工具**，目录共 **279 项**。

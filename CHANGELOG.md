@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-30 — daily external discovery
+
+- Add Antiburn and Skylos as external tools, plus the standalone OpenRouter
+  Decisions Skill: 3 additions from 378 candidates, catalog total 282.
+- Pin actual Jev request/caller paths, opt-in and data-sending boundaries,
+  model selection and untested status; record the Skill's unidentified license.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-10-28 — daily external discovery
 
 - Add Sensemaking, Sift Light and Cortex Hub as 3 external tools from 375
