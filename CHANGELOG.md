@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-31 — daily external discovery
+
+- Add Switch and Advocaat as 2 external tools from 380 candidates, catalog total 284.
+- Pin the pi-ai classifier adapter and task loop, direct System One request path,
+  state/question mapping and separate gateway confidence reconstruction.
+- Record runtime dependencies and untested provider/model behavior.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-10-30 — daily external discovery
 
 - Add Antiburn and Skylos as external tools, plus the standalone OpenRouter

@@ -13274,6 +13274,147 @@
         }
       ],
       "usageUrl": "https://github.com/OpenRouterTeam/skills/blob/fc4b230a5fce0470ccae3a286d8535dd4f8e45fe/skills/openrouter-decisions/README.md"
+    },
+    {
+      "repository": "osolmaz/switch",
+      "id": "switch-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Switch 为决策模型提供有限步骤的任务循环，通过 pi-ai 的分类模型注册表调用 Jev，由代码定义问题、候选操作和状态转换。",
+      "requires": [
+        "需 Node.js >=22.18、完整 Switch 包及其 pi-ai 依赖；使用方提供领域状态机和模型注册表，示例显式选择 typesafe/jev-latest。",
+        "Jev 的 HTTP 传输与凭据发现交由 pi-ai；Switch 适配器实际调用 registry.classify 并保留错误、用量和耗时结果，不将其他分类模型统一标为 Jev。",
+        "领域视图、问题及可选图片会交给所选提供商；操作执行由领域代码负责，模型选择不构成执行授权。本轮未安装框架、运行示例或调用模型，重试成本、效果与图片能力未实测。"
+      ],
+      "usageNote": "按固定 README 作为框架接入领域代码与 pi-ai；install 为 null，不生成通用 Skill 安装命令。仅确认 Jev 适配链路，不将示例成绩视为市场实测。",
+      "distribution": "external",
+      "url": "https://github.com/osolmaz/switch",
+      "version": "7c5b6b9bae55e9e7cda3efe310f585187eb7c717",
+      "revision": "7c5b6b9bae55e9e7cda3efe310f585187eb7c717",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-31",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1433269267,
+        "owner": "osolmaz",
+        "stars": 311,
+        "createdAt": "2026-10-25T14:12:42Z",
+        "pushedAt": "2026-10-30T05:12:52Z",
+        "updatedAt": "2026-10-30T23:49:34Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-31T00:01:32.568780+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/osolmaz/switch/blob/7c5b6b9bae55e9e7cda3efe310f585187eb7c717/src/models/pi-ai.ts#L42",
+          "summary": "适配器查找指定 provider/id 分类模型，并实际调用注册表的 classify。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/osolmaz/switch/blob/7c5b6b9bae55e9e7cda3efe310f585187eb7c717/src/models/pi-ai.ts#L65",
+          "summary": "请求映射把领域状态、问题及可选图片交给 pi-ai。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/osolmaz/switch/blob/7c5b6b9bae55e9e7cda3efe310f585187eb7c717/src/models/pi-ai.ts#L86",
+          "summary": "返回保留模型答案、错误、用量和耗时，并识别超长请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/osolmaz/switch/blob/7c5b6b9bae55e9e7cda3efe310f585187eb7c717/src/core/loop.ts#L321",
+          "summary": "任务循环实际调用 decider；超长时在有限次数内缩小视图重试。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/osolmaz/switch/blob/7c5b6b9bae55e9e7cda3efe310f585187eb7c717/package.json#L21",
+          "summary": "固定包声明 MIT、Node.js 版本要求及 pi-ai 依赖。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/osolmaz/switch/blob/7c5b6b9bae55e9e7cda3efe310f585187eb7c717/README.md#L172",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/osolmaz/switch/blob/7c5b6b9bae55e9e7cda3efe310f585187eb7c717/README.md"
+    },
+    {
+      "repository": "pithings/advocaat",
+      "id": "advocaat-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Advocaat 是 Jev 的 TypeScript 客户端封装，将模板问题和结构化状态组成一次 System One 请求，并把 Noul、Choice、Score 结果映射为调用方可用的值。",
+      "requires": [
+        "需支持 fetch 的 JavaScript/TypeScript 运行时及 Advocaat 包；服务端通过配置或 TYPESAFE_API_KEY 提供凭据，直连默认使用 TypeSafe 官方端点与 jev-latest。",
+        "另含 Vercel AI Gateway 分支及凭据优先级；该分支在本地重建 confidence，不能把上游的等价性说明当作本次验证结论。",
+        "调用会发送传入状态及模板插值内容；客户端不提供自动重试或日志。未安装包、读取任何密钥或发送模型请求，运行时、网关兼容性及阈值效果未验证。"
+      ],
+      "usageNote": "按固定 README 使用完整客户端包，保持凭据在服务端；install 为 null。仓库中的辅助 Skill 不替代 SDK 运行时，本条按客户端工具登记。",
+      "distribution": "external",
+      "url": "https://github.com/pithings/advocaat",
+      "version": "bc46287fc1102b95852a81d679c6e34a2c44f4a2",
+      "revision": "bc46287fc1102b95852a81d679c6e34a2c44f4a2",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-10-31",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1373650485,
+        "owner": "pithings",
+        "stars": 101,
+        "createdAt": "2026-09-16T21:23:24Z",
+        "pushedAt": "2026-09-18T17:55:50Z",
+        "updatedAt": "2026-10-30T03:22:53Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-31T00:02:17.831145+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/src/api.ts#L199",
+          "summary": "客户端解析直连与网关提供商、凭据和模型配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/src/api.ts#L226",
+          "summary": "HTTP 请求以 Bearer 认证发送 JSON，并处理非成功响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/src/api.ts#L254",
+          "summary": "直连 systemOne 实际 POST 到 /v1/systemone，网关走单独的转换分支。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/src/ask.ts#L90",
+          "summary": "问题转换及模板插值状态合并后实际调用 systemOne，再映射答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/src/api.ts#L331",
+          "summary": "网关返回值单独映射，confidence 由客户端公式计算。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/package.json#L1",
+          "summary": "固定包元数据声明名称、版本与 MIT 许可证。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/README.md#L23",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/README.md"
     }
   ]
 }

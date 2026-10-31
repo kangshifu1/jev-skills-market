@@ -73,6 +73,23 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-10-31（main）
+
+本轮搜索 380 个去重候选，新增 **2 个外部工具**，目录共 **284 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-10-31.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [osolmaz/switch](https://github.com/osolmaz/switch) | 311 | Switch 为决策模型提供有限步骤的任务循环，通过 pi-ai 的分类模型注册表调用 Jev，由代码定义问题、候选操作和状态转换。 |
+| [pithings/advocaat](https://github.com/pithings/advocaat) | 101 | Advocaat 是 Jev 的 TypeScript 客户端封装，将模板问题和结构化状态组成一次 System One 请求，并把 Noul、Choice、Score 结果映射为调用方可用的值。 |
+
+两项均返回 `install: null`，保持独立运行时。Switch 通过 pi-ai 调用选定模型；
+Advocaat 的直连与网关分支分开记录，网关 confidence 的本地计算未实测。
+
 ## 每日发现：2026-10-30（main）
 
 本轮搜索 378 个去重候选，新增 **2 个外部工具、1 个独立 Skill**，目录共 **282 项**。
