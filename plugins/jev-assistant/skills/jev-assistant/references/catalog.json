@@ -13415,6 +13415,288 @@
         }
       ],
       "usageUrl": "https://github.com/pithings/advocaat/blob/bc46287fc1102b95852a81d679c6e34a2c44f4a2/README.md"
+    },
+    {
+      "repository": "higress-group/HiRoute",
+      "id": "hiroute-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "HiRoute 的可选 Jev 决策扩展通过 OpenRouter Decisions 接口调用 Jev，判断任务类别、难度和前一阶段表现，由扩展代码选择 regular 或 primary 模型组。",
+      "requires": [
+        "需完整 HiRoute 配置和 Python >=3.12 的 Jev 决策扩展；源码默认使用 OpenRouter 的 typesafe/jev-1.13，提供商密钥由扩展主机上的独立文件读取。",
+        "HiRoute 到扩展的 /v1/decisions 请求与扩展到提供商的请求是两个不同边界；本条核实默认 OpenRouter Jev 路径，不把所有兼容提供商都标为 Jev。",
+        "发送当前输入、可见历史和路由相关上下文；扩展限制请求大小与总超时，单次上游调用不自动重试。未部署扩展、读取会话或密钥、调用模型；阈值、节省量和上游研究成绩未复现。"
+      ],
+      "usageNote": "按固定文档配置完整 HiRoute 自定义扩展；install 为 null。只核实该扩展，不将仓库中其他内置连接、Computer Use 或实验能力视为已测试。",
+      "distribution": "external",
+      "url": "https://github.com/higress-group/HiRoute",
+      "version": "8c698df62424901802262bb98d6b01c6fc702743",
+      "revision": "8c698df62424901802262bb98d6b01c6fc702743",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-01",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1366906256,
+        "owner": "higress-group",
+        "stars": 367,
+        "createdAt": "2026-09-12T03:28:58Z",
+        "pushedAt": "2026-10-31T23:56:15Z",
+        "updatedAt": "2026-10-31T16:21:23Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-31T23:57:00.042606+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/higress-group/HiRoute/blob/8c698df62424901802262bb98d6b01c6fc702743/decision-extensions/extensions/jev-decider/jev_decider/settings.py#L12",
+          "summary": "默认模型和端点明确为 OpenRouter 上的 TypeSafe Jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/higress-group/HiRoute/blob/8c698df62424901802262bb98d6b01c6fc702743/decision-extensions/extensions/jev-decider/jev_decider/settings.py#L46",
+          "summary": "部署配置读取独立凭据文件并校验超时、并发和请求上限。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/higress-group/HiRoute/blob/8c698df62424901802262bb98d6b01c6fc702743/decision-extensions/extensions/jev-decider/jev_decider/decision.py#L27",
+          "summary": "请求构造器将任务类别、难度和阶段评估拆为具名 Choice/Score 问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/higress-group/HiRoute/blob/8c698df62424901802262bb98d6b01c6fc702743/decision-extensions/extensions/jev-decider/jev_decider/server.py#L72",
+          "summary": "HTTP 服务实际发送带 Bearer 认证的提供商请求，再消费响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/higress-group/HiRoute/blob/8c698df62424901802262bb98d6b01c6fc702743/decision-extensions/extensions/jev-decider/jev_decider/decision.py#L78",
+          "summary": "扩展代码按所选类别的概率和阶段评分决定模型组，处理无效判断。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/higress-group/HiRoute/blob/8c698df62424901802262bb98d6b01c6fc702743/decision-extensions/extensions/jev-decider/README.md#L33",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/higress-group/HiRoute/blob/8c698df62424901802262bb98d6b01c6fc702743/decision-extensions/extensions/jev-decider/README.md"
+    },
+    {
+      "repository": "kennethwolters/litelm",
+      "id": "litelm-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "LiteLM 为 TypeSafe Jev 提供同步 systemone 与异步 asystemone 原生决策接口，验证结构化请求和回答，保留提供商分布与可选用量。",
+      "requires": [
+        "需 Python >=3.10 及 LiteLM 依赖；使用 typesafe/模型名选择直连 TypeSafe 路径，TYPESAFE_API_KEY 在服务进程环境提供，可显式配置基址。",
+        "原生决策接口独立于聊天补全，不调用 completion 回调；请求/响应有大小限制，重试默认关闭，错误与不完整回答按客户端规则处理。",
+        "请求 state 与 questions 会交给所选提供商；模型置信度和概率不等于应用正确率或执行权限。未安装包、配置提供商、运行上游测试或调用模型，兼容性与重试效果未实测。"
+      ],
+      "usageNote": "按固定 README 安装完整 Python 客户端并显式选择模型；install 为 null。其他提供商分支与缺失用量的处理不等于所有模型均为 Jev，也不推算未返回的计费信息。",
+      "distribution": "external",
+      "url": "https://github.com/kennethwolters/litelm",
+      "version": "eb6834719ef51af63f9f72fcb299042b690aee43",
+      "revision": "eb6834719ef51af63f9f72fcb299042b690aee43",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-01",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1181122228,
+        "owner": "kennethwolters",
+        "stars": 238,
+        "createdAt": "2026-03-13T19:18:37Z",
+        "pushedAt": "2026-10-31T19:48:17Z",
+        "updatedAt": "2026-10-31T12:37:06Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-10-31T23:57:04.634963+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/kennethwolters/litelm/blob/eb6834719ef51af63f9f72fcb299042b690aee43/litelm/_systemone.py#L44",
+          "summary": "按 provider/model 验证模型、构建问题对象并选择 TypeSafe 原生端点。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kennethwolters/litelm/blob/eb6834719ef51af63f9f72fcb299042b690aee43/litelm/_systemone.py#L99",
+          "summary": "凭据从显式配置或提供商环境读取，并构造认证请求头。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kennethwolters/litelm/blob/eb6834719ef51af63f9f72fcb299042b690aee43/litelm/_systemone.py#L221",
+          "summary": "同步 systemone 实际发送 POST、限制响应大小并解码返回值。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kennethwolters/litelm/blob/eb6834719ef51af63f9f72fcb299042b690aee43/litelm/_systemone.py#L285",
+          "summary": "异步 asystemone 使用相同原生接口和验证路径。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kennethwolters/litelm/blob/eb6834719ef51af63f9f72fcb299042b690aee43/litelm/__init__.py#L39",
+          "summary": "公开包导出 systemone、asystemone 与能力查询函数。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kennethwolters/litelm/blob/eb6834719ef51af63f9f72fcb299042b690aee43/README.md#L93",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/kennethwolters/litelm/blob/eb6834719ef51af63f9f72fcb299042b690aee43/README.md"
+    },
+    {
+      "repository": "future-agi/traceAI",
+      "id": "traceai-typesafe",
+      "kind": "tool",
+      "category": "development",
+      "description": "traceAI 的 TypeSafe Python 插桩为现有同步和异步 system_one 调用添加 OpenTelemetry 追踪，记录模型、结构化判断、用量与错误；自身不是新的模型客户端。",
+      "requires": [
+        "需 Python >=3.10,<3.14、traceAI-typesafe、typesafe-sdk >=0.7.0,<1 及已配置的 tracer/exporter；调用仍由 TypeSafe SDK 执行。",
+        "默认采集 state、问题和回答内容；FI_HIDE_INPUTS/FI_HIDE_OUTPUTS 可关闭相应内容，但问题名、类型、数值答案和元数据仍可能记录，应按固定文档配置遥测目的地与内容策略。",
+        "插桩转发原调用及异常，不额外增加模型重试。未安装插桩、读取或导出任何会话、运行 SDK 或发送遥测；上游脱敏保证和宿主兼容性未实测。"
+      ],
+      "usageNote": "按固定子包 README 配置已有 SDK 应用的追踪；install 为 null。目录仅登记 TypeSafe 插桩，不将整个 traceAI 框架或评价器统一声明为 Jev 能力。",
+      "distribution": "external",
+      "url": "https://github.com/future-agi/traceAI",
+      "version": "703317678879dc54e4c3d85c722c8892a80b7fbe",
+      "revision": "703317678879dc54e4c3d85c722c8892a80b7fbe",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-01",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 966544022,
+        "owner": "future-agi",
+        "stars": 265,
+        "createdAt": "2025-04-15T04:57:02Z",
+        "pushedAt": "2026-10-31T23:56:59Z",
+        "updatedAt": "2026-10-31T11:42:56Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-10-31T23:57:05.924488+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/future-agi/traceAI/blob/703317678879dc54e4c3d85c722c8892a80b7fbe/python/frameworks/typesafe/traceai_typesafe/__init__.py#L30",
+          "summary": "目标列表限定 TypeSafe 同步和异步客户端的 system_one 方法。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/future-agi/traceAI/blob/703317678879dc54e4c3d85c722c8892a80b7fbe/python/frameworks/typesafe/traceai_typesafe/__init__.py#L54",
+          "summary": "instrument 实际安装包装器并保留可恢复的原方法。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/future-agi/traceAI/blob/703317678879dc54e4c3d85c722c8892a80b7fbe/python/frameworks/typesafe/traceai_typesafe/_wrappers.py#L649",
+          "summary": "同步包装器执行原方法，记录成功、错误及取消后保留结果或异常。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/future-agi/traceAI/blob/703317678879dc54e4c3d85c722c8892a80b7fbe/python/frameworks/typesafe/traceai_typesafe/_wrappers.py#L678",
+          "summary": "异步包装器 await 原 SDK 方法并记录同样的调用生命周期。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/future-agi/traceAI/blob/703317678879dc54e4c3d85c722c8892a80b7fbe/python/frameworks/typesafe/examples/system_one.py#L13",
+          "summary": "上游示例将插桩接到真实 TypeSafeClient.system_one 调用。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/future-agi/traceAI/blob/703317678879dc54e4c3d85c722c8892a80b7fbe/python/frameworks/typesafe/README.md#L57",
+          "summary": "隐私说明明确内容默认采集及隐藏输入/输出后的剩余记录字段。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/future-agi/traceAI/blob/703317678879dc54e4c3d85c722c8892a80b7fbe/python/frameworks/typesafe/README.md#L23",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/future-agi/traceAI/blob/703317678879dc54e4c3d85c722c8892a80b7fbe/python/frameworks/typesafe/README.md"
+    },
+    {
+      "repository": "ellipsis-dev/blink",
+      "id": "blink-jev",
+      "kind": "tool",
+      "category": "development",
+      "license": null,
+      "licenseStatus": "GitHub API returns no license; no LICENSE/COPYING file exists in the pinned tree and package.json declares no license. Link and original summary only; no redistribution permission inferred.",
+      "description": "Blink 使用 Jev Choice 为目录和文件名候选分配概率，再由代码分配多个 walker 沿文件树搜索；最终排名是到达文件的 walker 占比。",
+      "requires": [
+        "需 Bun >=1.3.14、完整 Blink 仓库及 TypeSafe JavaScript SDK，凭据通过进程环境提供；固定源码使用 jev-latest。",
+        "模型请求包含查询、相对目录和直接子项名称/类型；该路径按名称导航，不读取文件正文来作语义验证。多层遍历会产生多次模型调用。",
+        "结果占比不是文件相关性的校准置信度；日志和搜索记录可能含查询、路径及模型返回。未安装、遍历用户代码、运行示例或调用模型，搜索质量、价格与延迟未验证。"
+      ],
+      "usageNote": "按固定 README 审阅完整 CLI 的依赖与使用方式；install 为 null。未发现许可证，保持链接与原创说明，不复制源码或生成通用 Skill 安装命令。",
+      "distribution": "external",
+      "url": "https://github.com/ellipsis-dev/blink",
+      "version": "a621ede75649303a933828c18c27ad800bb43ef0",
+      "revision": "a621ede75649303a933828c18c27ad800bb43ef0",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-01",
+      "github": {
+        "repositoryId": 1373162520,
+        "owner": "ellipsis-dev",
+        "stars": 101,
+        "createdAt": "2026-09-16T14:30:49Z",
+        "pushedAt": "2026-09-16T17:00:30Z",
+        "updatedAt": "2026-10-31T04:40:18Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-10-31T23:57:13.443532+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/src/search.ts#L12",
+          "summary": "每一步枚举目录候选并构造相对路径状态，排除配置中的忽略项。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/src/search.ts#L25",
+          "summary": "创建官方 TypeSafeClient，以 jev-latest 和 Choice 问题实际调用 systemOne。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/src/walkers.ts#L34",
+          "summary": "递归循环实际调用搜索步骤并根据概率分配 walker。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/src/walkers.ts#L75",
+          "summary": "到达文件后记录 walker 数，按占比汇总最终结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/src/cli.ts#L21",
+          "summary": "CLI 在单步搜索和递归 walker 搜索间选择执行入口。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/package.json#L5",
+          "summary": "固定包使用 Bun 与 TypeSafe SDK，但没有许可证声明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/README.md#L11",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/README.md"
     }
   ]
 }

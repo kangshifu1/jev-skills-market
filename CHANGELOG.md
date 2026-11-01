@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-11-01 — daily external discovery
+
+- Add HiRoute, LiteLM, traceAI TypeSafe instrumentation and Blink as 4 external
+  tools from 385 candidates; catalog total 288.
+- Pin provider calls and wrapper/walker chains; record trace content defaults,
+  Blink's unidentified license, separate provider boundaries and untested status.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-10-31 — daily external discovery
 
 - Add Switch and Advocaat as 2 external tools from 380 candidates, catalog total 284.

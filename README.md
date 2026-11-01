@@ -73,6 +73,25 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-01（main）
+
+本轮搜索 385 个去重候选，新增 **4 个外部工具**，目录共 **288 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-11-01.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [higress-group/HiRoute](https://github.com/higress-group/HiRoute) | 367 | HiRoute 的可选 Jev 决策扩展通过 OpenRouter Decisions 接口调用 Jev，判断任务类别、难度和前一阶段表现，由扩展代码选择 regular 或 primary 模型组。 |
+| [kennethwolters/litelm](https://github.com/kennethwolters/litelm) | 238 | LiteLM 为 TypeSafe Jev 提供同步 systemone 与异步 asystemone 原生决策接口，验证结构化请求和回答，保留提供商分布与可选用量。 |
+| [future-agi/traceAI](https://github.com/future-agi/traceAI) | 265 | traceAI 的 TypeSafe Python 插桩为现有同步和异步 system_one 调用添加 OpenTelemetry 追踪，记录模型、结构化判断、用量与错误；自身不是新的模型客户端。 |
+| [ellipsis-dev/blink](https://github.com/ellipsis-dev/blink) | 101 | Blink 使用 Jev Choice 为目录和文件名候选分配概率，再由代码分配多个 walker 沿文件树搜索；最终排名是到达文件的 walker 占比。 |
+
+四项均返回 `install: null`。traceAI 默认采集请求与回答内容，Blink 未发现许可证声明；
+各项数据范围、依赖、阈值和未测边界见审核记录。
+
 ## 每日发现：2026-10-31（main）
 
 本轮搜索 380 个去重候选，新增 **2 个外部工具**，目录共 **284 项**。
