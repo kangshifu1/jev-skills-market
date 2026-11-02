@@ -73,6 +73,23 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-02（main）
+
+本轮搜索 385 个去重候选，新增 **2 个外部工具**，目录共 **290 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-11-02.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [HelpCode-ai/anythingmcp](https://github.com/HelpCode-ai/anythingmcp) | 771 | AnythingMCP 的 Jev 连接器把 Noul、Choice、Score 和批量具名问题映射到 TypeSafe 官方 REST 接口，并通过实际 MCP 执行引擎返回结构化判断。 |
+| [hasso5703/alzeo](https://github.com/hasso5703/alzeo) | 245 | Alzeo 的独立基准与协议对比脚本可显式调用 TypeSafe 托管 Jev，并与本地决策端点比较；本条登记评价入口，不把其本地 Qwen 模型视为 Jev。 |
+
+两项均返回 `install: null`。AnythingMCP 的网关与 Alzeo 的测试运行时保持独立；
+Alzeo 仅按托管 Jev 评价入口登记，本地兼容模型不等同于 Jev，历史成绩未复现。
+
 ## 每日发现：2026-11-01（main）
 
 本轮搜索 385 个去重候选，新增 **4 个外部工具**，目录共 **288 项**。

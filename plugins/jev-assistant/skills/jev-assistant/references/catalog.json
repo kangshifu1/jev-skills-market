@@ -13697,6 +13697,185 @@
         }
       ],
       "usageUrl": "https://github.com/ellipsis-dev/blink/blob/a621ede75649303a933828c18c27ad800bb43ef0/README.md"
+    },
+    {
+      "repository": "HelpCode-ai/anythingmcp",
+      "id": "anythingmcp-jev",
+      "kind": "tool",
+      "category": "automation",
+      "license": "AGPL-3.0-only",
+      "licenseStatus": "GitHub API reports AGPL-3.0; pinned root and backend package manifests declare AGPL-3.0-only, with a matching root license text. The README identifies separately licensed ee/ code; this entry covers the Jev connector. Upstream terms apply; link and original summary only.",
+      "description": "AnythingMCP 的 Jev 连接器把 Noul、Choice、Score 和批量具名问题映射到 TypeSafe 官方 REST 接口，并通过实际 MCP 执行引擎返回结构化判断。",
+      "requires": [
+        "需完整 AnythingMCP 网关及依赖，源码要求 Node.js >=22.15；选择 Jev 连接器并配置 TYPESAFE_API_KEY，不能把目录登记视为已部署。",
+        "目录加载器导入 Jev 定义，安装服务创建工具，运行时填充参数默认值并通过 REST 引擎发送 Bearer 认证请求；安装探测会调用模型列表接口，静态 playbook 本身不调用模型。",
+        "调用会把传入 state 和 questions 发给 TypeSafe。未安装网关、读取业务数据或凭据、运行探测或调用模型；内置 playbook 的价格、时延、模型上限和其他连接器能力未作为市场实测。"
+      ],
+      "usageNote": "按固定 README 配置完整网关与 Jev 连接器；install 为 null。本条只登记已核实的 Jev 工具链，不覆盖其他连接器、企业版功能或平台整体安全性。",
+      "distribution": "external",
+      "url": "https://github.com/HelpCode-ai/anythingmcp",
+      "version": "b3350deed040300f5a932e50cd10e2b24784ec5c",
+      "revision": "b3350deed040300f5a932e50cd10e2b24784ec5c",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-02",
+      "github": {
+        "repositoryId": 1169252093,
+        "owner": "HelpCode-ai",
+        "stars": 771,
+        "createdAt": "2026-02-28T12:01:26Z",
+        "pushedAt": "2026-11-01T18:56:21Z",
+        "updatedAt": "2026-11-01T23:37:53Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "AGPL-3.0",
+        "checkedAt": "2026-11-02T00:00:13.767482+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/adapters/intl/jev.json#L22",
+          "summary": "连接器指定 TypeSafe 官方基址和 Bearer 凭据模板。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/adapters/intl/jev.json#L46",
+          "summary": "Noul 工具定义请求和响应映射，默认模型为 jev-latest。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/adapters/intl/jev.json#L215",
+          "summary": "jev_ask 将 state、模型和具名问题对象传入原生 System One 请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/adapters/catalog.ts#L337",
+          "summary": "目录实际导入 Jev JSON；同文件的适配器数组注册该连接器。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/adapters/adapters.service.ts#L850",
+          "summary": "安装服务将适配器中的参数、端点和返回映射保存为 MCP 工具。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/mcp-server/dynamic-mcp-tools.ts#L592",
+          "summary": "运行时填充 JSON Schema 默认值后交给实际执行引擎。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/mcp-server/dynamic-mcp-tools.ts#L1444",
+          "summary": "REST 类型工具被分派到 RestEngine。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/connectors/engines/rest.engine.ts#L759",
+          "summary": "REST 引擎实际调用 outboundRequest 并执行其有限重试策略。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/packages/backend/src/connectors/engines/rest.engine.ts#L841",
+          "summary": "BEARER_TOKEN 分支构造 Authorization 请求头。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/package.json#L6",
+          "summary": "包清单声明 AGPL-3.0-only 与 Node.js 要求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/README.md#L143",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/HelpCode-ai/anythingmcp/blob/b3350deed040300f5a932e50cd10e2b24784ec5c/README.md"
+    },
+    {
+      "repository": "hasso5703/alzeo",
+      "repositoryAliases": [
+        "hasso5703/dgx-spark-qwen38"
+      ],
+      "id": "alzeo-jev-evaluation",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "Alzeo 的独立基准与协议对比脚本可显式调用 TypeSafe 托管 Jev，并与本地决策端点比较；本条登记评价入口，不把其本地 Qwen 模型视为 Jev。",
+      "requires": [
+        "需 Python、所选基准的数据与依赖，以及脚本指定的独立 TypeSafe 凭据文件；基准默认目标是本地 ours，只有显式选择 --target jev 才使用其内置托管 Jev 目标。",
+        "systemone-check.py 的 --hosted 分支同时调用 TypeSafe 和本地端点，缺少凭据会记录未执行；本地协议兼容及同名模型别名不代表本地运行的是 Jev。",
+        "托管测试会发送问题/数据并可能计费，基准传输存在有限重试并保存逐项结果。未读取凭据、下载数据集、运行基准、启动本地模型或复现成绩；延迟、准确率和校准度均是未验证的上游结果。"
+      ],
+      "usageNote": "按固定基准文档审阅数据、目标及费用边界；install 为 null。本轮新核实的是已有托管比较入口，不是声称项目刚增加了该功能；旧地址登记为别名，避免重复收录。",
+      "distribution": "external",
+      "url": "https://github.com/hasso5703/alzeo",
+      "version": "6a8f2ec28748d313035fef128e444acc12d87ba2",
+      "revision": "6a8f2ec28748d313035fef128e444acc12d87ba2",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-02",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1334954277,
+        "owner": "hasso5703",
+        "stars": 245,
+        "createdAt": "2026-08-15T09:23:10Z",
+        "pushedAt": "2026-11-01T16:54:19Z",
+        "updatedAt": "2026-11-01T16:38:26Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-02T00:00:30.929449+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/bench-systemone.py#L62",
+          "summary": "目标表分别定义本地 ours 和真实 TypeSafe Jev 的地址、凭据来源与并发值。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/bench-systemone.py#L405",
+          "summary": "基准传输实际读取配置的凭据并 POST 结构化请求至 /v1/systemone。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/bench-systemone.py#L436",
+          "summary": "run 子命令按所选目标调用请求函数，记录返回模型、用量、耗时或错误。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/bench-systemone.py#L934",
+          "summary": "CLI 显式提供 target/model 参数，默认目标保持本地 ours。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/systemone-check.py#L40",
+          "summary": "协议比较脚本显式定义 TypeSafe 官方托管地址。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/systemone-check.py#L344",
+          "summary": "--hosted 比较函数向托管 Jev 和本地服务发送相同请求，并检查状态及答案字段。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/systemone-check.py#L433",
+          "summary": "主流程只在显式 --hosted 时调用托管对比函数。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/README.md#L22",
+          "summary": "README 记录从 dgx-spark-qwen38 改名为 alzeo；当前 GitHub API 确认新旧地址同一仓库 ID。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/BENCHMARKS.md#L680",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/BENCHMARKS.md"
     }
   ]
 }

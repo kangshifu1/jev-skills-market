@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-11-02 — daily external discovery
+
+- Add AnythingMCP's Jev connector and Alzeo's hosted Jev evaluation entry points
+  as 2 external tools from 385 candidates; catalog total 290.
+- Pin registration and REST execution, benchmark/parity calls and explicit local
+  versus hosted targets. Verify Alzeo's old repository alias by stable GitHub ID.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-11-01 — daily external discovery
 
 - Add HiRoute, LiteLM, traceAI TypeSafe instrumentation and Blink as 4 external
