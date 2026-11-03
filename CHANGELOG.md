@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-11-03 — daily external discovery
+
+- Add Motion Graphics Agent and Sudus as tools, plus the standalone nWave
+  System One Skill: 3 additions from 389 candidates, catalog total 293.
+- Pin SDK/HTTP callers and real workflow entry points; verify nWave distribution
+  mirrors and record knowledge-skill flags, upstream defaults and untested status.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-11-02 — daily external discovery
 
 - Add AnythingMCP's Jev connector and Alzeo's hosted Jev evaluation entry points

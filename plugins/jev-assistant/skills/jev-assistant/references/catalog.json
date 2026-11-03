@@ -13876,6 +13876,231 @@
         }
       ],
       "usageUrl": "https://github.com/hasso5703/alzeo/blob/6a8f2ec28748d313035fef128e444acc12d87ba2/BENCHMARKS.md"
+    },
+    {
+      "repository": "delexw/motion-graphics-agent",
+      "id": "motion-graphics-agent-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Motion Graphics Agent 在服务端用 Jev 评估视觉风格组合，再以 Choice 跨批次选择方向；视频规划、代码生成和渲染仍由其他模型及运行时负责。",
+      "requires": [
+        "需完整应用、Node.js >=24、TypeSafe JavaScript SDK 及生成/渲染依赖；服务端读取 TYPESAFE_API_KEY，固定源码使用 jev-1.14.0。",
+        "评分与约束检查使用 Score/Noul，最终排序使用 Choice；大比较会拆分，取消和失败按源码传播，显式手选或随机路线另有逻辑。",
+        "请求可能包含原始创意、段落要求、方案说明、渲染能力及相关偏好记录；模型日志也会保留调用证据。未安装应用、读取用户素材、调用模型或渲染视频，选择效果、费用与媒体能力未实测。"
+      ],
+      "usageNote": "按固定仓库说明配置完整视频应用；install 为 null。只登记已核实的 Jev 判断链路，不把视频生成、音频或其他渲染器能力归给 Jev。",
+      "distribution": "external",
+      "url": "https://github.com/delexw/motion-graphics-agent",
+      "version": "23335a3b91ceb80bd891a788e1f4ed2b375da231",
+      "revision": "23335a3b91ceb80bd891a788e1f4ed2b375da231",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-03",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1421288064,
+        "owner": "delexw",
+        "stars": 127,
+        "createdAt": "2026-10-15T20:25:36Z",
+        "pushedAt": "2026-11-02T17:56:33Z",
+        "updatedAt": "2026-11-02T19:12:55Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-03T00:04:16.189760+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/delexw/motion-graphics-agent/blob/23335a3b91ceb80bd891a788e1f4ed2b375da231/src/server/runtime/credential-environment.ts#L1",
+          "summary": "固定环境变量映射确认 TypeSafe 凭据名称。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/delexw/motion-graphics-agent/blob/23335a3b91ceb80bd891a788e1f4ed2b375da231/src/server/jev/client.ts#L4",
+          "summary": "服务端构造官方 SDK 客户端并固定 Jev 模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/delexw/motion-graphics-agent/blob/23335a3b91ceb80bd891a788e1f4ed2b375da231/src/server/jev/strategies/style-combination.ts#L142",
+          "summary": "按批构造 Score/Noul 判断并实际调用 systemOne。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/delexw/motion-graphics-agent/blob/23335a3b91ceb80bd891a788e1f4ed2b375da231/src/server/jev/strategies/style-combination.ts#L229",
+          "summary": "所有保留方案进入重复 Choice 比较，而非直接使用初步分数排序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/delexw/motion-graphics-agent/blob/23335a3b91ceb80bd891a788e1f4ed2b375da231/src/server/jev/choice.ts#L27",
+          "summary": "共享 Choice 执行器实际调用 SDK，保留用量并验证返回候选。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/delexw/motion-graphics-agent/blob/23335a3b91ceb80bd891a788e1f4ed2b375da231/src/server/jobs/workflow.ts#L744",
+          "summary": "作业流程真实调用组合排名函数并消费选择结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/delexw/motion-graphics-agent/blob/23335a3b91ceb80bd891a788e1f4ed2b375da231/src/server/jev/README.md#L1",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/delexw/motion-graphics-agent/blob/23335a3b91ceb80bd891a788e1f4ed2b375da231/src/server/jev/README.md"
+    },
+    {
+      "repository": "nWave-ai/nWave",
+      "id": "nw-typesafe-system-one",
+      "kind": "skill",
+      "path": "nWave/skills/nw-typesafe-system-one",
+      "category": "development",
+      "description": "nWave 的 System One 知识型 Skill 自带 Python 客户端，将调用方提供的具名判断请求发给 TypeSafe，并验证和保留原始结果。",
+      "requires": [
+        "已确认 nw-typesafe-system-one 的名称、目录和自包含 Python 标准库客户端；源码与插件分发副本的 Skill/脚本 Git blob 完全一致。",
+        "frontmatter 标记 user-invocable:false、disable-model-invocation:true；上游 nWave 策略默认允许 Jev 并提供明确拒绝开关。该默认策略不会赋予本市场执行权限，目录仍保持 routable:false。",
+        "客户端从环境读取 TYPESAFE_API_KEY，默认使用官方端点，一次请求不自动重试；调用方负责构造获准、已脱敏的 state/questions。未运行安装器、客户端或 nWave 工作流，隐私与宿主行为未实测。"
+      ],
+      "usageNote": "市场按已核对名称生成固定提交的 Skills CLI 发现指引，未运行安装器。该条目是 nWave 的知识型 Skill；安装不等于加载其策略、启用自动调用或完成框架安装。",
+      "distribution": "external",
+      "url": "https://github.com/nWave-ai/nWave",
+      "version": "b24efe185f34598e285ab1cd51b6e0bd1df0817c",
+      "revision": "b24efe185f34598e285ab1cd51b6e0bd1df0817c",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-03",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1156929150,
+        "owner": "nWave-ai",
+        "stars": 632,
+        "createdAt": "2026-02-13T08:10:46Z",
+        "pushedAt": "2026-11-02T16:44:43Z",
+        "updatedAt": "2026-11-02T19:00:49Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-03T00:04:18.934922+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/nWave-ai/nWave/blob/b24efe185f34598e285ab1cd51b6e0bd1df0817c/nWave/skills/nw-typesafe-system-one/SKILL.md#L1",
+          "summary": "frontmatter 确认技能名及其知识型调用限制。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nWave-ai/nWave/blob/b24efe185f34598e285ab1cd51b6e0bd1df0817c/nWave/skills/nw-typesafe-system-one/SKILL.md#L20",
+          "summary": "上游策略明确其默认允许和拒绝开关；此处仅记录，不作为市场授权。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nWave-ai/nWave/blob/b24efe185f34598e285ab1cd51b6e0bd1df0817c/nWave/skills/nw-typesafe-system-one/SKILL.md#L54",
+          "summary": "技能提供目录内 Python 客户端调用方式，并说明请求/结果文件或标准输入输出。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nWave-ai/nWave/blob/b24efe185f34598e285ab1cd51b6e0bd1df0817c/nWave/skills/nw-typesafe-system-one/scripts/jev_decide.py#L30",
+          "summary": "客户端固定 TypeSafe 官方默认端点并验证具名请求字段。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nWave-ai/nWave/blob/b24efe185f34598e285ab1cd51b6e0bd1df0817c/nWave/skills/nw-typesafe-system-one/scripts/jev_decide.py#L244",
+          "summary": "客户端实际读取请求、环境凭据并发送经认证的 POST。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nWave-ai/nWave/blob/b24efe185f34598e285ab1cd51b6e0bd1df0817c/nWave/skills/nw-typesafe-system-one/scripts/jev_decide.py#L279",
+          "summary": "客户端验证成功响应并保留结果，失败返回区分的状态码。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/nWave-ai/nWave/blob/b24efe185f34598e285ab1cd51b6e0bd1df0817c/docs/guides/understanding-jev.md#L3",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/nWave-ai/nWave/blob/b24efe185f34598e285ab1cd51b6e0bd1df0817c/docs/guides/understanding-jev.md"
+    },
+    {
+      "repository": "eas4ai/sudus",
+      "id": "sudus-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "Sudus 的可选 TypeSafe 评估器用五个 Score 问题衡量开发决策草案，再由代码计算组合结果、记录证据和建议。",
+      "requires": [
+        "需完整 Sudus 工作流及 Node.js >=24；TypeSafe 评估默认关闭，需配置 typesafeai.enabled、固定版本模型及专用环境变量 TYPESAFEAI_API_KEY（不同于 TYPESAFE_API_KEY）。",
+        "measure 先检查开放工作承诺、草案和本地边界；选择 Jev 源后才走真实传输。配置与授权须遵守宿主流程，模型分数本身不授予修改或发布权限。",
+        "请求包含草案、相关契约与获准文件内容等封闭状态；源码有请求预算和响应记录，并对部分 HTTP 错误有限重试。未初始化工作流、读取用户项目或凭据、运行授权命令或调用模型；权重、阈值和校准效果未复现。"
+      ],
+      "usageNote": "按固定 README 配置完整 CLI/工作流与显式启用步骤；install 为 null。这里只登记可选 Jev 评估器，不执行任何授权记录或改变用户项目设置。",
+      "distribution": "external",
+      "url": "https://github.com/eas4ai/sudus",
+      "version": "94bd2294e541ac884ba1e87cd8ec57ab1bc14841",
+      "revision": "94bd2294e541ac884ba1e87cd8ec57ab1bc14841",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-03",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1329833296,
+        "owner": "eas4ai",
+        "stars": 103,
+        "createdAt": "2026-08-10T13:03:13Z",
+        "pushedAt": "2026-10-15T20:03:14Z",
+        "updatedAt": "2026-11-02T08:30:30Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-03T00:04:42.691389+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/bin/typesafeai.mjs#L3",
+          "summary": "传输模块固定 TypeSafe 官方 System One 端点。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/bin/typesafeai.mjs#L112",
+          "summary": "传输从专用环境变量读取凭据，实际 POST JSON，并处理超时与有限重试。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/lib/evaluate.mjs#L429",
+          "summary": "五个 Score 问题被组合成包含 state、版本模型及 questions 的请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/lib/evaluate.mjs#L758",
+          "summary": "measure 根据配置选择 Jev 或审阅模型，并先执行本地前置检查。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/lib/evaluate.mjs#L883",
+          "summary": "Jev 分支实际调用传输，校验模型和答案，并写入结果记录。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/lib/cli.mjs#L484",
+          "summary": "CLI 的 measure 命令实际连接到评估流程。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/lib/settings.mjs#L158",
+          "summary": "设置校验要求启用时使用固定版本模型，并限制请求预算。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/README.md#L76",
+          "summary": "固定版本使用和配置说明；本轮未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/README.md"
     }
   ]
 }

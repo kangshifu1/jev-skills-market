@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-03（main）
+
+本轮搜索 389 个去重候选，新增 **2 个外部工具、1 个独立 Skill**，目录共 **293 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-11-03.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [delexw/motion-graphics-agent](https://github.com/delexw/motion-graphics-agent) | 127 | Motion Graphics Agent 在服务端用 Jev 评估视觉风格组合，再以 Choice 跨批次选择方向；视频规划、代码生成和渲染仍由其他模型及运行时负责。 |
+| [nWave-ai/nWave](https://github.com/nWave-ai/nWave) | 632 | nWave 的 System One 知识型 Skill 自带 Python 客户端，将调用方提供的具名判断请求发给 TypeSafe，并验证和保留原始结果。 |
+| [eas4ai/sudus](https://github.com/eas4ai/sudus) | 103 | Sudus 的可选 TypeSafe 评估器用五个 Score 问题衡量开发决策草案，再由代码计算组合结果、记录证据和建议。 |
+
+两个工具均返回 `install: null`；nWave 提供固定提交的 Skill 发现指引，但上游标记为知识型技能。
+nWave 的默认远程调用策略不构成本市场授权；Sudus 的 TypeSafe 评估默认关闭，具体边界见审核记录。
+
 ## 每日发现：2026-11-02（main）
 
 本轮搜索 385 个去重候选，新增 **2 个外部工具**，目录共 **290 项**。
