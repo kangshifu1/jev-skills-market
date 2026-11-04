@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-04（main）
+
+本轮搜索 391 个去重候选，新增 **3 个外部工具**，目录共 **296 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-11-04.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [Parcha-ai/agentrun](https://github.com/Parcha-ai/agentrun) | 424 | AgentRun 的 Jev 适配器把结构化决策接到工作流 runJudge 接口，支持 TypeSafe 直连及显式 OpenRouter 路径，并保留概率和调用记录。 |
+| [quietpublish/mardi-gras](https://github.com/quietpublish/mardi-gras) | 101 | Mardi Gras 的可选 Jev 判断器对任务快照提供辅助判断，并为命令或补丁审批显示风险建议；实际批准仍由界面和用户控制。 |
+| [kyle-pena-nlp/jevchat](https://github.com/kyle-pena-nlp/jevchat) | 101 | jevchat 用 Jev 的 Choice 概率反复选择下一个符号或停止，再由本地代码采样拼接回复；这是实验性聊天模拟，不是 Jev 原生文本生成接口。 |
+
+三项均返回 `install: null`。Mardi Gras 的远程判断需显式配置，审批回调只显示建议；
+jevchat 未发现许可证，且通过重复选择符号拼接文本，其聊天质量和调用成本未验证。
+
 ## 每日发现：2026-11-03（main）
 
 本轮搜索 389 个去重候选，新增 **2 个外部工具、1 个独立 Skill**，目录共 **293 项**。

@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-11-04 — daily external discovery
+
+- Add AgentRun's Jev adapter, Mardi Gras's optional judge and jevchat's symbol
+  sampling experiment: 3 tools from 391 candidates, catalog total 296.
+- Pin actual SDK/HTTP calls and consumers; record approval/data boundaries,
+  experimental text assembly and jevchat's unidentified license.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-11-03 — daily external discovery
 
 - Add Motion Graphics Agent and Sudus as tools, plus the standalone nWave

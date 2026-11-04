@@ -14101,6 +14101,230 @@
         }
       ],
       "usageUrl": "https://github.com/eas4ai/sudus/blob/94bd2294e541ac884ba1e87cd8ec57ab1bc14841/README.md"
+    },
+    {
+      "repository": "Parcha-ai/agentrun",
+      "id": "agentrun-jev",
+      "kind": "tool",
+      "category": "development",
+      "description": "AgentRun 的 Jev 适配器把结构化决策接到工作流 runJudge 接口，支持 TypeSafe 直连及显式 OpenRouter 路径，并保留概率和调用记录。",
+      "requires": [
+        "需 Node.js >=22.19、AgentRun DSL 与 Jev 适配器；宿主提供工具、代理、权限和预算，模型凭据需单独配置。",
+        "createJevRunner 默认走 TypeSafe；OpenRouter 使用独立提供商和密钥配置。请求预算可由宿主设置，发送前失败与可能已发送的失败按不同策略处理。",
+        "state/questions 及显式启用的资产可能发给所选提供商；未安装包、执行工作流、访问客户内容或调用模型。阈值、费用估算、重试策略及图像能力未实测。"
+      ],
+      "usageNote": "按固定子包说明接入现有应用；install 为 null。本条只登记 Jev 判断适配器，不将其他包的浏览器、沙箱或代理能力统一视为已测。",
+      "distribution": "external",
+      "url": "https://github.com/Parcha-ai/agentrun",
+      "version": "51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40",
+      "revision": "51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-04",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub API identifies Apache-2.0; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1382503730,
+        "owner": "Parcha-ai",
+        "stars": 424,
+        "createdAt": "2026-09-23T00:27:34Z",
+        "pushedAt": "2026-11-04T00:08:50Z",
+        "updatedAt": "2026-11-04T00:02:56Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-11-04T00:09:23.590445+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Parcha-ai/agentrun/blob/51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40/packages/jev/src/index.ts#L278",
+          "summary": "createJevRunner 验证配置并构造官方 SDK 客户端，区分提供商。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Parcha-ai/agentrun/blob/51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40/packages/jev/src/index.ts#L326",
+          "summary": "运行器实际调用 systemOne，区分可能已计费的未知结果与发送前错误。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Parcha-ai/agentrun/blob/51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40/packages/jev/src/index.ts#L243",
+          "summary": "响应检查保留具名答案、用量和显式费用信息，缺失值不伪造。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Parcha-ai/agentrun/blob/51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40/examples/support-answer-live.mjs#L127",
+          "summary": "真实工作流入口创建 Jev 判断器并注入宿主适配器。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Parcha-ai/agentrun/blob/51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40/examples/support-answer-live.mjs#L96",
+          "summary": "工作流执行时将判断器接入 runJudge。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Parcha-ai/agentrun/blob/51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40/packages/jev/package.json#L6",
+          "summary": "独立子包声明 Apache-2.0、Node.js 要求与固定 SDK 依赖。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Parcha-ai/agentrun/blob/51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40/packages/jev/README.md#L53",
+          "summary": "固定版本使用与配置说明，未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Parcha-ai/agentrun/blob/51e7e0ca1fdbfdfb6d23ad1360523c7c05ab1b40/packages/jev/README.md"
+    },
+    {
+      "repository": "quietpublish/mardi-gras",
+      "id": "mardi-gras-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Mardi Gras 的可选 Jev 判断器对任务快照提供辅助判断，并为命令或补丁审批显示风险建议；实际批准仍由界面和用户控制。",
+      "requires": [
+        "需完整 Mardi Gras 应用与其任务后端；设置 MG_JEV_API_KEY 会启用判断，MG_JEV=off 或 --no-jev 可关闭；默认端点为 TypeSafe 官方 System One。",
+        "任务快照按配置包含标题、结构信息及部分描述；审批判断还可能包含命令参数、相对路径和代理理由。代码对部分字段脱敏，本轮未验证完整脱敏效果，不能只凭文档断言所有内容均已清除敏感信息。",
+        "失败时保留人工判断路径，客户端有有限重试，建议不会由该回调自动批准执行。未读取任务、运行应用、配置账户或调用模型，隐私、缓存命中率、成本与判断效果未实测。"
+      ],
+      "usageNote": "按固定文档配置完整应用与最小数据范围；install 为 null。兼容的本地端点与托管 Jev 分开，静态规则、人工审批和执行权限不由本市场接管。",
+      "distribution": "external",
+      "url": "https://github.com/quietpublish/mardi-gras",
+      "version": "e43911b3667a12e8b1a2e09a74a02a6706c9e216",
+      "revision": "e43911b3667a12e8b1a2e09a74a02a6706c9e216",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-04",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1163740272,
+        "owner": "quietpublish",
+        "stars": 101,
+        "createdAt": "2026-02-22T04:14:28Z",
+        "pushedAt": "2026-10-30T22:15:39Z",
+        "updatedAt": "2026-11-03T15:30:12Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-04T00:09:23.092741+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/internal/jev/config.go#L52",
+          "summary": "环境配置在没有专用密钥或明确关闭时返回未启用客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/internal/jev/client.go#L20",
+          "summary": "默认官方端点和 jev-latest 模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/internal/jev/client.go#L147",
+          "summary": "Evaluate 将 state 与具名问题序列化并消费结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/internal/jev/client.go#L225",
+          "summary": "实际构造认证 POST 请求并执行 HTTP 调用。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/internal/app/jev.go#L264",
+          "summary": "任务快照批次真实进入 Evaluate。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/internal/app/jev_approval.go#L102",
+          "summary": "审批建议构建命令/补丁上下文并调用 Jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/internal/app/jev_approval.go#L227",
+          "summary": "回调仅更新当前审批的显示建议，错误提示人工决定。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/docs/jev.md#L49",
+          "summary": "固定版本使用与配置说明，未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/quietpublish/mardi-gras/blob/e43911b3667a12e8b1a2e09a74a02a6706c9e216/docs/jev.md"
+    },
+    {
+      "repository": "kyle-pena-nlp/jevchat",
+      "id": "jevchat-symbol-sampling",
+      "kind": "tool",
+      "category": "development",
+      "license": null,
+      "licenseStatus": "GitHub API returns no license; no LICENSE/COPYING file found in the pinned tree and pyproject.toml declares no license. Link and original summary only; no redistribution permission inferred.",
+      "description": "jevchat 用 Jev 的 Choice 概率反复选择下一个符号或停止，再由本地代码采样拼接回复；这是实验性聊天模拟，不是 Jev 原生文本生成接口。",
+      "requires": [
+        "需 Python >=3.11、完整 jevchat 包及依赖；凭据来自环境或项目配置，默认调用 TypeSafe 官方端点和 jev-latest。",
+        "每步发送构造的上下文与候选问题，可能进行多次模型调用；停止条件、采样、候选分组及文本拼接由客户端代码负责。",
+        "未安装包、读取本地配置、输入私人聊天或调用模型；流畅性、可靠性、性能、成本与上游基准未复现，未发现许可证声明。"
+      ],
+      "usageNote": "按固定 README 审阅实验性 CLI 与采样模式；install 为 null。只登记真实决策调用链，不背书其聊天质量或将实验策略作为标准 Jev 用法。",
+      "distribution": "external",
+      "url": "https://github.com/kyle-pena-nlp/jevchat",
+      "version": "d58abd51aef62a7df26c5614188d18df3f4ae1aa",
+      "revision": "d58abd51aef62a7df26c5614188d18df3f4ae1aa",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-04",
+      "github": {
+        "repositoryId": 1377792250,
+        "owner": "kyle-pena-nlp",
+        "stars": 101,
+        "createdAt": "2026-09-20T01:55:44Z",
+        "pushedAt": "2026-09-20T19:30:30Z",
+        "updatedAt": "2026-11-03T08:07:47Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": null,
+        "checkedAt": "2026-11-04T00:09:22.945951+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/jevchat/client.py#L49",
+          "summary": "客户端定义 TypeSafe 默认基址、模型及认证 HTTP 客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/jevchat/client.py#L140",
+          "summary": "ask 构造 model/state/questions 请求并校验返回答案对象。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/jevchat/client.py#L171",
+          "summary": "真实 HTTP 传输 POST 到 /systemone，包含重试与取消逻辑。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/jevchat/generate.py#L138",
+          "summary": "评分器通过 Choice 路径向模型询问候选分布。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/jevchat/generate.py#L235",
+          "summary": "生成循环消费分布、采样符号、拼接文本并累计调用统计。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/pyproject.toml#L1",
+          "summary": "固定包声明 Python 与依赖要求，未声明许可证。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/README.md#L5",
+          "summary": "固定版本使用与配置说明，未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/README.md"
     }
   ]
 }
