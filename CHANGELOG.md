@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-11-05 — daily external discovery
+
+- Add Katana's Jev decider and ghfs label suggestions as 2 external tools
+  from 393 candidates; catalog total 298.
+- Pin provider selection, HTTP/classifier calls and consumers; document
+  crawl-context transmission and local-queue versus remote-execution boundaries.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-11-04 — daily external discovery
 
 - Add AgentRun's Jev adapter, Mardi Gras's optional judge and jevchat's symbol

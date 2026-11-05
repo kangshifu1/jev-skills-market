@@ -14325,6 +14325,162 @@
         }
       ],
       "usageUrl": "https://github.com/kyle-pena-nlp/jevchat/blob/d58abd51aef62a7df26c5614188d18df3f4ae1aa/README.md"
+    },
+    {
+      "repository": "projectdiscovery/katana",
+      "id": "katana-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Katana 的可选 Jev 判断器将爬取过程中的布尔、选择和评分问题发送到 TypeSafe 原生接口，供表单语义判断等流程使用。",
+      "requires": [
+        "需完整 Katana 运行时；源码默认分支为 dev，条目固定到本次提交。显式选择 -ai-provider jev 才启用该路径，优先使用 TYPESAFE_API_KEY 配置凭据。",
+        "Jev 分支默认使用官方端点与 jev-latest，未将 AI_API_KEY 自动复用给 TypeSafe；本地回放与其他提供商另有分支。",
+        "模型请求包含爬取过程选取的页面/表单上下文，Noul 按源码阈值转换，评分由代码归一化。未安装爬虫、访问目标网站、填表或调用模型，阈值、覆盖率与错误处理效果未实测。"
+      ],
+      "usageNote": "按固定 README 使用完整 Katana 并配置授权测试范围；install 为 null。这里只登记 Jev 决策适配器，不代表完成任何网站、表单或爬取效果测试。",
+      "distribution": "external",
+      "url": "https://github.com/projectdiscovery/katana",
+      "version": "19cbd13b94927bea7281562c90e3dcd7406fc6d1",
+      "revision": "19cbd13b94927bea7281562c90e3dcd7406fc6d1",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-05",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 326228917,
+        "owner": "projectdiscovery",
+        "stars": 17798,
+        "createdAt": "2021-01-02T16:56:05Z",
+        "pushedAt": "2026-11-04T23:34:05Z",
+        "updatedAt": "2026-11-04T23:34:18Z",
+        "defaultBranch": "dev",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-05T00:00:26.887827+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/pkg/types/options.go#L320",
+          "summary": "AILive 仅在显式 URL 或 Jev 提供商选项存在时启用远程判断。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/pkg/types/crawler_options.go#L324",
+          "summary": "构造逻辑区分回放、Jev 与 OpenAI，并使用相应凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/pkg/decider/jev.go#L13",
+          "summary": "默认 TypeSafe 官方端点与 jev-latest 模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/pkg/decider/jev.go#L43",
+          "summary": "Decide 构造具名原生问题并消费 Noul、Choice 或 Score 回答。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/pkg/decider/openai.go#L61",
+          "summary": "共享 postJSON 传输实际发出 Bearer 认证 POST 请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/pkg/utils/formsemantic.go#L203",
+          "summary": "表单字段语义处理真实调用 Decider，并处理错误返回。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/pkg/engine/parser/parser_nojs.go#L12",
+          "summary": "非浏览器解析器把已配置的 FormDecider 注入表单处理。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/README.md#L189",
+          "summary": "固定版本使用与配置说明，未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/projectdiscovery/katana/blob/19cbd13b94927bea7281562c90e3dcd7406fc6d1/README.md"
+    },
+    {
+      "repository": "antfu/ghfs",
+      "id": "ghfs-jev-labeling",
+      "kind": "tool",
+      "category": "development",
+      "description": "ghfs 通过 pi-ai 和 Vercel AI Gateway 调用 Jev，为仓库条目生成标签概率；建议先写入本地 add-labels 队列，再由后续执行流程应用。",
+      "requires": [
+        "需完整 ghfs、已同步的仓库条目及标签、Vercel AI Gateway 凭据；默认决策模型为 typesafe-ai/jev，由 pi-ai 提供商适配器执行调用。",
+        "判断不确定时会调用另一个工具型代理收集评论、补丁和相关条目上下文后重判；这些数据可能发送给所配置的模型，生成模型与 Jev 判断分开。",
+        "label 入口只写本地操作队列，后续 execute 可修改 GitHub 标签。未安装 CLI、同步用户仓库、读取凭据、执行队列或调用模型；标签准确率、阈值、隐私和费用未实测。"
+      ],
+      "usageNote": "按固定 README 配置完整同步/建议/审阅流程；install 为 null。目录登记不授权修改任何 issue 或 PR，也不自动应用模型给出的标签。",
+      "distribution": "external",
+      "url": "https://github.com/antfu/ghfs",
+      "version": "6dce9c1a30a9b3b55beee9c6454df675e9538d6d",
+      "revision": "6dce9c1a30a9b3b55beee9c6454df675e9538d6d",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-05",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1172349698,
+        "owner": "antfu",
+        "stars": 279,
+        "createdAt": "2026-03-04T07:55:14Z",
+        "pushedAt": "2026-11-04T05:45:05Z",
+        "updatedAt": "2026-11-04T16:54:14Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-05T00:00:26.662313+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/src/constants.ts#L22",
+          "summary": "默认分类模型明确为 typesafe-ai/jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/src/ai/runtime.ts#L26",
+          "summary": "配置解析选择 Gateway 凭据与模型，并构造分类器运行时。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/src/ai/labeling/decide.ts#L5",
+          "summary": "真实调用 models.classify 并读取逐标签概率。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/src/ai/labeling/index.ts#L54",
+          "summary": "选择流程先判断，不确定时补充上下文再判断，并按阈值生成建议。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/src/ai/labeling/run.ts#L27",
+          "summary": "CLI 共用入口调用建议流程，再创建本地队列操作。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/src/server/queue-writer.ts#L19",
+          "summary": "addQueueOps 只更新本地执行文件并返回队列状态。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/src/cli/commands/label.ts#L17",
+          "summary": "CLI 注册 label 命令并指引用户审阅执行队列。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/README.md#L177",
+          "summary": "固定版本使用与配置说明，未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/README.md"
     }
   ]
 }
