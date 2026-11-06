@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-11-06 — daily external discovery
+
+- Add weflow-cli's configurable native Jev article classifier as one external
+  tool from 390 candidates; catalog total 299.
+- Pin the request and daily caller, and document the default endpoint mismatch,
+  explicit configuration requirement, provider branches and untested status.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-11-05 — daily external discovery
 
 - Add Katana's Jev decider and ghfs label suggestions as 2 external tools

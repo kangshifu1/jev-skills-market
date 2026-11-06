@@ -14481,6 +14481,105 @@
         }
       ],
       "usageUrl": "https://github.com/antfu/ghfs/blob/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/README.md"
+    },
+    {
+      "repository": "zhuobichen/weflow-cli",
+      "id": "weflow-cli-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "weflow-cli 的可配置原生 Jev 客户端用于公众号日报的主题、相关度和收录判断，并将概率与实际返回模型记录下来；默认端点路径与官方文档存在差异，需显式配置后另行验证。",
+      "requires": [
+        "需完整 weflow-cli、Node.js >=22.13 及 Python 工作流，原生判断使用 TYPESAFE_API_KEY 或上游 typesafeApiKey 配置；本轮没有读取任何本地配置或微信数据。",
+        "固定源码默认主机 https://api.typesafe.ai 后只拼接 /systemone，而当前官方文档为 /v1/systemone；使用前需显式把 judgeEndpoint 或 JEV_BASE_URL 配到包含 /v1 的官方基址或完整官方端点，并独立验证。未确认默认路径是否受服务端支持。",
+        "只核实 judgeProvider=native 路径；chat、openrouter、local 是不同客户端，不能统一称为原生 Jev。日报 auto 模式没有可用客户端或单篇判断失败时可退回原 LLM 路径，强制 llm 另有开关。",
+        "原生文章判断发送标题和截断正文，相关度量表面向上游指定读者，阈值不是通用效果保证。未安装工具、访问或导出聊天、抓取文章、发消息或调用模型；兼容性、隐私和费用未实测。"
+      ],
+      "usageNote": "按固定 README 审阅完整工作流，先对照 https://docs.typesafe.ai/api/system-one 校正显式端点配置并验证；install 为 null。这里只登记有条件的原生文章判断链，不为聊天模型兼容分支、地区可用性或其他微信操作背书。",
+      "distribution": "external",
+      "url": "https://github.com/zhuobichen/weflow-cli",
+      "version": "ed53986af878d3daf8ae27824376133e9a7f895b",
+      "revision": "ed53986af878d3daf8ae27824376133e9a7f895b",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-06",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1236161940,
+        "owner": "zhuobichen",
+        "stars": 151,
+        "createdAt": "2026-05-12T02:14:39Z",
+        "pushedAt": "2026-11-05T14:57:10Z",
+        "updatedAt": "2026-11-05T14:57:15Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-06T00:04:08.152620+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/jev_client.py#L35",
+          "summary": "默认主机与端点拼接明确产生 /systemone；可由环境或配置覆盖。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/src/services/configService.ts#L126",
+          "summary": "配置默认使用 native，judgeEndpoint 默认空字符串，没有自动补充 /v1。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/_utils.py#L1073",
+          "summary": "提供商选择函数明确区分 native、chat、openrouter 和 local。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/jev_client.py#L244",
+          "summary": "原生凭据优先来自显式值、环境变量或上游配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/jev_client.py#L339",
+          "summary": "原生 HTTP 传输实际发送 Bearer 认证请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/jev_client.py#L373",
+          "summary": "decide 实际发送具名问题，并记录返回模型和用量。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/jev_client.py#L399",
+          "summary": "文章判断仅以标题及截断正文构造状态，消费主题、相关度与收录结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/jev_client.py#L281",
+          "summary": "构造 Choice、Score、Noul 三个用途不同的问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/jev_client.py#L695",
+          "summary": "工厂按提供商实例化不同客户端，不能由类名推断都调用 Jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/biz_daily.py#L470",
+          "summary": "日报逐篇调用 decide_article，失败返回空结果供上层回退。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/scripts/biz_daily.py#L1505",
+          "summary": "日报主流程按分类计划创建客户端并调度文章判断。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/README.md#L291",
+          "summary": "固定版本使用与配置说明，未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/README.md"
     }
   ]
 }

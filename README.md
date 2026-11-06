@@ -73,6 +73,22 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-06（main）
+
+本轮搜索 390 个去重候选，新增 **1 个外部工具**，目录共 **299 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-11-06.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [zhuobichen/weflow-cli](https://github.com/zhuobichen/weflow-cli) | 151 | weflow-cli 的可配置原生 Jev 客户端用于公众号日报的主题、相关度和收录判断，并将概率与实际返回模型记录下来；默认端点路径与官方文档存在差异，需显式配置后另行验证。 |
+
+该项返回 `install: null`。原生客户端默认地址缺少官方文档中的 `/v1` 路径段，需显式配置并另行验证；
+聊天模型兼容分支不统一视为 Jev。本轮未访问微信数据或调用任何模型。
+
 ## 每日发现：2026-11-05（main）
 
 本轮搜索 393 个去重候选，新增 **2 个外部工具**，目录共 **298 项**。
