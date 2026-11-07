@@ -14580,6 +14580,90 @@
         }
       ],
       "usageUrl": "https://github.com/zhuobichen/weflow-cli/blob/ed53986af878d3daf8ae27824376133e9a7f895b/README.md"
+    },
+    {
+      "repository": "mu-zi-lee/magpie-our-free-model",
+      "id": "magpie-our-free-model-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Magpie 的 Our Free Model 插件把 Jev 标记为决策模型，经本地模型准入检查后向 OpenCode Zen 转发 System One 请求；固定实现与当前官方端点及认证说明存在差异，兼容性未实测。",
+      "requires": [
+        "依赖支持 provider.decide 的 Magpie 宿主和完整 Our Free Model 托管服务；包声明 Node.js ^22.19.0 或 >=24.0.0。它是宿主插件，不是可独立安装的 Agent Skill。",
+        "请求经过插件启用状态和本地模型准入检查，再转给 OpenCode Zen；不是直接调用 TypeSafe 官方端点。目录只核实 Jev 决策转发分支，不将其他聊天模型和账号渠道算作 Jev 能力。",
+        "固定源码使用旧 /zen/v1/systemone 路径和上游公开访问/客户端标记；当前 OpenCode 官方文档列的是 /inference/systemone/v1/systemone，并说明 Console API key 用法。旧路径、认证方式、免费池资格及宿主兼容性未实测，使用前需按官方文档确认，不能据此保证免费或可用。",
+        "完整插件启用流程可能下载运行环境与上游组件、启动本地服务；需要单独审阅固定 README 的安装及数据说明。本轮没有安装、执行上游测试、启动服务、登录账号、读取凭据或发起模型请求。"
+      ],
+      "usageNote": "从固定 README 的决策模型章节核对宿主要求和使用范围；对照 https://opencode.ai/docs/console/models/#jev 核查服务兼容性。只登记来源，install 为 null，不提供未经验证的 skills 安装命令。",
+      "distribution": "external",
+      "url": "https://github.com/mu-zi-lee/magpie-our-free-model",
+      "version": "410326e3598acbc593a8faa2469694b3991d4e31",
+      "revision": "410326e3598acbc593a8faa2469694b3991d4e31",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-07",
+      "license": "MIT",
+      "licenseStatus": "GitHub API identifies MIT; pinned root LICENSE reviewed. Upstream terms apply. Link and original summary only.",
+      "github": {
+        "repositoryId": 1412206085,
+        "owner": "mu-zi-lee",
+        "stars": 313,
+        "createdAt": "2026-10-09T17:18:24Z",
+        "pushedAt": "2026-11-06T17:35:28Z",
+        "updatedAt": "2026-11-06T18:19:21Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-07T00:20:48.057415+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/index.mjs#L1",
+          "summary": "主入口实际加载托管插件；禁用 managed 时返回空插件。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/src/managed.mjs#L84",
+          "summary": "配置钩子声明 provider.decide，依赖宿主识别该能力。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/src/managed.mjs#L102",
+          "summary": "已启用供应商的 fetch 分支捕获 System One POST 请求，并调用本地准入后转发。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/src/managed-runner.mjs#L94",
+          "summary": "admit 命令查询本地服务模型和渠道状态，而不是仅采用宿主缓存。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/src/systemone.mjs#L60",
+          "summary": "检查决策模型家族及 admit 结果，拒绝无效请求，并保留取消信号。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/src/systemone.mjs#L74",
+          "summary": "固定转发函数向旧 Zen System One 端点发送原请求体并回传响应体和状态；未验证旧端点兼容性。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/tests/systemone.test.mjs#L26",
+          "summary": "上游用替身 fetch 检查转发、错误、准入和取消；这里只读取测试源码，未运行或视作真实模型验证。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/package.json#L1",
+          "summary": "包入口、插件版本、Node 版本约束和 MIT 元数据来源。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/README.md#L304",
+          "summary": "固定版本使用与配置说明，未执行安装或模型测试。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/README.md"
     }
   ]
 }

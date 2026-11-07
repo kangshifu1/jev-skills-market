@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-11-07 — daily external discovery
+
+- Add Magpie Our Free Model's Jev decision forwarding as one external
+  tool from 391 candidates; catalog total 300.
+- Pin the plugin entry, provider route and admission checks; record legacy Zen
+  endpoint/authentication differences from current OpenCode documentation.
+- Preserve existing entries, routing, release tags and the independent
+  computer-use repository. Source review does not imply runtime validation.
+
 ## Unreleased — 2026-11-06 — daily external discovery
 
 - Add weflow-cli's configurable native Jev article classifier as one external

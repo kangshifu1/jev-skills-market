@@ -73,6 +73,22 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-07（main）
+
+本轮搜索 391 个去重候选，新增 **1 个外部工具**，目录共 **300 项**。
+Star 为本次 GitHub API 快照；新增项按 `updated_at` 倒序排列。
+**只核实来源，未安装或运行上游功能。** 新条目可 list/show 查询，暂不加入模型路由。
+目录更新位于 main，不包含在既有 v0.1.2 安装快照中。
+
+[本轮审核记录](docs/discovery/2026-11-07.md) · [使用说明](plugins/jev-assistant/skills/jev-assistant/references/external-projects.md)
+
+| 项目 | Star | 已核实的 Jev 用途 |
+| --- | ---: | --- |
+| [mu-zi-lee/magpie-our-free-model](https://github.com/mu-zi-lee/magpie-our-free-model) | 313 | Magpie 的 Our Free Model 插件把 Jev 标记为决策模型，经本地模型准入检查后向 OpenCode Zen 转发 System One 请求；固定实现与当前官方端点及认证说明存在差异，兼容性未实测。 |
+
+该项返回 `install: null`，依赖 Magpie 宿主。固定实现仍使用旧 Zen 端点及访问方式，
+与[当前官方说明](https://opencode.ai/docs/console/models/#jev)存在差异；实际兼容性和免费额度未验证。
+
 ## 每日发现：2026-11-06（main）
 
 本轮搜索 390 个去重候选，新增 **1 个外部工具**，目录共 **299 项**。
