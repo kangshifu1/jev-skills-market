@@ -73,6 +73,19 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-11（main）
+
+本轮检索 394 个去重候选，新增 4 个独立外部工具，目录共 304 项。前三类运行时用途涉及岗位与表单匹配、Chrome 页面判断和模型路由。JevStyle 的关联仅限 2B v4 训练来源。
+
+| 项目 | GitHub Star | 核实用途 |
+| --- | ---: | --- |
+| [qbeka/jev-job-search](https://github.com/qbeka/jev-job-search) | 347 | 求职工具通过 OpenRouter 调用 Jev 评估岗位匹配度，并把表单字段映射到个人资料。 |
+| [Endokelp/Endoplexity](https://github.com/Endokelp/Endoplexity) | 336 | Chrome 浏览器工具可选用 Jev 判断页面操作。在 See 模式下，桥接服务可把截图发给 Jev 并据返回的边界框定位元素。 |
+| [pardnchiu/Agenvoy](https://github.com/pardnchiu/Agenvoy) | 583 | Agenvoy 可以将 Jev 配置为决策模型，通过 Choice 问题识别任务类型和候选模型，辅助选择后续执行模型。 |
+| [lawrence3699/jev-style](https://github.com/lawrence3699/jev-style) | 132 | 本地推理工具。作者披露 2B v4 的部分训练软标签由 TypeSafe Jev 1.14 公共 API 生成。此条目的 Jev 关联限于该版本的训练来源。 |
+
+以上均为固定版本源码或上游文档审阅，尚未实测。可用市场 CLI 的 `list` 和 `show` 查看。[来源、使用条件与审核记录](docs/discovery/2026-11-11.md)
+
 ## 每日发现：2026-11-07（main）
 
 本轮搜索 391 个去重候选，新增 **1 个外部工具**，目录共 **300 项**。

@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-11
+
+- Add three runtime Jev integrations and record the training provenance of JevStyle 2B v4. Catalog total: 304.
+
 ## Unreleased — 2026-11-07 — daily external discovery
 
 - Add Magpie Our Free Model's Jev decision forwarding as one external

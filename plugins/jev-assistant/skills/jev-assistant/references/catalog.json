@@ -14664,6 +14664,246 @@
         }
       ],
       "usageUrl": "https://github.com/mu-zi-lee/magpie-our-free-model/blob/410326e3598acbc593a8faa2469694b3991d4e31/README.md"
+    },
+    {
+      "repository": "qbeka/jev-job-search",
+      "id": "jev-job-search",
+      "kind": "tool",
+      "category": "automation",
+      "description": "求职工具通过 OpenRouter 调用 Jev 评估岗位匹配度，并把表单字段映射到个人资料。",
+      "requires": [
+        "上游工作流依赖 Node.js 22+、Chrome、编码助手和 OpenRouter API key。"
+      ],
+      "usageNote": "仓库内含多项依赖同一 CLI 的 Claude Code 工作流。使用前可从上游 README 查看资料准备和申请确认步骤。",
+      "distribution": "external",
+      "url": "https://github.com/qbeka/jev-job-search",
+      "version": "4442778f4a4962e3dd80c238fe1ba7dea68f5277",
+      "revision": "4442778f4a4962e3dd80c238fe1ba7dea68f5277",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-11",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and root LICENSE checked at the pinned revision.",
+      "github": {
+        "repositoryId": 1400902478,
+        "owner": "qbeka",
+        "stars": 347,
+        "createdAt": "2026-10-02T01:38:23Z",
+        "pushedAt": "2026-11-11T06:29:01Z",
+        "updatedAt": "2026-11-11T07:29:01Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-11T07:52:14.589248+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/qbeka/jev-job-search/blob/4442778f4a4962e3dd80c238fe1ba7dea68f5277/src/config.ts#L95",
+          "summary": "固定的 OpenRouter Decisions 地址和 Jev 模型名。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/qbeka/jev-job-search/blob/4442778f4a4962e3dd80c238fe1ba7dea68f5277/src/jev/client.ts#L82",
+          "summary": "客户端发送判断请求并校验返回结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/qbeka/jev-job-search/blob/4442778f4a4962e3dd80c238fe1ba7dea68f5277/src/jobs/rate.ts#L138",
+          "summary": "岗位评分调用 Jev 并消费结构化答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/qbeka/jev-job-search/blob/4442778f4a4962e3dd80c238fe1ba7dea68f5277/src/forms/mapForm.ts#L406",
+          "summary": "对表单字段分组发起判断，生成填写计划。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/qbeka/jev-job-search/blob/4442778f4a4962e3dd80c238fe1ba7dea68f5277/README.md#L57",
+          "summary": "仓库内含多项依赖同一 CLI 的 Claude Code 工作流。使用前可从上游 README 查看资料准备和申请确认步骤。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/qbeka/jev-job-search/blob/4442778f4a4962e3dd80c238fe1ba7dea68f5277/README.md#L57"
+    },
+    {
+      "repository": "Endokelp/Endoplexity",
+      "id": "endoplexity-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Chrome 浏览器工具可选用 Jev 判断页面操作。在 See 模式下，桥接服务可把截图发给 Jev 并据返回的边界框定位元素。",
+      "requires": [
+        "依赖上游 Chrome 扩展、Node.js 桥接服务和受支持的编码助手 CLI。Jev 后端需单独启用、确认数据发送并配置凭据。"
+      ],
+      "usageNote": "README 的 Reflexes 和 Get started 两节说明可用后端、授权及宿主要求。See 模式启用后可向所选服务发送浏览器截图。",
+      "distribution": "external",
+      "url": "https://github.com/Endokelp/Endoplexity",
+      "version": "2afebce336b08e2f5379051e21851947de728c2e",
+      "revision": "2afebce336b08e2f5379051e21851947de728c2e",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-11",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub SPDX and root LICENSE checked at the pinned revision.",
+      "github": {
+        "repositoryId": 1334430510,
+        "owner": "Endokelp",
+        "stars": 336,
+        "createdAt": "2026-08-14T17:37:36Z",
+        "pushedAt": "2026-11-09T06:33:07Z",
+        "updatedAt": "2026-11-11T07:21:29Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-11-11T07:52:14.589248+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Endokelp/Endoplexity/blob/2afebce336b08e2f5379051e21851947de728c2e/bridge/src/reflex.ts#L199",
+          "summary": "检查 Jev 选项和凭据，选择 TypeSafe 或网关地址及模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Endokelp/Endoplexity/blob/2afebce336b08e2f5379051e21851947de728c2e/bridge/src/reflex.ts#L229",
+          "summary": "向 System One 提交判断请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Endokelp/Endoplexity/blob/2afebce336b08e2f5379051e21851947de728c2e/bridge/src/reflex.ts#L269",
+          "summary": "构建带图像的 System One 请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Endokelp/Endoplexity/blob/2afebce336b08e2f5379051e21851947de728c2e/bridge/src/reflexes.ts#L341",
+          "summary": "See 模式检查图像和判断结果并转换为页面坐标。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Endokelp/Endoplexity/blob/2afebce336b08e2f5379051e21851947de728c2e/README.md#L142",
+          "summary": "README 的 Reflexes 和 Get started 两节说明可用后端、授权及宿主要求。See 模式启用后可向所选服务发送浏览器截图。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Endokelp/Endoplexity/blob/2afebce336b08e2f5379051e21851947de728c2e/README.md#L142"
+    },
+    {
+      "repository": "pardnchiu/Agenvoy",
+      "id": "agenvoy-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Agenvoy 可以将 Jev 配置为决策模型，通过 Choice 问题识别任务类型和候选模型，辅助选择后续执行模型。",
+      "requires": [
+        "依赖 Agenvoy 运行时及其决策模型设置。使用 README 所述 TypeSafe 路径时，需要在宿主配置 TypeSafe 凭据并选择 typesafe@jev-latest。"
+      ],
+      "usageNote": "固定 README 说明提供商和模型选择步骤，源码中的决策接口也可配置其他提供商。",
+      "distribution": "external",
+      "url": "https://github.com/pardnchiu/Agenvoy",
+      "version": "a56aabc81ee6269e5dfa2139b3ec44fe48814b57",
+      "revision": "a56aabc81ee6269e5dfa2139b3ec44fe48814b57",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-11",
+      "license": "AGPL-3.0",
+      "licenseStatus": "GitHub SPDX and root LICENSE checked at the pinned revision.",
+      "github": {
+        "repositoryId": 1150205195,
+        "owner": "pardnchiu",
+        "stars": 583,
+        "createdAt": "2026-02-05T02:16:07Z",
+        "pushedAt": "2026-11-11T07:13:14Z",
+        "updatedAt": "2026-11-11T06:50:07Z",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "AGPL-3.0",
+        "checkedAt": "2026-11-11T07:52:14.589248+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/pardnchiu/Agenvoy/blob/a56aabc81ee6269e5dfa2139b3ec44fe48814b57/internal/agents/decision/decision.go#L67",
+          "summary": "按所选提供商读取可用决策模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pardnchiu/Agenvoy/blob/a56aabc81ee6269e5dfa2139b3ec44fe48814b57/internal/agents/decision/decision.go#L94",
+          "summary": "用选择的模型和对应凭据创建决策客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pardnchiu/Agenvoy/blob/a56aabc81ee6269e5dfa2139b3ec44fe48814b57/internal/agents/decision/decision.go#L132",
+          "summary": "客户端发送状态与具名问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pardnchiu/Agenvoy/blob/a56aabc81ee6269e5dfa2139b3ec44fe48814b57/internal/agents/exec/model/select_with_decision.go#L134",
+          "summary": "模型选择逻辑调用决策客户端并读取 Choice 答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/pardnchiu/Agenvoy/blob/a56aabc81ee6269e5dfa2139b3ec44fe48814b57/README.md#L272",
+          "summary": "固定 README 说明提供商和模型选择步骤，源码中的决策接口也可配置其他提供商。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/pardnchiu/Agenvoy/blob/a56aabc81ee6269e5dfa2139b3ec44fe48814b57/README.md#L272"
+    },
+    {
+      "repository": "lawrence3699/jev-style",
+      "id": "jev-style-local",
+      "kind": "tool",
+      "category": "automation",
+      "description": "本地推理工具。作者披露 2B v4 的部分训练软标签由 TypeSafe Jev 1.14 公共 API 生成。此条目的 Jev 关联限于该版本的训练来源。",
+      "requires": [
+        "本地使用依赖相应运行后端和 JevStyle 模型权重。2B v4 的训练来源须按版本区分。"
+      ],
+      "usageNote": "本地推理加载 JevStyle 权重，无需 TypeSafe 凭据。作者在 README 与 2B v4 模型卡披露了训练来源。",
+      "distribution": "external",
+      "url": "https://github.com/lawrence3699/jev-style",
+      "version": "f4708785250788f4afd99e43ce77934f2fc7e2f7",
+      "revision": "f4708785250788f4afd99e43ce77934f2fc7e2f7",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-11",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub SPDX and root LICENSE checked at the pinned revision.",
+      "github": {
+        "repositoryId": 1387781216,
+        "owner": "lawrence3699",
+        "stars": 132,
+        "createdAt": "2026-09-25T15:31:24Z",
+        "pushedAt": "2026-11-04T22:14:36Z",
+        "updatedAt": "2026-11-10T09:05:14Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-11-11T07:52:14.589248+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/lawrence3699/jev-style/blob/f4708785250788f4afd99e43ce77934f2fc7e2f7/jev_style/models.py#L124",
+          "summary": "2B v4 发布项固定了对应的模型标识和构建版本。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lawrence3699/jev-style/blob/f4708785250788f4afd99e43ce77934f2fc7e2f7/jev_style/client.py#L5",
+          "summary": "客户端支持进程内推理及单独配置的兼容服务。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/lawrence3699/jev-style/blob/f4708785250788f4afd99e43ce77934f2fc7e2f7/README.md#L489",
+          "summary": "本地推理加载 JevStyle 权重，无需 TypeSafe 凭据。作者在 README 与 2B v4 模型卡披露了训练来源。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/lawrence3699/jev-style/blob/f4708785250788f4afd99e43ce77934f2fc7e2f7/README.md#L489",
+      "trainingProvenance": {
+        "release": "2B v4",
+        "teacher": "TypeSafe Jev 1.14",
+        "scope": "partial training labels",
+        "source": "https://huggingface.co/chaoliangUNSW/Jev-Style-2B-Decision-v4?library=jev-style"
+      }
     }
   ]
 }
