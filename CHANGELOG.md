@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-12
+
+- Add AXe simulator automation and WebRouter provider selection. The catalog now contains 306 entries.
+
 ## Unreleased — 2026-11-11
 
 - Add three runtime Jev integrations and record the training provenance of JevStyle 2B v4. Catalog total: 304.

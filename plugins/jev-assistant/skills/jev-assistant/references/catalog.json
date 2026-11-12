@@ -14904,6 +14904,138 @@
         "scope": "partial training labels",
         "source": "https://huggingface.co/chaoliangUNSW/Jev-Style-2B-Decision-v4?library=jev-style"
       }
+    },
+    {
+      "repository": "cameroncooke/AXe",
+      "id": "axe-simulator-agent",
+      "kind": "tool",
+      "category": "automation",
+      "description": "AXe 的 axe agent 命令把模拟器前台应用的无障碍树与目标交给 Jev，每次选择一个操作。执行前再次读取界面，丢弃已过期的选择。",
+      "requires": [
+        "需要 macOS 上的 AXe CLI、已启动的 Apple 模拟器及 TYPESAFE_API_KEY。需要生成目标中未给出的输入文本时，上游另用兼容 OpenAI 的文本模型。"
+      ],
+      "usageNote": "上游 README 的 Autonomous agent command 说明模拟器 UDID 与目标参数。axe init 可安装随 CLI 提供的操作指南 Skill。市场收录的是执行 Jev 调用的模拟器 CLI。",
+      "distribution": "external",
+      "url": "https://github.com/cameroncooke/AXe",
+      "version": "cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5",
+      "revision": "cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-12",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and root LICENSE checked at the pinned revision.",
+      "github": {
+        "repositoryId": 987946887,
+        "owner": "cameroncooke",
+        "stars": 2342,
+        "createdAt": "2025-05-21T20:32:50Z",
+        "pushedAt": "2026-11-11T23:16:23Z",
+        "updatedAt": "2026-11-11T23:59:00Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT",
+        "checkedAt": "2026-11-12T00:05:50.076467+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/cameroncooke/AXe/blob/cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5/Sources/AXe/Commands/AgentCommand.swift#L70",
+          "summary": "命令从环境取得凭据并构建 TypeSafe 客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cameroncooke/AXe/blob/cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5/Sources/AXeCore/TypeSafeClient.swift#L162",
+          "summary": "客户端向 /v1/systemone 发送结构化请求并解码响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cameroncooke/AXe/blob/cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5/Sources/AXe/Agent/SimulatorAgentRunner.swift#L194",
+          "summary": "等待模型选择时并行读取界面，随后检查动作是否仍然有效。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cameroncooke/AXe/blob/cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5/docs/agent.md#L31",
+          "summary": "上游列出观察、选择和执行步骤，并说明提交给 Jev 的无障碍树数据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cameroncooke/AXe/blob/cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5/agent-plugin/skills/axe/SKILL.md#L2",
+          "summary": "AXe 项目随附名为 axe 的操作指南。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cameroncooke/AXe/blob/cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5/README.md#L233",
+          "summary": "上游介绍该 Jev 功能的启用条件与使用示例。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/cameroncooke/AXe/blob/cd2fa9c3f53f4e0e8b08b9319e327baee55b1ff5/README.md#L233"
+    },
+    {
+      "repository": "Nimbleway/webrouter",
+      "id": "webrouter-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "WebRouter 的实验性 System One 路由器把查询和候选项作为 Choice 问题交给 Jev，根据返回的概率排序，为网页任务选择工具及服务商。",
+      "requires": [
+        "需要 WebRouter Python 包和 TYPESAFE_API_KEY，并显式启用 systemone 路由器的 typesafe 预设。实际网页操作还依赖被选中的后端。"
+      ],
+      "usageNote": "固定版本的 TypeSafe 预设选择 jev-1.14.0。默认参与排序的工具为 answer、extract、research 和 browse，普通 search 沿用自动顺序。README 的 Decision APIs 章节给出了配置示例。",
+      "distribution": "external",
+      "url": "https://github.com/Nimbleway/webrouter",
+      "version": "c209e3c69b3e2339f0aee5d36da60acc265f715e",
+      "revision": "c209e3c69b3e2339f0aee5d36da60acc265f715e",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-12",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub SPDX and root LICENSE checked at the pinned revision.",
+      "github": {
+        "repositoryId": 1410855623,
+        "owner": "Nimbleway",
+        "stars": 257,
+        "createdAt": "2026-10-08T19:24:10Z",
+        "pushedAt": "2026-11-11T21:11:29Z",
+        "updatedAt": "2026-11-11T23:45:50Z",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0",
+        "checkedAt": "2026-11-12T00:05:50.076467+00:00"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Nimbleway/webrouter/blob/c209e3c69b3e2339f0aee5d36da60acc265f715e/src/web_router/constants_decider.py#L73",
+          "summary": "TypeSafe 预设固定模型、API 地址及凭据变量。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Nimbleway/webrouter/blob/c209e3c69b3e2339f0aee5d36da60acc265f715e/src/web_router/constants_decider.py#L48",
+          "summary": "列出默认参与 System One 路由的四种工具。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Nimbleway/webrouter/blob/c209e3c69b3e2339f0aee5d36da60acc265f715e/src/web_router/routing/decider_systemone.py#L88",
+          "summary": "构造带查询和可选预算的 Choice 请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Nimbleway/webrouter/blob/c209e3c69b3e2339f0aee5d36da60acc265f715e/src/web_router/routing/decider_systemone.py#L98",
+          "summary": "发送请求、读取每个选项的概率并排序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Nimbleway/webrouter/blob/c209e3c69b3e2339f0aee5d36da60acc265f715e/src/web_router/routing/decider_router.py#L145",
+          "summary": "检查返回值并按排序结果生成路由决定。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Nimbleway/webrouter/blob/c209e3c69b3e2339f0aee5d36da60acc265f715e/README.md#L2459",
+          "summary": "上游介绍该 Jev 功能的启用条件与使用示例。",
+          "basis": "upstream-documentation"
+        }
+      ],
+      "usageUrl": "https://github.com/Nimbleway/webrouter/blob/c209e3c69b3e2339f0aee5d36da60acc265f715e/README.md#L2459"
     }
   ]
 }

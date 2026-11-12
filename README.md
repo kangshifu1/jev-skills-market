@@ -73,6 +73,17 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-12（main）
+
+本轮检索 396 个去重候选，新增 2 个独立外部工具，目录共 306 项。两项分别用于模拟器界面自动化和网页工具路由。
+
+| 项目 | GitHub Star | 核实用途 |
+| --- | ---: | --- |
+| [cameroncooke/AXe](https://github.com/cameroncooke/AXe) | 2342 | AXe 的 axe agent 命令把模拟器前台应用的无障碍树与目标交给 Jev，每次选择一个操作。执行前再次读取界面，丢弃已过期的选择。 |
+| [Nimbleway/webrouter](https://github.com/Nimbleway/webrouter) | 257 | WebRouter 的实验性 System One 路由器把查询和候选项作为 Choice 问题交给 Jev，根据返回的概率排序，为网页任务选择工具及服务商。 |
+
+以上均为固定版本源码或上游文档审阅，尚未实测。可用市场 CLI 的 `list` 和 `show` 查看。[来源、使用条件与审核记录](docs/discovery/2026-11-12.md)
+
 ## 每日发现：2026-11-11（main）
 
 本轮检索 394 个去重候选，新增 4 个独立外部工具，目录共 304 项。前三类运行时用途涉及岗位与表单匹配、Chrome 页面判断和模型路由。JevStyle 的关联仅限 2B v4 训练来源。
