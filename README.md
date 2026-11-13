@@ -73,6 +73,10 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-13（main）
+
+新增 **Calibrain Harness**（122★），目录共 **307 项**。这个金融测试工具可切换到 Jev，记录对永续合约行情的概率判断，再用后续行情检验预测。已核对固定提交的源码，尚未实测。[上游仓库](https://github.com/zadescoxp/calibrain-harness) · [使用条件与审核记录](docs/discovery/2026-11-13.md)
+
 ## 每日发现：2026-11-12（main）
 
 本轮检索 396 个去重候选，新增 2 个独立外部工具，目录共 306 项。两项分别用于模拟器界面自动化和网页工具路由。

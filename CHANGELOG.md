@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-13
+
+- Add Calibrain Harness as a finance tool with an optional Jev provider for forward evaluation on market data.
+
 ## Unreleased — 2026-11-12
 
 - Add AXe simulator automation and WebRouter provider selection. The catalog now contains 306 entries.
