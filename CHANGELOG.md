@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-14
+
+- Add INDXDev/jevlint, the Deckuse Skill, and the Claude Code and Codex GPTaku catalogs that distribute golla-jev.
+
 ## Unreleased — 2026-11-13
 
 - Add Calibrain Harness as a finance tool with an optional Jev provider for forward evaluation on market data.

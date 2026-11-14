@@ -73,6 +73,19 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-14（main）
+
+本轮新增 4 项，目录共 311 项。两个 GPTaku 条目分别对应 Claude Code 和 Codex，表中 Star 数取自各自的市场仓库。
+
+| 项目 | 类型 | Star | 核实用途 |
+| --- | --- | ---: | --- |
+| [INDXDev/jevlint](https://github.com/INDXDev/jevlint) | CLI 工具 | 109 | 按开发者选择的规则用 Jev 给源文件评分，并结合静态分析和 Git 变更情况，排列优先重构的文件。 |
+| [fivetaku/gptaku_plugins](https://github.com/fivetaku/gptaku_plugins) | 插件市场 | 1,300 | Claude Code 插件市场以固定子模块分发 golla-jev。插件设计 Jev 判断问题，附带可调用 TypeSafe 的基准脚本。 |
+| [deckflow/deckuse](https://github.com/deckflow/deckuse) | 可安装 Skill | 105 | Deckuse Skill 配合 CLI 编辑 PowerPoint 和 Word。可选的 find 命令使用 TypeSafe 给候选文档元素排序。 |
+| [fivetaku/gptaku-plugins-codex](https://github.com/fivetaku/gptaku-plugins-codex) | 插件市场 | 130 | Codex 插件市场内含 golla-jev-codex。其 Skill 输出问题 JSON、文档预览和测试计划，随附的基准脚本可向 Jev 发起请求。 |
+
+四项均已核对固定版本源码，尚未实测。[审核与使用说明](docs/discovery/2026-11-14.md)
+
 ## 每日发现：2026-11-13（main）
 
 新增 **Calibrain Harness**（122★），目录共 **307 项**。这个金融测试工具可切换到 Jev，记录对永续合约行情的概率判断，再用后续行情检验预测。已核对固定提交的源码，尚未实测。[上游仓库](https://github.com/zadescoxp/calibrain-harness) · [使用条件与审核记录](docs/discovery/2026-11-13.md)

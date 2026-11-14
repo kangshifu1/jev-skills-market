@@ -15102,6 +15102,277 @@
           "basis": "upstream-documentation"
         }
       ]
+    },
+    {
+      "id": "indx-jevlint",
+      "kind": "tool",
+      "category": "development",
+      "description": "按开发者选择的规则用 Jev 给源文件评分，并结合静态分析和 Git 变更情况，排列优先重构的文件。",
+      "distribution": "external",
+      "repository": "INDXDev/jevlint",
+      "url": "https://github.com/INDXDev/jevlint",
+      "version": "010887a9fd5d47bf5841630b36b995bfb4ecde55",
+      "revision": "010887a9fd5d47bf5841630b36b995bfb4ecde55",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-14",
+      "requires": [
+        "需要 @indxjp/jevlint CLI、上游支持的 Node.js 版本和 TypeSafe 凭据。"
+      ],
+      "usageUrl": "https://github.com/INDXDev/jevlint/blob/010887a9fd5d47bf5841630b36b995bfb4ecde55/README.md#L103",
+      "usageNote": "在 jevlint.toml 中选用 typesafe 提供商。模型审查会发送待评估代码，audit --dry-run 可预览发送范围。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and pinned root LICENSE reviewed.",
+      "github": {
+        "repositoryId": 1445820001,
+        "owner": "INDXDev",
+        "stars": 109,
+        "createdAt": "2026-11-04T15:09:23Z",
+        "pushedAt": "2026-11-13T03:10:37Z",
+        "updatedAt": "2026-11-13T18:19:26Z",
+        "checkedAt": "2026-11-14T00:31:38.719479+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/INDXDev/jevlint/blob/010887a9fd5d47bf5841630b36b995bfb4ecde55/src/decision/providers.ts#L59",
+          "summary": "TypeSafe 分支创建决策模型客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/INDXDev/jevlint/blob/010887a9fd5d47bf5841630b36b995bfb4ecde55/src/decision/decide.ts#L119",
+          "summary": "将文件内容和审查问题交给配置的模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/INDXDev/jevlint/blob/010887a9fd5d47bf5841630b36b995bfb4ecde55/src/audit.ts#L106",
+          "summary": "文件审查实际调用决策客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/INDXDev/jevlint/blob/010887a9fd5d47bf5841630b36b995bfb4ecde55/src/audit.ts#L219",
+          "summary": "汇总文件评分并输出重构优先次序。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/INDXDev/jevlint/blob/010887a9fd5d47bf5841630b36b995bfb4ecde55/README.md#L103",
+          "summary": "上游的安装与使用说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/INDXDev/jevlint/blob/010887a9fd5d47bf5841630b36b995bfb4ecde55/LICENSE#L1",
+          "summary": "固定版本的根许可证。",
+          "basis": "source-inspection"
+        }
+      ]
+    },
+    {
+      "id": "gptaku-claude-market",
+      "kind": "catalog",
+      "category": "agent-tools",
+      "description": "Claude Code 插件市场以固定子模块分发 golla-jev。插件设计 Jev 判断问题，附带可调用 TypeSafe 的基准脚本。",
+      "distribution": "external",
+      "repository": "fivetaku/gptaku_plugins",
+      "url": "https://github.com/fivetaku/gptaku_plugins",
+      "version": "f26ca324a31eb5a276dacfd2a7143ecc9bb91e78",
+      "revision": "f26ca324a31eb5a276dacfd2a7143ecc9bb91e78",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-14",
+      "requires": [
+        "需要 Claude Code。设计阶段可直接生成问题草案，运行基准需要 TYPESAFE_API_KEY。"
+      ],
+      "usageUrl": "https://github.com/fivetaku/gptaku_plugins/blob/f26ca324a31eb5a276dacfd2a7143ecc9bb91e78/README.md#L33",
+      "usageNote": "按上游 README 添加 GPTaku 市场，再选择 golla-jev。此条目的 Star 数属于市场仓库。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and pinned root LICENSE reviewed.",
+      "github": {
+        "repositoryId": 1163180433,
+        "owner": "fivetaku",
+        "stars": 1300,
+        "createdAt": "2026-02-21T08:08:16Z",
+        "pushedAt": "2026-11-13T01:15:57Z",
+        "updatedAt": "2026-11-13T11:51:39Z",
+        "checkedAt": "2026-11-14T00:31:38.719479+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/fivetaku/gptaku_plugins/blob/f26ca324a31eb5a276dacfd2a7143ecc9bb91e78/.claude-plugin/marketplace.json#L302",
+          "summary": "可安装插件清单指向本仓库的 golla-jev 子模块。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku_plugins/blob/f26ca324a31eb5a276dacfd2a7143ecc9bb91e78/.gitmodules#L58",
+          "summary": "子模块保留独立上游仓库地址。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku_plugins/blob/f26ca324a31eb5a276dacfd2a7143ecc9bb91e78/README.md#L190",
+          "summary": "上游说明运行判断或基准时需要 TypeSafe 凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku_plugins/blob/f26ca324a31eb5a276dacfd2a7143ecc9bb91e78/README.md#L33",
+          "summary": "上游的安装与使用说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku_plugins/blob/f26ca324a31eb5a276dacfd2a7143ecc9bb91e78/LICENSE#L1",
+          "summary": "固定版本的根许可证。",
+          "basis": "source-inspection"
+        }
+      ],
+      "pluginSource": {
+        "repository": "fivetaku/golla-jev",
+        "revision": "4b7f0a1a76d88bb2a6ead62abcd6997312edfaa1",
+        "path": "plugins/golla-jev",
+        "evidenceUrl": "https://github.com/fivetaku/golla-jev/blob/4b7f0a1a76d88bb2a6ead62abcd6997312edfaa1/skills/golla-jev/bench/run.py#L50"
+      }
+    },
+    {
+      "id": "deckuse",
+      "kind": "skill",
+      "category": "productivity",
+      "description": "Deckuse Skill 配合 CLI 编辑 PowerPoint 和 Word。可选的 find 命令使用 TypeSafe 给候选文档元素排序。",
+      "distribution": "external",
+      "repository": "deckflow/deckuse",
+      "url": "https://github.com/deckflow/deckuse",
+      "version": "476d91ea4faae7c8a771c3efdb6536b8b5cbfef0",
+      "revision": "476d91ea4faae7c8a771c3efdb6536b8b5cbfef0",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-14",
+      "requires": [
+        "Skill 依赖 Deckuse CLI（Node.js 20.19+）。语义查找需要 TYPESAFE_API_KEY。"
+      ],
+      "usageUrl": "https://github.com/deckflow/deckuse/blob/476d91ea4faae7c8a771c3efdb6536b8b5cbfef0/README.md#L96",
+      "usageNote": "按 README 安装 CLI 和 deckuse Skill。find 会向 TypeSafe 发送查询、候选元素名称、可见文本片段与布局上下文。",
+      "license": "AGPL-3.0",
+      "licenseStatus": "GitHub SPDX and pinned root LICENSE reviewed.",
+      "github": {
+        "repositoryId": 1196070195,
+        "owner": "deckflow",
+        "stars": 105,
+        "createdAt": "2026-03-30T10:43:54Z",
+        "pushedAt": "2026-11-13T23:16:55Z",
+        "updatedAt": "2026-11-13T02:17:42Z",
+        "checkedAt": "2026-11-14T00:31:38.719479+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "AGPL-3.0"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/deckflow/deckuse/blob/476d91ea4faae7c8a771c3efdb6536b8b5cbfef0/skills/deckuse/SKILL.md#L2",
+          "summary": "Skill 名称与所需 CLI。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/deckflow/deckuse/blob/476d91ea4faae7c8a771c3efdb6536b8b5cbfef0/README.md#L101",
+          "summary": "上游提供 skills 安装入口。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/deckflow/deckuse/blob/476d91ea4faae7c8a771c3efdb6536b8b5cbfef0/README.md#L186",
+          "summary": "上游说明 find 的数据范围及凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/deckflow/deckuse/blob/476d91ea4faae7c8a771c3efdb6536b8b5cbfef0/src/find/client.ts#L82",
+          "summary": "调用 TypeSafe SDK 的 systemOne 接口。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/deckflow/deckuse/blob/476d91ea4faae7c8a771c3efdb6536b8b5cbfef0/src/find/rank.ts#L198",
+          "summary": "从 Choice 概率得到与查询最匹配的元素。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/deckflow/deckuse/blob/476d91ea4faae7c8a771c3efdb6536b8b5cbfef0/README.md#L96",
+          "summary": "上游的安装与使用说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/deckflow/deckuse/blob/476d91ea4faae7c8a771c3efdb6536b8b5cbfef0/LICENSE#L1",
+          "summary": "固定版本的根许可证。",
+          "basis": "source-inspection"
+        }
+      ],
+      "skillPath": "skills/deckuse/SKILL.md"
+    },
+    {
+      "id": "gptaku-codex-market",
+      "kind": "catalog",
+      "category": "agent-tools",
+      "description": "Codex 插件市场内含 golla-jev-codex。其 Skill 输出问题 JSON、文档预览和测试计划，随附的基准脚本可向 Jev 发起请求。",
+      "distribution": "external",
+      "repository": "fivetaku/gptaku-plugins-codex",
+      "url": "https://github.com/fivetaku/gptaku-plugins-codex",
+      "version": "31b1552aabb242cdaca95958f98c80cbd4ef66a0",
+      "revision": "31b1552aabb242cdaca95958f98c80cbd4ef66a0",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-14",
+      "requires": [
+        "需要支持插件市场的 Codex CLI。运行插件内的 Jev 基准需要 TYPESAFE_API_KEY。"
+      ],
+      "usageUrl": "https://github.com/fivetaku/gptaku-plugins-codex/blob/31b1552aabb242cdaca95958f98c80cbd4ef66a0/README.md#L15",
+      "usageNote": "按 README 添加 GPTaku Codex 市场并安装 golla-jev-codex。此条目的 Star 数属于 Codex 市场仓库。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and pinned root LICENSE reviewed.",
+      "github": {
+        "repositoryId": 1219547995,
+        "owner": "fivetaku",
+        "stars": 130,
+        "createdAt": "2026-04-24T01:40:54Z",
+        "pushedAt": "2026-11-13T01:16:09Z",
+        "updatedAt": "2026-11-11T04:52:48Z",
+        "checkedAt": "2026-11-14T00:31:38.719479+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/fivetaku/gptaku-plugins-codex/blob/31b1552aabb242cdaca95958f98c80cbd4ef66a0/.agents/plugins/marketplace.json#L176",
+          "summary": "清单指定包名和本地插件路径。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku-plugins-codex/blob/31b1552aabb242cdaca95958f98c80cbd4ef66a0/plugins/golla-jev-codex/skills/golla-jev/SKILL.md#L70",
+          "summary": "工作流设计指向包内基准模板。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku-plugins-codex/blob/31b1552aabb242cdaca95958f98c80cbd4ef66a0/plugins/golla-jev-codex/skills/golla-jev/bench/run.py#L50",
+          "summary": "基准程序向 TypeSafe System One 发出认证 POST 请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku-plugins-codex/blob/31b1552aabb242cdaca95958f98c80cbd4ef66a0/plugins/golla-jev-codex/skills/golla-jev/bench/run.py#L94",
+          "summary": "基准请求选择 jev-latest 并提交待判断的问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku-plugins-codex/blob/31b1552aabb242cdaca95958f98c80cbd4ef66a0/README.md#L15",
+          "summary": "上游的安装与使用说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/fivetaku/gptaku-plugins-codex/blob/31b1552aabb242cdaca95958f98c80cbd4ef66a0/LICENSE#L1",
+          "summary": "固定版本的根许可证。",
+          "basis": "source-inspection"
+        }
+      ]
     }
   ]
 }
