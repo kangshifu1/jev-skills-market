@@ -73,6 +73,18 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-16（main）
+
+本轮新增 3 项，目录共 314 项。
+
+| 项目 | 类型 | Star | 核实用途 |
+| --- | --- | ---: | --- |
+| [tobi/qmd](https://github.com/tobi/qmd) | 可安装 Skill | 31,147 | QMD 可将检索到的 Markdown 候选片段交给 Jev，逐段询问与查询的相关性，再按返回的概率重排结果。 |
+| [AkashPriyadarshii/jev-seo](https://github.com/AkashPriyadarshii/jev-seo) | 工具 | 102 | 这个 Rust CLI 可在 geo 命令中调用 Jev，评估页面被生成式搜索引用的可能性。输出是模型估计，低置信度时可不显示分数。 |
+| [Dart-veider01/TradingAgents-crypto](https://github.com/Dart-veider01/TradingAgents-crypto) | 工具 | 140 | 这一 TradingAgents 衍生项目可用 Jev 过滤无关的 StockTwits 和 Reddit 帖子，并汇总相关帖子的看涨、看跌、中性和不确定立场。 |
+
+三项均已核对固定版本源码，尚未实测。[审核与使用说明](docs/discovery/2026-11-16.md)
+
 ## 每日发现：2026-11-14（main）
 
 本轮新增 4 项，目录共 311 项。两个 GPTaku 条目分别对应 Claude Code 和 Codex，表中 Star 数取自各自的市场仓库。

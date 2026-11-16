@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-16
+
+- Add QMD remote reranking, jev-seo page evaluation, and TradingAgents-crypto social-post screening.
+
 ## Unreleased — 2026-11-14
 
 - Add INDXDev/jevlint, the Deckuse Skill, and the Claude Code and Codex GPTaku catalogs that distribute golla-jev.
