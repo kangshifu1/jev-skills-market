@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — 2026-11-23
+
+- Add Claude x Jev, Draive System One, NetEngine decisions, and Decision Index evaluation. Complete the pending MineAgent publication.
+
+## Unreleased — 2026-11-19
+
+- Add MineAgent runtime intent judgments and document its separate native-generation behavior.
+
 ## Unreleased — 2026-11-16
 
 - Add QMD remote reranking, jev-seo page evaluation, and TradingAgents-crypto social-post screening.

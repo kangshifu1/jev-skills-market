@@ -15588,6 +15588,363 @@
         }
       ],
       "upstreamRepository": "TauricResearch/TradingAgents"
+    },
+    {
+      "id": "mineagent-jev",
+      "kind": "tool",
+      "category": "automation",
+      "description": "MineAgent 的自带运行时可调用 Jev，意图识别模板使用 Choice、Noul 和 Score 判断输入意图、工具需求与处理工作量。框架原生代码生成器的默认意图节点另走普通 LLM 路径。",
+      "distribution": "external",
+      "repository": "YT-Proteus-bot/MineAgent",
+      "url": "https://github.com/YT-Proteus-bot/MineAgent",
+      "version": "b270ceac84d5bde62e53d659a9a5153c970d2166",
+      "revision": "b270ceac84d5bde62e53d659a9a5153c970d2166",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-19",
+      "requires": [
+        "需要 MineAgent 平台及其 Python 运行时。上游快速开始提供 PowerShell 启动脚本并准备前后端依赖。",
+        "在执行保留 ctx.judge 调用的意图节点时配置 TYPESAFE_API_KEY。JEV_MODEL 可指定模型，源码仅在显式配置时把 model 字段加入请求。",
+        "本轮确认自带执行器及节点模板的 Jev 路径。框架原生生成器的默认意图节点调用普通 LLM，使用时应核对实际节点代码和执行模式。"
+      ],
+      "usageUrl": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/README.md#L687",
+      "usageNote": "自带模板在 Jev 可用时返回 engine=jev、意图、概率、工具需求和工作量。缺凭据或特定网络、认证错误时可回退为 engine=llm。源码已审阅，宿主安装与模型调用尚未实测。",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub SPDX and the pinned root LICENSE identify Apache-2.0.",
+      "github": {
+        "repositoryId": 1446601345,
+        "owner": "YT-Proteus-bot",
+        "stars": 170,
+        "createdAt": "2026-11-05T06:01:27Z",
+        "pushedAt": "2026-11-18T09:31:13Z",
+        "updatedAt": "2026-11-21T05:55:39Z",
+        "checkedAt": "2026-11-23T00:04:36.912179+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/backend/app/node_registry.py#L372",
+          "summary": "注册表把节点模板作为 default_code 提供给画布。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/backend/app/node_templates_ext.py#L33",
+          "summary": "意图模板调用 ctx.judge，同时询问意图、工具需求与处理工作量。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/backend/app/runtime/runtime_sdk.py#L889",
+          "summary": "运行时选取 TypeSafe 官方端点和配置的凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/backend/app/runtime/runtime_sdk.py#L914",
+          "summary": "将状态与问题通过认证 POST 请求发送给 System One。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/backend/app/runtime/runner.py#L196",
+          "summary": "自带执行器构造 NodeContext 并执行节点的 run(ctx)。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/backend/app/codegen/generators.py#L447",
+          "summary": "导出包含运行时 SDK，harness 入口使用自带执行器。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/backend/app/codegen/native.py#L517",
+          "summary": "框架原生生成器的默认意图节点调用普通 LLM。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/README.md#L687",
+          "summary": "上游介绍 Jev 判断节点的配置和返回字段。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/YT-Proteus-bot/MineAgent/blob/b270ceac84d5bde62e53d659a9a5153c970d2166/LICENSE#L1",
+          "summary": "根许可证为 Apache-2.0。",
+          "basis": "source-inspection"
+        }
+      ]
+    },
+    {
+      "id": "claude-x-jev-package",
+      "kind": "tool",
+      "category": "agent-tools",
+      "description": "Claude Code 工作流安装包，用 Jev 进行分类、检查、评分和队列分流，按置信度把需进一步判断的项目交给 Claude。",
+      "distribution": "external",
+      "repository": "charlesdove977/claude-x-jev",
+      "url": "https://github.com/charlesdove977/claude-x-jev",
+      "version": "7252118ded5194e94625df88557178d9ad9923c2",
+      "revision": "7252118ded5194e94625df88557178d9ad9923c2",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-23",
+      "requires": [
+        "依赖 Claude Code、Python 3.8+ 和 OpenRouter API key。上游提供专用 npm 安装器及可选命令与 Hook。"
+      ],
+      "usageUrl": "https://github.com/charlesdove977/claude-x-jev/blob/7252118ded5194e94625df88557178d9ad9923c2/README.md#L29",
+      "usageNote": "按固定 README 使用作者的 claude-x-jev 安装器。随附 Skill 名称为 claude-x-jev，Python 请求脚本默认选择 typesafe/jev-1.13。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and pinned root LICENSE reviewed.",
+      "github": {
+        "repositoryId": 1387750574,
+        "owner": "charlesdove977",
+        "stars": 104,
+        "createdAt": "2026-09-25T15:13:47Z",
+        "pushedAt": "2026-10-23T16:45:07Z",
+        "updatedAt": "2026-11-22T01:09:45Z",
+        "checkedAt": "2026-11-23T00:04:36.912179+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/charlesdove977/claude-x-jev/blob/7252118ded5194e94625df88557178d9ad9923c2/skill/SKILL.md#L64",
+          "summary": "Skill 定义分类、检查和分流等命令。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/charlesdove977/claude-x-jev/blob/7252118ded5194e94625df88557178d9ad9923c2/bin/claude-x-jev.js#L11",
+          "summary": "专用安装器复制 Skill 并可安装 Claude Code 命令。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/charlesdove977/claude-x-jev/blob/7252118ded5194e94625df88557178d9ad9923c2/skill/scripts/jev.py#L35",
+          "summary": "固定 OpenRouter Decisions 端点和默认 Jev 模型。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/charlesdove977/claude-x-jev/blob/7252118ded5194e94625df88557178d9ad9923c2/skill/scripts/jev.py#L158",
+          "summary": "发送具名问题并处理上游响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/charlesdove977/claude-x-jev/blob/7252118ded5194e94625df88557178d9ad9923c2/skill/scripts/jev.py#L396",
+          "summary": "批处理入口实际调用判断函数。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/charlesdove977/claude-x-jev/blob/7252118ded5194e94625df88557178d9ad9923c2/README.md#L29",
+          "summary": "上游使用与配置说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/charlesdove977/claude-x-jev/blob/7252118ded5194e94625df88557178d9ad9923c2/LICENSE#L1",
+          "summary": "固定提交的根许可证。",
+          "basis": "source-inspection"
+        }
+      ]
+    },
+    {
+      "id": "decision-index-evaluation",
+      "kind": "tool",
+      "category": "evaluation",
+      "description": "决策模型评测工具。文档列出 TypeSafe Jev 参考模型配置，其 HTTP 引擎可提交具名问题并记录模型来源与请求结果。",
+      "distribution": "external",
+      "repository": "apolinario/decision-index",
+      "url": "https://github.com/apolinario/decision-index",
+      "version": "25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d",
+      "revision": "25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-23",
+      "requires": [
+        "依赖 Python 3.10+ 及上游评测环境。使用 Jev 时须显式设置官方 API 基址、模型和 DECISION_INDEX_API_KEY。"
+      ],
+      "usageUrl": "https://github.com/apolinario/decision-index/blob/25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d/docs/engines.md#L65",
+      "usageNote": "按 docs/engines.md 配置 http 引擎。Jev 的支持由上游配置说明与 HTTP 客户端共同核实，模型分数和延迟未经本轮复测。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and pinned root LICENSE reviewed.",
+      "github": {
+        "repositoryId": 1380917386,
+        "owner": "apolinario",
+        "stars": 101,
+        "createdAt": "2026-09-22T05:22:43Z",
+        "pushedAt": "2026-10-20T13:51:50Z",
+        "updatedAt": "2026-11-20T14:33:08Z",
+        "checkedAt": "2026-11-23T00:04:36.912179+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/apolinario/decision-index/blob/25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d/docs/engines.md#L65",
+          "summary": "引擎映射明确列出 TypeSafe 托管 Jev。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/apolinario/decision-index/blob/25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d/decision_index/engines/http.py#L22",
+          "summary": "基址、模型和凭据变量均由配置提供。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/apolinario/decision-index/blob/25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d/decision_index/engines/http.py#L39",
+          "summary": "将状态和问题 POST 到 /v1/systemone。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/apolinario/decision-index/blob/25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d/decision_index/engines/http.py#L44",
+          "summary": "检查 HTTP 状态并返回结构化及原始响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/apolinario/decision-index/blob/25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d/docs/engines.md#L65",
+          "summary": "上游使用与配置说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/apolinario/decision-index/blob/25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d/LICENSE#L1",
+          "summary": "固定提交的根许可证。",
+          "basis": "source-inspection"
+        }
+      ]
+    },
+    {
+      "id": "draive-systemone",
+      "kind": "tool",
+      "category": "sdk",
+      "description": "Draive 的 System One 提供商可将类型化判断接入 Python 应用，默认使用 TypeSafe Jev，并把响应转为框架的决策结果。",
+      "distribution": "external",
+      "repository": "miquido/draive",
+      "url": "https://github.com/miquido/draive",
+      "version": "0d5b528579db54f805f056a469f9a5941d84a493",
+      "revision": "0d5b528579db54f805f056a469f9a5941d84a493",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-23",
+      "requires": [
+        "固定版本要求 Python 3.15+，启用 draive[systemone] 可选依赖，并配置 SYSTEMONE_API_KEY 或 TYPESAFE_API_KEY。"
+      ],
+      "usageUrl": "https://github.com/miquido/draive/blob/0d5b528579db54f805f056a469f9a5941d84a493/README.md#L155",
+      "usageNote": "按 README 的 System One 章节安装相应可选依赖。SystemOne 初始化时绑定 DecisionModel，模型可通过 SystemOneConfig 指定。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and pinned root LICENSE reviewed.",
+      "github": {
+        "repositoryId": 761696382,
+        "owner": "miquido",
+        "stars": 111,
+        "createdAt": "2024-02-22T10:13:25Z",
+        "pushedAt": "2026-11-20T14:14:51Z",
+        "updatedAt": "2026-11-09T16:10:15Z",
+        "checkedAt": "2026-11-23T00:04:36.912179+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/miquido/draive/blob/0d5b528579db54f805f056a469f9a5941d84a493/src/draive/systemone/api.py#L38",
+          "summary": "默认地址为 TypeSafe API，并读取提供商凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/miquido/draive/blob/0d5b528579db54f805f056a469f9a5941d84a493/src/draive/systemone/config.py#L15",
+          "summary": "默认模型为 jev-latest。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/miquido/draive/blob/0d5b528579db54f805f056a469f9a5941d84a493/src/draive/systemone/client.py#L66",
+          "summary": "上下文初始化返回绑定 decide 的 DecisionModel。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/miquido/draive/blob/0d5b528579db54f805f056a469f9a5941d84a493/src/draive/systemone/decisions.py#L100",
+          "summary": "把输入和类型化问题构造为请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/miquido/draive/blob/0d5b528579db54f805f056a469f9a5941d84a493/src/draive/systemone/decisions.py#L116",
+          "summary": "通过 HTTP 发起判断并校验响应状态。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/miquido/draive/blob/0d5b528579db54f805f056a469f9a5941d84a493/README.md#L155",
+          "summary": "上游使用与配置说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/miquido/draive/blob/0d5b528579db54f805f056a469f9a5941d84a493/LICENSE#L1",
+          "summary": "固定提交的根许可证。",
+          "basis": "source-inspection"
+        }
+      ]
+    },
+    {
+      "id": "netengine-systemone",
+      "kind": "tool",
+      "category": "development",
+      "description": "NetEngine 提供 .NET System One 决策客户端与业务服务，可配置 TypeSafe Jev，对同一份业务状态发起多个具名判断。",
+      "distribution": "external",
+      "repository": "dashiell-zhang/NetEngine",
+      "url": "https://github.com/dashiell-zhang/NetEngine",
+      "version": "5adcd797e942262db07eea71e4c72fbd773f3270",
+      "revision": "5adcd797e942262db07eea71e4c72fbd773f3270",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-23",
+      "requires": [
+        "依赖 NetEngine 的 .NET 服务工程及 LLM 配置。使用 Jev 时选择 SystemOne 协议、有效 TypeSafe 凭据和模型标识。"
+      ],
+      "usageUrl": "https://github.com/dashiell-zhang/NetEngine/blob/5adcd797e942262db07eea71e4c72fbd773f3270/Docs/LLM.md#L221",
+      "usageNote": "按 Docs/LLM.md 的 Jev 结构化决策章节配置模型和应用 Code，再通过 LlmInvokeService.DecideAsync 调用。各配置字段与模板由宿主管理。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and pinned root LICENSE reviewed.",
+      "github": {
+        "repositoryId": 452543086,
+        "owner": "dashiell-zhang",
+        "stars": 391,
+        "createdAt": "2022-01-27T04:48:15Z",
+        "pushedAt": "2026-11-21T02:00:49Z",
+        "updatedAt": "2026-11-07T02:01:15Z",
+        "checkedAt": "2026-11-23T00:04:36.912179+00:00",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/dashiell-zhang/NetEngine/blob/5adcd797e942262db07eea71e4c72fbd773f3270/Docs/LLM.md#L231",
+          "summary": "提供 TypeSafe Jev 的模型和官方端点配置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/dashiell-zhang/NetEngine/blob/5adcd797e942262db07eea71e4c72fbd773f3270/Infrastructure/LLM/DynamicLlmClientFactory.cs#L48",
+          "summary": "工厂创建专用决策客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/dashiell-zhang/NetEngine/blob/5adcd797e942262db07eea71e4c72fbd773f3270/Application/Application.Service.LLM/LlmInvokeService.Decision.cs#L30",
+          "summary": "业务入口实际调用决策客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/dashiell-zhang/NetEngine/blob/5adcd797e942262db07eea71e4c72fbd773f3270/Infrastructure/LLM/SystemOne/SystemOneDecisionClient.cs#L139",
+          "summary": "构造 model、state、questions 并发送请求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/dashiell-zhang/NetEngine/blob/5adcd797e942262db07eea71e4c72fbd773f3270/Docs/LLM.md#L221",
+          "summary": "上游使用与配置说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/dashiell-zhang/NetEngine/blob/5adcd797e942262db07eea71e4c72fbd773f3270/LICENSE#L1",
+          "summary": "固定提交的根许可证。",
+          "basis": "source-inspection"
+        }
+      ]
     }
   ]
 }

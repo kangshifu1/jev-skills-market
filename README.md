@@ -73,6 +73,24 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-23（main）
+
+本轮新增 4 项并完成 MineAgent 的恢复发布，目录共 319 项。以下项目均已审阅固定版本来源，尚未实测。
+
+| 仓库 | Star | 核实用途 |
+| --- | ---: | --- |
+| [charlesdove977/claude-x-jev](https://github.com/charlesdove977/claude-x-jev) | 104 | Claude Code 工作流安装包，用 Jev 进行分类、检查、评分和队列分流，按置信度把需进一步判断的项目交给 Claude。 |
+| [YT-Proteus-bot/MineAgent](https://github.com/YT-Proteus-bot/MineAgent) | 170 | MineAgent 的自带运行时可调用 Jev，意图识别模板使用 Choice、Noul 和 Score 判断输入意图、工具需求与处理工作量。框架原生代码生成器的默认意图节点另走普通 LLM 路径。 |
+| [apolinario/decision-index](https://github.com/apolinario/decision-index) | 101 | 决策模型评测工具。文档列出 TypeSafe Jev 参考模型配置，其 HTTP 引擎可提交具名问题并记录模型来源与请求结果。 |
+| [miquido/draive](https://github.com/miquido/draive) | 111 | Draive 的 System One 提供商可将类型化判断接入 Python 应用，默认使用 TypeSafe Jev，并把响应转为框架的决策结果。 |
+| [dashiell-zhang/NetEngine](https://github.com/dashiell-zhang/NetEngine) | 391 | NetEngine 提供 .NET System One 决策客户端与业务服务，可配置 TypeSafe Jev，对同一份业务状态发起多个具名判断。 |
+
+[审核与使用条件](docs/discovery/2026-11-23.md)
+
+## 每日发现：2026-11-19（main）
+
+新增 MineAgent（174★），目录共 315 项。它的意图节点模板可通过 Jev 判断输入意图、工具需求与工作量。已确认自带运行时的调用路径，框架原生生成器的默认意图节点使用普通 LLM。尚未实测。[审核与使用说明](docs/discovery/2026-11-19.md)
+
 ## 每日发现：2026-11-16（main）
 
 本轮新增 3 项，目录共 314 项。
