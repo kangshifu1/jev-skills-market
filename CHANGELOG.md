@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-24
+
+- Add Jev-Interaction voice turn-taking runtime with pinned call-chain evidence and provider requirements.
+
 ## Unreleased — 2026-11-23
 
 - Add Claude x Jev, Draive System One, NetEngine decisions, and Decision Index evaluation. Complete the pending MineAgent publication.

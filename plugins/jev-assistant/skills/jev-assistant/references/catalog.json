@@ -15945,6 +15945,92 @@
           "basis": "source-inspection"
         }
       ]
+    },
+    {
+      "id": "jev-interaction",
+      "kind": "tool",
+      "category": "voice",
+      "description": "语音会话运行时将当前转写和会话状态交给 Jev，用返回的概率控制回应、让出话轮和倾听反馈。回复文本与语音输出由配置的其他适配器完成。",
+      "distribution": "external",
+      "repository": "native-bond-lab/Jev-Interaction",
+      "url": "https://github.com/native-bond-lab/Jev-Interaction",
+      "version": "e963bd69e83d6c884ff899d1e9d2ff35a8125df5",
+      "revision": "e963bd69e83d6c884ff899d1e9d2ff35a8125df5",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-24",
+      "requires": [
+        "需要 Python 3.10+、jev-interaction 及相应服务端依赖。使用 TypeSafe 后端时配置 JEV_API_KEY，并分别配置语音识别、语言模型和语音合成适配器。"
+      ],
+      "usageUrl": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/README.md#L53",
+      "usageNote": "上游提供 jev-interaction[server] 包和 serve 命令，以及库级 Session 示例。JEV_URL、JEV_MODEL 可改变判断服务和模型。实际语音质量、端到端时延及宿主连接尚未实测。",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub SPDX and the pinned root LICENSE identify Apache-2.0.",
+      "github": {
+        "repositoryId": 1452435546,
+        "owner": "native-bond-lab",
+        "stars": 125,
+        "createdAt": "2026-11-10T09:10:14Z",
+        "pushedAt": "2026-11-23T08:27:41Z",
+        "updatedAt": "2026-11-23T23:17:42Z",
+        "checkedAt": "2026-11-24T00:07:11.936485+00:00",
+        "defaultBranch": "dev",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/jev_interaction/judge/client.py#L15",
+          "summary": "默认调用 TypeSafe System One 端点。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/jev_interaction/judge/client.py#L25",
+          "summary": "从 JEV_API_KEY 取得凭据，模型默认为 jev-latest。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/jev_interaction/judge/client.py#L33",
+          "summary": "将会话状态和具名问题发送到模型，并读取答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/jev_interaction/session.py#L453",
+          "summary": "从当前转写、静默时长和会话记录构造判断状态。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/jev_interaction/session.py#L473",
+          "summary": "会话实际调用判断客户端，并对等待设置超时。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/jev_interaction/decisions/base.py#L75",
+          "summary": "返回结果先检查是否仍适用于当前会话，再交给决策策略。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/jev_interaction/decisions/turn.py#L70",
+          "summary": "话轮逻辑消费返回概率，决定回应、插话或继续听。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/jev_interaction/server/app.py#L421",
+          "summary": "服务入口创建判断器、语音识别和回复器并组装 Session。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/README.md#L53",
+          "summary": "上游的 Python 包安装和服务启动说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/native-bond-lab/Jev-Interaction/blob/e963bd69e83d6c884ff899d1e9d2ff35a8125df5/LICENSE#L1",
+          "summary": "固定提交的根许可证。",
+          "basis": "source-inspection"
+        }
+      ]
     }
   ]
 }
