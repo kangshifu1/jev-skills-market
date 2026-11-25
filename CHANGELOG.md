@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-25
+
+- Add RayTrace agent observability with pinned Jev assessment and attribution evidence, runtime requirements, and source-only verification status.
+
 ## Unreleased — 2026-11-24
 
 - Add Jev-Interaction voice turn-taking runtime with pinned call-chain evidence and provider requirements.

@@ -73,6 +73,10 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-25（main）
+
+新增 RayTrace（110★），目录共 321 项。它将 Jev 接入代理运行记录，用于命令影响评估和候选原因排序。已审阅固定版本源码，尚未实测。[审核与使用条件](docs/discovery/2026-11-25.md)
+
 ## 每日发现：2026-11-24（main）
 
 新增 Jev-Interaction（125★），目录共 320 项。它使用 Jev 判断语音会话中的回应、让出话轮与倾听反馈。已审阅固定版本源码，尚未实测。[审核与使用条件](docs/discovery/2026-11-24.md)

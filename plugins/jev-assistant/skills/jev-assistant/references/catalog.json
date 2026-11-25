@@ -16031,6 +16031,103 @@
           "basis": "source-inspection"
         }
       ]
+    },
+    {
+      "id": "raytrace-cli",
+      "kind": "tool",
+      "category": "observability",
+      "description": "代理运行记录与沙箱工具；可使用 Jev 评估已记录命令的影响程度，并对工具调用的候选原因给出概率排序。归因是模型对记录的推断。",
+      "distribution": "external",
+      "repository": "Godcreatebugs/raytrace-cli",
+      "url": "https://github.com/Godcreatebugs/raytrace-cli",
+      "version": "60b0ef130544c343263bf8f294b78b6ad87c9acf",
+      "revision": "60b0ef130544c343263bf8f294b78b6ad87c9acf",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-25",
+      "requires": [
+        "上游 npm CLI 需要 Node.js ^22.16.0 或 >=24；本地沙箱需要相应的 Lima、Docker/gVisor 环境，具体平台条件见 README。",
+        "Jev 功能需要服务端 TYPESAFE_API_KEY；上游提供 raytrace key typesafe 配置命令。文字解释和候选原因生成等附加功能另用 OpenRouter。"
+      ],
+      "usageUrl": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/README.md#L85",
+      "usageNote": "上游 README 提供 npm install -g @raytrace-cli/cli、沙箱启动及 MCP 接入说明。这里登记完整工具，不生成 Skill 安装命令；沙箱隔离、代理兼容性及 Jev 判断准确率尚未实测。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and the pinned root LICENSE identify MIT.",
+      "github": {
+        "repositoryId": 1407790196,
+        "owner": "Godcreatebugs",
+        "stars": 110,
+        "createdAt": "2026-10-06T18:51:26Z",
+        "pushedAt": "2026-11-24T19:50:31Z",
+        "updatedAt": "2026-11-24T17:17:08Z",
+        "checkedAt": "2026-11-25T00:09:46.600829+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/proxy/typesafe.mjs#L14",
+          "summary": "默认使用 TypeSafe 服务和 jev-latest；从 TYPESAFE_API_KEY 读取服务端凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/proxy/typesafe.mjs#L42",
+          "summary": "将 state 与 questions POST 到 /v1/systemone，并读取模型响应。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/proxy/raytace-proxy.mjs#L91",
+          "summary": "命令评估流程实际调用 System One，合并答案并缓存具体模型和结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/proxy/call-assessment.mjs#L192",
+          "summary": "为命令构造 Score、Noul 和 Choice 问题，判断影响程度与执行结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/proxy/call-assessment.mjs#L302",
+          "summary": "结合 Jev 分数、置信度和规则下限，输出影响等级及待复核标记。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/proxy/raytace-proxy.mjs#L264",
+          "summary": "工具调用归因流程调用 Jev，失败或未配置时退回未排序候选。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/proxy/step-attribution.mjs#L306",
+          "summary": "根据已记录的动作和上下文构造候选原因，两种候选顺序分别提问。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/proxy/step-attribution.mjs#L346",
+          "summary": "合并候选原因概率并在结果不稳定或置信度较低时标记不确定。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/README.md#L303",
+          "summary": "上游说明 Jev 和 OpenRouter 的用途、密钥配置与功能限制。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/README.md#L85",
+          "summary": "上游 CLI 安装、本地沙箱启动与平台条件。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/package.json#L27",
+          "summary": "固定提交声明 Node.js ^22.16.0 或 >=24。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Godcreatebugs/raytrace-cli/blob/60b0ef130544c343263bf8f294b78b6ad87c9acf/LICENSE#L1",
+          "summary": "固定提交的根许可证为 MIT。",
+          "basis": "source-inspection"
+        }
+      ]
     }
   ]
 }
