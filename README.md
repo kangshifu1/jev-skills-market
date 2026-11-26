@@ -73,6 +73,10 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-26（main）
+
+新增 Karpo Browser（104★）、ccLoad（448★）和 Glean（876★），目录共 324 项，分别用于浏览器操作、动态推理强度和文章分类。均已审阅固定版本源码，尚未实测。[审核与使用条件](docs/discovery/2026-11-26.md)
+
 ## 每日发现：2026-11-25（main）
 
 新增 RayTrace（110★），目录共 321 项。它将 Jev 接入代理运行记录，用于命令影响评估和候选原因排序。已审阅固定版本源码，尚未实测。[审核与使用条件](docs/discovery/2026-11-25.md)

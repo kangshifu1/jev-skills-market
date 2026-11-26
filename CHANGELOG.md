@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-26
+
+- Add Karpo Browser, ccLoad, and Glean with pinned Jev call-chain evidence, configuration requirements, and source-only verification status.
+
 ## Unreleased — 2026-11-25
 
 - Add RayTrace agent observability with pinned Jev assessment and attribution evidence, runtime requirements, and source-only verification status.
