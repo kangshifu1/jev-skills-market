@@ -73,6 +73,10 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-27（main）
+
+新增 OmniRoute（90,564★），目录共 325 项。它可使用 Jev 进行模型选择和请求路由，相关路径需要显式启用。已审阅固定版本源码，尚未实测。[审核与使用条件](docs/discovery/2026-11-27.md)
+
 ## 每日发现：2026-11-26（main）
 
 新增 Karpo Browser（104★）、ccLoad（448★）和 Glean（876★），目录共 324 项，分别用于浏览器操作、动态推理强度和文章分类。均已审阅固定版本源码，尚未实测。[审核与使用条件](docs/discovery/2026-11-26.md)

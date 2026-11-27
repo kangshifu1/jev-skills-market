@@ -16359,6 +16359,109 @@
           "basis": "source-inspection"
         }
       ]
+    },
+    {
+      "id": "omniroute",
+      "kind": "tool",
+      "category": "gateway",
+      "description": "AI 网关可选用 TypeSafe Jev 从配置的模型候选中选择请求目标，支持 Jev 组合策略和 System One 决策路由。",
+      "distribution": "external",
+      "repository": "cheaper-inference/OmniRoute",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "version": "9671192011beb2d7f83979f40be488c5da8772b9",
+      "revision": "9671192011beb2d7f83979f40be488c5da8772b9",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-27",
+      "requires": [
+        "按上游部署并配置提供商与候选模型；npm 包要求 Node.js >=22.22.2 <23 或 >=24.0.0 <27。",
+        "使用 jev 组合策略时，需要配置 typesafe 连接并显式开启 COMBO_JEV_STRATEGY_ENABLED。",
+        "使用 decision 路由的 systemone 决策器时，需要 COMBO_DECISION_ROUTER_ENABLED，以及允许访问的 typesafe 连接；该路径还支持 OMNIROUTE_DECISION_API_KEY 环境变量。"
+      ],
+      "usageUrl": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/docs/routing/AUTO-COMBO.md#L856",
+      "usageNote": "上游提供 npm install -g omniroute 和部署说明。两条决策路径均默认关闭，启用后可能发送请求摘要并产生 TypeSafe 调用费用。失败时分别退回用户顺序或 rules 策略。本次未安装网关、调用模型或验证路由质量、成本与兼容性。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and the pinned root LICENSE identify MIT.",
+      "github": {
+        "repositoryId": 1157102282,
+        "owner": "cheaper-inference",
+        "stars": 90564,
+        "createdAt": "2026-02-13T12:38:31Z",
+        "pushedAt": "2026-11-26T23:55:10Z",
+        "updatedAt": "2026-11-26T23:48:43Z",
+        "checkedAt": "2026-11-26T23:59:56.823505+00:00",
+        "defaultBranch": "release/v3.8.55",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/typesafe/systemOne.ts#L19",
+          "summary": "默认调用 TypeSafe 官方端点，模型为 jev-latest。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/typesafe/systemOne.ts#L242",
+          "summary": "以 Bearer 凭据发送模型、状态和 Choice 问题，并解析返回答案。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/decision/transport.ts#L161",
+          "summary": "执行受超时与响应大小限制的 HTTP POST。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/combo/jevAsk.ts#L13",
+          "summary": "先检查 Jev 开关，再读取允许范围内的 typesafe 连接并调用客户端。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/combo/targetResolution.ts#L520",
+          "summary": "实际目标解析流程调用 Jev 策略并使用其结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/combo/jevStrategy.ts#L139",
+          "summary": "校验候选、置信度与返回选项，无法判断时回退。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/decision/systemOneDecider.ts#L31",
+          "summary": "System One 决策器调用同一 TypeSafe 客户端并返回模型选择结果。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/autoCombo/decisionStrategy.ts#L105",
+          "summary": "decision 路由实际调用决策器，验证结果后缩小模型候选集。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/open-sse/services/decision/credentials.ts#L92",
+          "summary": "从受允许列表限制的连接或指定环境变量读取决策凭据。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/docs/routing/AUTO-COMBO.md#L382",
+          "summary": "Jev 策略的付费调用需要显式启用。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/docs/routing/AUTO-COMBO.md#L856",
+          "summary": "System One 决策器的配置、开关、凭据、输入范围和回退说明。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/package.json#L75",
+          "summary": "固定版本的 Node.js 运行要求。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/cheaper-inference/OmniRoute/blob/9671192011beb2d7f83979f40be488c5da8772b9/LICENSE#L1",
+          "summary": "固定提交根许可证为 MIT。",
+          "basis": "source-inspection"
+        }
+      ]
     }
   ]
 }
