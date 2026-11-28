@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-11-28
+
+- Add Pots and Telegram Summary Bot with pinned Jev classification evidence, deployment constraints, and source-only verification status.
+
 ## Unreleased — 2026-11-27
 
 - Add OmniRoute with pinned TypeSafe Jev routing evidence, opt-in configuration, and source-only verification status.

@@ -73,6 +73,10 @@ codex plugin add jev-assistant@jev-skills-market
 机器可读目录：[catalog.json](plugins/jev-assistant/skills/jev-assistant/references/catalog.json)。
 目录状态不是安装状态，也不是实测能力承诺。
 
+## 每日发现：2026-11-28（main）
+
+新增 Pots（103★，消息唤醒判定）与 Telegram Summary Bot（210★，广告审核），目录共 327 项。均已审阅固定版本源码，尚未实测；后者的目标群限制及删除、封禁行为见审核记录。[审核与使用条件](docs/discovery/2026-11-28.md)
+
 ## 每日发现：2026-11-27（main）
 
 新增 OmniRoute（90,564★），目录共 325 项。它可使用 Jev 进行模型选择和请求路由，相关路径需要显式启用。已审阅固定版本源码，尚未实测。[审核与使用条件](docs/discovery/2026-11-27.md)

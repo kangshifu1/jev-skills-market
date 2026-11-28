@@ -16462,6 +16462,171 @@
           "basis": "source-inspection"
         }
       ]
+    },
+    {
+      "id": "pi-durable-bot",
+      "kind": "tool",
+      "category": "assistant",
+      "description": "自托管聊天助手可通过 pi 的 Jev 分类器判断未提及助手的消息是否与职责相关、是否需要回复，再决定是否唤醒主代理。",
+      "distribution": "external",
+      "repository": "Crokily/pi-durable-bot",
+      "url": "https://github.com/Crokily/pi-durable-bot",
+      "version": "4497f4f4cf04c489d10d206cc6e4bff323c5d3b3",
+      "revision": "4497f4f4cf04c489d10d206cc6e4bff323c5d3b3",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-28",
+      "requires": [
+        "需要 Node.js 24+、pi 模型运行时依赖、主代理模型和相应聊天应用配置。",
+        "使用 Jev 时通过上游登录流程配置 TypeSafe 凭据，并将 judge 设为 typesafe/jev-latest；judge 默认 off，不进行这一步分类。"
+      ],
+      "usageUrl": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/README.md#L154",
+      "usageNote": "上游提供 npm install -g pi-durable-bot 和 pots init。主代理具有宿主机操作能力，上游要求使用独立电脑或虚拟机。Jev 只参与唤醒判定；本次未安装、接入群聊、发送消息或测试运行恢复与判定准确率。",
+      "license": "MIT",
+      "licenseStatus": "GitHub SPDX and the pinned root LICENSE identify MIT.",
+      "github": {
+        "repositoryId": 1436606183,
+        "owner": "Crokily",
+        "stars": 103,
+        "createdAt": "2026-10-28T04:40:45Z",
+        "pushedAt": "2026-11-27T00:35:49Z",
+        "updatedAt": "2026-11-27T20:45:12Z",
+        "checkedAt": "2026-11-28T00:09:04.773057+00:00",
+        "defaultBranch": "main",
+        "archived": false,
+        "licenseSpdxId": "MIT"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/README.md#L204",
+          "summary": "上游列出 typesafe/jev-latest 等分类器选择及默认关闭设置。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/src/bot/bot.ts#L235",
+          "summary": "实际机器人启动时从配置创建判定器。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/src/agent/models.ts#L126",
+          "summary": "按提供商和模型标识查询 pi 模型运行时。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/src/agent/judge.ts#L20",
+          "summary": "实际提交状态和问题，并读取分类概率。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/src/agent/judge.ts#L61",
+          "summary": "构造职责相关性和是否需要回应两个问题。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/src/gateway/waker.ts#L156",
+          "summary": "消息调度器调用判定；失败时交给主代理，成功时检查概率阈值。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/README.md#L154",
+          "summary": "安装、登录、主代理和独立宿主机条件。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/package.json#L44",
+          "summary": "固定版本要求 Node.js 24+。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/Crokily/pi-durable-bot/blob/4497f4f4cf04c489d10d206cc6e4bff323c5d3b3/LICENSE#L1",
+          "summary": "根许可证为 MIT。",
+          "basis": "source-inspection"
+        }
+      ]
+    },
+    {
+      "id": "telegram-summary-bot",
+      "kind": "tool",
+      "category": "automation",
+      "description": "Cloudflare Workers 群聊摘要机器人，通过 Tokener 的 TypeSafe 转发接口调用 jev-latest 判定广告；符合源码阈值的目标群消息会触发删除和发送者封禁。",
+      "distribution": "external",
+      "repository": "asukaminato0721/telegram-summary-bot",
+      "url": "https://github.com/asukaminato0721/telegram-summary-bot",
+      "version": "e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979",
+      "revision": "e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979",
+      "status": "source-reviewed-not-run",
+      "routable": false,
+      "selection": "daily-github-discovery",
+      "inspectedAt": "2026-11-28",
+      "requires": [
+        "需要自部署 Cloudflare Workers、D1 的 DB 绑定、Telegram 机器人凭据及目标群所需管理权限。",
+        "此版本将 GEMINI_API_KEY 用作 api.tokener.ai/typesafe/v1/systemone 的 Bearer 凭据；这是第三方转发路径，不是 TypeSafe 直连。",
+        "审核仅对源码写定的目标群生效，部署者需自行核对和调整该限制，不能直接视为通用群审核配置。"
+      ],
+      "usageUrl": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/README.md#L15",
+      "usageNote": "按上游 Setup 和代码配置完整 Worker 应用。广告选择、置信度和广告概率同时满足条件才执行；阈值为源码示例，并未验证误判率。删除与封禁具有实际影响。本次未部署、连接群聊或调用转发服务，也未核验其可用性和费用。",
+      "license": "Apache-2.0",
+      "licenseStatus": "GitHub SPDX and the pinned root LICENSE identify Apache-2.0.",
+      "github": {
+        "repositoryId": 890054104,
+        "owner": "asukaminato0721",
+        "stars": 210,
+        "createdAt": "2024-11-17T22:16:03Z",
+        "pushedAt": "2026-11-02T01:19:20Z",
+        "updatedAt": "2026-11-27T13:47:59Z",
+        "checkedAt": "2026-11-28T00:09:04.773057+00:00",
+        "defaultBranch": "master",
+        "archived": false,
+        "licenseSpdxId": "Apache-2.0"
+      },
+      "evidence": [
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/src/moderation.ts#L24",
+          "summary": "实际请求 Tokener 的 TypeSafe 转发接口，模型为 jev-latest。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/src/moderation.ts#L53",
+          "summary": "同时检查广告选择、置信度和广告概率。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/src/moderation.ts#L67",
+          "summary": "审核前检查管理员及特定发送者保护条件。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/src/moderation.ts#L76",
+          "summary": "命中后执行删除、封禁，并清理 D1 中对应记录。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/src/moderation.ts#L96",
+          "summary": "审核范围限定到源码目标群；错误时返回保留消息。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/src/index.ts#L548",
+          "summary": "普通消息处理入口调用审核。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/src/index.ts#L631",
+          "summary": "编辑消息处理入口同样调用审核。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/README.md#L15",
+          "summary": "上游 Worker 与 D1 部署指引。",
+          "basis": "source-inspection"
+        },
+        {
+          "url": "https://github.com/asukaminato0721/telegram-summary-bot/blob/e253d9481b1bdc3c5f5f6fbd78c53678f5cfa979/LICENSE#L1",
+          "summary": "根许可证为 Apache-2.0。",
+          "basis": "source-inspection"
+        }
+      ]
     }
   ]
 }
